@@ -9,6 +9,8 @@ Benjamin Ward
 
 Swaraj Dhumne
 
+Ethan Huey
+
 Shaun Wu
 
 Zack Alfakir
@@ -20,3 +22,4 @@ Paola Henriquez
 Champ Dietzel
 
 Jonathan Wang
+
