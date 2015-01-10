@@ -16,3 +16,5 @@ Zack Alfakir
 Ahmad Bamba
 
 Paola Henriquez
+
+Champ Dietzel
