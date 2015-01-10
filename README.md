@@ -11,10 +11,17 @@ Swaraj Dhumne
 
 Calvin Godfrey
 
+Ethan Huey
+
 Shaun Wu
 
 Zack Alfakir
 
 Ahmad Bamba
 
+Paola Henriquez
+
 Champ Dietzel
+
+Jonathan Wang
+
