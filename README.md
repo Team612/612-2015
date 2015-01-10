@@ -18,3 +18,5 @@ Ahmad Bamba
 Paola Henriquez
 
 Champ Dietzel
+
+Jonathan Wang
