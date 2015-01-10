@@ -14,3 +14,5 @@ Shaun Wu
 Zack Alfakir
 
 Ahmad Bamba
+
+Paola Henriquez
