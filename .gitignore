@@ -1,1 +1,7 @@
 /Debug/
+.settings/
+.cproject
+.directory
+.project
+build.*
+
