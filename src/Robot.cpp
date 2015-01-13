@@ -8,12 +8,16 @@ class Robot: public IterativeRobot
 private:
 	Command *autonomousCommand;
 	LiveWindow *lw;
+	RobotDrive* robotDrive;
+	Joystick* joystick;
 
 	void RobotInit()
 	{
-		CommandBase::init();
-		autonomousCommand = new ExampleCommand();
+		//CommandBase::init();
+		//autonomousCommand = new ExampleCommand();
 		lw = LiveWindow::GetInstance();
+		robotDrive = new RobotDrive(new Talon(1), new Talon(2), new Talon(3), new Talon(4));
+		joystick = new Joystick(1);
 	}
 	
 	void DisabledPeriodic()
@@ -45,6 +49,7 @@ private:
 	void TeleopPeriodic()
 	{
 		Scheduler::GetInstance()->Run();
+		robotDrive->ArcadeDrive(joystick);
 	}
 
 	void TestPeriodic()
