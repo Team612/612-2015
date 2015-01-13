@@ -44,12 +44,12 @@ private:
 		// this line or comment it out.
 		if (autonomousCommand != NULL)
 			autonomousCommand->Cancel();
-		robotDrive->ArcadeDrive(joystick);
 	}
 
 	void TeleopPeriodic()
 	{
 		Scheduler::GetInstance()->Run();
+		robotDrive->ArcadeDrive(joystick);
 	}
 
 	void TestPeriodic()
