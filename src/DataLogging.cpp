@@ -3,6 +3,7 @@
 
 DataLogging::DataLogging()
 {
+
 	this->bufferSize = 0;
 	this->bufferedText = new char*[this->maxBufferSize];
 }
