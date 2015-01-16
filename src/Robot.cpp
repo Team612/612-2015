@@ -8,8 +8,6 @@ class Robot: public IterativeRobot
 private:
 	Command *autonomousCommand;
 	LiveWindow *lw;
-	RobotDrive* robotDrive;
-	Joystick* joystick;
 
 	void RobotInit()
 	{
