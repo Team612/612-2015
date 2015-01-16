@@ -40,6 +40,16 @@ short DataLogging::Log(string textToLog)
 	return 0;
 }
 
+short DataLogging::Log(string* data, int length)
+{
+	string message = "";
+	for(int i = 0; i < length; i++)
+	{
+		message += data[i] + " ";
+	}
+	return this->Log(message);
+}
+
 void DataLogging::writeBuffer()
 {
 	this->file.open(this->fileName + std::to_string(this->fileNumber) + (string)".txt");

@@ -16,6 +16,7 @@ public:
 	DataLogging();
 	~DataLogging();
 	short Log(string);
+	short Log(string*, int size);
 
 private:
 	string* bufferedText;
