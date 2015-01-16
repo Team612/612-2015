@@ -3,19 +3,24 @@
 
 DataLogging::DataLogging()
 {
-
 	this->bufferSize = 0;
-	this->bufferedText = new char*[this->maxBufferSize];
+	this->bufferedText = new string[this->maxBufferSize];
+
+	// Initialize time-related data members
+	// Get current raw time value
+	time(&(this->rawtime));
+	// Translate raw time value into time, taking into consideration the local time zone
+	this->timeinfo = localtime(&(this->rawtime));
 }
 DataLogging::~DataLogging() {}
 
-short DataLogging::Log(char* textToLog)
+short DataLogging::Log(string textToLog)
 {
-	if((this->bufferSize > 0) && (strcmp(textToLog,this->bufferedText[this->bufferSize-1]) != 0))
+	if((this->bufferSize > 0) && (textToLog != this->bufferedText[this->bufferSize-1]))
 	{
 		if(bufferSize < this->maxBufferSize)
 		{
-			this->bufferedText[bufferSize] = strcat(getTime(), + textToLog);
+			this->bufferedText[bufferSize] = (string)(getTime()) + (string)(textToLog);
 			this->bufferSize++;
 		}
 		else
@@ -28,11 +33,16 @@ short DataLogging::Log(char* textToLog)
 		this->bufferedText[bufferSize] = textToLog;
 		this->bufferSize++;
 	}
+	else
+	{
+		return 1;
+	}
+	return 0;
 }
 
 void DataLogging::writeBuffer()
 {
-	this->file.open(strcat(strcat(this->fileName, std::to_string(this->fileNumber)), ".txt"));
+	this->file.open(this->fileName + std::to_string(this->fileNumber) + (string)".txt");
 	for(int i = 0; i < this->bufferSize; i++)
 	{
 		this->file << bufferedText[i] << std::endl;
@@ -47,5 +57,5 @@ std::string DataLogging::getTime()
 	time(&(this->rawtime));
 	// Translate raw time value into time, taking into consideration the local time zone
 	this->timeinfo = localtime(&(this->rawtime));
-	return strcat(strcat("[", asctime(this->timeinfo)), "] ");
+	return (string)("[") + (string)(asctime(this->timeinfo)) + (string)("]");
 }

@@ -15,7 +15,7 @@ class DataLogging
 public:
 	DataLogging();
 	~DataLogging();
-	short Log(char*);
+	short Log(string);
 
 private:
 	string* bufferedText;
