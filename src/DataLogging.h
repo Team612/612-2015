@@ -6,7 +6,6 @@
 #include <iostream>
 #include <fstream>
 #include <time.h>
-#include <string.h>
 
 typedef std::string string;
 
