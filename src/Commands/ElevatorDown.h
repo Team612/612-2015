@@ -7,7 +7,7 @@
 class ElevatorDown: public CommandBase
 {
 public:
-	ExampleCommand();
+	ElevatorDown();
 	void Initialize();
 	void Execute();
 	bool IsFinished();

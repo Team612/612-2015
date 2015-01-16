@@ -7,7 +7,7 @@
 class ElevatorToPosition: public CommandBase
 {
 public:
-	ExampleCommand();
+	ElevatorToPosition();
 	void Initialize();
 	void Execute();
 	bool IsFinished();
