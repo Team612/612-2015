@@ -1,7 +1,7 @@
 612-2015
 ========
 
-This is the code repository for the [FRC](http://www.usfirst.org/roboticsprograms/frc/) [Team 612 Chantilly Robotics](http://chantillyrobotics.org/) robot competing in the 2014-2015 season game Recycle Rush.
+This is the code repository for the [Chantilly Robotics](http://chantillyrobotics.org/) [FIRST](http://www.usfirst.org/roboticsprograms/frc/) Team 612 robot competing in the 2014-2015 season game Recycle Rush.
 
 The code uses the C++ programming language and the [WPILIB](http://first.wpi.edu/FRC/).   
 
