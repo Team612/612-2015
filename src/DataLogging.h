@@ -5,6 +5,10 @@
 
 #include <iostream>
 #include <fstream>
+#include <time.h>
+#include <string.h>
+
+typedef std::string string;
 
 class DataLogging
 {
@@ -14,13 +18,16 @@ public:
 	short Log(char*);
 
 private:
-	char** bufferedText;
-	unsigned int bufferSize;
-	const unsigned int maxBufferSize = 64;
+	string* bufferedText;
+	int bufferSize;
+	const int maxBufferSize = 64;
 	void writeBuffer();
 	int fileNumber = 0;
-	const char* fileName = "DataLog";
+	const string fileName = "DataLog";
 	std::ofstream file;
+	string getTime();
+	time_t rawtime;
+	struct tm* timeinfo;
 
 };
 
