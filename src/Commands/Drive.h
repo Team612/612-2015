@@ -1,13 +1,14 @@
-#ifndef ELEVATOR_DOWN_H
-#define ELEVATOR_DOWN_H
+#ifndef Drive_H
+#define Drive_H
 
 #include "../CommandBase.h"
 #include "WPILib.h"
+#include <MecanumDrivetrain.h>
 
-class ElevatorDown: public CommandBase
+class Drive: public CommandBase
 {
 public:
-	ElevatorDown();
+	Drive();
 	void Initialize();
 	void Execute();
 	bool IsFinished();
