@@ -2,10 +2,10 @@
 #include "../RobotMap.h"
 #include <Talon.h>
 
-MecanumDrivetrain::MecanumDrivetrain(uint32_t talonmod1, uint32_t talonchannel1,
-		  uint32_t talonmod2, uint32_t talonchannel2,
-		  uint32_t talonmod3, uint32_t talonchannel3,
-		  uint32_t talonmod4, uint32_t talonchannel4,) :
+MecanumDrivetrain::MecanumDrivetrain(uint8_t talonmod1, uint32_t talonchannel1,
+		                             uint8_t talonmod2, uint32_t talonchannel2,
+		                             uint8_t talonmod3, uint32_t talonchannel3,
+		                             uint8_t talonmod4, uint32_t talonchannel4):
 		Subsystem("MecanumDrivetrain"),
 		RobotDrive(new Talon(talonmod1, talonchannel1),
 				   new Talon(talonmod2, talonchannel2),
@@ -18,8 +18,8 @@ MecanumDrivetrain::MecanumDrivetrain(uint32_t talonmod1, uint32_t talonchannel1,
 void MecanumDrivetrain::InitDefaultCommand()
 {
 	// Set the default command for a subsystem here.
-	//SetDefaultCommand(new MySpecialCommand());
-	SetDefaultCommand(new Drive());
+
+	//SetDefaultCommand(new Drive());
 }
 
 // Put methods for controlling this subsystem
