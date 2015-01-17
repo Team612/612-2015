@@ -11,7 +11,7 @@ class TestMotors: public CommandBase
 {
 private:
 	Timer* testMotorTimer;
-	MecanumDrivetrain* drive;
+	//MecanumDrivetrain* drive;
 	bool isTestDone;
 public:
 	TestMotors();
