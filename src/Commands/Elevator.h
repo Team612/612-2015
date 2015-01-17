@@ -1,13 +1,13 @@
-#ifndef EXAMPLE_COMMAND_H
-#define EXAMPLE_COMMAND_H
+#ifndef ELEVATOR_H
+#define ELEVATOR_H
 
 #include "../CommandBase.h"
 #include "WPILib.h"
 
-class ExampleCommand: public CommandBase
+class Elevator: public CommandBase
 {
 public:
-	ExampleCommand();
+	Elevator();
 	void Initialize();
 	void Execute();
 	bool IsFinished();
@@ -15,4 +15,4 @@ public:
 	void Interrupted();
 };
 
-#endif
+#endif /* ELEVATOR_H */
