@@ -27,16 +27,12 @@ void CommandAutonomousSimple::Initialize()
  */
 void CommandAutonomousSimple::Execute()
 {
-	Talon(1) -> Set(1.0); //Move the robot forward
-	Talon(2) -> Set(1.0);
-	Talon(3) -> Set(1.0);
-	Talon(4) -> Set(1.0);
-
+	drive -> move(1.0,0,0); //Move the robot forward to score points
 }
 
 bool CommandAutonomousSimple::IsFinished()
 {
-	if(timer -> Get() >= 4) //Check to see if timer is at 4 seconds or more
+	if(timer -> Get() >= 4.0) //Check to see if timer is at 4 seconds or more
 	{
 		return true;
 	}
@@ -52,7 +48,7 @@ bool CommandAutonomousSimple::IsFinished()
  */
 void CommandAutonomousSimple::End()
 {
-	delete Timer; //Delete timer
+	delete timer; //Deletes timer for more memory
 }
 
 

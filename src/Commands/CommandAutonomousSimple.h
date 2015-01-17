@@ -3,6 +3,7 @@
 
 #include "../CommandBase.h"
 #include "WPILib.h"
+#include "MecanumDrivetrain.h"
 
 
 class CommandAutonomousSimple: public CommandBase
