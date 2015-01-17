@@ -55,7 +55,7 @@ void ExampleCommand::End()
  * This method is used if the Subsystem has a requires() statement or if the Command was created
  * by a whileHeld() button action.  When the button is released, the active Command becomes interrupted
  * and canceled.
- *//
+ */
 void ExampleCommand::Interrupted()
 {
 
