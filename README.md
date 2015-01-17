@@ -8,18 +8,21 @@ The code uses the C++ programming language and the [WPILIB](http://first.wpi.edu
 Contributors:
 =============
 
-* Benjamin Ward
-* Swaraj Dhumne
-* Calvin Godfrey
-* Ethan Huey
-* Shaun Wu
-* Zack Alfakir
-* Ahmad Bamba
-* Paola Henriquez
-* Champ Dietzel
-* Jonathan Wang
-* Zach Perkins
-* Ben Nguyen
-* David Fiumano
-* Jeff Tolbert
+| Name            | Github Username |
+|-----------------|-----------------|
+| Benjamin Ward   | WardBenjamin    |
+| Swaraj Dhumne   | swarage         |
+| Zack Alfakir    | ZackAlfakir     |
+| Ethan Huey      | ethanhuey       |
+| Shaun Wu        | Alexbay218      |
+| Calvin Godfrey  | ggodfrey        |
+| Ahmad Bamba     | Ahmad-Bamba     |
+| Paola Henriquez | PaolaHenriquez  |
+| Champ Dietzel   | ChampD          |
+| Johnathan Wang  | Jonathan5252    |
+| Zach Perkins    | ZachPerkins1    |
+| Ben Nguyen      | BenNgu          |
+| David Fuimano   | DavidFiumano    |
+| Jeff Tolbert    | JeffTolbert     |
+| Sid Sridhar     | 1266119
 
