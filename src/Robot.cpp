@@ -3,6 +3,8 @@
 #include "Commands/ExampleCommand.h"
 #include "CommandBase.h"
 #include <cstdio>
+#include <JoyStick.h>
+#include <Talon.h>
 
 class Robot: public IterativeRobot
 {
@@ -26,7 +28,6 @@ private:
 		robotDrive = new RobotDrive(new Talon(1), new Talon(2), new Talon(3), new Talon(4));//The 4 talons
 		joystick = new Joystick(1);//Right hand joystick
 		speedgun = new BuiltInAccelerometer(); // New accelerometer called speedgun
-
 	}
 	
 	void DisabledPeriodic()
@@ -88,6 +89,11 @@ private:
 	{
 
 		
+	}
+	float spinMotor()
+	{
+		float input = joystick->GetRawAxis(2);
+		talon->Set(input);
 	}
 };
 
