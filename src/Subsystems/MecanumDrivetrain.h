@@ -17,10 +17,30 @@ public:
 					  uint8_t talonmod3, uint32_t talonchannel3,
 					  uint8_t talonmod4, uint32_t talonchannel4);
 	void InitDefaultCommand();
+
+	void moveForwards();
+	void moveBackwards();
+	void moveLeft();
+	void moveRight();
+
 	void moveForwards(float rotationf);
 	void moveBackwards(float rotationb);
 	void moveLeft(float rotationl);
 	void moveRight(float rotationr);
+
+	void moveForwards(float directionf, float rotationf);
+	void moveBackwards(float directionb, float rotationb);
+	void moveLeft(float directionl, float rotationl);
+	void moveRight(float directionr, float rotationr);
+
+	void moveForwards(float speedf, float directionf, float rotationf);
+	void moveBackwards(float speedb, float directionb, float rotationb);
+	void moveLeft(float speedl, float directionl, float rotationl);
+	void moveRight(float speedr, float directionr, float rotationr);
+
+	void rotate(float angle);
+
+	void stop();
 };
 
 #endif
