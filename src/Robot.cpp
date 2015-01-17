@@ -11,6 +11,8 @@ private:
 	LiveWindow* lw;
 	RobotDrive* robotDrive;
 	Joystick* joystick;
+	Talon* firstTalon
+	Talon* secondTalon
 	//all acceleration is measured in meters per second squared
 	BuiltInAccelerometer* speedgun; // Used for speedgun, a accelerometer
 	double currentAcceleration = 0; // used for acceleration and accelerometer
@@ -21,8 +23,8 @@ private:
 		CommandBase::init();
 		autonomousCommand = new ExampleCommand();
 		lw = LiveWindow::GetInstance();
-		robotDrive = new RobotDrive(new Talon(1), new Talon(2), new Talon(3), new Talon(4));
-		joystick = new Joystick(1);
+		robotDrive = new RobotDrive(new Talon(1), new Talon(2), new Talon(3), new Talon(4));//The 4 talons
+		joystick = new Joystick(1);//Right hand joystick
 		speedgun = new BuiltInAccelerometer(); // New accelerometer called speedgun
 
 	}
@@ -56,7 +58,7 @@ private:
 	void TeleopPeriodic()
 	{
 		Scheduler::GetInstance()->Run();
-		robotDrive->ArcadeDrive(joystick);
+		
 		static unsigned int TimeChecked = 0;
 		TimeChecked++;
 		currentAcceleration = (speedgun -> GetY())*9.806; // covert from g force to acceleration
@@ -76,6 +78,16 @@ private:
 	void TestPeriodic()
 	{
 		lw->Run();
+		float val = joystick->GetRawAxis(5);//Takes input from joystick
+		firstTalon->Set(val);//Gives joystick input to first talon
+		secondTalon->Set(val);
+		
+	}
+	
+	void TestPulley()
+	{
+
+		
 	}
 };
 
