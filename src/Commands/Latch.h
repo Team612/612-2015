@@ -15,4 +15,4 @@ public:
 	void Interrupted();
 };
 
-#endif /* EXAMPLE_COMMAND_H */
+#endif /* LATCH_H */

@@ -7,7 +7,7 @@ void Latch::Initialize()
 
 }
 
-// Called repeatedly when this Command is scheduled to run
+// Called repeatedly when the Command is scheduled to run
 void Latch::Execute()
 {
 

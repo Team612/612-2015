@@ -7,7 +7,7 @@ void Elevator::Initialize()
 
 }
 
-// Called repeatedly when this Command is scheduled to run
+// Called repeatedly when the Command is scheduled to run
 void Elevator::Execute()
 {
 
