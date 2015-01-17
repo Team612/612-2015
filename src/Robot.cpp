@@ -11,8 +11,8 @@ private:
 	LiveWindow* lw;
 	RobotDrive* robotDrive;
 	Joystick* joystick;
-	Talon* firstTalon
-	Talon* secondTalon
+	Talon* firstTalon;
+	Talon* secondTalon;
 	//all acceleration is measured in meters per second squared
 	BuiltInAccelerometer* speedgun; // Used for speedgun, a accelerometer
 	double currentAcceleration = 0; // used for acceleration and accelerometer
