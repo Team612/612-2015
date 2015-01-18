@@ -2,15 +2,15 @@
 #include "../RobotMap.h"
 #include <Talon.h>
 
-MecanumDrivetrain::MecanumDrivetrain(uint8_t talonmod1, uint32_t talonchannel1,
-		                             uint8_t talonmod2, uint32_t talonchannel2,
-		                             uint8_t talonmod3, uint32_t talonchannel3,
-		                             uint8_t talonmod4, uint32_t talonchannel4):
+MecanumDrivetrain::MecanumDrivetrain(uint32_t talonchannel1,
+		                             uint32_t talonchannel2,
+		                             uint32_t talonchannel3,
+		                             uint32_t talonchannel4):
 		Subsystem("MecanumDrivetrain"),
-		RobotDrive(new Talon(talonmod1, talonchannel1),
-				   new Talon(talonmod2, talonchannel2),
-				   new Talon(talonmod3, talonchannel3),
-				   new Talon(talonmod4, talonchannel4))
+		RobotDrive(new Talon(talonchannel1),
+				   new Talon(talonchannel2),
+				   new Talon(talonchannel3),
+				   new Talon(talonchannel4))
 {
 	//import trackball or something? idk.
 }
@@ -24,6 +24,10 @@ void MecanumDrivetrain::InitDefaultCommand()
 
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
+void MecanumDrivetrain::move(float magnitude, float direction, float rotation)
+{
+	MecanumDrive_Polar(magnitude,direction,rotation);
+}
 
 void MecanumDrivetrain::moveForwards()
 {
