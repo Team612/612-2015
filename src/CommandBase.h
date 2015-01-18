@@ -7,6 +7,7 @@
 #include "OI.h"
 #include "WPILib.h"
 #include "Subsystems/MecanumDrivetrain.h"
+#include "RobotMap.h"
 
 /**
  * The base for all commands. All atomic commands should subclass CommandBase.
@@ -20,9 +21,9 @@ public:
 	CommandBase();
 	static void init();
 	// Create a single static instance of all of your subsystems
-	static ExampleSubsystem *examplesubsystem;
-	static OI *oi;
-	static MecanumDrivetrain *drive;
+	static ExampleSubsystem* examplesubsystem;
+	static OI* oi;
+	static MecanumDrivetrain* drive;
 };
 
 #endif

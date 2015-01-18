@@ -5,7 +5,7 @@
 #include "WPILib.h"
 #include "../Subsystems/MecanumDrivetrain.h"
 #include <Timer.h>
-#include "../ports.h"
+#include "RobotMap.h"
 
 class TestMotors: public CommandBase
 {
