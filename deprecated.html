@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">WPILibC++
-   &#160;<span id="projectnumber">2015.312.beta</span>
+   &#160;<span id="projectnumber">2015.326</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -77,7 +77,7 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -92,19 +92,25 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
-<dt><a class="anchor" id="_deprecated000001"></a>Global <a class="el" href="classCANJaguar.html#a724fb123fb9694f998cdd5f7da28bcd4">CANJaguar::Disable</a>  () override</dt>
+<dt><a class="anchor" id="_deprecated000001"></a>Member <a class="el" href="classCANJaguar.html#a724fb123fb9694f998cdd5f7da28bcd4">CANJaguar::Disable</a>  () override</dt>
 <dd>Call <a class="el" href="">DisableControl()</a> instead.  </dd>
-<dt><a class="anchor" id="_deprecated000002"></a>Global <a class="el" href="classCANJaguar.html#a2355d55f42083ab82870c79f742620e4">CANJaguar::PIDWrite</a>  (float output)</dt>
+<dt><a class="anchor" id="_deprecated000002"></a>Member <a class="el" href="classCANJaguar.html#a2355d55f42083ab82870c79f742620e4">CANJaguar::PIDWrite</a>  (float output)</dt>
 <dd>Call Set instead. </dd>
-<dt><a class="anchor" id="_deprecated000003"></a>Global <a class="el" href="classCANJaguar.html#a5ce4840f1e80913836cfb2ddb2d7d50b">CANJaguar::StopMotor</a>  ()</dt>
+<dt><a class="anchor" id="_deprecated000003"></a>Member <a class="el" href="classCANJaguar.html#a5ce4840f1e80913836cfb2ddb2d7d50b">CANJaguar::StopMotor</a>  ()</dt>
 <dd>Call DisableControl instead.  </dd>
-<dt><a class="anchor" id="_deprecated000004"></a>Global <a class="el" href="classCANTalon.html#a3e09bf792ecee332f4302c164a080c04">CANTalon::PIDWrite</a>  (float output) override</dt>
+<dt><a class="anchor" id="_deprecated000005"></a>Member <a class="el" href="classCANTalon.html#ad7dce04cbc276a76ca6ea8048da13908">CANTalon::ConfigEncoderCodesPerRev</a>  (uint16_t codesPerRev) override</dt>
+<dd>not implemented  </dd>
+<dt><a class="anchor" id="_deprecated000006"></a>Member <a class="el" href="classCANTalon.html#a83b286995d244b8d9e7530c190ab8eca">CANTalon::ConfigPotentiometerTurns</a>  (uint16_t turns) override</dt>
+<dd>not implemented  </dd>
+<dt><a class="anchor" id="_deprecated000007"></a>Member <a class="el" href="classCANTalon.html#a3e5d464de61b9005f33edd0b9db714ec">CANTalon::ConfigSoftPositionLimits</a>  (double forwardLimitPosition, double reverseLimitPosition) override</dt>
+<dd>not implemented  </dd>
+<dt><a class="anchor" id="_deprecated000004"></a>Member <a class="el" href="classCANTalon.html#a3e09bf792ecee332f4302c164a080c04">CANTalon::PIDWrite</a>  (float output) override</dt>
 <dd>Call Set instead. </dd>
-<dt><a class="anchor" id="_deprecated000005"></a>Global <a class="el" href="classCANTalon.html#ac4dab826cbcb67e04ba7c734dfb088bb">CANTalon::StopMotor</a>  () override</dt>
+<dt><a class="anchor" id="_deprecated000008"></a>Member <a class="el" href="classCANTalon.html#ac4dab826cbcb67e04ba7c734dfb088bb">CANTalon::StopMotor</a>  () override</dt>
 <dd>Call Disable instead.  </dd>
-<dt><a class="anchor" id="_deprecated000006"></a>Global <a class="el" href="classEncoder.html#a9825883787337876f6d62951d7eaac24">Encoder::GetPeriod</a>  ()</dt>
+<dt><a class="anchor" id="_deprecated000009"></a>Member <a class="el" href="classEncoder.html#a9825883787337876f6d62951d7eaac24">Encoder::GetPeriod</a>  ()</dt>
 <dd>Use GetRate() in favor of this method. This returns unscaled periods and GetRate() scales using value from SetDistancePerPulse(). </dd>
-<dt><a class="anchor" id="_deprecated000007"></a>Global <a class="el" href="classEncoder.html#a53e9481bd248b04a00809a3ea69d97c1">Encoder::SetMaxPeriod</a>  (double maxPeriod)</dt>
+<dt><a class="anchor" id="_deprecated000010"></a>Member <a class="el" href="classEncoder.html#a53e9481bd248b04a00809a3ea69d97c1">Encoder::SetMaxPeriod</a>  (double maxPeriod)</dt>
 <dd>Use SetMinRate() in favor of this method. This takes unscaled periods and SetMinRate() scales using value from SetDistancePerPulse().</dd>
 </dl>
 </div></div><!-- contents -->
@@ -112,7 +118,7 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Jan 1 2015 12:29:44 for WPILibC++ by
+    <li class="footer">Generated on Fri Jan 16 2015 22:19:47 for WPILibC++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
