@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">WPILibC++
-   &#160;<span id="projectnumber">2015.312.beta</span>
+   &#160;<span id="projectnumber">2015.326</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -77,7 +77,7 @@ $(document).ready(function(){initNavTree('classCANTalon.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -89,7 +89,8 @@ $(document).ready(function(){initNavTree('classCANTalon.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classCANTalon-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">CANTalon Class Reference</div>  </div>
 </div><!--header-->
@@ -203,9 +204,8 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsSafetyEnabl
 <tr class="memitem:a222a259188498885a344e2a19770e26c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a222a259188498885a344e2a19770e26c"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>GetDescription</b> (char *desc) override</td></tr>
 <tr class="separator:a222a259188498885a344e2a19770e26c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a865c356d54cd491350efefc6cf0cd362"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a865c356d54cd491350efefc6cf0cd362"></a>
-virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCANTalon.html#a865c356d54cd491350efefc6cf0cd362">Get</a> () override</td></tr>
-<tr class="memdesc:a865c356d54cd491350efefc6cf0cd362"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO documentation (see CANJaguar.cpp) <br/></td></tr>
+<tr class="memitem:a865c356d54cd491350efefc6cf0cd362"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCANTalon.html#a865c356d54cd491350efefc6cf0cd362">Get</a> () override</td></tr>
+<tr class="memdesc:a865c356d54cd491350efefc6cf0cd362"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current status of the <a class="el" href="classTalon.html" title="Cross the Road Electronics (CTRE) Talon and Talon SR Speed Controller. ">Talon</a> (usually a sensor value).  <a href="#a865c356d54cd491350efefc6cf0cd362">More...</a><br/></td></tr>
 <tr class="separator:a865c356d54cd491350efefc6cf0cd362"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3549186d2e6fdeeaabbd1648f31e02c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCANTalon.html#ac3549186d2e6fdeeaabbd1648f31e02c">Set</a> (float value, uint8_t syncGroup=0) override</td></tr>
 <tr class="memdesc:ac3549186d2e6fdeeaabbd1648f31e02c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the appropriate output on the talon, depending on the mode.  <a href="#ac3549186d2e6fdeeaabbd1648f31e02c">More...</a><br/></td></tr>
@@ -221,24 +221,25 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a6a8c44252d104634d6a0c580088cbf98"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCANTalon.html#a6a8c44252d104634d6a0c580088cbf98">SetP</a> (double p) override</td></tr>
 <tr class="separator:a6a8c44252d104634d6a0c580088cbf98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac72349fb7837dff1a27c5288416eb1ac"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCANTalon.html#ac72349fb7837dff1a27c5288416eb1ac">SetI</a> (double i) override</td></tr>
-<tr class="memdesc:ac72349fb7837dff1a27c5288416eb1ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO documentation (see CANJaguar.cpp)  <a href="#ac72349fb7837dff1a27c5288416eb1ac">More...</a><br/></td></tr>
+<tr class="memdesc:ac72349fb7837dff1a27c5288416eb1ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the integration constant of the currently selected profile.  <a href="#ac72349fb7837dff1a27c5288416eb1ac">More...</a><br/></td></tr>
 <tr class="separator:ac72349fb7837dff1a27c5288416eb1ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1d9dc5cb06e4efbf57ed10d91f2ee80"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCANTalon.html#ad1d9dc5cb06e4efbf57ed10d91f2ee80">SetD</a> (double d) override</td></tr>
-<tr class="memdesc:ad1d9dc5cb06e4efbf57ed10d91f2ee80"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO documentation (see CANJaguar.cpp)  <a href="#ad1d9dc5cb06e4efbf57ed10d91f2ee80">More...</a><br/></td></tr>
+<tr class="memdesc:ad1d9dc5cb06e4efbf57ed10d91f2ee80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the derivative constant of the currently selected profile.  <a href="#ad1d9dc5cb06e4efbf57ed10d91f2ee80">More...</a><br/></td></tr>
 <tr class="separator:ad1d9dc5cb06e4efbf57ed10d91f2ee80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac147cdb9096848beac85a25d04489d60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCANTalon.html#ac147cdb9096848beac85a25d04489d60">SetF</a> (double f)</td></tr>
+<tr class="memdesc:ac147cdb9096848beac85a25d04489d60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the feedforward value of the currently selected profile.  <a href="#ac147cdb9096848beac85a25d04489d60">More...</a><br/></td></tr>
 <tr class="separator:ac147cdb9096848beac85a25d04489d60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a232b637087900eac7272450015c2be04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCANTalon.html#a232b637087900eac7272450015c2be04">SetIzone</a> (unsigned iz)</td></tr>
 <tr class="memdesc:a232b637087900eac7272450015c2be04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Izone to a nonzero value to auto clear the integral accumulator when the absolute value of CloseLoopError exceeds Izone.  <a href="#a232b637087900eac7272450015c2be04">More...</a><br/></td></tr>
 <tr class="separator:a232b637087900eac7272450015c2be04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6454fc74fcdf5b8afa8da07d08f0290"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCANTalon.html#ae6454fc74fcdf5b8afa8da07d08f0290">SetPID</a> (double p, double i, double d) override</td></tr>
-<tr class="memdesc:ae6454fc74fcdf5b8afa8da07d08f0290"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO documentation (see CANJaguar.cpp) This function does not modify F-gain.  <a href="#ae6454fc74fcdf5b8afa8da07d08f0290">More...</a><br/></td></tr>
+<tr class="memdesc:ae6454fc74fcdf5b8afa8da07d08f0290"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets control values for closed loop control.  <a href="#ae6454fc74fcdf5b8afa8da07d08f0290">More...</a><br/></td></tr>
 <tr class="separator:ae6454fc74fcdf5b8afa8da07d08f0290"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a416e51c661eb35c05b594fa19793eb09"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a416e51c661eb35c05b594fa19793eb09"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPID</b> (double p, double i, double d, double f)</td></tr>
+<tr class="memitem:a416e51c661eb35c05b594fa19793eb09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCANTalon.html#a416e51c661eb35c05b594fa19793eb09">SetPID</a> (double p, double i, double d, double f)</td></tr>
+<tr class="memdesc:a416e51c661eb35c05b594fa19793eb09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets control values for closed loop control.  <a href="#a416e51c661eb35c05b594fa19793eb09">More...</a><br/></td></tr>
 <tr class="separator:a416e51c661eb35c05b594fa19793eb09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bd4172195f43f029a60f66a78fb72c9"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCANTalon.html#a0bd4172195f43f029a60f66a78fb72c9">GetP</a> () override</td></tr>
-<tr class="memdesc:a0bd4172195f43f029a60f66a78fb72c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO documentation (see CANJaguar.cpp)  <a href="#a0bd4172195f43f029a60f66a78fb72c9">More...</a><br/></td></tr>
+<tr class="memdesc:a0bd4172195f43f029a60f66a78fb72c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current proportional constant.  <a href="#a0bd4172195f43f029a60f66a78fb72c9">More...</a><br/></td></tr>
 <tr class="separator:a0bd4172195f43f029a60f66a78fb72c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a1eafa5b839e9e740079d03f53fae12"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCANTalon.html#a9a1eafa5b839e9e740079d03f53fae12">GetI</a> () override</td></tr>
 <tr class="memdesc:a9a1eafa5b839e9e740079d03f53fae12"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO documentation (see CANJaguar.cpp)  <a href="#a9a1eafa5b839e9e740079d03f53fae12">More...</a><br/></td></tr>
@@ -251,17 +252,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPID</b> (double p,
 <tr class="memitem:a4aeb5e2516e6b4a1475186ebee3da321"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCANTalon.html#a4aeb5e2516e6b4a1475186ebee3da321">GetBusVoltage</a> () override</td></tr>
 <tr class="memdesc:a4aeb5e2516e6b4a1475186ebee3da321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the voltage coming in from the battery.  <a href="#a4aeb5e2516e6b4a1475186ebee3da321">More...</a><br/></td></tr>
 <tr class="separator:a4aeb5e2516e6b4a1475186ebee3da321"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1179c6e26aacdead84ba16c3894efe00"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1179c6e26aacdead84ba16c3894efe00"></a>
-virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCANTalon.html#a1179c6e26aacdead84ba16c3894efe00">GetOutputVoltage</a> () override</td></tr>
-<tr class="memdesc:a1179c6e26aacdead84ba16c3894efe00"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO documentation (see CANJaguar.cpp) <br/></td></tr>
+<tr class="memitem:a1179c6e26aacdead84ba16c3894efe00"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCANTalon.html#a1179c6e26aacdead84ba16c3894efe00">GetOutputVoltage</a> () override</td></tr>
 <tr class="separator:a1179c6e26aacdead84ba16c3894efe00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addf6b222e747a57638bb8067ed1ea9ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="addf6b222e747a57638bb8067ed1ea9ae"></a>
 virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCANTalon.html#addf6b222e747a57638bb8067ed1ea9ae">GetOutputCurrent</a> () override</td></tr>
-<tr class="memdesc:addf6b222e747a57638bb8067ed1ea9ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO documentation (see CANJaguar.cpp) <br/></td></tr>
+<tr class="memdesc:addf6b222e747a57638bb8067ed1ea9ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current going through the <a class="el" href="classTalon.html" title="Cross the Road Electronics (CTRE) Talon and Talon SR Speed Controller. ">Talon</a>, in Amperes. <br/></td></tr>
 <tr class="separator:addf6b222e747a57638bb8067ed1ea9ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f47da5a82270f6bb9d6b5c30015f680"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f47da5a82270f6bb9d6b5c30015f680"></a>
 virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCANTalon.html#a1f47da5a82270f6bb9d6b5c30015f680">GetTemperature</a> () override</td></tr>
-<tr class="memdesc:a1f47da5a82270f6bb9d6b5c30015f680"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO documentation (see CANJaguar.cpp) <br/></td></tr>
+<tr class="memdesc:a1f47da5a82270f6bb9d6b5c30015f680"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns temperature of <a class="el" href="classTalon.html" title="Cross the Road Electronics (CTRE) Talon and Talon SR Speed Controller. ">Talon</a>, in degrees Celsius. <br/></td></tr>
 <tr class="separator:a1f47da5a82270f6bb9d6b5c30015f680"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e30edc8e7240e17abce7125a2a6c72c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCANTalon.html#a9e30edc8e7240e17abce7125a2a6c72c">SetPosition</a> (double pos)</td></tr>
 <tr class="memdesc:a9e30edc8e7240e17abce7125a2a6c72c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position value of the selected sensor.  <a href="#a9e30edc8e7240e17abce7125a2a6c72c">More...</a><br/></td></tr>
@@ -333,17 +332,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearStickyFaults</b>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCANTalon.html#a7a6a2ce755982ff35031664736927026">ConfigNeutralMode</a> (<a class="el" href="classCANSpeedController.html#aabc1091d13bc8046db333be0fd6c1da1">NeutralMode</a> mode) override</td></tr>
 <tr class="memdesc:a7a6a2ce755982ff35031664736927026"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO documentation (see CANJaguar.cpp) <br/></td></tr>
 <tr class="separator:a7a6a2ce755982ff35031664736927026"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7dce04cbc276a76ca6ea8048da13908"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad7dce04cbc276a76ca6ea8048da13908"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCANTalon.html#ad7dce04cbc276a76ca6ea8048da13908">ConfigEncoderCodesPerRev</a> (uint16_t codesPerRev) override</td></tr>
-<tr class="memdesc:ad7dce04cbc276a76ca6ea8048da13908"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO documentation (see CANJaguar.cpp) <br/></td></tr>
+<tr class="memitem:ad7dce04cbc276a76ca6ea8048da13908"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCANTalon.html#ad7dce04cbc276a76ca6ea8048da13908">ConfigEncoderCodesPerRev</a> (uint16_t codesPerRev) override</td></tr>
 <tr class="separator:ad7dce04cbc276a76ca6ea8048da13908"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83b286995d244b8d9e7530c190ab8eca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a83b286995d244b8d9e7530c190ab8eca"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCANTalon.html#a83b286995d244b8d9e7530c190ab8eca">ConfigPotentiometerTurns</a> (uint16_t turns) override</td></tr>
-<tr class="memdesc:a83b286995d244b8d9e7530c190ab8eca"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO documentation (see CANJaguar.cpp) <br/></td></tr>
+<tr class="memitem:a83b286995d244b8d9e7530c190ab8eca"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCANTalon.html#a83b286995d244b8d9e7530c190ab8eca">ConfigPotentiometerTurns</a> (uint16_t turns) override</td></tr>
 <tr class="separator:a83b286995d244b8d9e7530c190ab8eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e5d464de61b9005f33edd0b9db714ec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e5d464de61b9005f33edd0b9db714ec"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCANTalon.html#a3e5d464de61b9005f33edd0b9db714ec">ConfigSoftPositionLimits</a> (double forwardLimitPosition, double reverseLimitPosition) override</td></tr>
-<tr class="memdesc:a3e5d464de61b9005f33edd0b9db714ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO documentation (see CANJaguar.cpp) <br/></td></tr>
+<tr class="memitem:a3e5d464de61b9005f33edd0b9db714ec"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCANTalon.html#a3e5d464de61b9005f33edd0b9db714ec">ConfigSoftPositionLimits</a> (double forwardLimitPosition, double reverseLimitPosition) override</td></tr>
 <tr class="separator:a3e5d464de61b9005f33edd0b9db714ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fda4cb5db6d3b4b400222f549d91621"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5fda4cb5db6d3b4b400222f549d91621"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCANTalon.html#a5fda4cb5db6d3b4b400222f549d91621">DisableSoftPositionLimits</a> () override</td></tr>
@@ -552,6 +545,33 @@ static <a class="el" href="classError.html">Error</a>&#160;</td><td class="memIt
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ad7dce04cbc276a76ca6ea8048da13908"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CANTalon::ConfigEncoderCodesPerRev </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>codesPerRev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd>not implemented </dd></dl>
+
+<p>Implements <a class="el" href="classCANSpeedController.html">CANSpeedController</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a5da34dc5d266817f0a666868f20429d8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -610,6 +630,33 @@ static <a class="el" href="classError.html">Error</a>&#160;</td><td class="memIt
 
 </div>
 </div>
+<a class="anchor" id="a83b286995d244b8d9e7530c190ab8eca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CANTalon::ConfigPotentiometerTurns </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>turns</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated:</a></b></dt><dd>not implemented </dd></dl>
+
+<p>Implements <a class="el" href="classCANSpeedController.html">CANSpeedController</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a247a8434375eb32171058d61f366e7be"></a>
 <div class="memitem">
 <div class="memproto">
@@ -633,6 +680,72 @@ static <a class="el" href="classError.html">Error</a>&#160;</td><td class="memIt
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="a3e5d464de61b9005f33edd0b9db714ec"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CANTalon::ConfigSoftPositionLimits </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>forwardLimitPosition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>reverseLimitPosition</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated:</a></b></dt><dd>not implemented </dd></dl>
+
+<p>Implements <a class="el" href="classCANSpeedController.html">CANSpeedController</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a865c356d54cd491350efefc6cf0cd362"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CANTalon::Get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the current status of the <a class="el" href="classTalon.html" title="Cross the Road Electronics (CTRE) Talon and Talon SR Speed Controller. ">Talon</a> (usually a sensor value). </p>
+<p>In Current mode: returns output current. In Speed mode: returns current speed. In Position mode: returns current sensor position. In PercentVbus and Follower modes: returns current applied throttle.</p>
+<dl class="section return"><dt>Returns</dt><dd>The current sensor value of the <a class="el" href="classTalon.html" title="Cross the Road Electronics (CTRE) Talon and Talon SR Speed Controller. ">Talon</a>. </dd></dl>
+
+<p>Implements <a class="el" href="classCANSpeedController.html#a33570cb39ad4686ae8e8d35520a39175">CANSpeedController</a>.</p>
 
 </div>
 </div>
@@ -752,7 +865,7 @@ static <a class="el" href="classError.html">Error</a>&#160;</td><td class="memIt
 </div><div class="memdoc">
 
 <p>Returns the voltage coming in from the battery. </p>
-<dl class="section return"><dt>Returns</dt><dd>The input voltage in vols. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The input voltage in volts. </dd></dl>
 
 <p>Implements <a class="el" href="classCANSpeedController.html">CANSpeedController</a>.</p>
 
@@ -966,6 +1079,32 @@ static <a class="el" href="classError.html">Error</a>&#160;</td><td class="memIt
 
 </div>
 </div>
+<a class="anchor" id="a1179c6e26aacdead84ba16c3894efe00"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CANTalon::GetOutputVoltage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The voltage being output by the <a class="el" href="classTalon.html" title="Cross the Road Electronics (CTRE) Talon and Talon SR Speed Controller. ">Talon</a>, in Volts. </dd></dl>
+
+<p>Implements <a class="el" href="classCANSpeedController.html">CANSpeedController</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a0bd4172195f43f029a60f66a78fb72c9"></a>
 <div class="memitem">
 <div class="memproto">
@@ -987,7 +1126,8 @@ static <a class="el" href="classError.html">Error</a>&#160;</td><td class="memIt
 </table>
 </div><div class="memdoc">
 
-<p>TODO documentation (see CANJaguar.cpp) </p>
+<p>Get the current proportional constant. </p>
+<dl class="section return"><dt>Returns</dt><dd>double proportional constant for current profile. </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classCANTalon.html#a0f478462884ed5e541179821c44b724f" title="SRX has two available slots for PID. ">SelectProfileSlot</a> to choose between the two sets of gains. </dd></dl>
 
 <p>Implements <a class="el" href="classCANSpeedController.html">CANSpeedController</a>.</p>
@@ -1256,7 +1396,7 @@ static <a class="el" href="classError.html">Error</a>&#160;</td><td class="memIt
 </div><div class="memdoc">
 
 <p>Sets the appropriate output on the talon, depending on the mode. </p>
-<p>In PercentVbus, the output is between -1.0 and 1.0, with 0.0 as stopped. In Voltage mode, outputValue is in volts. In Current mode, outputValue is in amperes. In Speed mode, outputValue is in position change / 10ms. In Position mode, outputValue is in encoder ticks or an analog value, depending on the sensor.</p>
+<p>In PercentVbus, the output is between -1.0 and 1.0, with 0.0 as stopped. In Voltage mode, output value is in volts. In Current mode, output value is in amperes. In Speed mode, output value is in position change / 10ms. In Position mode, output value is in encoder ticks or an analog value, depending on the sensor. In Follower mode, the output value is the integer device ID of the talon to duplicate.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">outputValue</td><td>The setpoint value, as described above. </td></tr>
@@ -1316,7 +1456,13 @@ static <a class="el" href="classError.html">Error</a>&#160;</td><td class="memIt
 </table>
 </div><div class="memdoc">
 
-<p>TODO documentation (see CANJaguar.cpp) </p>
+<p>Set the derivative constant of the currently selected profile. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Derivative constant for the currently selected PID profile. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classCANTalon.html#a0f478462884ed5e541179821c44b724f" title="SRX has two available slots for PID. ">SelectProfileSlot</a> to choose between the two sets of gains. </dd></dl>
 
 <p>Implements <a class="el" href="classCANSpeedController.html">CANSpeedController</a>.</p>
@@ -1336,6 +1482,14 @@ static <a class="el" href="classError.html">Error</a>&#160;</td><td class="memIt
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set the feedforward value of the currently selected profile. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>Feedforward constant for the currently selected PID profile. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classCANTalon.html#a0f478462884ed5e541179821c44b724f" title="SRX has two available slots for PID. ">SelectProfileSlot</a> to choose between the two sets of gains. </dd></dl>
 
 </div>
@@ -1362,7 +1516,13 @@ static <a class="el" href="classError.html">Error</a>&#160;</td><td class="memIt
 </table>
 </div><div class="memdoc">
 
-<p>TODO documentation (see CANJaguar.cpp) </p>
+<p>Set the integration constant of the currently selected profile. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>Integration constant for the currently selected PID profile. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classCANTalon.html#a0f478462884ed5e541179821c44b724f" title="SRX has two available slots for PID. ">SelectProfileSlot</a> to choose between the two sets of gains. </dd></dl>
 
 <p>Implements <a class="el" href="classCANSpeedController.html">CANSpeedController</a>.</p>
@@ -1459,10 +1619,66 @@ static <a class="el" href="classError.html">Error</a>&#160;</td><td class="memIt
 </table>
 </div><div class="memdoc">
 
-<p>TODO documentation (see CANJaguar.cpp) This function does not modify F-gain. </p>
-<p>Considerable passing a zero for f using the four-parameter function. </p>
+<p>Sets control values for closed loop control. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>Proportional constant. </td></tr>
+    <tr><td class="paramname">i</td><td>Integration constant. </td></tr>
+    <tr><td class="paramname">d</td><td>Differential constant. This function does not modify F-gain. Considerable passing a zero for f using the four-parameter function. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="classCANSpeedController.html">CANSpeedController</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a416e51c661eb35c05b594fa19793eb09"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CANTalon::SetPID </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets control values for closed loop control. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>Proportional constant. </td></tr>
+    <tr><td class="paramname">i</td><td>Integration constant. </td></tr>
+    <tr><td class="paramname">d</td><td>Differential constant. </td></tr>
+    <tr><td class="paramname">f</td><td>Feedforward constant. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1564,7 +1780,7 @@ static <a class="el" href="classError.html">Error</a>&#160;</td><td class="memIt
 </div><div class="memdoc">
 
 <p>Common interface for stopping the motor Part of the <a class="el" href="classMotorSafety.html">MotorSafety</a> interface. </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd>Call Disable instead. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd>Call Disable instead. </dd></dl>
 
 <p>Implements <a class="el" href="classMotorSafety.html">MotorSafety</a>.</p>
 
@@ -1580,7 +1796,7 @@ static <a class="el" href="classError.html">Error</a>&#160;</td><td class="memIt
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classCANTalon.html">CANTalon</a></li>
-    <li class="footer">Generated on Thu Jan 1 2015 12:29:45 for WPILibC++ by
+    <li class="footer">Generated on Fri Jan 16 2015 22:19:48 for WPILibC++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

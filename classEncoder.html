@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">WPILibC++
-   &#160;<span id="projectnumber">2015.312.beta</span>
+   &#160;<span id="projectnumber">2015.326</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -77,7 +77,7 @@ $(document).ready(function(){initNavTree('classEncoder.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -88,7 +88,9 @@ $(document).ready(function(){initNavTree('classEncoder.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classEncoder-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Encoder Class Reference</div>  </div>
 </div><!--header-->
@@ -113,6 +115,27 @@ Inheritance diagram for Encoder:</div>
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a9d4ed467f3b45baa9a5de0a513cca538"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>IndexingType</b> { <b>kResetWhileHigh</b>, 
+<b>kResetWhileLow</b>, 
+<b>kResetOnFallingEdge</b>, 
+<b>kResetOnRisingEdge</b>
+ }</td></tr>
+<tr class="separator:a9d4ed467f3b45baa9a5de0a513cca538"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classCounterBase"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classCounterBase')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classCounterBase.html">CounterBase</a></td></tr>
+<tr class="memitem:a3ce9d74c53e2571c1951cbb8e40eb88d inherit pub_types_classCounterBase"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>EncodingType</b> { <b>k1X</b>, 
+<b>k2X</b>, 
+<b>k4X</b>
+ }</td></tr>
+<tr class="separator:a3ce9d74c53e2571c1951cbb8e40eb88d inherit pub_types_classCounterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classPIDSource"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classPIDSource')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classPIDSource.html">PIDSource</a></td></tr>
+<tr class="memitem:a467d118a5800b6fa2a181c81195b2250 inherit pub_types_classPIDSource"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>PIDSourceParameter</b> { <b>kDistance</b>, 
+<b>kRate</b>, 
+<b>kAngle</b>
+ }</td></tr>
+<tr class="separator:a467d118a5800b6fa2a181c81195b2250 inherit pub_types_classPIDSource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae4a9a3cf8d8eeefa5712d2fdcaebc624"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEncoder.html#ae4a9a3cf8d8eeefa5712d2fdcaebc624">Encoder</a> (uint32_t aChannel, uint32_t bChannel, bool reverseDirection=false, EncodingType encodingType=k4X)</td></tr>
@@ -178,6 +201,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a08665d9e47c9fa77606dfe8611612e73"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEncoder.html#a08665d9e47c9fa77606dfe8611612e73">PIDGet</a> ()</td></tr>
 <tr class="memdesc:a08665d9e47c9fa77606dfe8611612e73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement the <a class="el" href="classPIDSource.html" title="PIDSource interface is a generic sensor source for the PID class. ">PIDSource</a> interface.  <a href="#a08665d9e47c9fa77606dfe8611612e73">More...</a><br/></td></tr>
 <tr class="separator:a08665d9e47c9fa77606dfe8611612e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5298cee0d95902f23a9e852ba23c603"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEncoder.html#af5298cee0d95902f23a9e852ba23c603">SetIndexSource</a> (uint32_t channel, IndexingType type=kResetOnRisingEdge)</td></tr>
+<tr class="memdesc:af5298cee0d95902f23a9e852ba23c603"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the index source for the encoder.  <a href="#af5298cee0d95902f23a9e852ba23c603">More...</a><br/></td></tr>
+<tr class="separator:af5298cee0d95902f23a9e852ba23c603"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4704ab007627c162b97bedcba9f12eec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEncoder.html#a4704ab007627c162b97bedcba9f12eec">SetIndexSource</a> (<a class="el" href="classDigitalSource.html">DigitalSource</a> *source, IndexingType type=kResetOnRisingEdge)</td></tr>
+<tr class="memdesc:a4704ab007627c162b97bedcba9f12eec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the index source for the encoder.  <a href="#a4704ab007627c162b97bedcba9f12eec">More...</a><br/></td></tr>
+<tr class="separator:a4704ab007627c162b97bedcba9f12eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab108fe45b89c6bb709ce9d9495c1d65f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEncoder.html#ab108fe45b89c6bb709ce9d9495c1d65f">SetIndexSource</a> (<a class="el" href="classDigitalSource.html">DigitalSource</a> &amp;source, IndexingType type=kResetOnRisingEdge)</td></tr>
+<tr class="memdesc:ab108fe45b89c6bb709ce9d9495c1d65f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the index source for the encoder.  <a href="#ab108fe45b89c6bb709ce9d9495c1d65f">More...</a><br/></td></tr>
+<tr class="separator:ab108fe45b89c6bb709ce9d9495c1d65f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f6a1ab80e3590e2687551b22d8669e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f6a1ab80e3590e2687551b22d8669e4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEncoder.html#a2f6a1ab80e3590e2687551b22d8669e4">UpdateTable</a> ()</td></tr>
 <tr class="memdesc:a2f6a1ab80e3590e2687551b22d8669e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the table for this sendable object with the latest values. <br/></td></tr>
@@ -241,18 +273,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_types_classCounterBase"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classCounterBase')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classCounterBase.html">CounterBase</a></td></tr>
-<tr class="memitem:a3ce9d74c53e2571c1951cbb8e40eb88d inherit pub_types_classCounterBase"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>EncodingType</b> { <b>k1X</b>, 
-<b>k2X</b>, 
-<b>k4X</b>
- }</td></tr>
-<tr class="separator:a3ce9d74c53e2571c1951cbb8e40eb88d inherit pub_types_classCounterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_types_classPIDSource"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classPIDSource')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classPIDSource.html">PIDSource</a></td></tr>
-<tr class="memitem:a467d118a5800b6fa2a181c81195b2250 inherit pub_types_classPIDSource"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>PIDSourceParameter</b> { <b>kDistance</b>, 
-<b>kRate</b>, 
-<b>kAngle</b>
- }</td></tr>
-<tr class="separator:a467d118a5800b6fa2a181c81195b2250 inherit pub_types_classPIDSource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classSensorBase"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classSensorBase')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classSensorBase.html">SensorBase</a></td></tr>
 <tr class="memitem:aac521c8617e84c41c3e7c921302cdcc6 inherit pub_static_methods_classSensorBase"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSensorBase.html#aac521c8617e84c41c3e7c921302cdcc6">DeleteSingletons</a> ()</td></tr>
 <tr class="memdesc:aac521c8617e84c41c3e7c921302cdcc6 inherit pub_static_methods_classSensorBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete all the singleton classes on the list.  <a href="#aac521c8617e84c41c3e7c921302cdcc6">More...</a><br/></td></tr>
@@ -655,7 +675,7 @@ static <a class="el" href="classError.html">Error</a>&#160;</td><td class="memIt
 
 <p>Returns the period of the most recent pulse. </p>
 <p>Returns the period of the most recent <a class="el" href="classEncoder.html" title="Class to read quad encoders. ">Encoder</a> pulse in seconds. This method compensates for the decoding type.</p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated:</a></b></dt><dd>Use <a class="el" href="classEncoder.html#a72423acddb85ee347fc213b8600843f7" title="Get the current rate of the encoder. ">GetRate()</a> in favor of this method. This returns unscaled periods and <a class="el" href="classEncoder.html#a72423acddb85ee347fc213b8600843f7" title="Get the current rate of the encoder. ">GetRate()</a> scales using value from <a class="el" href="classEncoder.html#a0bfacc84063e402077f1f620ea863ce5" title="Set the distance per pulse for this encoder. ">SetDistancePerPulse()</a>.</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated:</a></b></dt><dd>Use <a class="el" href="classEncoder.html#a72423acddb85ee347fc213b8600843f7" title="Get the current rate of the encoder. ">GetRate()</a> in favor of this method. This returns unscaled periods and <a class="el" href="classEncoder.html#a72423acddb85ee347fc213b8600843f7" title="Get the current rate of the encoder. ">GetRate()</a> scales using value from <a class="el" href="classEncoder.html#a0bfacc84063e402077f1f620ea863ce5" title="Set the distance per pulse for this encoder. ">SetDistancePerPulse()</a>.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Period in seconds of the most recent pulse. </dd></dl>
 
 <p>Implements <a class="el" href="classCounterBase.html">CounterBase</a>.</p>
@@ -915,6 +935,114 @@ static <a class="el" href="classError.html">Error</a>&#160;</td><td class="memIt
 
 </div>
 </div>
+<a class="anchor" id="af5298cee0d95902f23a9e852ba23c603"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Encoder::SetIndexSource </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Encoder::IndexingType&#160;</td>
+          <td class="paramname"><em>type</em> = <code>kResetOnRisingEdge</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the index source for the encoder. </p>
+<p>When this source is activated, the encoder count automatically resets.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>A DIO channel to set as the encoder index </td></tr>
+    <tr><td class="paramname">type</td><td>The state that will cause the encoder to reset </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4704ab007627c162b97bedcba9f12eec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Encoder::SetIndexSource </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classDigitalSource.html">DigitalSource</a> *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Encoder::IndexingType&#160;</td>
+          <td class="paramname"><em>type</em> = <code>kResetOnRisingEdge</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the index source for the encoder. </p>
+<p>When this source is activated, the encoder count automatically resets.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>A digital source to set as the encoder index </td></tr>
+    <tr><td class="paramname">type</td><td>The state that will cause the encoder to reset </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab108fe45b89c6bb709ce9d9495c1d65f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Encoder::SetIndexSource </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classDigitalSource.html">DigitalSource</a> &amp;&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Encoder::IndexingType&#160;</td>
+          <td class="paramname"><em>type</em> = <code>kResetOnRisingEdge</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the index source for the encoder. </p>
+<p>When this source is activated, the encoder count automatically resets.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>A digital source to set as the encoder index </td></tr>
+    <tr><td class="paramname">type</td><td>The state that will cause the encoder to reset </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a53e9481bd248b04a00809a3ea69d97c1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -939,7 +1067,7 @@ static <a class="el" href="classError.html">Error</a>&#160;</td><td class="memIt
 
 <p>Sets the maximum period for stopped detection. </p>
 <p>Sets the value that represents the maximum period of the <a class="el" href="classEncoder.html" title="Class to read quad encoders. ">Encoder</a> before it will assume that the attached device is stopped. This timeout allows users to determine if the wheels or other shaft has stopped rotating. This method compensates for the decoding type.</p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated:</a></b></dt><dd>Use <a class="el" href="classEncoder.html#aed57d1224b55a28c666f2888102efbec" title="Set the minimum rate of the device before the hardware reports it stopped. ">SetMinRate()</a> in favor of this method. This takes unscaled periods and <a class="el" href="classEncoder.html#aed57d1224b55a28c666f2888102efbec" title="Set the minimum rate of the device before the hardware reports it stopped. ">SetMinRate()</a> scales using value from <a class="el" href="classEncoder.html#a0bfacc84063e402077f1f620ea863ce5" title="Set the distance per pulse for this encoder. ">SetDistancePerPulse()</a>.</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>Use <a class="el" href="classEncoder.html#aed57d1224b55a28c666f2888102efbec" title="Set the minimum rate of the device before the hardware reports it stopped. ">SetMinRate()</a> in favor of this method. This takes unscaled periods and <a class="el" href="classEncoder.html#aed57d1224b55a28c666f2888102efbec" title="Set the minimum rate of the device before the hardware reports it stopped. ">SetMinRate()</a> scales using value from <a class="el" href="classEncoder.html#a0bfacc84063e402077f1f620ea863ce5" title="Set the distance per pulse for this encoder. ">SetDistancePerPulse()</a>.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">maxPeriod</td><td>The maximum time between rising and falling edges before the FPGA will report the device stopped. This is expressed in seconds. </td></tr>
@@ -1059,7 +1187,7 @@ static <a class="el" href="classError.html">Error</a>&#160;</td><td class="memIt
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classEncoder.html">Encoder</a></li>
-    <li class="footer">Generated on Thu Jan 1 2015 12:29:45 for WPILibC++ by
+    <li class="footer">Generated on Fri Jan 16 2015 22:19:48 for WPILibC++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

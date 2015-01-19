@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">WPILibC++
-   &#160;<span id="projectnumber">2015.312.beta</span>
+   &#160;<span id="projectnumber">2015.326</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -77,7 +77,7 @@ $(document).ready(function(){initNavTree('classDoubleSolenoid.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -89,7 +89,8 @@ $(document).ready(function(){initNavTree('classDoubleSolenoid.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classDoubleSolenoid-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">DoubleSolenoid Class Reference</div>  </div>
 </div><!--header-->
@@ -383,8 +384,8 @@ static <a class="el" href="classError.html">Error</a>&#160;</td><td class="memIt
 <p>Uses the default PCM ID of 0 </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">forwardChannel</td><td>The forward channel number on the PCM. </td></tr>
-    <tr><td class="paramname">reverseChannel</td><td>The reverse channel number on the PCM. </td></tr>
+    <tr><td class="paramname">forwardChannel</td><td>The forward channel number on the PCM (0..7). </td></tr>
+    <tr><td class="paramname">reverseChannel</td><td>The reverse channel number on the PCM (0..7). </td></tr>
   </table>
   </dd>
 </dl>
@@ -425,8 +426,8 @@ static <a class="el" href="classError.html">Error</a>&#160;</td><td class="memIt
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">moduleNumber</td><td>The CAN ID of the PCM. </td></tr>
-    <tr><td class="paramname">forwardChannel</td><td>The forward channel on the module to control. </td></tr>
-    <tr><td class="paramname">reverseChannel</td><td>The reverse channel on the module to control. </td></tr>
+    <tr><td class="paramname">forwardChannel</td><td>The forward channel on the PCM to control (0..7). </td></tr>
+    <tr><td class="paramname">reverseChannel</td><td>The reverse channel on the PCM to control (0..7). </td></tr>
   </table>
   </dd>
 </dl>
@@ -628,7 +629,7 @@ static <a class="el" href="classError.html">Error</a>&#160;</td><td class="memIt
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classDoubleSolenoid.html">DoubleSolenoid</a></li>
-    <li class="footer">Generated on Thu Jan 1 2015 12:29:45 for WPILibC++ by
+    <li class="footer">Generated on Fri Jan 16 2015 22:19:48 for WPILibC++ by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
