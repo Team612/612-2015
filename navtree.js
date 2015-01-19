@@ -2,11 +2,11 @@ var NAVTREE =
 [
   [ "WPILibC++", "index.html", [
     [ "Deprecated List", "deprecated.html", null ],
-    [ "Data Structures", null, [
-      [ "Data Structures", "annotated.html", "annotated" ],
-      [ "Data Structure Index", "classes.html", null ],
+    [ "Classes", null, [
+      [ "Class List", "annotated.html", "annotated" ],
+      [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
-      [ "Data Fields", "functions.html", [
+      [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ],
@@ -16,7 +16,11 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Files", null, [
-      [ "File List", "files.html", "files" ]
+      [ "File List", "files.html", "files" ],
+      [ "File Members", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Functions", "globals_func.html", null ]
+      ] ]
     ] ]
   ] ]
 ];
@@ -24,14 +28,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "ADXL345__I2C_8h_source.html",
-"classAnalogOutput.html#ab5e9f41bce004b747f9c9245eeb189fd",
-"classCANJaguar.html#adbc881307dd349405e6058c055c45f81",
-"classCanTalonSRX.html#a6fa0f9ac9ef20e317d4ab037becdc6adaa4b317b598aa156ac8cb26bac5db2359",
-"classCounter.html#a929a270422ce7fe72955f76e33e60fd2",
-"classHSLImage.html",
-"classPIDSubsystem.html#a3d729af7b0753459e02a1f8d9ac8c0db",
-"classSampleRobot.html",
-"classWaitCommand.html#a272bb9b16371f8ca22c5fc807d76f1e7"
+"classADXL345__SPI.html#ad8f5adbd1cffd033a4c165f037dd6614",
+"classCANJaguar.html#a5c8d5fd51104e6bf512534bb95ac48d7",
+"classCameraServer.html#a805965c4083ac8b747076857da1b5f28",
+"classCommandGroup.html#a7c85be5c78703c542bbda74fc4173202",
+"classEncoder.html#a9d4ed467f3b45baa9a5de0a513cca538",
+"classMotorSafety.html#addc7856cb3e0c51385efc81d5e659ada",
+"classRobotDrive.html#a0ed67ac95f87cdb444674b706ff3cf19",
+"classTalonSRX.html#a672477993faafdc2bcf8d9937cd5ee08",
+"structColorReport__struct.html#a83dddadd68e27ca7ff1669f6eacf0db6"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
