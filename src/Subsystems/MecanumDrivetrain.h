@@ -19,7 +19,6 @@ public:
 	void InitDefaultCommand();
 
 	void move(float magnitude, float direction, float rotation);
-
 	void stop();
 };
 

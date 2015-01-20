@@ -24,6 +24,10 @@ void MecanumDrivetrain::InitDefaultCommand()
 
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
+void MecanumDrivetrain::move(float magnitude, float direction, float rotation)
+{
+	MecanumDrive_Polar(magnitude,direction,rotation);
+}
 
 void MecanumDrivetrain::move(float magnitude, float direction, float rotation)
 {
