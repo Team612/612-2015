@@ -5,11 +5,12 @@
 class Robot: public IterativeRobot
 {
 private:
-	Command *autonomousCommand;
+	Command* autonomousCommand;
 	LiveWindow* lw;
 	Joystick* joystick;
 	Talon* firstTalon;
 	Talon* secondTalon;
+	Talon* thirdTalon;
 	//all acceleration is measured in meters per second squared
 	BuiltInAccelerometer* speedgun; // Used for speedgun, a accelerometer
 	double currentAcceleration = 0; // used for acceleration and accelerometer
