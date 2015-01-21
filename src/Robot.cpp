@@ -3,6 +3,8 @@
 #include "Commands/ExampleCommand.h"
 #include "CommandBase.h"
 #include <cstdio>
+#include <JoyStick.h>
+#include <Talon.h>
 #include "Subsystems/MecanumDrivetrain.h"
 #include "Robot.h"
 #include "RobotMap.h"
@@ -18,10 +20,39 @@ void Robot::RobotInit()
 	speedgun = new BuiltInAccelerometer(); // New accelerometer called speedgun
 	robot = this;
 }
+
 void Robot::DisabledInit()
 {
+private:
+	Command *autonomousCommand;
+	LiveWindow* lw;
+	RobotDrive* robotDrive;
+	Joystick* joystick;
+	Talon* firstTalon;
+	Talon* secondTalon;
+	Talon* thirdTalon;
+	//all acceleration is measured in meters per second squared
+	BuiltInAccelerometer* speedgun; // Used for speedgun, a accelerometer
+	double currentAcceleration = 0; // used for acceleration and accelerometer
+	double maxAcceleration = 0; // used for highest acceleration during total run time
+
+	void RobotInit()
+	{
+		CommandBase::init();
+		autonomousCommand = new ExampleCommand();
+		lw = LiveWindow::GetInstance();
+		robotDrive = new RobotDrive(new Talon(1), new Talon(2), new Talon(3), new Talon(4));//The 4 talons
+		joystick = new Joystick(1);//This is the X-Box controller for left and right
+		speedgun = new BuiltInAccelerometer(); // New accelerometer called speedgun
+	}
+	
+	void DisabledPeriodic()
+	{
+		Scheduler::GetInstance()->Run();
+	}
 
 }
+
 void Robot::DisabledPeriodic()
 {
 	Scheduler::GetInstance()->Run();
@@ -61,6 +92,15 @@ void Robot::TeleopPeriodic()
 	}
 	if (TimeChecked == 30) //print every half second
 	{
+		lw->Run();
+		float val = joystick->GetRawAxis(5);//Takes input from joystick
+		float leftYAxis = joystick->GetRawAxis(2);
+		firstTalon->Set(val);//Gives joystick input to first talon
+		secondTalon->Set(val);
+		thirdTalon->Set(leftYAxis);
+	}
+};
+
 		printf("Raw G-force on Y-axis is %f meters per second per second \n", speedgun -> GetY()); //prints raw g-force
 		printf("Acceleration is %f meters per second per second \n", currentAcceleration); //prints currentAcceleration
 		printf("Max acceleration is %f meters per second per second \n", maxAcceleration); //prints maxAcceleration
@@ -81,11 +121,6 @@ void Robot::TestPeriodic()
 	
 }
 
-void Robot::TestPulley()
-{
-
-
-}
 
 START_ROBOT_CLASS(Robot);
 
