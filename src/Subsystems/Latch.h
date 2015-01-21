@@ -1,18 +1,14 @@
 #ifndef Latch_H
 #define Latch_H
 
-#include "../CommandBase.h"
 #include "WPILib.h"
 
-class Latch: public CommandBase
+class Latch: public Subsystem
 {
 public:
 	Latch();
-	void Initialize();
-	void Execute();
-	bool IsFinished();
-	void End();
-	void Interrupted();
+	void Open();
+	void Close();
 };
 
 #endif /* LATCH_H */
