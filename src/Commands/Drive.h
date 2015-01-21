@@ -1,13 +1,14 @@
-#ifndef EXAMPLE_COMMAND_H
-#define EXAMPLE_COMMAND_H
+#ifndef Drive_H
+#define Drive_H
 
 #include "../CommandBase.h"
 #include "WPILib.h"
+#include "../Subsystems/MecanumDrivetrain.h"
 
-class ExampleCommand: public CommandBase
+class Drive: public CommandBase
 {
 public:
-	ExampleCommand();
+	Drive();
 	void Initialize();
 	void Execute();
 	bool IsFinished();

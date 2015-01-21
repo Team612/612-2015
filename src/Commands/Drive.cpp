@@ -1,38 +1,38 @@
-#include "ExampleCommand.h"
+#include "Drive.h"
 
-ExampleCommand::ExampleCommand()
+Drive::Drive()
 {
 	// Use Requires() here to declare subsystem dependencies
 	// eg. Requires(chassis);
 }
 
 // Called just before this Command runs the first time
-void ExampleCommand::Initialize()
+void Drive::Initialize()
 {
 
 }
 
 // Called repeatedly when this Command is scheduled to run
-void ExampleCommand::Execute()
+void Drive::Execute()
 {
 
 }
 
 // Make this return true when this Command no longer needs to run execute()
-bool ExampleCommand::IsFinished()
+bool Drive::IsFinished()
 {
 	return false;
 }
 
 // Called once after isFinished returns true
-void ExampleCommand::End()
+void Drive::End()
 {
 
 }
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
-void ExampleCommand::Interrupted()
+void Drive::Interrupted()
 {
 
 }
