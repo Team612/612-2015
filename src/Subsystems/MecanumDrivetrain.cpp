@@ -28,6 +28,7 @@ void MecanumDrivetrain::move(float magnitude, float direction, float rotation)
 {
 	MecanumDrive_Polar(magnitude, direction, rotation);
 }
+
 void MecanumDrivetrain::stop()
 {
 	MecanumDrive_Polar(0.0f, 0.0f, 0.0f);
