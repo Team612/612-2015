@@ -17,7 +17,7 @@ CommandAutonomousSimple::CommandAutonomousSimple(Robot* r)
  */
 void CommandAutonomousSimple::Initialize()
 {
-	timer -> Start(); //Start the timer
+	timer->Start(); //Start the timer
 }
 
 /** Called repeatedly when this Command is scheduled to run
@@ -33,7 +33,7 @@ void CommandAutonomousSimple::Execute()
 
 bool CommandAutonomousSimple::IsFinished()
 {
-	if(timer -> Get() >= 4.0) //Check to see if timer is at 4 seconds or more
+	if(timer->Get() >= 4.0) //Check to see if timer is at 4 seconds or more
 	{
 		return true;
 	}
@@ -57,4 +57,3 @@ void CommandAutonomousSimple::Interrupted()
 {
 
 }
-

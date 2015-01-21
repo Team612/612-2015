@@ -26,14 +26,9 @@ void MecanumDrivetrain::InitDefaultCommand()
 // here. Call these from Commands.
 void MecanumDrivetrain::move(float magnitude, float direction, float rotation)
 {
-	MecanumDrive_Polar(magnitude,direction,rotation);
-}
-
-void MecanumDrivetrain::move(float magnitude, float direction, float rotation)
-{
 	MecanumDrive_Polar(magnitude, direction, rotation);
 }
 void MecanumDrivetrain::stop()
 {
-	MecanumDrive_Polar(0.0, 0.0, 0.0);
+	MecanumDrive_Polar(0.0f, 0.0f, 0.0f);
 }
