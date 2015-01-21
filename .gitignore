@@ -6,3 +6,4 @@
 build.*
 .settings/language.settings.xml
 *.xml
+/Simulate/
