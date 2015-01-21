@@ -6,7 +6,9 @@ TestMotors::TestMotors()
 	// eg. Requires(chassis);
 
 	isTestDone = false;
-	this->testMotorTimer = new Timer();
+
+	testMotorTimer = new Timer();
+
 	//MecanumDrivetrain* drive = new MecanumDrivetrain(TALON1_CHANNEL, TALON2_CHANNEL, TALON3_CHANNEL, TALON4_CHANNEL);
 
 	Requires(drive);

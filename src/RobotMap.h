@@ -15,10 +15,10 @@
 //const int LEFTMOTOR = 1;
 //const int RIGHTMOTOR = 2;
 
-const int MOTOR_LR = 1;
-const int MOTOR_LF = 2;
-const int MOTOR_RR = 3;
-const int MOTOR_RF = 4;
+const uint32_t MOTOR_LR = 1;
+const uint32_t MOTOR_LF = 2;
+const uint32_t MOTOR_RR = 3;
+const uint32_t MOTOR_RF = 4;
 
 // If you are using multiple modules, make sure to define both the port
 // number and the module. For example you with a rangefinder:
