@@ -20,6 +20,8 @@ const uint32_t MOTOR_LF = 2;
 const uint32_t MOTOR_RR = 3;
 const uint32_t MOTOR_RF = 4;
 
+const uint32_t ELEVATOR_CHANNEL = 5;
+
 // If you are using multiple modules, make sure to define both the port
 // number and the module. For example you with a rangefinder:
 //const int RANGE_FINDER_PORT = 1;

@@ -1,18 +1,19 @@
-#ifndef ELEVATOR_H
-#define ELEVATOR_H
+#ifndef EXAMPLE_SUBSYSTEM_H
+#define EXAMPLE_SUBSYSTEM_H
 
-#include "../CommandBase.h"
+#include "Commands/Subsystem.h"
 #include "WPILib.h"
 
-class Elevator: public CommandBase
+class Elevator: public Subsystem
 {
+private:
+	Talon* controller;
 public:
-	Elevator();
-	void Initialize();
-	void Execute();
-	bool IsFinished();
-	void End();
-	void Interrupted();
+	Elevator(uint32_t channel);
+	void InitDefaultCommand();
+	void move(float magnitude);
+	void stop();
 };
 
-#endif /* ELEVATOR_H */
+#endif
+

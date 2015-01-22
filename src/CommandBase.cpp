@@ -2,6 +2,7 @@
 #include "Subsystems/ExampleSubsystem.h"
 #include "Commands/Scheduler.h"
 #include "Subsystems/MecanumDrivetrain.h"
+#include "Subsystems/Elevator.h"
 #include "RobotMap.h"
 
 // Initialize a single static instance of all of your subsystems to NULL
@@ -27,4 +28,5 @@ void CommandBase::init()
 	examplesubsystem = new ExampleSubsystem();
 	oi = new OI();
 	drive = new MecanumDrivetrain(TALON1_CHANNEL, TALON2_CHANNEL, TALON3_CHANNEL, TALON4_CHANNEL);
+	elevator = new Elevator(ELEVATOR_CHANNEL);
 }

@@ -1,33 +1,31 @@
 #include "Elevator.h"
+#include "../RobotMap.h"
 
+Elevator::Elevator(uint32_t channel) :
+		Subsystem("Elevator")
+{
+	controller = new Talon(channel);
+}
 
-// Called just before this Command runs the first time
-void Elevator::Initialize()
+void Elevator::InitDefaultCommand()
+{
+	// Set the default command for a subsystem here.
+	//SetDefaultCommand(new MySpecialCommand());
+}
+
+void Elevator::move(float magnitude)
+{
+	controller -> Set(0.1);
+}
+
+void Elevator::stop()
 {
 
 }
 
-// Called repeatedly when the Command is scheduled to run
-void Elevator::Execute()
-{
 
-}
 
-// Make this return true when this Command no longer needs to run execute()
-bool Elevator::IsFinished()
-{
-	return false;
-}
+// Put methods for controlling this subsystem
+// here. Call these from Commands.
 
-// Called once after isFinished returns true
-void Elevator::End()
-{
 
-}
-
-// Called when another command which requires one or more of the same
-// subsystems is scheduled to run
-void Elevator::Interrupted()
-{
-
-}

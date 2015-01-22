@@ -7,6 +7,7 @@
 #include "OI.h"
 #include "WPILib.h"
 #include "Subsystems/MecanumDrivetrain.h"
+#include "Subsystems/Elevator.h"
 #include "RobotMap.h"
 
 /**
@@ -24,6 +25,7 @@ public:
 	static ExampleSubsystem* examplesubsystem;
 	static OI* oi;
 	static MecanumDrivetrain* drive;
+	static Elevator* elevator;
 };
 
 #endif
