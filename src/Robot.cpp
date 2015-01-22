@@ -19,7 +19,7 @@ private:
 		robotDrive = new RobotDrive(new Talon(1), new Talon(2), new Talon(3), new Talon(4));
 		joystick = new Joystick(1);
 	}
-	
+
 	void DisabledPeriodic()
 	{
 		Scheduler::GetInstance()->Run();
@@ -44,6 +44,7 @@ private:
 		// this line or comment it out.
 		if (autonomousCommand != NULL)
 			autonomousCommand->Cancel();
+		robotDrive->SetSafetyEnabled(false);
 	}
 
 	void TeleopPeriodic()
