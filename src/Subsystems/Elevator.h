@@ -7,11 +7,13 @@
 class Elevator : public Subsystem {
 private:
 	Talon* talon;
+	Encoder* encoder;
 public:
-	Elevator();
+	Elevator(uint32_t channel);
 	virtual ~Elevator();
 	void move(float magnitude);
 	void stop();
+	void InitDefaultCommand();
 };
 
 #endif /* SRC_SUBSYSTEMS_ELEVATOR_H_ */

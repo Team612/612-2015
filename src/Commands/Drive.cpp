@@ -34,10 +34,12 @@ bool Drive::IsFinished()
 // Called once after isFinished returns true
 void Drive::End()
 {
+	// Called repeatedly when this Co
 	drive -> stop();
 }
 
-// Called when another command which requires one or more of the same
+// Called when another comma
+// Called repeatedly when this Cond which requires one or more of the same
 // subsystems is scheduled to run
 void Drive::Interrupted()
 {

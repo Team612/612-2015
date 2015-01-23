@@ -30,5 +30,5 @@ void CommandBase::init()
 	examplesubsystem = new ExampleSubsystem();
 	oi = new OI();
 	drive = new MecanumDrivetrain(TALON1_CHANNEL, TALON2_CHANNEL, TALON3_CHANNEL, TALON4_CHANNEL);
-	elevator = new Elevator();
+	elevator = new Elevator(ELEVATOR_CHANNEL);
 }
