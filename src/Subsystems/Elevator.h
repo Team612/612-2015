@@ -1,19 +1,17 @@
-#ifndef EXAMPLE_SUBSYSTEM_H
-#define EXAMPLE_SUBSYSTEM_H
+#ifndef SRC_SUBSYSTEMS_ELEVATOR_H_
+#define SRC_SUBSYSTEMS_ELEVATOR_H_
 
 #include "Commands/Subsystem.h"
 #include "WPILib.h"
 
-class Elevator: public Subsystem
-{
+class Elevator : public Subsystem {
 private:
-	Talon* controller;
+	Talon* talon;
 public:
-	Elevator(uint32_t channel);
-	void InitDefaultCommand();
+	Elevator();
+	virtual ~Elevator();
 	void move(float magnitude);
 	void stop();
 };
 
-#endif
-
+#endif /* SRC_SUBSYSTEMS_ELEVATOR_H_ */
