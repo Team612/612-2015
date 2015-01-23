@@ -14,16 +14,10 @@ void SmoothJoystick::InitDefaultCommand()
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
 
-void SmoothJoystick::InitJoystick() //Run this first!
-{
-	joystick = new Joystick(1);
-}
 
 //Below, JoystickHand is used to see which joystick you want. left = 0, right = 1
 float SmoothJoystick::GetValue(int JoystickHand, int Axis) //Axis is used to find out whether you want y or x axis. x = 0, y = 1
 {
-	float Value = 0; //Used to return the value wanted
-	float DeadZone = 0.1; //Used to filter signals
 
 	if (Axis == 0) //Check to see if it is the x axis you want
 	{
@@ -37,7 +31,7 @@ float SmoothJoystick::GetValue(int JoystickHand, int Axis) //Axis is used to fin
 		}
 		else
 		{
-			return 0; //In case arguments are not appropriate
+			return 0.0; //In case arguments are not appropriate
 		}
 	}
 	else if (Axis == 1) //Check to see if it is the y axis you want
@@ -52,18 +46,18 @@ float SmoothJoystick::GetValue(int JoystickHand, int Axis) //Axis is used to fin
 		}
 		else
 		{
-			return 0; //In case arguments are not appropriate
+			return 0.0; //In case arguments are not appropriate
 		}
 		Value *= -1; //Used to reverse the y value cause up was negative and down was positive (CONFUSING RIGHT?)
 	}
 	else
 	{
-		return 0; //In case arguments are not appropriate
+		return 0.0; //In case arguments are not appropriate
 	}
 
 	if (Value <= DeadZone)
 	{
-		return 0; //To filter signals
+		return 0.0; //To filter signals
 	}
 
 	return Value; //Return the value you want

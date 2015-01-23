@@ -11,12 +11,16 @@ private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
 	Joystick *joystick;
+	joystick = new Joystick(1);
+	float Value = 0.0; //Used to return the value wanted
+	float DeadZone = 0.1; //Used to filter signals
+
 
 public:
 	SmoothJoystick(); //Constructor
 	void InitDefaultCommand();
-	void InitJoystick();
 	float GetValue(int JoystickHand, int Axis);
+
 	/*
 	 * GetValue() can be used to get value of an joystick (Run InitJoystick() first).
 	 * X axis = 0, y axis = 1
