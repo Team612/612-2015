@@ -12,8 +12,8 @@ private:
     // The variable type would be either a Relay or Solenoid
     // see https://chantilly612code.github.io/612-2015/classRelay.html
     // see https://chantilly612code.github.io/612-2015/classSolenoid.html
-	Solenoid solenoid;
-	Relay relay;
+	Solenoid* solenoid;
+	Relay* relay;
 
 public:
 	Latch();
@@ -21,4 +21,4 @@ public:
 	void Close();
 };
 
-#endif /* LATCH_H */
+#endif /*LATCH_H*/

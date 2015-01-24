@@ -11,7 +11,7 @@ TestMotors::TestMotors()
 
 	//MecanumDrivetrain* drive = new MecanumDrivetrain(TALON1_CHANNEL, TALON2_CHANNEL, TALON3_CHANNEL, TALON4_CHANNEL);
 
-	Requires(drive);
+	Requires(drivetrain);
 }
 
 // Called just before this Command runs the first time
@@ -25,11 +25,11 @@ void TestMotors::Execute()
 {
 	if(!testMotorTimer->HasPeriodPassed(10.0))
 	{
-		drive->move(0.5, 0.0, 0.0);
+		drivetrain->move(0.5, 0.0, 0.0);
 	}
 	else
 	{
-		drive->stop();
+		drivetrain->stop();
 		isTestDone = true;
 	}
 
@@ -51,6 +51,6 @@ void TestMotors::End()
 // subsystems is scheduled to run
 void TestMotors::Interrupted()
 {
-	drive->stop();
+	drivetrain->stop();
 	testMotorTimer->Stop();
 }

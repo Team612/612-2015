@@ -1,33 +1,49 @@
-#include "Elevator.h"
+#include <Subsystems/Elevator.h>
 
-
-// Called just before this Command runs the first time
-void Elevator::Initialize()
+Elevator::Elevator() :
+	Subsystem("Elevator")
 {
-
+	talon = new Talon(ELEVATOR_MOTOR);
+	topSwitch = new DigitalInput(ELEVATOR_TOP_SWITCH);
+	bottomSwitch = new DigitalInput(ELEVATOR_BOTTOM_SWITCH);
+	encoder = new Encoder(ELEVATOR_ENCODER_A, ELEVATOR_ENCODER_B);
 }
 
-// Called repeatedly when the Command is scheduled to run
-void Elevator::Execute()
+Elevator::~Elevator()
 {
-
+	delete talon;
 }
 
-// Make this return true when this Command no longer needs to run execute()
-bool Elevator::IsFinished()
+void Elevator::InitDefaultCommand()
 {
-	return false;
+	//SetDefaultCommand(new ElevatorUp());
 }
 
-// Called once after isFinished returns true
-void Elevator::End()
+void Elevator::move(float magnitude)
 {
+	//Checks the sensors to see if the elevator is at the top or the bottom
+	bool topInput = topSwitch->Get();
+	bool bottomInput = bottomSwitch->Get();
 
+	//If the sensors give any input then the motors are set to a speed of 0
+	if (topInput || bottomInput)
+	{
+		talon->Set(0);
+	}
+	else
+	{
+		talon->Set(magnitude);
+	}
 }
 
-// Called when another command which requires one or more of the same
-// subsystems is scheduled to run
-void Elevator::Interrupted()
+void Elevator::stop()
 {
-
+	//Sets motor speed to nothing
+	talon->Set(0);
 }
+
+Encoder* Elevator::getEncoder()
+{
+	return encoder;
+}
+

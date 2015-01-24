@@ -6,7 +6,7 @@ Drive::Drive()
 	// Use Requires() here to declare subsystem dependencies
 	// eg. Requires(chassis);
 
-	Requires(drive);
+	Requires(drivetrain);
 
 }
 
@@ -34,7 +34,8 @@ void Drive::End()
 	drivetrain->stop();
 }
 
-// Called when another command which requires one or more of the same
+// Called when another comma
+// Called repeatedly when this Cond which requires one or more of the same
 // subsystems is scheduled to run
 void Drive::Interrupted()
 {

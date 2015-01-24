@@ -6,6 +6,7 @@
 #include "Subsystems/ExampleSubsystem.h"
 #include "OI.h"
 #include "WPILib.h"
+#include "Subsystems/Elevator.h"
 #include "Subsystems/MecanumDrivetrain.h"
 #include "RobotMap.h"
 
@@ -23,6 +24,7 @@ public:
 	// Create a single static instance of all of your subsystems
 	static ExampleSubsystem* examplesubsystem;
 	static OI* oi;
+	static Elevator* elevator;
 	static MecanumDrivetrain* drivetrain;
 };
 
