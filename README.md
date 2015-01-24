@@ -29,4 +29,5 @@ Contributors:
 | Ben Nguyen      | BenNgu          |
 | David Fuimano   | DavidFiumano    |
 | Jeff Tolbert    | JeffTolbert     |
-| Sid Sridhar     | 1266119
+| Sid Sridhar     | 1266119         |
+| Adrian De Vera  | AdrianDeVera    
