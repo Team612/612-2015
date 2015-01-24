@@ -7,7 +7,9 @@
 class ElevatorMoveToPosition: public CommandBase
 {
 private:
-	uint32_t position;
+	uint32_t targetPosition;
+	int targetSpins;
+	const uint32_t INTERVAL = 0; //Placeholder value
 public:
 	ElevatorMoveToPosition(uint32_t position);
 	void Initialize();

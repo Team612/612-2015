@@ -25,9 +25,12 @@ const uint32_t MOTOR_RF = 4;
 //const int RANGE_FINDER_PORT = 1;
 //const int RANGE_FINDER_MODULE = 1;
 
+//Placeholder values for elevator channels
 const uint32_t ELEVATOR_MOTOR = 0;
 const uint32_t ELEVATOR_TOP_SWITCH = 0;
 const uint32_t ELEVATOR_BOTTOM_SWITCH = 0;
+const uint32_t ELEVATOR_ENCODER_A = 0;
+const uint32_t ELEVATOR_ENCODER_B = 0;
 
 static const uint32_t TALON1_CHANNEL = 1;
 static const uint32_t TALON2_CHANNEL = 2;

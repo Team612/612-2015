@@ -6,6 +6,7 @@ Elevator::Elevator(uint32_t channel) :
 	talon = new Talon(channel);
 	topSwitch = new DigitalInput(ELEVATOR_TOP_SWITCH);
 	bottomSwitch = new DigitalInput(ELEVATOR_BOTTOM_SWITCH);
+	encoder = new Encoder(ELEVATOR_ENCODER_A, ELEVATOR_ENCODER_B);
 }
 
 Elevator::~Elevator()
@@ -38,5 +39,10 @@ void Elevator::move(float magnitude)
 void Elevator::stop()
 {
 	talon->Set(0);
+}
+
+Encoder* Elevator::getEncoder()
+{
+	return encoder;
 }
 

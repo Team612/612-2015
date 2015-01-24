@@ -10,12 +10,14 @@ private:
 	Talon* talon;
 	DigitalInput* topSwitch;
 	DigitalInput* bottomSwitch;
+	Encoder* encoder;
 public:
 	Elevator(uint32_t channel);
 	virtual ~Elevator();
 	void move(float magnitude);
 	void stop();
 	void InitDefaultCommand();
+	Encoder* getEncoder();
 };
 
 #endif /* SRC_SUBSYSTEMS_ELEVATOR_H_ */
