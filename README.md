@@ -30,4 +30,4 @@ Contributors:
 | David Fuimano   | DavidFiumano    |
 | Jeff Tolbert    | JeffTolbert     |
 | Sid Sridhar     | 1266119         |
-| Adrian De Vera  | AdrianDeVera    
+| Adrian De Vera  | AdrianDeVera    |
