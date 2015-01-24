@@ -73,9 +73,9 @@ void Robot::TeleopPeriodic()
 		lw->Run();
 		float val = joystick->GetRawAxis(5);//Takes input from joystick
 		float leftYAxis = joystick->GetRawAxis(2);
-		firstTalon->Set(val);//Gives joystick input to first talon
+		/*firstTalon->Set(val);//Gives joystick input to first talon
 		secondTalon->Set(val);
-		thirdTalon->Set(leftYAxis);
+		thirdTalon->Set(leftYAxis);*/
 	}
 
 	printf("Raw G-force on Y-axis is %f meters per second per second \n", speedgun -> GetY()); //prints raw g-force

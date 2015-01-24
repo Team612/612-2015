@@ -1,18 +1,24 @@
 #ifndef Latch_H
 #define Latch_H
 
-#include "../CommandBase.h"
 #include "WPILib.h"
+#include <Solenoid.h>
+#include <Relay.h>
 
-class Latch: public CommandBase
+class Latch: public Subsystem
 {
+private:
+    // I think you're going to need a private variable.
+    // The variable type would be either a Relay or Solenoid
+    // see https://chantilly612code.github.io/612-2015/classRelay.html
+    // see https://chantilly612code.github.io/612-2015/classSolenoid.html
+	Solenoid* solenoid;
+	Relay* relay;
+
 public:
 	Latch();
-	void Initialize();
-	void Execute();
-	bool IsFinished();
-	void End();
-	void Interrupted();
+	void Open();
+	void Close();
 };
 
 #endif /*LATCH_H*/

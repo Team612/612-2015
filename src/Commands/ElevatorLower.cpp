@@ -14,6 +14,7 @@ void ElevatorLower::Initialize()
 // Called repeatedly when this Command is scheduled to run
 void ElevatorLower::Execute()
 {
+	//Using -0.8 as a temporary value
 	elevator -> move(-0.8);
 }
 

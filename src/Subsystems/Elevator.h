@@ -12,7 +12,7 @@ private:
 	DigitalInput* bottomSwitch;
 	Encoder* encoder;
 public:
-	Elevator(uint32_t channel);
+	Elevator();
 	virtual ~Elevator();
 	void move(float magnitude);
 	void stop();

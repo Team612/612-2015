@@ -1,9 +1,9 @@
 #include <Subsystems/Elevator.h>
 
-Elevator::Elevator(uint32_t channel) :
+Elevator::Elevator() :
 	Subsystem("Elevator")
 {
-	talon = new Talon(channel);
+	talon = new Talon(ELEVATOR_MOTOR);
 	topSwitch = new DigitalInput(ELEVATOR_TOP_SWITCH);
 	bottomSwitch = new DigitalInput(ELEVATOR_BOTTOM_SWITCH);
 	encoder = new Encoder(ELEVATOR_ENCODER_A, ELEVATOR_ENCODER_B);
@@ -38,6 +38,7 @@ void Elevator::move(float magnitude)
 
 void Elevator::stop()
 {
+	//Sets motor speed to nothing
 	talon->Set(0);
 }
 

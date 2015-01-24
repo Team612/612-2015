@@ -1,16 +1,13 @@
 #include "Drive.h"
-#include "../CommandBase.h"
-#include "../Subsystems/MecanumDrivetrain.h"
 
-Drive::Drive(float inMagnitude, float inDirection, float inRotation)
+
+Drive::Drive()
 {
 	// Use Requires() here to declare subsystem dependencies
 	// eg. Requires(chassis);
 
-	Requires(drive);
-	magnitude = inMagnitude;
-	direction = inDirection;
-	rotation = inRotation;
+	Requires(drivetrain);
+
 }
 
 // Called just before this Command runs the first time
@@ -20,9 +17,9 @@ void Drive::Initialize()
 }
 
 // Called repeatedly when this Command is scheduled to run
-void Drive::Execute()
+void Drive::Execute(float inMagnitude, float inDirection, float inRotation)
 {
-	drive -> move(magnitude, direction, rotation);
+	drivetrain->move(inMagnitude, inDirection, inRotation);
 }
 
 // Make this return true when this Command no longer needs to run execute()
@@ -34,8 +31,7 @@ bool Drive::IsFinished()
 // Called once after isFinished returns true
 void Drive::End()
 {
-	// Called repeatedly when this Co
-	drive -> stop();
+	drivetrain->stop();
 }
 
 // Called when another comma
@@ -43,5 +39,5 @@ void Drive::End()
 // subsystems is scheduled to run
 void Drive::Interrupted()
 {
-	drive -> stop();
+	drivetrain->stop();
 }
