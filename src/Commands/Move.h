@@ -1,18 +1,21 @@
-#ifndef ELEVATOR_H
-#define ELEVATOR_H
+#ifndef Move_H
+#define Move_H
 
 #include "../CommandBase.h"
 #include "WPILib.h"
+#include <Joystick.h>
 
-class Elevator: public CommandBase
+class Move: public CommandBase
 {
 public:
-	Elevator();
+	Move();
 	void Initialize();
 	void Execute();
 	bool IsFinished();
 	void End();
 	void Interrupted();
+
+	Joystick* driverJoy;
 };
 
-#endif /* ELEVATOR_H */
+#endif

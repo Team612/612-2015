@@ -1,38 +1,40 @@
-#include "Drive.h"
+#include "Move.h"
 
-Drive::Drive()
+Move::Move()
 {
 	// Use Requires() here to declare subsystem dependencies
 	// eg. Requires(chassis);
+	Requires(drivetrain);
+	driverJoy = new Joystick(1);
 }
 
 // Called just before this Command runs the first time
-void Drive::Initialize()
+void Move::Initialize()
 {
 
 }
 
 // Called repeatedly when this Command is scheduled to run
-void Drive::Execute()
+void Move::Execute()
 {
-
+	drivetrain->move(driverJoy->GetY(), driverJoy->GetX(), driverJoy->GetRawAxis(4));
 }
 
 // Make this return true when this Command no longer needs to run execute()
-bool Drive::IsFinished()
+bool Move::IsFinished()
 {
 	return false;
 }
 
 // Called once after isFinished returns true
-void Drive::End()
+void Move::End()
 {
-
+	drivetrain->stahp();
 }
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
-void Drive::Interrupted()
+void Move::Interrupted()
 {
 
 }
