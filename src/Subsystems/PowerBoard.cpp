@@ -53,26 +53,26 @@ double PowerBoard::GetTotalEnergy()
 
 void PowerBoard::ResetTotalEnergy()
 {	
-	return powerboard->ResetTotalEnergy();
+	powerboard->ResetTotalEnergy();
 }
 
-void PowerBoard::ClearStickyDefaults()
+void PowerBoard::ClearStickyFaults()
 {
-	return powerboard->ClearStickyDefaults();
+	powerboard->ClearStickyFaults();
 }
 
 void PowerBoard::UpdateTable()
 {
-	return powerboard->UpdateTable();
+	powerboard->UpdateTable();
 }
 
 void PowerBoard::StartLiveWindowMode()
 {
-	return powerboard->StartLiveWindowMode();
+	powerboard->StartLiveWindowMode();
 }
 
 void PowerBoard::StopLiveWindowMode()
 {
-	return powerboard->StopLiveWindowMode();
+	powerboard->StopLiveWindowMode();
 }
 
