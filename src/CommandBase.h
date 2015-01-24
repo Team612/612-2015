@@ -23,7 +23,7 @@ public:
 	// Create a single static instance of all of your subsystems
 	static ExampleSubsystem* examplesubsystem;
 	static OI* oi;
-	static MecanumDrivetrain* drive;
+	static MecanumDrivetrain* drivetrain;
 };
 
 #endif
