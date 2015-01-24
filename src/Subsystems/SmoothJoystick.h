@@ -1,24 +1,24 @@
-#ifndef MecanumDrivetrain_H
-#define MecanumDrivetrain_H
+#ifndef SmoothJoystick_H
+#define SmoothJoystick_H
 
 #include "Commands/Subsystem.h"
 #include "WPILib.h"
 #include <Joystick.h>
 
-class SmoothJoystick: public Subsystem, public Joystick
+class SmoothJoystick
 {
 private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
-	Joystick *joystick;
-	joystick = new Joystick(1);
 	float Value = 0.0; //Used to return the value wanted
 	float DeadZone = 0.1; //Used to filter signals
+	Joystick *rightjoystick;
+	Joystick *leftjoystick;
 
 
 public:
 	SmoothJoystick(); //Constructor
-	void InitDefaultCommand();
+	//void InitDefaultCommand();
 	float GetValue(int JoystickHand, int Axis);
 
 	/*
