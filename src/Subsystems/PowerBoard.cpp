@@ -14,7 +14,7 @@ void PowerBoard::InitDefaultCommand()
 }
 
 // Put methods for controlling this subsystem
-// here. Call these from Commands.
+// here. Call from Commands
 	
 
 void PowerBoard::InitDefaultCommand()
@@ -23,55 +23,56 @@ void PowerBoard::InitDefaultCommand()
 }
 double PowerBoard::GetVoltage()
 {
-	powerboard->GetVoltage();
+	return powerboard->GetVoltage();
 }
 	
 double PowerBoard::GetTemperature()
 {
-	powerboard->GetTemperature();
+	return powerboard->GetTemperature();
 }
 
 double PowerBoard::GetCurrent(uint8_t channel)
 {
-	powerboard->GetCurrent(channel);
+	return powerboard->GetCurrent(channel);
 }
 
 double PowerBoard::GetTotalCurrent()
 {
-	powerboard->GetTotalCurrent();
+	return powerboard->GetTotalCurrent();
 }
 
 double PowerBoard::GetTotalPower()
 {
-	powerboard->GetTotalPower();
+	return powerboard->GetTotalPower();
 }
 
 double PowerBoard::GetTotalEnergy()
 {
-	powerboard->GetTotalEnergy();
+	return powerboard->GetTotalEnergy();
 }
 
 void PowerBoard::ResetTotalEnergy()
 {	
-	powerboard->ResetTotalEnergy();
+	return powerboard->ResetTotalEnergy();
 }
 
 void PowerBoard::ClearStickyDefaults()
 {
-	powerboard->ClearStickyDefaults();
+	return powerboard->ClearStickyDefaults();
 }
 
 void PowerBoard::UpdateTable()
 {
-	powerboard->UpdateTable();
+	return powerboard->UpdateTable();
 }
 
 void PowerBoard::StartLiveWindowMode()
 {
-	powerboard->StartLiveWindowMode();
+	return powerboard->StartLiveWindowMode();
 }
 
 void PowerBoard::StopLiveWindowMode()
 {
-	powerboard->StopLiveWindowMode();
+	return powerboard->StopLiveWindowMode();
 }
+
