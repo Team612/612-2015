@@ -29,4 +29,8 @@ static const uint32_t TALON2_CHANNEL = 2;
 static const uint32_t TALON3_CHANNEL = 3;
 static const uint32_t TALON4_CHANNEL = 4;
 
+const uint32_t SOLENOID_LATCH = 1;
+
+const uint32_t RELAY_LATCH = 1;
+
 #endif
