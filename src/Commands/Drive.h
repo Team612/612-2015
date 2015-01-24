@@ -6,14 +6,12 @@
 
 class Drive: public CommandBase
 {
-	private:
-	float magnitude;
-	float direction;
-	float rotation;
+private:
+
 public:
-	Drive(float inMagnitude, float inDirection, float inRotation);
+	Drive();
 	void Initialize();
-	void Execute();
+	void Execute(float inMagnitude, float inDirection, float inRotation);
 	bool IsFinished();
 	void End();
 	void Interrupted();
