@@ -20,7 +20,6 @@ private:
 	void DisabledPeriodic()
 	{
 		Scheduler::GetInstance()->Run();
-		moveCommand->End();
 	}
 
 	void AutonomousInit()
@@ -41,7 +40,7 @@ private:
 	void TeleopPeriodic()
 	{
 		printf("Teleop Periodic start");
-		moveCommand->Execute();
+		moveCommand->Start();
 	}
 
 	void TestPeriodic()
