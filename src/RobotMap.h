@@ -21,8 +21,8 @@
 //const int RANGE_FINDER_MODULE = 1;
 
 const uint32_t TALON_FL = 1;
-const uint32_t TALON_FR = 2;
-const uint32_t TALON_BL = 3;
-const uint32_t TALON_BR = 4;
+const uint32_t TALON_FR = 0;
+const uint32_t TALON_BL = 2;
+const uint32_t TALON_BR = 3;
 
 #endif
