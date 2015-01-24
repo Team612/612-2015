@@ -1,0 +1,8 @@
+<map id="GetCameraParametersReport_struct" name="GetCameraParametersReport_struct">
+<area shape="rect" id="node2" href="$struct_internal_parameters__struct.html" title="InternalParameters\l_struct" alt="" coords="148,97,279,138"/>
+<area shape="rect" id="node4" href="$struct_point_float__struct.html" title="PointFloat_struct" alt="" coords="5,5,125,32"/>
+<area shape="rect" id="node6" href="$struct_focal_length__struct.html" title="FocalLength_struct" alt="" coords="151,5,284,32"/>
+<area shape="rect" id="node8" href="$struct_distortion_model_params__struct.html" title="DistortionModelParams\l_struct" alt="" coords="303,97,460,138"/>
+<area shape="rect" id="node10" href="$struct_poly_model__struct.html" title="PolyModel_struct" alt="" coords="312,5,435,32"/>
+<area shape="rect" id="node12" href="$struct_division_model__struct.html" title="DivisionModel_struct" alt="" coords="459,5,600,32"/>
+</map>

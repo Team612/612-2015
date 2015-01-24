@@ -1,0 +1,8 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_button_scheduler.html" title="ButtonScheduler" alt="" coords="6,107,125,133"/>
+<area shape="rect" id="node3" href="$class_cancel_button_scheduler.html" title="CancelButtonScheduler" alt="" coords="181,5,339,32"/>
+<area shape="rect" id="node5" href="$class_held_button_scheduler.html" title="HeldButtonScheduler" alt="" coords="188,56,332,83"/>
+<area shape="rect" id="node7" href="$class_pressed_button_scheduler.html" title="PressedButtonScheduler" alt="" coords="177,107,343,133"/>
+<area shape="rect" id="node9" href="$class_released_button_scheduler.html" title="ReleasedButtonScheduler" alt="" coords="174,157,346,184"/>
+<area shape="rect" id="node11" href="$class_toggle_button_scheduler.html" title="ToggleButtonScheduler" alt="" coords="182,208,338,235"/>
+</map>

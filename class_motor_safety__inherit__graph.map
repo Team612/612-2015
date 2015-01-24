@@ -1,0 +1,12 @@
+<map id="MotorSafety" name="MotorSafety">
+<area shape="rect" id="node3" href="$class_c_a_n_jaguar.html" title="CANJaguar" alt="" coords="5,80,91,107"/>
+<area shape="rect" id="node5" href="$class_c_a_n_talon.html" title="CANTalon" alt="" coords="116,80,196,107"/>
+<area shape="rect" id="node7" href="$class_robot_drive.html" title="RobotDrive" alt="" coords="221,80,304,107"/>
+<area shape="rect" id="node9" href="$class_safe_p_w_m.html" title="SafePWM" alt="" coords="329,80,409,107"/>
+<area shape="rect" id="node11" href="$class_jaguar.html" title="Jaguar" alt="" coords="134,155,193,181"/>
+<area shape="rect" id="node13" href="$class_servo.html" title="Servo" alt="" coords="218,155,272,181"/>
+<area shape="rect" id="node15" href="$class_talon.html" title="Talon" alt="" coords="297,155,351,181"/>
+<area shape="rect" id="node17" href="$class_talon_s_r_x.html" title="TalonSRX" alt="" coords="375,155,453,181"/>
+<area shape="rect" id="node19" href="$class_victor.html" title="Victor" alt="" coords="479,155,535,181"/>
+<area shape="rect" id="node21" href="$class_victor_s_p.html" title="VictorSP" alt="" coords="559,155,633,181"/>
+</map>

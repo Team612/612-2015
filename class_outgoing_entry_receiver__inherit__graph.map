@@ -1,0 +1,9 @@
+<map id="OutgoingEntryReceiver" name="OutgoingEntryReceiver">
+<area shape="rect" id="node3" href="$class_flushable_outgoing_entry_receiver.html" title="FlushableOutgoingEntryReceiver" alt="" coords="208,56,419,83"/>
+<area shape="rect" id="node11" href="$class_outgoing_entry_receiver___n_u_l_l__t.html" title="OutgoingEntryReceiver\l_NULL_t" alt="" coords="236,107,391,149"/>
+<area shape="rect" id="node13" href="$class_transaction_dirtier.html" title="TransactionDirtier" alt="" coords="252,173,375,200"/>
+<area shape="rect" id="node15" href="$class_write_manager.html" title="WriteManager" alt="" coords="262,224,365,251"/>
+<area shape="rect" id="node5" href="$class_client_connection_adapter.html" title="ClientConnectionAdapter" alt="" coords="468,5,633,32"/>
+<area shape="rect" id="node7" href="$class_server_connection_adapter.html" title="ServerConnectionAdapter" alt="" coords="467,56,635,83"/>
+<area shape="rect" id="node9" href="$class_server_connection_list.html" title="ServerConnectionList" alt="" coords="479,107,623,133"/>
+</map>

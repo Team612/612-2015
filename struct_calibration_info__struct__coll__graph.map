@@ -1,0 +1,7 @@
+<map id="CalibrationInfo_struct" name="CalibrationInfo_struct">
+<area shape="rect" id="node2" href="$struct_learn_calibration_options__struct.html" title="LearnCalibrationOptions\l_struct" alt="" coords="219,5,379,46"/>
+<area shape="rect" id="node4" href="$struct_range_float__struct.html" title="RangeFloat_struct" alt="" coords="235,71,363,97"/>
+<area shape="rect" id="node6" href="$struct_grid_descriptor__struct.html" title="GridDescriptor_struct" alt="" coords="226,121,371,148"/>
+<area shape="rect" id="node8" href="$struct_coordinate_system__struct.html" title="CoordinateSystem_struct" alt="" coords="214,172,383,199"/>
+<area shape="rect" id="node10" href="$struct_point_float__struct.html" title="PointFloat_struct" alt="" coords="6,172,127,199"/>
+</map>

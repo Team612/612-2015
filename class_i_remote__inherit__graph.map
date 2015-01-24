@@ -1,0 +1,6 @@
+<map id="IRemote" name="IRemote">
+<area shape="rect" id="node3" href="$class_network_table.html" title="NetworkTable" alt="" coords="5,80,104,107"/>
+<area shape="rect" id="node5" href="$class_network_table_node.html" title="NetworkTableNode" alt="" coords="129,80,260,107"/>
+<area shape="rect" id="node7" href="$class_network_table_client.html" title="NetworkTableClient" alt="" coords="49,155,183,181"/>
+<area shape="rect" id="node9" href="$class_network_table_server.html" title="NetworkTableServer" alt="" coords="207,155,343,181"/>
+</map>

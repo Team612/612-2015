@@ -1,0 +1,10 @@
+<map id="Solenoid" name="Solenoid">
+<area shape="rect" id="node2" href="$class_solenoid_base.html" title="SolenoidBase" alt="" coords="75,277,177,304"/>
+<area shape="rect" id="node4" href="$class_sensor_base.html" title="SensorBase" alt="" coords="5,187,99,213"/>
+<area shape="rect" id="node6" href="$class_error_base.html" title="ErrorBase" alt="" coords="75,109,155,136"/>
+<area shape="rect" id="node10" href="$class_resource.html" title="Resource" alt="" coords="123,187,200,213"/>
+<area shape="rect" id="node8" href="$class_error.html" title="Error" alt="" coords="89,5,140,32"/>
+<area shape="rect" id="node13" href="$class_live_window_sendable.html" title="LiveWindowSendable" alt="" coords="203,277,347,304"/>
+<area shape="rect" id="node15" href="$class_sendable.html" title="Sendable" alt="" coords="237,187,312,213"/>
+<area shape="rect" id="node17" href="$class_i_table_listener.html" title="ITableListener" alt="" coords="371,277,473,304"/>
+</map>
