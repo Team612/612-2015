@@ -25,4 +25,8 @@ const uint32_t MOTOR_RF = 4;
 //const int RANGE_FINDER_PORT = 1;
 //const int RANGE_FINDER_MODULE = 1;
 
+const uint32_t SOLENOID_LATCH = 1;
+
+const uint32_t RELAY_LATCH = 1;
+
 #endif
