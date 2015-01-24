@@ -8,7 +8,7 @@ class PowerBoard: public Subsystem
 private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
-	PowerDistributionPanel* pdb;
+	PowerDistributionPanel* powerboard;
 public:
 	PowerDistributionPanel();//Initializer for panel
 	void InitDefaultCommand();//Figure this out

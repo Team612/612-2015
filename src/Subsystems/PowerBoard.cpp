@@ -4,7 +4,7 @@
 PowerBoard::PowerDistributionPanel() :
 		Subsystem("PowerDistributionPanel");
 {
-	pdb = new PowerDistributionPanel();
+	powerboard = new PowerDistributionPanel();
 }
 
 void PowerBoard::InitDefaultCommand()
@@ -15,69 +15,63 @@ void PowerBoard::InitDefaultCommand()
 
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
-
-
-PowerDistributionPanel()
-{
-	pdb->PowerDistributionPanel();
-}
 	
 
-void InitDefaultCommand()
+void PowerBoard::InitDefaultCommand()
 {
 	//Fill this later
 }
-double GetVoltage()
+double PowerBoard::GetVoltage()
 {
-	pdb->GetVoltage();
+	powerboard->GetVoltage();
 }
 	
-double GetTemperature()
+double PowerBoard::GetTemperature()
 {
-	pdb->GetTemperature();
+	powerboard->GetTemperature();
 }
 
-double GetCurrent(uint8_t channel)
+double PowerBoard::GetCurrent(uint8_t channel)
 {
-	pdb->GetCurrent(channel);
+	powerboard->GetCurrent(channel);
 }
 
-double GetTotalCurrent()
+double PowerBoard::GetTotalCurrent()
 {
-	pdb->GetTotalCurrent();
+	powerboard->GetTotalCurrent();
 }
 
-double GetTotalPower()
+double PowerBoard::GetTotalPower()
 {
-	pdb->GetTotalPower();
+	powerboard->GetTotalPower();
 }
 
-double GetTotalEnergy()
+double PowerBoard::GetTotalEnergy()
 {
-	pdb->GetTotalEnergy();
+	powerboard->GetTotalEnergy();
 }
 
-void ResetTotalEnergy()
+void PowerBoard::ResetTotalEnergy()
 {	
-	pdb->ResetTotalEnergy();
+	powerboard->ResetTotalEnergy();
 }
 
-void ClearStickyDefaults()
+void PowerBoard::ClearStickyDefaults()
 {
-	pdb->ClearStickyDefaults();
+	powerboard->ClearStickyDefaults();
 }
 
-void UpdateTable()
+void PowerBoard::UpdateTable()
 {
-	pdb->UpdateTable();
+	powerboard->UpdateTable();
 }
 
-void StartLiveWindowMode()
+void PowerBoard::StartLiveWindowMode()
 {
-	pdb->StartLiveWindowMode();
+	powerboard->StartLiveWindowMode();
 }
 
-void StopLiveWindowMode()
+void PowerBoard::StopLiveWindowMode()
 {
-	pdb->StopLiveWindowMode();
+	powerboard->StopLiveWindowMode();
 }
