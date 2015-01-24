@@ -8,9 +8,9 @@ class PowerBoard: public Subsystem
 private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
+	PowerDistributionPanel* pdb;
 public:
 	PowerDistributionPanel();//Initializer for panel
-	void InitTable(ITable* subTable)//Inits the table
 	void InitDefaultCommand();//Figure this out
 	double GetVoltage();//Returns input value of the PDP
 	double GetTemperature();//Returns temperature of the PDP
@@ -23,7 +23,6 @@ public:
 	void UpdateTable();//Update the table for this sendable object with the latest values
 	void StartLiveWindowMode();//Starts sendable object automatically respond to value changes reflect value on table
 	void StopLiveWindowMode();//Ends the above
-	ITable* GetTable();//Gets the table
 	
 };
 

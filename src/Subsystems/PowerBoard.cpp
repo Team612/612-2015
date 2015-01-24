@@ -4,10 +4,10 @@
 PowerBoard::PowerDistributionPanel() :
 		Subsystem("PowerDistributionPanel");
 {
-
+	pdb = new PowerDistributionPanel();
 }
 
-void ExampleSubsystem::InitDefaultCommand()
+void PowerBoard::InitDefaultCommand()
 {
 	//Set the default command for a subsystem here.
 	//SetDefaultCommand(new MySpecialCommand());
@@ -19,13 +19,7 @@ void ExampleSubsystem::InitDefaultCommand()
 
 PowerDistributionPanel()
 {
-	PowerDistributionPanel();
-}
-	
-
-void InitTable(ITable* subTable)
-{
-	InitTable(subTable);
+	pdb->PowerDistributionPanel();
 }
 	
 
@@ -35,60 +29,55 @@ void InitDefaultCommand()
 }
 double GetVoltage()
 {
-	GetVoltage();
+	pdb->GetVoltage();
 }
 	
 double GetTemperature()
 {
-	GetTemperature();
+	pdb->GetTemperature();
 }
 
 double GetCurrent(uint8_t channel)
 {
-	GetCurrent(channel);
+	pdb->GetCurrent(channel);
 }
 
 double GetTotalCurrent()
 {
-	GetTotalCurrent();
+	pdb->GetTotalCurrent();
 }
 
 double GetTotalPower()
 {
-	GetTotalPower();
+	pdb->GetTotalPower();
 }
 
 double GetTotalEnergy()
 {
-	GetTotalEnergy();
+	pdb->GetTotalEnergy();
 }
 
 void ResetTotalEnergy()
 {	
-	ResetTotalEnergy();
+	pdb->ResetTotalEnergy();
 }
 
 void ClearStickyDefaults()
 {
-	ClearStickyDefaults();
+	pdb->ClearStickyDefaults();
 }
 
 void UpdateTable()
 {
-	UpdateTable();
+	pdb->UpdateTable();
 }
 
 void StartLiveWindowMode()
 {
-	StartLiveWindowMode();
+	pdb->StartLiveWindowMode();
 }
 
 void StopLiveWindowMode()
 {
-	StopLiveWindowMode();
-}
-
-ITable* GetTable()
-{
-	GetTable();
+	pdb->StopLiveWindowMode();
 }
