@@ -1,13 +1,13 @@
-#ifndef Latch_H
-#define Latch_H
+#ifndef ElevatorLower_H
+#define ElevatorLower_H
 
 #include "../CommandBase.h"
 #include "WPILib.h"
 
-class Latch: public CommandBase
+class ElevatorLower: public CommandBase
 {
 public:
-	Latch();
+	ElevatorLower();
 	void Initialize();
 	void Execute();
 	bool IsFinished();
@@ -15,4 +15,4 @@ public:
 	void Interrupted();
 };
 
-#endif /*LATCH_H*/
+#endif

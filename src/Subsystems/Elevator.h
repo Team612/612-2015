@@ -3,11 +3,13 @@
 
 #include "Commands/Subsystem.h"
 #include "WPILib.h"
+#include "../RobotMap.h"
 
 class Elevator : public Subsystem {
 private:
 	Talon* talon;
-	Encoder* encoder;
+	DigitalInput* topSwitch;
+	DigitalInput* bottomSwitch;
 public:
 	Elevator(uint32_t channel);
 	virtual ~Elevator();

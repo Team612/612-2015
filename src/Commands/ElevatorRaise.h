@@ -1,15 +1,13 @@
-#ifndef ElevatorUp_H
-#define ElevatorUp_H
+#ifndef ElevatorRaise_H
+#define ElevatorRaise_H
 
 #include "../CommandBase.h"
 #include "WPILib.h"
 
-class ElevatorUp: public CommandBase
+class ElevatorRaise: public CommandBase
 {
-private:
-	uint32_t rotations;
 public:
-	ElevatorUp(uint32_t inRotations);
+	ElevatorRaise();
 	void Initialize();
 	void Execute();
 	bool IsFinished();

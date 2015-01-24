@@ -4,6 +4,8 @@ Elevator::Elevator(uint32_t channel) :
 	Subsystem("Elevator")
 {
 	talon = new Talon(channel);
+	topSwitch = new DigitalInput(ELEVATOR_TOP_SWITCH);
+	bottomSwitch = new DigitalInput(ELEVATOR_BOTTOM_SWITCH);
 }
 
 Elevator::~Elevator()
@@ -18,20 +20,23 @@ void Elevator::InitDefaultCommand()
 
 void Elevator::move(float magnitude)
 {
-	/*
-	 - One class for commands
-	 - Requires argument for direction (Enum?)
-	 - Requires argument for amount (Spins)
-	 - Other command that sets the elevator to presets
-	 - Add implementation for time in case there is no encoder
-	 */
+	//Checks the sensors to see if the elevator is at the top or the bottom
+	bool topInput = topSwitch->Get();
+	bool bottomInput = bottomSwitch->Get();
 
-	//Move the elevator up or down
-	talon -> Set(magnitude);
+	//If the sensors give any input then the motors are set to a speed of 0
+	if (topInput || bottomInput)
+	{
+		talon->Set(0);
+	}
+	else
+	{
+		talon->Set(magnitude);
+	}
 }
 
 void Elevator::stop()
 {
-	move(0);
+	talon->Set(0);
 }
 

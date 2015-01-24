@@ -11,7 +11,6 @@ OI* CommandBase::oi = NULL;
 MecanumDrivetrain* CommandBase::drive = NULL;
 Elevator* CommandBase::elevator = NULL;
 
-
 CommandBase::CommandBase(char const *name) :
 		Command(name)
 {
@@ -30,5 +29,5 @@ void CommandBase::init()
 	examplesubsystem = new ExampleSubsystem();
 	oi = new OI();
 	drive = new MecanumDrivetrain(TALON1_CHANNEL, TALON2_CHANNEL, TALON3_CHANNEL, TALON4_CHANNEL);
-	elevator = new Elevator(ELEVATOR_CHANNEL);
+	elevator = new Elevator(ELEVATOR_MOTOR);
 }
