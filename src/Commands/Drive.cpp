@@ -17,9 +17,9 @@ void Drive::Initialize()
 }
 
 // Called repeatedly when this Command is scheduled to run
-void Drive::Execute(float inMagnitude, float inDirection, float inRotation)
+void Drive::Execute(float x, float y, float rotation)
 {
-	drivetrain->move(inMagnitude, inDirection, inRotation);
+	drivetrain->move(x,y,rotation);
 }
 
 // Make this return true when this Command no longer needs to run execute()
