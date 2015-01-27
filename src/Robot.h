@@ -27,6 +27,11 @@ public:
 	void TeleopPeriodic();
 	void TestInit();
 	void TestPeriodic();
+	void DisabledInit();
+	void DisabledPeriodic();
+	//612 functions
+	float getValues(int);
+	void MecDrive(float x,float y,float rotation);
 };
 
 #endif /* SRC_ROBOT_H_ */
