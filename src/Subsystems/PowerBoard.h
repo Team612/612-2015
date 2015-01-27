@@ -10,7 +10,7 @@ private:
 	// for methods that implement subsystem capabilities
 	PowerDistributionPanel* powerboard; 
 public:
-	PowerDistributionPanel();//Initializer for panel
+	PowerBoard();//Initializer for panel
 	void InitDefaultCommand();//Figure this out
 	double GetVoltage();//Returns input value of the PDP
 	double GetTemperature();//Returns temperature of the PDP
@@ -23,7 +23,7 @@ public:
 	void UpdateTable();//Update the table for this sendable object with the latest values
 	void StartLiveWindowMode();//Starts sendable object automatically respond to value changes reflect value on table
 	void StopLiveWindowMode();//Ends the above
-	
+	void ClearStickyFaults();
 };
 
 #endif

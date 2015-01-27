@@ -3,6 +3,7 @@
 
 #include "WPILib.h"
 
+
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
  * to a variable name. This provides flexibility changing wiring, makes checking
@@ -15,10 +16,22 @@
 //const int LEFTMOTOR = 1;
 //const int RIGHTMOTOR = 2;
 
-const uint32_t MOTOR_LR = 1;
-const uint32_t MOTOR_LF = 2;
+/*********Settings***********/
+#define DEBUG //Use this for debug statements
+const float THROTTLE = 0.3f;
+const float TOLORANCE = 0.1f;
+
+/******PORTS*******/
+//Gamepad
+const int DRIVER = 0;
+const int LEFT_X = 0; //reverse this axis
+const int LEFT_Y = 1;
+const int RIGHT_X = 4; //reverse this axis
+//drivetrain
+const uint32_t MOTOR_LR = 2;
+const uint32_t MOTOR_LF = 1;
 const uint32_t MOTOR_RR = 3;
-const uint32_t MOTOR_RF = 4;
+const uint32_t MOTOR_RF = 0;
 
 // If you are using multiple modules, make sure to define both the port
 // number and the module. For example you with a rangefinder:
