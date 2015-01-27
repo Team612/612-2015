@@ -3,52 +3,49 @@
 #include "Commands/ExampleCommand.h"
 #include "Commands/Move.h"
 #include "CommandBase.h"
-#include <cstdio>
 
-class Robot: public IterativeRobot
+void Robot::RobotInit()
 {
-private:
-	LiveWindow* lw;
-	Move* moveCommand = new Move();
+	CommandBase::init();
+	lw = LiveWindow::GetInstance();
+}
 
-	void RobotInit()
-	{
-		CommandBase::init();
-		lw = LiveWindow::GetInstance();
-	}
-	
-	void DisabledPeriodic()
-	{
-		Scheduler::GetInstance()->Run();
-	}
+void Robot::DisabledPeriodic()
+{
+	Scheduler::GetInstance()->Run();
+}
 
-	void AutonomousInit()
-	{
+void Robot::AutonomousInit()
+{
 
-	}
+}
 
-	void AutonomousPeriodic()
-	{
-		Scheduler::GetInstance()->Run();
-	}
+void Robot::AutonomousPeriodic()
+{
+	Scheduler::GetInstance()->Run();
+}
 
-	void TeleopInit()
-	{
-		printf("Teleop Initialized");
-	}
+void Robot::TeleopInit()
+{
+	printf("Teleop Initialized");
+}
 
-	void TeleopPeriodic()
-	{
-		printf("Teleop Periodic start");
-		moveCommand->Start();
-	}
+void Robot::TeleopPeriodic()
+{
+	printf("Teleop Periodic start");
+	//moveCommand->Start();
+}
 
-	void TestPeriodic()
-	{
-		lw->Run();
+void Robot::TestInit()
+{
 
-	}
-};
+}
+
+void Robot::TestPeriodic()
+{
+//	lw->Run();
+
+}
 
 START_ROBOT_CLASS(Robot);
 
