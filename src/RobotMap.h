@@ -20,4 +20,21 @@
 //const int RANGE_FINDER_PORT = 1;
 //const int RANGE_FINDER_MODULE = 1;
 
+//Settings
+const float THROTTLE = 0.3f;
+const float TOLORANCE = 0.1f;
+#define DEBUG
+
+	//RoboRIO ports
+//DriveTrain
+const uint32_t TALON_FL = 1;
+const uint32_t TALON_FR = 0;
+const uint32_t TALON_BL = 2;
+const uint32_t TALON_BR = 3;
+
+//Gamepad
+const int LEFT_X = 0;
+const int LEFT_Y = 1; //Reverse this axis
+const int RIGHT_X = 4; //Reverse this axis
+
 #endif

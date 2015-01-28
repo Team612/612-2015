@@ -1,18 +1,21 @@
-#ifndef EXAMPLE_COMMAND_H
-#define EXAMPLE_COMMAND_H
+#ifndef Move_H
+#define Move_H
 
 #include "../CommandBase.h"
 #include "WPILib.h"
+#include <Joystick.h>
 
-class ExampleCommand: public CommandBase
+class Move: public CommandBase
 {
 public:
-	ExampleCommand();
+	Move();
 	void Initialize();
 	void Execute();
 	bool IsFinished();
 	void End();
 	void Interrupted();
+
+	Joystick* driverJoy;
 };
 
 #endif

@@ -1,1 +1,8 @@
 /Debug/
+.settings/
+.cproject
+.directory
+.project
+build.*
+.settings/language.settings.xml
+*.xml

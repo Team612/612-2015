@@ -1,38 +1,40 @@
-#include "ExampleCommand.h"
+#include "Move.h"
 
-ExampleCommand::ExampleCommand()
+Move::Move()
 {
 	// Use Requires() here to declare subsystem dependencies
 	// eg. Requires(chassis);
+	Requires(drivetrain);
+	driverJoy = new Joystick(0);
 }
 
 // Called just before this Command runs the first time
-void ExampleCommand::Initialize()
+void Move::Initialize()
 {
 
 }
 
 // Called repeatedly when this Command is scheduled to run
-void ExampleCommand::Execute()
+void Move::Execute()
 {
-
+	drivetrain->move(driverJoy->GetY(), driverJoy->GetX(), driverJoy->GetRawAxis(4));
 }
 
 // Make this return true when this Command no longer needs to run execute()
-bool ExampleCommand::IsFinished()
+bool Move::IsFinished()
 {
 	return false;
 }
 
 // Called once after isFinished returns true
-void ExampleCommand::End()
+void Move::End()
 {
-
+	drivetrain->stahp();
 }
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
-void ExampleCommand::Interrupted()
+void Move::Interrupted()
 {
 
 }
