@@ -16,8 +16,8 @@ private:
 	Joystick* joy;
 	Talon* talon0;
 	Talon* talon1;
-	Talon* talon2; // This Talon is inverted
-	Talon* talon3; // This Talon is inverted
+	Talon* talon2; //invert
+	Talon* talon3; //invert
 	Move* moveCommand = new Move();
 public:
 	void RobotInit();
@@ -29,7 +29,7 @@ public:
 	void TestPeriodic();
 	void DisabledInit();
 	void DisabledPeriodic();
-	// Custom functions
+	//612 functions
 	float getValues(int);
 	void MecDrive(float x,float y,float rotation);
 };

@@ -16,11 +16,13 @@ void Robot::RobotInit()
 	talon1 = new Talon(1);
 	talon2 = new Talon(2);
 	talon3 = new Talon(3);
+
 	drivetrain = new RobotDrive(talon1, talon2, talon0, talon3);
 	//Remember to do this, and it must come after the drivetrain constructor call
 	drivetrain->SetInvertedMotor(RobotDrive::kRearRightMotor, true);
 	drivetrain->SetInvertedMotor(RobotDrive::kRearLeftMotor, true);
 }
+
 void Robot::DisabledInit()
 {
 
@@ -35,7 +37,6 @@ void Robot::AutonomousInit()
 {
 
 }
->>>>>>> origin/kitbot
 
 void Robot::AutonomousPeriodic()
 {
@@ -45,13 +46,6 @@ void Robot::AutonomousPeriodic()
 void Robot::TeleopInit()
 {
 	printf("Teleop Initialized");
-	// This makes sure that the autonomous stops running when
-	// teleop starts running. If you want the autonomous to 
-	// continue until interrupted by another command, remove
-	// this line or comment it out.
-	if (autonomousCommand != NULL)
-		autonomousCommand->Cancel();
-	robotDrive->SetSafetyEnabled(false);
 }
 
 void Robot::TeleopPeriodic()
