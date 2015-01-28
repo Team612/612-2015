@@ -71,9 +71,10 @@ void Robot::TeleopPeriodic()
 	if (TimeChecked == 30) //print every half second
 	{
 		lw->Run();
-		float val = joystick->GetRawAxis(5);//Takes input from joystick
+
+		/*float val = joystick->GetRawAxis(5);//Takes input from joystick
 		float leftYAxis = joystick->GetRawAxis(2);
-		/*firstTalon->Set(val);//Gives joystick input to first talon
+		firstTalon->Set(val);//Gives joystick input to first talon
 		secondTalon->Set(val);
 		thirdTalon->Set(leftYAxis);*/
 	}
