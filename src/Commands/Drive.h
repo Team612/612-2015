@@ -1,5 +1,5 @@
-#ifndef TestMotors_H
-#define TestMotors_H
+#ifndef DRIVE_H
+#define DRIVE_H
 
 #include "../CommandBase.h"
 #include "WPILib.h"
@@ -7,21 +7,15 @@
 #include <Timer.h>
 #include "RobotMap.h"
 
-class TestMotors: public CommandBase
+class Drive: public CommandBase
 {
-private:
-	Timer* testMotorTimer;
-	//MecanumDrivetrain* drive;
-	bool isTestDone;
 public:
-	TestMotors();
+	Drive();
 	void Initialize();
-	void Execute();
+	void Execute(float inMagnitude, float inDirection, float inRotation);
 	bool IsFinished();
 	void End();
 	void Interrupted();
 };
 
 #endif
-
-

@@ -24,9 +24,17 @@ const uint32_t MOTOR_RF = 4;
 // number and the module. For example you with a rangefinder:
 //const int RANGE_FINDER_PORT = 1;
 //const int RANGE_FINDER_MODULE = 1;
-static const uint32_t TALON1_CHANNEL = 1;
-static const uint32_t TALON2_CHANNEL = 2;
-static const uint32_t TALON3_CHANNEL = 3;
-static const uint32_t TALON4_CHANNEL = 4;
+
+//Placeholder values for elevator channels
+const uint32_t ELEVATOR_MOTOR = 1;
+const uint32_t ELEVATOR_TOP_SWITCH = 1;
+const uint32_t ELEVATOR_BOTTOM_SWITCH = 1;
+const uint32_t ELEVATOR_ENCODER_A = 1;
+const uint32_t ELEVATOR_ENCODER_B = 1;
+
+const uint32_t SOLENOID_LATCH = 1;
+
+const uint32_t RELAY_LATCH = 1;
+
 
 #endif
