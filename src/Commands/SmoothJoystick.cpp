@@ -1,6 +1,7 @@
 #include "SmoothJoystick.h"
 #include "../RobotMap.h"
 #include "WPILib.h"
+#include <math.h>
 
 SmoothJoystick::SmoothJoystick()
 {
@@ -29,6 +30,6 @@ float SmoothJoystick::GetValue(int JoystickHand, int Axis) //Axis is used to fin
 	{
 		return 0.0; //To filter signals
 	}
-
+	Value = (round(Value*100))/100; //round to the nearest hundredth
 	return Value; //Return the value you want
 }
