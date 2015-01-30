@@ -1,13 +1,14 @@
-#ifndef Drive_H
-#define Drive_H
+#ifndef DRIVE_H
+#define DRIVE_H
 
 #include "../CommandBase.h"
+#include "WPILib.h"
 #include "../Subsystems/MecanumDrivetrain.h"
+#include <Timer.h>
+#include "RobotMap.h"
 
 class Drive: public CommandBase
 {
-private:
-
 public:
 	Drive();
 	void Initialize();

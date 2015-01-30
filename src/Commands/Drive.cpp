@@ -1,15 +1,12 @@
+#include "../CommandBase.h"
 #include "Drive.h"
-
 
 Drive::Drive()
 {
-	// Use Requires() here to declare subsystem dependencies
-	// eg. Requires(chassis);
-
+	// Use Requirevas() here to declare subsystem dependencies
+	// eg. Requires(chassis)
 	Requires(drivetrain);
-
 }
-
 // Called just before this Command runs the first time
 void Drive::Initialize()
 {
@@ -34,8 +31,7 @@ void Drive::End()
 	drivetrain->stop();
 }
 
-// Called when another comma
-// Called repeatedly when this Cond which requires one or more of the same
+// Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void Drive::Interrupted()
 {
