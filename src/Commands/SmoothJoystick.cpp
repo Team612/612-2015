@@ -7,9 +7,6 @@ SmoothJoystick::SmoothJoystick()
 {
 }
 
-
-
-
 //Below, JoystickHand is used to see which joystick you want. left = 0, right = 1
 float SmoothJoystick::GetValue(int JoystickHand, int Axis) //Axis is used to find out whether you want y or x axis. x = 0, y = 1
 {
@@ -33,10 +30,14 @@ float SmoothJoystick::GetValue(int JoystickHand, int Axis) //Axis is used to fin
 
 	Value = (round(Value*100))/100; //round to the nearest hundredth
 
-	if (Value > 1) //Make sure rounding or other stuff exceeds 1
+	if (Value > 1) //Make sure rounding or other stuff does not exceeds 1
 	{
 		Value = 1.0;
 	}
 
+	if (Value < -1) //Make sure rounding or other stuff does not make Value less than -1
+	{
+		Value = -1.0;
+	}
 	return Value; //Return the value you want
 }
