@@ -1,9 +1,11 @@
 /Debug/
 .settings/
+.settings/*
+.settings/language.settings.xml
+sysProps.xml
 .cproject
 .directory
 .project
 build.*
-.settings/language.settings.xml
 *.xml
 /Simulate/
