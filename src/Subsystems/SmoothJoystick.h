@@ -4,16 +4,16 @@
 #include "Commands/Subsystem.h"
 #include "WPILib.h"
 #include <Joystick.h>
+#include "OI.h"
+#include "OI.cpp"
 
-class SmoothJoystick
+class SmoothJoystick: public OI
 {
 private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
 	float Value = 0.0; //Used to return the value wanted
 	float DeadZone = 0.1; //Used to filter signals
-	Joystick *rightjoystick;
-	Joystick *leftjoystick;
 
 
 public:

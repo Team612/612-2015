@@ -5,8 +5,6 @@
 SmoothJoystick::SmoothJoystick()
 //		Subsystem("SmoothJoystick")
 {
-	rightjoystick = new Joystick(1);
-	leftjoystick = new Joystick(0);
 }
 
 /*void SmoothJoystick::InitDefaultCommand()
@@ -25,11 +23,11 @@ float SmoothJoystick::GetValue(int JoystickHand, int Axis) //Axis is used to fin
 		{
 			if (Axis == 0)
 			{
-				Value = leftjoystick->GetRawAxis(0);
+				Value = left_joystick->GetRawAxis(0);
 			}
 			else if (Axis == 1)
 			{
-				Value = leftjoystick->GetRawAxis(1);
+				Value = left_joystick->GetRawAxis(1);
 			}
 			else
 			{
@@ -40,11 +38,11 @@ float SmoothJoystick::GetValue(int JoystickHand, int Axis) //Axis is used to fin
 		{
 			if (Axis == 0)
 			{
-				Value = rightjoystick->GetRawAxis(0);
+				Value = right_joystick->GetRawAxis(0);
 			}
 			else if (Axis == 1)
 			{
-				Value = rightjoystick->GetRawAxis(1);
+				Value = right_joystick->GetRawAxis(1);
 			}
 			else
 			{
