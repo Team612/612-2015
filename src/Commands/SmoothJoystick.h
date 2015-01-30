@@ -10,8 +10,7 @@ class SmoothJoystick: public OI
 private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
-	float Value = 0.0; //Used to return the value wanted
-	float DeadZone = 0.1; //Used to filter signals
+
 
 
 public:

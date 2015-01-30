@@ -10,6 +10,9 @@ SmoothJoystick::SmoothJoystick()
 //Below, JoystickHand is used to see which joystick you want. left = 0, right = 1
 float SmoothJoystick::GetValue(int JoystickHand, int Axis) //Axis is used to find out whether you want y or x axis. x = 0, y = 1
 {
+	float Value = 0.0; //Used to return the value wanted
+	float DeadZone = 0.1; //Used to filter signals
+
 	if (JoystickHand == 0) //Check to see if it is the left hand
 	{
 		Value = left_joystick->GetRawAxis(Axis); //set the value for output

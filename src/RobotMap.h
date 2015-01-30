@@ -29,4 +29,14 @@ static const uint32_t TALON2_CHANNEL = 2;
 static const uint32_t TALON3_CHANNEL = 3;
 static const uint32_t TALON4_CHANNEL = 4;
 
+//Mapping the joystick stuff
+static const uint32_t XBOX_CONTROLLER = 3;
+static const uint32_t LEFT_JOYSTICK = 0;
+static const uint32_t RIGHT_JOYSTICK = 1;
+
+static const uint32_t BUTTON_A = 1;
+static const uint32_t BUTTON_B = 2;
+static const uint32_t BUTTON_X = 3;
+static const uint32_t BUTTON_Y = 4;
+
 #endif
