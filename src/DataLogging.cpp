@@ -1,4 +1,5 @@
 // Benjamin Ward, Jan 13, 2015
+
 #include "DataLogging.h"
 
 DataLogging::DataLogging()
@@ -47,6 +48,35 @@ short DataLogging::Log(string* data, int length)
 	{
 		message += data[i] + " ";
 	}
+	return this->Log(message);
+}
+
+// This function overload enables motor values to be logged. It requires
+	// an array of SpeedControllers (aka Talons, TalonSRXs, etc) and an
+	// integer representing the length of the array.
+short DataLogging::Log(SpeedController* talons, int length)
+{
+	string message = "Motor: ";
+	for(int i = 0; i < length; i++)
+	{
+		message += "Talon" + i + ": " + talons[i].Get() + " ";
+	}
+	return this->Log(message);
+}
+
+// This function overload enables joystick values to be logged. It
+	// requires a joystick pointer (representing a controller) and
+	// logs all joystick values from it (X, Y, and Z). Note that only
+	// the amount of buttons pressed is logged rather than the button
+	// values themselves currently, but this could be changed based on
+	// the need for this functionality.
+short DataLogging::Log(Joystick* joystick)
+{
+	string message = "Joystick: ";
+	message += "X Value: " + joystick->GetX() + " ";
+	message += "Y Value: " + joystick->GetY() + " ";
+	message += "Z Value: " + joystick->GetZ() + " ";
+	message += "Buttons: " + joystick->GetButtonCount();
 	return this->Log(message);
 }
 
