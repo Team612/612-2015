@@ -4,18 +4,22 @@
 #include "../CommandBase.h"
 #include "WPILib.h"
 #include <Joystick.h>
+#include "RobotMap.h"
+#include "Robot.h"
 
 class Move: public CommandBase
 {
 public:
-	Move();
+	Move(Robot* r, Joystick* j);
+	~Move();
 	void Initialize();
 	void Execute();
 	bool IsFinished();
 	void End();
 	void Interrupted();
-
-	Joystick* driverJoy;
+private:
+	Robot* robot;
+	Joystick* joystick;
 };
 
 #endif
