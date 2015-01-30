@@ -18,6 +18,7 @@ private:
 	Talon* talon1;
 	Talon* talon2; //invert
 	Talon* talon3; //invert
+	Gyro* gyro;
 	Move* moveCommand = new Move();
 public:
 	void RobotInit();

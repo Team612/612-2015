@@ -17,6 +17,7 @@ void Robot::RobotInit()
 	talon2 = new Talon(2);
 	talon3 = new Talon(3);
 
+	//gyro = new Gyro(); FILL IN DECLARATION LATER
 	drivetrain = new RobotDrive(talon1, talon2, talon0, talon3);
 	//Remember to do this, and it must come after the drivetrain constructor call
 	drivetrain->SetInvertedMotor(RobotDrive::kRearRightMotor, true);
@@ -51,6 +52,13 @@ void Robot::TeleopInit()
 void Robot::TeleopPeriodic()
 {
 	printf("Teleop Periodic start");
+	static const interval = 0;
+	interval++;
+	if (interval >= 30) //Prints every half second
+	{
+		printf("Robot facing %f degrees", gyro->GetAngle());
+		interval = 0;
+	}
 	//moveCommand->Start();
 }
 
