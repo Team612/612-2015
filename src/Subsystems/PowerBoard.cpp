@@ -2,7 +2,7 @@
 #include "../RobotMap.h"
 
 PowerBoard::PowerBoard() :
-		Subsystem("PowerDistributionPanel")
+		Subsystem("PowerBoard")
 {
 	powerboard = new PowerDistributionPanel();
 }
@@ -15,7 +15,6 @@ void PowerBoard::InitDefaultCommand()
 
 // Put methods for controlling this subsystem
 // here. Call from Commands
-	
 
 double PowerBoard::GetVoltage()
 {
