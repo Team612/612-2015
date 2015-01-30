@@ -14,7 +14,7 @@ public:
 	Drivetrain();
 	void InitDefaultCommand();
 
-	void move(float magnitude, float direction, float rotation);
+	void move(float x, float y, float rotation);
 	void stop();
 };
 

@@ -14,9 +14,9 @@ class Robot: public IterativeRobot
 {
 private:
 	LiveWindow* lw;
-	RobotDrive* drivetrain;
+	Drivetrain* drivetrain;
 	Joystick* joy;
-	Move* move;
+	//Move* move;
 public:
 	void RobotInit();
 	void AutonomousInit();

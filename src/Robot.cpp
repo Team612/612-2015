@@ -39,12 +39,16 @@ void Robot::AutonomousPeriodic()
 void Robot::TeleopInit()
 {
 	printf("Teleop Initialized");
-	move = new Move(this, joy);
 }
 
 void Robot::TeleopPeriodic()
 {
+	//Get the values from the joystick
+	float x = joy->GetRawAxis(LEFT_X);
+	float y = joy->GetRawAxis(LEFT_Y);
+	float rotation = joy->GetRawAxis(RIGHT_X);
 
+	drivetrain->move(x,y,rotation);
 }
 
 void Robot::TestInit()
