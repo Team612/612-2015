@@ -1,7 +1,6 @@
 #ifndef SmoothJoystick_H
 #define SmoothJoystick_H
 
-#include "Commands/Subsystem.h"
 #include "WPILib.h"
 #include <Joystick.h>
 #include "OI.h"
