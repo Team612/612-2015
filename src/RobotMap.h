@@ -25,12 +25,13 @@ const float THROTTLE = 0.3f;
 const float TOLORANCE = 0.1f;
 #define DEBUG
 
-	//RoboRIO ports
+//RoboRIO ports
 //DriveTrain
 const uint32_t TALON_FL = 1;
 const uint32_t TALON_FR = 0;
 const uint32_t TALON_BL = 2;
 const uint32_t TALON_BR = 3;
+const uint32_t GYRO_CH = 0;
 
 //Gamepad
 const int LEFT_X = 0;

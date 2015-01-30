@@ -17,7 +17,7 @@ void Robot::RobotInit()
 	talon2 = new Talon(2);
 	talon3 = new Talon(3);
 
-	//gyro = new Gyro(); FILL IN DECLARATION LATER
+	gyro = new Gyro(GYRO_CH); //todo
 	drivetrain = new RobotDrive(talon1, talon2, talon0, talon3);
 	//Remember to do this, and it must come after the drivetrain constructor call
 	drivetrain->SetInvertedMotor(RobotDrive::kRearRightMotor, true);
@@ -113,4 +113,3 @@ void Robot::MecDrive(float x, float y, float rotation)
 }
 
 START_ROBOT_CLASS(Robot);
-
