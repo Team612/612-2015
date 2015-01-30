@@ -15,11 +15,11 @@ float SmoothJoystick::GetValue(int JoystickHand, int Axis) //Axis is used to fin
 {
 	if (JoystickHand == 0) //Check to see if it is the left hand
 	{
-		Value = left_joystick->GetRawAxis(Axis);
+		Value = left_joystick->GetRawAxis(Axis); //set the value for output
 	}
 	else if (JoystickHand == 1) //Check to see if it is the right hand
 	{
-		Value = right_joystick->GetRawAxis(Axis);
+		Value = right_joystick->GetRawAxis(Axis); //set the value for output
 	}
 	else
 	{
@@ -30,6 +30,13 @@ float SmoothJoystick::GetValue(int JoystickHand, int Axis) //Axis is used to fin
 	{
 		return 0.0; //To filter signals
 	}
+
 	Value = (round(Value*100))/100; //round to the nearest hundredth
+
+	if (Value > 1) //Make sure rounding or other stuff exceeds 1
+	{
+		Value = 1.0;
+	}
+
 	return Value; //Return the value you want
 }

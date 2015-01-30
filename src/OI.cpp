@@ -10,4 +10,5 @@ OI::OI()
 	button_b = new JoystickButton(xbox_controller,2);//B button
 	button_x = new JoystickButton(xbox_controller,3);//X button
 	button_y = new JoystickButton(xbox_controller,4);//Y button
+	//TODO find the right port stuff and fix it
 }
