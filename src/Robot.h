@@ -9,13 +9,14 @@
 #define SRC_ROBOT_H_
 
 #include "Commands/Move.h"
+#include "SmoothJoystick.h"
 
 class Robot: public IterativeRobot
 {
 private:
 	LiveWindow* lw;
 	Drivetrain* drivetrain;
-	Joystick* joy;
+	SmoothJoystick* joy;
 	//Move* move;
 public:
 	void RobotInit();

@@ -21,8 +21,9 @@
 //const int RANGE_FINDER_MODULE = 1;
 
 //Settings
-const float THROTTLE = 0.3f;
+const float THROTTLE = 1.0f;
 const float TOLORANCE = 0.1f;
+const float TIMEOUT = 0.1f; //0.1f is default
 #define DEBUG
 
 	//RoboRIO ports

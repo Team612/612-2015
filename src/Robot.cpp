@@ -10,7 +10,7 @@ void Robot::RobotInit()
 {
 	CommandBase::init();
 	lw = LiveWindow::GetInstance();
-	joy = new Joystick(0);
+	joy = new SmoothJoystick(0);
 
 	drivetrain = new Drivetrain();
 	//Remember to do this, and it must come after the drivetrain constructor call
@@ -44,8 +44,8 @@ void Robot::TeleopInit()
 void Robot::TeleopPeriodic()
 {
 	//Get the values from the joystick
-	float x = joy->GetRawAxis(LEFT_X);
-	float y = joy->GetRawAxis(LEFT_Y);
+	float x = joy->GetModValue(LEFT_X);
+	float y = joy->GetModValue(LEFT_Y);
 	float rotation = joy->GetRawAxis(RIGHT_X);
 
 	drivetrain->move(x,y,rotation);

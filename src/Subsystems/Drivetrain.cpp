@@ -1,5 +1,6 @@
 #include "Drivetrain.h"
 #include "../RobotMap.h"
+#include <MotorSafetyHelper.h>
 
 Drivetrain::Drivetrain():
 		Subsystem("Drivetrain"),
@@ -7,6 +8,9 @@ Drivetrain::Drivetrain():
 {
 	SetInvertedMotor(RobotDrive::kRearRightMotor, true);
 	SetInvertedMotor(RobotDrive::kRearLeftMotor, true);
+	SetSafetyEnabled(true);
+	SetExpiration(TIMEOUT); //todo reimplement when we find out the units for the float
+	std::printf("Expiration = %f", GetExpiration());
 }
 
 void Drivetrain::InitDefaultCommand()
@@ -34,6 +38,10 @@ void Drivetrain::move(float x, float y, float rotation)
 		if (count % 30 == 0)
 		{
 			std::printf("X = %f\t Y = %f\tR = %f\n\n", x, y,rotation);
+			if (!m_safetyHelper->IsAlive())
+			{
+				std::printf("Motor has been timed out!\n");
+			}
 		}
 		count++;
 	#endif
