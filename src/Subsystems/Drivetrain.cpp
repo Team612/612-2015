@@ -9,7 +9,7 @@ Drivetrain::Drivetrain():
 	SetInvertedMotor(RobotDrive::kRearRightMotor, true);
 	SetInvertedMotor(RobotDrive::kRearLeftMotor, true);
 	SetSafetyEnabled(true);
-	SetExpiration(TIMEOUT); //todo reimplement when we find out the units for the float
+	SetExpiration(TIMEOUT);
 	std::printf("Expiration = %f", GetExpiration());
 }
 
