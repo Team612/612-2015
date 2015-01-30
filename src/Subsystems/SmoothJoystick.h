@@ -5,7 +5,6 @@
 #include "WPILib.h"
 #include <Joystick.h>
 #include "OI.h"
-#include "OI.cpp"
 
 class SmoothJoystick: public OI
 {
