@@ -8,17 +8,15 @@
 #ifndef SRC_ROBOT_H_
 #define SRC_ROBOT_H_
 
+#include "Commands/Move.h"
+
 class Robot: public IterativeRobot
 {
 private:
-	LiveWindow *lw;
+	LiveWindow* lw;
 	RobotDrive* drivetrain;
 	Joystick* joy;
-	Talon* talon0;
-	Talon* talon1;
-	Talon* talon2; //invert
-	Talon* talon3; //invert
-	Move* moveCommand = new Move();
+	Move* move;
 public:
 	void RobotInit();
 	void AutonomousInit();

@@ -11,11 +11,11 @@ private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
 public:
-	Drivetrain(uint32_t talonfl, uint32_t talonbl, uint32_t talonfr, uint32_t talonbr);
+	Drivetrain();
 	void InitDefaultCommand();
 
 	void move(float magnitude, float direction, float rotation);
-	void stahp();
+	void stop();
 };
 
 #endif

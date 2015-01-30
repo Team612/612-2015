@@ -1,11 +1,12 @@
 #include "Drivetrain.h"
 #include "../RobotMap.h"
 
-Drivetrain::Drivetrain(uint32_t talonfl, uint32_t talonbl, uint32_t talonfr, uint32_t talonbr):
+Drivetrain::Drivetrain():
 		Subsystem("Drivetrain"),
-		RobotDrive(talonfl, talonbl, talonfr, talonbr)
+		RobotDrive(TALON_FL, TALON_RL, TALON_FR, TALON_RR)
 {
-
+	SetInvertedMotor(RobotDrive::kRearRightMotor, true);
+	SetInvertedMotor(RobotDrive::kRearLeftMotor, true);
 }
 
 void Drivetrain::InitDefaultCommand()
@@ -22,7 +23,7 @@ void Drivetrain::move(float magnitude, float direction, float rotation)
 	MecanumDrive_Polar(magnitude, direction, rotation);
 }
 
-void Drivetrain::stahp()
+void Drivetrain::stop()
 {
 	MecanumDrive_Polar(0.0f, 0.0f, 0.0f);
 }

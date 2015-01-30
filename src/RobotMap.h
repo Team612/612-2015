@@ -28,9 +28,9 @@ const float TOLORANCE = 0.1f;
 	//RoboRIO ports
 //DriveTrain
 const uint32_t TALON_FL = 1;
-const uint32_t TALON_FR = 0;
-const uint32_t TALON_BL = 2;
-const uint32_t TALON_BR = 3;
+const uint32_t TALON_RL = 4;
+const uint32_t TALON_FR = 2;
+const uint32_t TALON_RR = 3;
 
 //Gamepad
 const int LEFT_X = 0;
