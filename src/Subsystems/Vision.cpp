@@ -1,8 +1,8 @@
 #include "Vision.h"
-#include "../RobotMap.h"
+#include "RobotMap.h"
 
 Vision::Vision() :
-		Subsystem("ExampleSubsystem")
+		Subsystem("Vision")
 {
 
 }
