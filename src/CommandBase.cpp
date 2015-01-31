@@ -1,8 +1,4 @@
 #include "CommandBase.h"
-#include "Subsystems/ExampleSubsystem.h"
-#include "Commands/Scheduler.h"
-#include "Subsystems/MecanumDrivetrain.h"
-#include "Subsystems/Elevator.h"
 #include "RobotMap.h"
 
 // Initialize a single static instance of all of your subsystems to NULL

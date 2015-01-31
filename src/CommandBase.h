@@ -8,6 +8,7 @@
 #include "WPILib.h"
 #include "Subsystems/Elevator.h"
 #include "Subsystems/MecanumDrivetrain.h"
+#include "Subsystems/Vision.h"
 #include "RobotMap.h"
 
 /**
@@ -26,6 +27,7 @@ public:
 	static OI* oi;
 	static Elevator* elevator;
 	static MecanumDrivetrain* drivetrain;
+	static Vision* vision;
 };
 
 #endif
