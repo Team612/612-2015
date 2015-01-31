@@ -38,10 +38,17 @@ const uint32_t RELAY_LATCH = 1;
 
 
 //Mapping the joystick stuff
-static const uint32_t XBOX_CONTROLLER = 3;
-static const uint32_t LEFT_JOYSTICK = 0;
-static const uint32_t RIGHT_JOYSTICK = 1;
-
+//Settings
+static const float DEADZONE = 0.1f;
+static const float THROTTLE = 1.0f;
+//Joystick ports
+static const uint32_t DRIVER_JOY = 0;
+static const uint32_t GUNNER_JOY = 1;
+//Axis
+static const uint32_t LEFT_X = 0;
+static const uint32_t LEFT_Y = 1;
+static const uint32_t RIGHT_X = 4;
+//Buttons
 static const uint32_t BUTTON_A = 1;
 static const uint32_t BUTTON_B = 2;
 static const uint32_t BUTTON_X = 3;

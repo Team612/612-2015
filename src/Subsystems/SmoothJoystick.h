@@ -5,18 +5,15 @@
 #include <Joystick.h>
 #include "OI.h"
 
-class SmoothJoystick: public OI
+class SmoothJoystick: public Joystick
 {
 private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
-
-
-
 public:
-	SmoothJoystick(); //Constructor
+	SmoothJoystick(int port); //Constructor
 	//void InitDefaultCommand();
-	float GetValue(int JoystickHand, int Axis);
+	float GetValue(int axis);
 
 	/*
 	 * GetValue() can be used to get value of an joystick (Run InitJoystick() first).
