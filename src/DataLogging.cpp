@@ -56,10 +56,11 @@ short DataLogging::Log(string* data, int length)
 	// integer representing the length of the array.
 short DataLogging::Log(SpeedController* talons, int length)
 {
-	string message = "Motor: ";
+	string message = (string)("Motor: ");
 	for(int i = 0; i < length; i++)
 	{
-		message += "Talon" + i + ": " + talons[i].Get() + " ";
+		message += (string)("Talon") + std::to_string(i) + (string)(": ")
+				+ std::to_string(talons[i].Get()) + (string)(" ");
 	}
 	return this->Log(message);
 }
@@ -72,10 +73,10 @@ short DataLogging::Log(SpeedController* talons, int length)
 	// the need for this functionality.
 short DataLogging::Log(Joystick* joystick)
 {
-	string message = "Joystick: ";
-	message += "X Value: " + joystick->GetX() + " ";
-	message += "Y Value: " + joystick->GetY() + " ";
-	message += "Z Value: " + joystick->GetZ() + " ";
+	string message = (string)("Joystick: ");
+	message += (string)("X Value: ") + std::to_string(joystick->GetX()) + (string)(" ");
+	message += (string)("Y Value: ") + std::to_string(joystick->GetY()) + (string)(" ");
+	message += (string)("Z Value: ") + std::to_string(joystick->GetZ()) + (string)(" ");
 	message += "Buttons: " + joystick->GetButtonCount();
 	return this->Log(message);
 }
