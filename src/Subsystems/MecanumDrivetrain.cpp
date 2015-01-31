@@ -14,13 +14,9 @@ MecanumDrivetrain::MecanumDrivetrain(uint32_t talonchannel1,
 				   new Talon(talonchannel4))
 
 {
-	if (! m_safetyHelper->IsAlive())
-	{
-		std::printf("Motor has been timed out\n");
-		SetSafetyEnable(true);
-		SetExpiration(MOTOR_EXPIRATION);
-		std::printf("Expiration = %f", GetExpiration());
-	}
+	SetSafetyEnabled(true);
+	SetExpiration(MOTOR_EXPIRATION);
+	std::printf("Expiration = %f", GetExpiration());
 	//import trackball or something? idk.
 }
 
@@ -36,11 +32,11 @@ void MecanumDrivetrain::InitDefaultCommand()
 void MecanumDrivetrain::move(float magnitude, float direction, float rotation)
 {
 	MecanumDrive_Polar(magnitude, direction, rotation);
-
-
+	m_safetyHelper->Feed();
 }
 
 void MecanumDrivetrain::stop()
 {
 	MecanumDrive_Polar(0.0f, 0.0f, 0.0f);
+	m_safetyHelper->Feed();
 }
