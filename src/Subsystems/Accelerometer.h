@@ -14,6 +14,9 @@ public:
 	virtual ~Accelerometer();
 	void InitDefaultCommand();
 	// Other methods here (getValues, etc)
+	double GetX();
+	double GetY();
+	double GetZ();
 };
 
 #endif /* SRC_SUBSYSTEMS_ACCELEROMETER_H_ */

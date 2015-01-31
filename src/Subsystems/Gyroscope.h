@@ -1,5 +1,5 @@
-#ifndef SRC_SUBSYSTEMS_GYRO_H_
-#define SRC_SUBSYSTEMS_GYRO_H_
+#ifndef SRC_SUBSYSTEMS_GYROSCOPE_H_
+#define SRC_SUBSYSTEMS_GYROSCOPE_H_
 
 #include "Commands/Subsystem.h"
 #include "WPILib.h"
@@ -16,4 +16,4 @@ public:
 	// Other methods here
 };
 
-#endif /* SRC_SUBSYSTEMS_GYRO_H_ */
+#endif /* SRC_SUBSYSTEMS_GYROSCOPE_H_ */

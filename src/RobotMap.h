@@ -15,6 +15,8 @@
 //const int LEFTMOTOR = 1;
 //const int RIGHTMOTOR = 2;
 
+const uint32_t GYRO_CHANNEL = 0;
+
 const uint32_t MOTOR_LR = 1;
 const uint32_t MOTOR_LF = 2;
 const uint32_t MOTOR_RR = 3;
