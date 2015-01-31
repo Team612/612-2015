@@ -17,6 +17,18 @@
 
 const uint32_t GYRO_CHANNEL = 0;
 
+const uint32_t ENCODER_LR_A = 0;
+const uint32_t ENCODER_LR_B = 0;
+
+const uint32_t ENCODER_LF_A = 0;
+const uint32_t ENCODER_LF_B = 0;
+
+const uint32_t ENCODER_RR_A = 0;
+const uint32_t ENCODER_RR_B = 0;
+
+const uint32_t ENCODER_RF_A = 0;
+const uint32_t ENCODER_RF_B = 0;
+
 const uint32_t MOTOR_LR = 1;
 const uint32_t MOTOR_LF = 2;
 const uint32_t MOTOR_RR = 3;

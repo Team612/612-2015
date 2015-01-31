@@ -8,12 +8,17 @@
 class Gyroscope: public Subsystem
 {
 private:
-	Gyro gyro;
+	Gyro* gyro;
 public:
 	Gyroscope();
 	virtual ~Gyroscope();
 	void InitDefaultCommand();
+
 	// Other methods here
+	double getRate();
+	float getAngle();
+
+	void reset();
 };
 
 #endif /* SRC_SUBSYSTEMS_GYROSCOPE_H_ */
