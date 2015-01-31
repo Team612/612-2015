@@ -26,12 +26,15 @@ const float TOLORANCE = 0.1f;
 const float TIMEOUT = 0.1f; //0.1f is default
 #define DEBUG
 
-	//RoboRIO ports
+//RoboRIO ports
 //DriveTrain
 const uint32_t TALON_FL = 1;
 const uint32_t TALON_RL = 4;
 const uint32_t TALON_FR = 2;
 const uint32_t TALON_RR = 3;
+
+//Sensors
+const uint32_t GYRO_CH = 0;
 
 //Gamepad
 const int LEFT_X = 0;

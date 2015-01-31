@@ -13,6 +13,8 @@ void Robot::RobotInit()
 	joy = new SmoothJoystick(0);
 
 	drivetrain = new Drivetrain();
+
+	gyro = new Gyro(GYRO_CH); //todo
 	//Remember to do this, and it must come after the drivetrain constructor call
 }
 
@@ -43,12 +45,21 @@ void Robot::TeleopInit()
 
 void Robot::TeleopPeriodic()
 {
+	static int interval = 0;
 	//Get the values from the joystick
 	float x = joy->GetModValue(LEFT_X);
 	float y = joy->GetModValue(LEFT_Y);
 	float rotation = joy->GetModValue(RIGHT_X);
 
 	drivetrain->move(x,y,rotation);
+
+	if (interval >= 30) //Prints every half second
+	{
+		printf("Robot facing %f degrees", gyro->GetAngle());
+		interval = 0;
+	}
+	interval++;
+	//moveCommand->Start();
 }
 
 void Robot::TestInit()
@@ -87,4 +98,3 @@ void Robot::MecDrive(float x, float y, float rotation)
 }
 
 START_ROBOT_CLASS(Robot);
-

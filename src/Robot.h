@@ -18,6 +18,8 @@ private:
 	Drivetrain* drivetrain;
 	SmoothJoystick* joy;
 	//Move* move;
+	Gyro* gyro;
+	//Move* moveCommand = new Move();
 public:
 	void RobotInit();
 	void AutonomousInit();
