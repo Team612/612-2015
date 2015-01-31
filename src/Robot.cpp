@@ -51,6 +51,12 @@ void Robot::TeleopPeriodic()
 	float y = joy->GetModValue(LEFT_Y);
 	float rotation = joy->GetModValue(RIGHT_X);
 
+	if(joy->GetModValue(LEFT_X) == 0.0f && joy->GetModValue(LEFT_Y) == 0.0f && joy->GetModValue(RIGHT_X) == 0.0f)
+	{
+		drivetrain->move(0.0f,0.0f,0.0f);
+	}
+
+
 	drivetrain->move(x,y,rotation);
 
 	if (interval >= 30) //Prints every half second

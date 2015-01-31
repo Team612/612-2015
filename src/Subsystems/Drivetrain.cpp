@@ -9,7 +9,8 @@ Drivetrain::Drivetrain():
 	SetInvertedMotor(RobotDrive::kRearRightMotor, true);
 	SetInvertedMotor(RobotDrive::kRearLeftMotor, true);
 	SetSafetyEnabled(true);
-	SetExpiration(TIMEOUT);
+	//SetExpiration(10.0f);
+	this->m_safetyHelper->SetExpiration(100.0f);
 	std::printf("Expiration = %f", GetExpiration());
 }
 
@@ -30,6 +31,10 @@ void Drivetrain::move(float x, float y, float rotation)
 	rotation = x; //put x into rotation
 	x = temp; //now variables are fully swapped
 */
+	// FEED ME SEYMOUR
+	this->m_safetyHelper->Feed();
+	this->
+
 	//now that they are swapped, plug them in correctly
 	MecanumDrive_Cartesian(x*THROTTLE,y*THROTTLE,rotation*THROTTLE); //for some reason, this works if x and rotation are swapped
 	//in case we need to debug
@@ -49,5 +54,5 @@ void Drivetrain::move(float x, float y, float rotation)
 
 void Drivetrain::stop()
 {
-	MecanumDrive_Polar(0.0f, 0.0f, 0.0f);
+	MecanumDrive_Cartesian(0.0f, 0.0f, 0.0f);
 }

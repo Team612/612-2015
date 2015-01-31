@@ -23,7 +23,7 @@
 //Settings
 const float THROTTLE = 1.0f;
 const float TOLORANCE = 0.1f;
-const float TIMEOUT = 0.1f; //0.1f is default
+const float TIMEOUT = 0.2f; //0.1f is default
 #define DEBUG
 
 //RoboRIO ports
