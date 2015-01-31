@@ -5,7 +5,8 @@
 #include "WPILib.h"
 #include "../RobotMap.h"
 
-class Accelerometer: public Subsystem {
+class Accelerometer: public Subsystem
+{
 private:
 	BuiltInAccelerometer accel;
 public:
