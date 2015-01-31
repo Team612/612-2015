@@ -29,10 +29,11 @@ static const uint32_t TALON2_CHANNEL = 2;
 static const uint32_t TALON3_CHANNEL = 3;
 static const uint32_t TALON4_CHANNEL = 4;
 
-//Mapping the joystick stuff
+//Mapping the joystick stuff (ports)
 static const uint32_t XBOX_CONTROLLER = 3;
 static const uint32_t LEFT_JOYSTICK = 0;
 static const uint32_t RIGHT_JOYSTICK = 1;
+static const float DEAD_ZONE = 0.1; //Used to filter signals
 
 static const uint32_t BUTTON_A = 1;
 static const uint32_t BUTTON_B = 2;
