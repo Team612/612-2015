@@ -5,20 +5,15 @@
 #include "WPILib.h"
 #include "../RobotMap.h"
 
-class Elevator : public Subsystem
+class Gyroscope: public Subsystem
 {
 private:
-	Talon* talon;
-	DigitalInput* topSwitch;
-	DigitalInput* bottomSwitch;
-	Encoder* encoder;
+	Gyro gyro;
 public:
-	Elevator();
-	virtual ~Elevator();
-	void move(float magnitude);
-	void stop();
+	Gyroscope();
+	virtual ~Gyroscope();
 	void InitDefaultCommand();
-	Encoder* getEncoder();
+	// Other methods here
 };
 
 #endif /* SRC_SUBSYSTEMS_GYRO_H_ */

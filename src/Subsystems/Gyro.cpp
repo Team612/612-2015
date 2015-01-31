@@ -1,27 +1,27 @@
-#include "Gyro.h"
+#include "Gyroscope.h"
 
-Gyro::Gyro() :
-	Subsystem("Gyro")
+Gyroscope::Gyroscope() :
+	Subsystem("Gyroscope")
 {
-	talon = new Talon(Gyro_MOTOR);
-	topSwitch = new DigitalInput(Gyro_TOP_SWITCH);
-	bottomSwitch = new DigitalInput(Gyro_BOTTOM_SWITCH);
-	encoder = new Encoder(Gyro_ENCODER_A, Gyro_ENCODER_B);
+	talon = new Talon(Gyroscope_MOTOR);
+	topSwitch = new DigitalInput(Gyroscope_TOP_SWITCH);
+	bottomSwitch = new DigitalInput(Gyroscope_BOTTOM_SWITCH);
+	encoder = new Encoder(Gyroscope_ENCODER_A, Gyroscope_ENCODER_B);
 }
 
-Gyro::~Gyro()
+Gyroscope::~Gyroscope()
 {
 	delete talon;
 }
 
-void Gyro::InitDefaultCommand()
+void Gyroscope::InitDefaultCommand()
 {
-	//SetDefaultCommand(new GyroUp());
+	//SetDefaultCommand(new GyroscopeUp());
 }
 
-void Gyro::move(float magnitude)
+void Gyroscope::move(float magnitude)
 {
-	//Checks the sensors to see if the Gyro is at the top or the bottom
+	//Checks the sensors to see if the Gyroscope is at the top or the bottom
 	bool topInput = topSwitch->Get();
 	bool bottomInput = bottomSwitch->Get();
 
@@ -36,13 +36,13 @@ void Gyro::move(float magnitude)
 	}
 }
 
-void Gyro::stop()
+void Gyroscope::stop()
 {
 	//Sets motor speed to nothing
 	talon->Set(0);
 }
 
-Encoder* Gyro::getEncoder()
+Encoder* Gyroscope::getEncoder()
 {
 	return encoder;
 }
