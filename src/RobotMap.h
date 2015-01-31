@@ -37,4 +37,21 @@ const uint32_t SOLENOID_LATCH = 1;
 const uint32_t RELAY_LATCH = 1;
 
 
+//Mapping the joystick stuff
+//Settings
+static const float DEADZONE = 0.1f;
+static const float THROTTLE = 1.0f;
+//Joystick ports
+static const uint32_t DRIVER_JOY = 0;
+static const uint32_t GUNNER_JOY = 1;
+//Axis
+static const uint32_t LEFT_X = 0;
+static const uint32_t LEFT_Y = 1;
+static const uint32_t RIGHT_X = 4;
+//Buttons
+static const uint32_t BUTTON_A = 1;
+static const uint32_t BUTTON_B = 2;
+static const uint32_t BUTTON_X = 3;
+static const uint32_t BUTTON_Y = 4;
+
 #endif
