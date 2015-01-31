@@ -1,14 +1,12 @@
-/*
- * AutonomousToteNavGroup.h
- *
- *  Created on: Jan 30, 2015
- *      Author: user
- */
-
 #ifndef SRC_COMMANDS_TOTENAVGROUP_H_
 #define SRC_COMMANDS_TOTENAVGROUP_H_
 
-class ToteNavGroup: public CommandGroup {
+#include "CommandBase.h"
+#include "WPILib.h"
+#include "Subsystems/MecanumDrivetrain.h"
+
+class ToteNavGroup: public CommandGroup
+{
 public:
 	ToteNavGroup();
 };

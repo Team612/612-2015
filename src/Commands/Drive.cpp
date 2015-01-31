@@ -1,4 +1,4 @@
-#include "../CommandBase.h"
+#include "CommandBase.h"
 #include "Drive.h"
 
 Drive::Drive()

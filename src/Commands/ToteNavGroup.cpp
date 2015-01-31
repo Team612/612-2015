@@ -1,4 +1,5 @@
-#include <ToteNavGroup.h>
+#include "CommandBase.h"
+#include "ToteNavGroup.h"
 
 ToteNavGroup::ToteNavGroup() {
 	// Add Commands here:
@@ -17,4 +18,5 @@ ToteNavGroup::ToteNavGroup() {
 	// e.g. if Command1 requires chassis, and Command2 requires arm,
 	// a CommandGroup containing them would require both the chassis and the
 	// arm.
+	Requires(CommandBase::drivetrain);
 }
