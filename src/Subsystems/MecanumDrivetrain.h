@@ -4,6 +4,7 @@
 #include "Commands/Subsystem.h"
 #include "WPILib.h"
 #include <RobotDrive.h>
+#include <MotorSafetyHelper.h>
 
 class MecanumDrivetrain: public Subsystem, public RobotDrive
 {
