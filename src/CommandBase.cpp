@@ -6,6 +6,7 @@ ExampleSubsystem* CommandBase::examplesubsystem = NULL;
 OI* CommandBase::oi = NULL;
 Elevator* CommandBase::elevator = NULL;
 MecanumDrivetrain* CommandBase::drivetrain = NULL;
+Vision* CommandBase::vision = NULL;
 
 CommandBase::CommandBase(char const *name) :
 		Command(name)
