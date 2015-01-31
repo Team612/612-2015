@@ -1,10 +1,10 @@
-#include "AutonomousToteNavGroup.h"
+#include <ToteNavGroup.h>
 
-AutonomousToteNavGroup::AutonomousToteNavGroup() {
+ToteNavGroup::ToteNavGroup() {
 	// Add Commands here:
 	// e.g. AddSequential(new Command1());
 	//      AddSequential(new Command2());
-	// these will run in order.
+	// these Commandswill run in order.
 
 	// To run multiple commands at the same time,
 	// use AddParallel()
