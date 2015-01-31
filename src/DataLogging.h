@@ -7,6 +7,8 @@
 #include <fstream>
 #include <time.h>
 
+#include "WPILib.h"
+
 typedef std::string string;
 
 class DataLogging
