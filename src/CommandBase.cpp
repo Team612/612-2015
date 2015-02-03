@@ -7,6 +7,10 @@ OI* CommandBase::oi = NULL;
 Elevator* CommandBase::elevator = NULL;
 MecanumDrivetrain* CommandBase::drivetrain = NULL;
 Vision* CommandBase::vision = NULL;
+Gyroscope* CommandBase::gyroscope = NULL;
+DriveEncoder* CommandBase::encoder = NULL;
+DriveAccelerometer* CommandBase::accelerometer = NULL;
+
 
 CommandBase::CommandBase(char const *name) :
 		Command(name)
@@ -27,4 +31,7 @@ void CommandBase::init()
 	oi = new OI();
 	elevator = new Elevator();
 	drivetrain = new MecanumDrivetrain(MOTOR_LR, MOTOR_LF, MOTOR_RR, MOTOR_RF);
+	gyroscope = new Gyroscope();
+	encoder = new DriveEncoder();
+	accelerometer = new DriveAccelerometer();
 }
