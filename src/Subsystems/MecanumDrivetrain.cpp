@@ -40,3 +40,21 @@ void MecanumDrivetrain::stop()
 	MecanumDrive_Polar(0.0f, 0.0f, 0.0f);
 	m_safetyHelper->Feed();
 }
+
+bool MecanumDrivetrain::switchSense(float d)// inf is on by default
+{
+	if(d < 6){// switch to infrard m8
+		return true;
+	}else{
+		return false;
+	}
+}
+
+void MecanumDrivetrain::switchSense(float d)// inf is on by default
+{
+	switchSense(d) ? (sensor = ultra) : (sensor = infrared);// switch sensors
+}
+
+
+
+
