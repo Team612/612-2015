@@ -50,7 +50,7 @@ const uint32_t SOLENOID_LATCH = 1;
 
 const uint32_t RELAY_LATCH = 1;
 
-float MOTOR_EXPIRATION = 0.1f; // float measured in seconds
+const float MOTOR_EXPIRATION = 0.1f; // float measured in seconds
 
 //Mapping the joystick stuff
 //Settings
