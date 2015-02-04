@@ -5,6 +5,7 @@
 #include "CommandBase.h"
 #include "Robot.h"
 #include "RobotMap.h"
+#include "Commands/DriveDistance.h"
 
 void Robot::RobotInit()
 {
@@ -20,7 +21,6 @@ void Robot::RobotInit()
 
 void Robot::DisabledInit()
 {
-
 }
 
 void Robot::DisabledPeriodic()
@@ -30,7 +30,7 @@ void Robot::DisabledPeriodic()
 
 void Robot::AutonomousInit()
 {
-
+	DriveDistance* d = new DriveDistance(30);
 }
 
 void Robot::AutonomousPeriodic()

@@ -8,14 +8,21 @@
 class Drivetrain: public Subsystem, public RobotDrive
 {
 private:
-	// It's desirable that everything possible under private except
-	// for methods that implement subsystem capabilities
+	Encoder* encoderLF;
+	Encoder* encoderLR;
+	Encoder* encoderRF;
+	Encoder* encoderRR;
 public:
 	Drivetrain();
 	void InitDefaultCommand();
-
 	void move(float x, float y, float rotation);
 	void stop();
+	void driveDistance(int inches);
+
+	Encoder* getLFEncoder();
+	Encoder* getLREncoder();
+	Encoder* getRFEncoder();
+	Encoder* getRREncoder();
 };
 
 #endif
