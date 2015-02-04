@@ -43,9 +43,12 @@ void Drivetrain::move(float x, float y, float rotation)
 	//now that they are swapped, plug them in correctly
 	MecanumDrive_Cartesian(x*THROTTLE,y*THROTTLE,rotation*THROTTLE); //for some reason, this works if x and rotation are swapped
 	static int count = 0;
-	if (count % 30 == 0)
+	if (count % 120 == 0)
 	{
-
+		std::printf("LF Encoder Value %u\n", encoderLF->Get());
+		std::printf("LR Encoder Value %u\n", encoderLR->Get());
+		std::printf("RF Encoder Value %u\n", encoderRF->Get());
+		std::printf("RR Encoder Value %u\n", encoderRR->Get());
 	}
 
 	count++;
