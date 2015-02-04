@@ -1,0 +1,17 @@
+#include "Infrared.h"
+#include "../RobotMap.h"
+
+Infrared::Infrared() :
+		Subsystem("Infrared")
+{
+	infrared612 = new AnalogInput(3); //get actual ports. Preferably in RobotMap.h
+}
+
+void Infrared::InitDefaultCommand()
+{
+	// Set the default command for a subsystem here.
+	//SetDefaultCommand(new MySpecialCommand());
+}
+
+// Put methods for controlling this subsystem
+// here. Call these from Commands.
