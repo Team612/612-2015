@@ -4,6 +4,7 @@
 #include "Commands/Subsystem.h"
 #include "WPILib.h"
 #include "../RobotMap.h"
+#include <cmath>
 
 class Gyroscope: public Subsystem
 {

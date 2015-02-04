@@ -29,7 +29,7 @@ double Gyroscope::getRate()
 
 float Gyroscope::getAngle()
 {
-	return gyro->GetAngle();
+	return fmod(gyro->GetAngle(), 360);
 }
 
 void Gyroscope::reset()
