@@ -40,8 +40,11 @@ const float MOTOR_EXPIRATION = 0.1f; // float measured in seconds
 
 //Mapping the joystick stuff
 //Settings
+static const float DEFAULT_RUMBLE_DURATION = 2.0f;
+
 static const float DEADZONE = 0.1f;
 static const float THROTTLE = 1.0f;
+
 //Joystick ports
 static const uint32_t DRIVER_JOY = 0;
 static const uint32_t GUNNER_JOY = 1;

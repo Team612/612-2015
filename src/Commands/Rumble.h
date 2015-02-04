@@ -9,26 +9,26 @@
 // it from being updated in the future.
 
 
-#ifndef RUMBLEON_H
-#define RUMBLEON_H
+#ifndef RUMBLE_H
+#define RUMBLE_H
 
 
 #include "Commands/Subsystem.h"
 #include "../Robot.h"
 
-/**
- *
- *
- * @author ExampleAuthor
- */
-class RumbleOn: public Command {
+class Rumble: public Command
+{
 public:
-	RumbleOn();
-	virtual void Initialize();
-	virtual void Execute();
-	virtual bool IsFinished();
-	virtual void End();
-	virtual void Interrupted();
+	Rumble();
+	virtual ~Rumble();
+	void Initialize();
+	void Execute();
+	bool IsFinished();
+	void End();
+	void Interrupted();
+private:
+	int counter;
+	void StartRumble(float duration);
 };
 
 #endif
