@@ -6,8 +6,9 @@
 #include <Ultrasonic.h>
 #include <DigitalOutput.h>
 #include <DigitalInput.h>
+#include <SensorMaster.h>
 
-class Ultrasonic612: public Subsystem
+class Ultrasonic612: public Subsystem, public SensorMaster
 {
 private:
 	// It's desirable that everything possible under private except
