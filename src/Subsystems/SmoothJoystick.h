@@ -20,6 +20,8 @@ public:
 	 * X axis = 0, y axis = 1
 	 * left hand = 0, right hand = 1
 	 */
+
+	void autoInvert();
 };
 
 #endif
