@@ -10,6 +10,7 @@ Vision* CommandBase::vision = NULL;
 Gyroscope* CommandBase::gyroscope = NULL;
 DriveEncoder* CommandBase::encoder = NULL;
 DriveAccelerometer* CommandBase::accelerometer = NULL;
+Ultrasonic612* CommandBase::ultrasonic612 = NULL;
 
 
 CommandBase::CommandBase(char const *name) :
@@ -34,4 +35,5 @@ void CommandBase::init()
 	gyroscope = new Gyroscope();
 	encoder = new DriveEncoder();
 	accelerometer = new DriveAccelerometer();
+	ultrasonic612 = new Ultrasonic612();
 }

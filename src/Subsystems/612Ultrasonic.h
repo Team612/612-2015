@@ -7,7 +7,7 @@
 #include <DigitalOutput.h>
 #include <DigitalInput.h>
 
-class Ultrasonic: public Subsystem
+class Ultrasonic612: public Subsystem
 {
 private:
 	// It's desirable that everything possible under private except
@@ -21,7 +21,7 @@ private:
 	Ultrasonic* ultrasonicL;
 	Ultrasonic* ultrasonicR;
 public:
-	Ultrasonic();
+	Ultrasonic612();
 	void InitDefaultCommand();
 	double measureL();
 	double measureR();

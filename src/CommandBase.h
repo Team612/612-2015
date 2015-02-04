@@ -35,6 +35,7 @@ public:
 	static Gyroscope* gyroscope;
 	static DriveEncoder* encoder;
 	static DriveAccelerometer* accelerometer;
+	static Ultrasonic612* ultrasonic612;
 };
 
 #endif
