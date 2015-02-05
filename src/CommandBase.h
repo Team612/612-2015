@@ -1,6 +1,7 @@
 #ifndef COMMAND_BASE_H
 #define COMMAND_BASE_H
 
+#include <Subsystems/DriveAccelerometer.h>
 #include <string>
 #include "Commands/Command.h"
 #include "Subsystems/ExampleSubsystem.h"
@@ -9,6 +10,8 @@
 #include "Subsystems/Elevator.h"
 #include "Subsystems/MecanumDrivetrain.h"
 #include "Subsystems/Vision.h"
+#include "Subsystems/DriveEncoder.h"
+#include "Subsystems/DriveAccelerometer.h"
 #include "RobotMap.h"
 
 /**
@@ -28,6 +31,9 @@ public:
 	static Elevator* elevator;
 	static MecanumDrivetrain* drivetrain;
 	static Vision* vision;
+	static DriveEncoder* encoder;
+	static DriveAccelerometer* accelerometer;
+	static Ultrasonic612* ultrasonic612;
 };
 
 #endif

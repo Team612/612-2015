@@ -5,12 +5,17 @@
 #include "WPILib.h"
 #include <RobotDrive.h>
 #include <MotorSafetyHelper.h>
+#include <Subsystems/Infrared612.h>
+#include "Ultrasonic612.h"
 
 class MecanumDrivetrain: public Subsystem, public RobotDrive
 {
 private:
-	// It's desirable that everything possible under private except
-	// for methods that implement subsystem capabilities
+	Ultrasonic612 ultra;
+	Infrared612 infrared;
+	bool useIR = false;
+
+	bool SwitchSensor(float distance); // Called in CheckSensor
 
 public:
 	MecanumDrivetrain(uint32_t talonchannel1,
@@ -19,8 +24,10 @@ public:
 					  uint32_t talonchannel4);
 	void InitDefaultCommand();
 
+	void CheckSensor(float distance);
 	void move(float magnitude, float direction, float rotation);
 	void stop();
+
 };
 
 #endif

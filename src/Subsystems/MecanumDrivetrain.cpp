@@ -40,3 +40,25 @@ void MecanumDrivetrain::stop()
 	MecanumDrive_Polar(0.0f, 0.0f, 0.0f);
 	m_safetyHelper->Feed();
 }
+
+bool MecanumDrivetrain::SwitchSensor(float distance) // Infared sensor is used by default
+{
+	// Once the IR becomes accurate, switch to it over ultrasonic
+	return (distance < 6);
+
+	// OLD
+	/*
+	if(d < 6)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	} */
+}
+
+void MecanumDrivetrain::CheckSensor(float distance)
+{
+	this->useIR = this->SwitchSensor(distance);
+}
