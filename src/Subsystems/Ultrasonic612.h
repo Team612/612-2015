@@ -6,18 +6,15 @@
 #include <Ultrasonic.h>
 #include <DigitalOutput.h>
 #include <DigitalInput.h>
-#include <SensorMaster.h>
 
-class Ultrasonic612: public Subsystem, public SensorMaster
+class Ultrasonic612: public Subsystem
 {
 private:
-	// It's desirable that everything possible under private except
-	// for methods that implement subsystem capabilities
-	DigitalInput* ultraDI_1;
-	DigitalOutput* ultraDO_1;
+	uint32_t ultraDI_1;
+	uint32_t ultraDO_1;
 
-	DigitalInput* ultraDI_2;
-	DigitalOutput* ultraDO_2;
+	uint32_t ultraDI_2;
+	uint32_t ultraDO_2;
 
 	Ultrasonic* ultrasonicL;
 	Ultrasonic* ultrasonicR;

@@ -1,14 +1,13 @@
-#include <Subsystems/612Ultrasonic.h>
+#include <Subsystems/Ultrasonic612.h>
 #include "../RobotMap.h"
 
 Ultrasonic612::Ultrasonic612() :
 		Subsystem("Ultrasonic")
 {
-	ultraDI_1 = new DigitalInput(1);
-	ultraDO_1 = new DigitalOutput(1);
-
-	ultraDI_2 = new DigitalInput(2);
-	ultraDO_2 = new DigitalOutput(2);
+	ultraDI_1 = (unsigned)1;
+	ultraDO_1 = (unsigned)1;
+	ultraDI_2 = (unsigned)2;
+	ultraDO_2 = (unsigned)2;
 
 	ultrasonicL = new Ultrasonic(ultraDI_1, ultraDO_1);
 	ultrasonicR = new Ultrasonic(ultraDI_2, ultraDO_2);

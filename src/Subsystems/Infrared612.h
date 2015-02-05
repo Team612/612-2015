@@ -5,14 +5,14 @@
 #include "WPILib.h"
 #include <AnalogInput.h>
 
-class Infrared: public Subsystem
+class Infrared612: public Subsystem
 {
 private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
 	AnalogInput* infrared612;
 public:
-	Infrared();
+	Infrared612();
 	void InitDefaultCommand();
 };
 

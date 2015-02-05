@@ -1,7 +1,7 @@
 #ifndef AverageDistance_H
 #define AverageDistance_H
 
-#include <Subsystems/612Ultrasonic.h>
+#include <Subsystems/Ultrasonic612.h>
 #include "../CommandBase.h"
 #include "WPILib.h"
 

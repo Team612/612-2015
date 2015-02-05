@@ -12,7 +12,7 @@ DriveEncoder::DriveEncoder() :
 
 DriveEncoder::~DriveEncoder()
 {
-	delete encoders; //deletes encoders for more resources
+	delete[] encoders; //deletes encoders for more resources
 }
 
 int32_t DriveEncoder::GetEncoderSpins(uint32_t encoder) //returns the spin from the encoder you want

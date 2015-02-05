@@ -41,20 +41,24 @@ void MecanumDrivetrain::stop()
 	m_safetyHelper->Feed();
 }
 
-bool MecanumDrivetrain::switchSense(float d)// inf is on by default
+bool MecanumDrivetrain::SwitchSensor(float distance) // Infared sensor is used by default
 {
-	if(d < 6){// switch to infrard m8
+	// Once the IR becomes accurate, switch to it over ultrasonic
+	return (distance < 6);
+
+	// OLD
+	/*
+	if(d < 6)
+	{
 		return true;
-	}else{
-		return false;
 	}
+	else
+	{
+		return false;
+	} */
 }
 
-void MecanumDrivetrain::switchSense(float d)// inf is on by default
+void MecanumDrivetrain::CheckSensor(float distance)
 {
-	switchSense(d) ? (sensor = ultra) : (sensor = infrared);// switch sensors
+	this->useIR = this->SwitchSensor(distance);
 }
-
-
-
-

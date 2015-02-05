@@ -10,7 +10,6 @@
 #include "Subsystems/Elevator.h"
 #include "Subsystems/MecanumDrivetrain.h"
 #include "Subsystems/Vision.h"
-#include "Subsystems/Gyroscope.h"
 #include "Subsystems/DriveEncoder.h"
 #include "Subsystems/DriveAccelerometer.h"
 #include "RobotMap.h"
@@ -32,7 +31,6 @@ public:
 	static Elevator* elevator;
 	static MecanumDrivetrain* drivetrain;
 	static Vision* vision;
-	static Gyroscope* gyroscope;
 	static DriveEncoder* encoder;
 	static DriveAccelerometer* accelerometer;
 	static Ultrasonic612* ultrasonic612;
