@@ -21,10 +21,11 @@ void AverageDistance::Initialize()
 // Called repeatedly when this Command is scheduled to run
 void AverageDistance::Execute()
 {
+	left_measurement = ultrasonic612->measureL();
+	right_measurement = ultrasonic612->measureR();
 	double average = (left_measurement + right_measurement)/2;
 	SmartDashboard::PutNumber("Average of Ultrasonic measurements:", average);
 	AverageDistance::isADDone = true;
-	//TODO: Incorporate this average with actual usefulness
 }
 
 // Make this return true when this Command no longer needs to run execute()
