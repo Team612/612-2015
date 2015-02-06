@@ -30,7 +30,8 @@ void Robot::DisabledPeriodic()
 
 void Robot::AutonomousInit()
 {
-	DriveDistance* d = new DriveDistance(30);
+	DriveDistance* d = new DriveDistance(1250);
+	d->Start();
 }
 
 void Robot::AutonomousPeriodic()
@@ -59,6 +60,7 @@ void Robot::TeleopPeriodic()
 
 
 	drivetrain->move(x,y,rotation);
+
 
 	if (interval >= 30) //Prints every half second
 	{

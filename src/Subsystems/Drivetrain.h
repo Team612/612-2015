@@ -17,7 +17,7 @@ public:
 	void InitDefaultCommand();
 	void move(float x, float y, float rotation);
 	void stop();
-	void driveDistance(int inches);
+	void moveTank(float l, float r);
 
 	Encoder* getLFEncoder();
 	Encoder* getLREncoder();

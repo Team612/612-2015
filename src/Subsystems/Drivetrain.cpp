@@ -59,6 +59,11 @@ void Drivetrain::stop()
 	MecanumDrive_Cartesian(0.0f, 0.0f, 0.0f);
 }
 
+void Drivetrain::moveTank(float l, float r)
+{
+	TankDrive(l, r);
+}
+
 Encoder* Drivetrain::getLFEncoder()
 {
 	return encoderLF;
