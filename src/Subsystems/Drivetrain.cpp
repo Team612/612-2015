@@ -1,13 +1,13 @@
-#include "MecanumDrivetrain.h"
 #include "../RobotMap.h"
 #include <Talon.h>
 #include <MotorSafetyHelper.h>
+#include <Subsystems/DriveTrain.h>
 
-MecanumDrivetrain::MecanumDrivetrain(uint32_t talonchannel1,
+DriveTrain::DriveTrain(uint32_t talonchannel1,
 		                             uint32_t talonchannel2,
 		                             uint32_t talonchannel3,
 		                             uint32_t talonchannel4):
-		Subsystem("MecanumDrivetrain"),
+		Subsystem("Drivetrain"),
 		RobotDrive(new Talon(talonchannel1),
 				   new Talon(talonchannel2),
 				   new Talon(talonchannel3),
@@ -20,7 +20,7 @@ MecanumDrivetrain::MecanumDrivetrain(uint32_t talonchannel1,
 	//import trackball or something? idk.
 }
 
-void MecanumDrivetrain::InitDefaultCommand()
+void DriveTrain::InitDefaultCommand()
 {
 	// Set the default command for a subsystem here.
 	//SetDefaultCommand(new Drive());
@@ -29,19 +29,19 @@ void MecanumDrivetrain::InitDefaultCommand()
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
 
-void MecanumDrivetrain::move(float magnitude, float direction, float rotation)
+void DriveTrain::move(float magnitude, float direction, float rotation)
 {
 	MecanumDrive_Polar(magnitude, direction, rotation);
 	m_safetyHelper->Feed();
 }
 
-void MecanumDrivetrain::stop()
+void DriveTrain::stop()
 {
 	MecanumDrive_Polar(0.0f, 0.0f, 0.0f);
 	m_safetyHelper->Feed();
 }
 
-bool MecanumDrivetrain::SwitchSensor(float distance) // Infared sensor is used by default
+bool DriveTrain::SwitchSensor(float distance) // Infared sensor is used by default zac likes to touhc children
 {
 	// Once the IR becomes accurate, switch to it over ultrasonic
 	return (distance < 6);
@@ -58,7 +58,7 @@ bool MecanumDrivetrain::SwitchSensor(float distance) // Infared sensor is used b
 	} */
 }
 
-void MecanumDrivetrain::CheckSensor(float distance)
+void DriveTrain::CheckSensor(float distance)
 {
 	this->useIR = this->SwitchSensor(distance);
 }
