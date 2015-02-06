@@ -5,11 +5,10 @@
 ExampleSubsystem* CommandBase::examplesubsystem = NULL;
 OI* CommandBase::oi = NULL;
 Elevator* CommandBase::elevator = NULL;
-MecanumDrivetrain* CommandBase::drivetrain = NULL;
+Drivetrain* CommandBase::drivetrain = NULL;
 Vision* CommandBase::vision = NULL;
 DriveEncoder* CommandBase::encoder = NULL;
 DriveAccelerometer* CommandBase::accelerometer = NULL;
-Ultrasonic612* CommandBase::ultrasonic612 = NULL;
 
 
 CommandBase::CommandBase(char const *name) :
@@ -30,8 +29,7 @@ void CommandBase::init()
 	examplesubsystem = new ExampleSubsystem();
 	oi = new OI();
 	elevator = new Elevator();
-	drivetrain = new MecanumDrivetrain(MOTOR_LR, MOTOR_LF, MOTOR_RR, MOTOR_RF);
+	drivetrain = new Drivetrain(MOTOR_LR, MOTOR_LF, MOTOR_RR, MOTOR_RF, INFRARED);
 	encoder = new DriveEncoder();
 	accelerometer = new DriveAccelerometer();
-	ultrasonic612 = new Ultrasonic612();
 }

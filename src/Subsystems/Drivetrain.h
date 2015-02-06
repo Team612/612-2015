@@ -5,28 +5,28 @@
 #include "WPILib.h"
 #include <RobotDrive.h>
 #include <MotorSafetyHelper.h>
-#include <Subsystems/Infrared612.h>
-#include "Ultrasonic612.h"
+#include <AnalogInput.h>
 
-class MecanumDrivetrain: public Subsystem, public RobotDrive
+class Drivetrain: public Subsystem, public RobotDrive
 {
 private:
-	Ultrasonic612 ultra;
-	Infrared612 infrared;
-	bool useIR = false;
+	//bool useIR = false;
 
+	AnalogInput* ir;
 	bool SwitchSensor(float distance); // Called in CheckSensor
 
 public:
-	MecanumDrivetrain(uint32_t talonchannel1,
+	Drivetrain(uint32_t talonchannel1,
 					  uint32_t talonchannel2,
 					  uint32_t talonchannel3,
-					  uint32_t talonchannel4);
+					  uint32_t talonchannel4,
+					  uint32_t infraredchannel);
 	void InitDefaultCommand();
 
-	void CheckSensor(float distance);
+	//void CheckSensor(float distance);
 	void move(float magnitude, float direction, float rotation);
 	void stop();
+	int16_t getir();
 
 };
 
