@@ -1,5 +1,5 @@
-#ifndef MecanumDrivetrain_H
-#define MecanumDrivetrain_H
+#ifndef Drivetrain_H
+#define Drivetrain_H
 
 #include "Commands/Subsystem.h"
 #include "WPILib.h"
@@ -8,7 +8,7 @@
 #include <Subsystems/Infrared612.h>
 #include "Ultrasonic612.h"
 
-class MecanumDrivetrain: public Subsystem, public RobotDrive
+class DriveTrain: public Subsystem, public RobotDrive
 {
 private:
 	Ultrasonic612 ultra;
@@ -18,7 +18,7 @@ private:
 	bool SwitchSensor(float distance); // Called in CheckSensor
 
 public:
-	MecanumDrivetrain(uint32_t talonchannel1,
+	DriveTrain(uint32_t talonchannel1,
 					  uint32_t talonchannel2,
 					  uint32_t talonchannel3,
 					  uint32_t talonchannel4);
