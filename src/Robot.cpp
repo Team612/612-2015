@@ -1,11 +1,11 @@
 #include "WPILib.h"
 #include "Commands/Command.h"
-#include "Commands/ExampleCommand.h"
 #include "CommandBase.h"
 #include <cstdio>
 #include <Joystick.h>
+#include <Subsystems/DriveTrain.h>
 #include <Talon.h>
-#include "Subsystems/DriveTrain.h"
+#include "Commands/AutonomousSimple.h"
 #include "Robot.h"
 #include "RobotMap.h"
 
@@ -13,7 +13,7 @@
 void Robot::RobotInit()
 {
 	CommandBase::init();
-	autonomousCommand = new ExampleCommand();
+	autonomousCommand = new AutonomousSimple(this);
 	lw = LiveWindow::GetInstance();
 	robotDrive = new DriveTrain(MOTOR_LF,MOTOR_LR,MOTOR_RF,MOTOR_RR);//The 4 talons
 	joystick = new Joystick(1);//Right hand joystick
