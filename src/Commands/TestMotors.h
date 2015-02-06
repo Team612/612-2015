@@ -3,7 +3,7 @@
 
 #include "../CommandBase.h"
 #include "WPILib.h"
-#include "../Subsystems/Drivetrain.h"
+#include "../Subsystems/DriveTrain.h"
 #include <Timer.h>
 #include "RobotMap.h"
 
@@ -11,7 +11,7 @@ class TestMotors: public CommandBase
 {
 private:
 	Timer* testMotorTimer;
-	//MecanumDrivetrain* drive;
+	DriveTrain* drive;
 	bool isTestDone;
 public:
 	TestMotors();
