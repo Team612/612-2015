@@ -1,7 +1,7 @@
 #include "../RobotMap.h"
 #include <Talon.h>
 #include <MotorSafetyHelper.h>
-#include <Subsystems/DriveTrain.h>
+#include <Subsystems/Drivetrain.h>
 
 DriveTrain::DriveTrain(uint32_t talonchannel1,
 		                             uint32_t talonchannel2,
