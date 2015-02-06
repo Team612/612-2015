@@ -30,6 +30,6 @@ public:
 	//612 functions
 	void TestPulley();
 	//612 Objects
-	MecanumDrivetrain* robotDrive;
+	Drivetrain* robotDrive;
 };
 #endif

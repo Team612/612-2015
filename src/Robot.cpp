@@ -15,7 +15,7 @@ void Robot::RobotInit()
 	CommandBase::init();
 	autonomousCommand = new ExampleCommand();
 	lw = LiveWindow::GetInstance();
-	robotDrive = new MecanumDrivetrain(MOTOR_LF,MOTOR_LR,MOTOR_RF,MOTOR_RR);//The 4 talons
+	robotDrive = new Drivetrain(MOTOR_LF,MOTOR_LR,MOTOR_RF,MOTOR_RR);//The 4 talons
 	joystick = new Joystick(1);//Right hand joystick
 	speedgun = new BuiltInAccelerometer(); // New accelerometer called speedgun
 	robot = this;

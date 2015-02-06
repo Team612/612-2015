@@ -13,7 +13,16 @@ private:
 	//bool useIR = false;
 
 	AnalogInput* ir;
-	bool SwitchSensor(float distance); // Called in CheckSensor
+	Ultrasonic* ultra;
+	AnalogInput* infrared;
+
+	Encoder* encoderLR;
+	Encoder* encoderLF;
+	Encoder* encoderRR;
+	Encoder* encoderRF;
+
+	bool useIR = false;
+	//bool SwitchSensor(float distance); // Called in CheckSensor
 
 public:
 	Drivetrain(uint32_t talonchannel1,
@@ -27,6 +36,11 @@ public:
 	void move(float magnitude, float direction, float rotation);
 	void stop();
 	int16_t getir();
+
+	//Encoder Methods
+	enum MotorLocation {LEFT_FRONT, LEFT_REAR, RIGHT_FRONT, RIGHT_REAR}; //For use in getDistance
+	void resetEncoders(); //Resets ALL encoders
+	int32_t getDistance(MotorLocation); //Gets the distance of a specific  motor
 
 };
 
