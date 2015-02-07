@@ -26,6 +26,7 @@ public:
 	static Elevator* elevator;
 	static Drivetrain* drivetrain;
 	static Vision* vision;
+	static Haptic* haptic;
 };
 
 #endif

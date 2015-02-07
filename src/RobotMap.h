@@ -56,6 +56,8 @@ const uint32_t RELAY_LATCH = 1;
  * JOYSTICK STUFF
  */
 //Settings
+static const float DEFAULT_RUMBLE_DURATION = 2.0f;
+
 static const float DEADZONE = 0.1f;
 static const float THROTTLE = 1.0f;
 

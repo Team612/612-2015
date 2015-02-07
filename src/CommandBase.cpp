@@ -6,6 +6,7 @@ OI* CommandBase::oi = NULL;
 Elevator* CommandBase::elevator = NULL;
 Drivetrain* CommandBase::drivetrain = NULL;
 Vision* CommandBase::vision = NULL;
+Haptic* CommandBase::haptic = NULL;
 
 CommandBase::CommandBase(char const *name) :
 		Command(name)
