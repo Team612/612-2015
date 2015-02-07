@@ -1,7 +1,7 @@
 #include "../RobotMap.h"
 #include <Talon.h>
 #include <MotorSafetyHelper.h>
-#include <Drivetrain.h>
+#include "Drivetrain.h"
 
 Drivetrain::Drivetrain(uint32_t talonchannel1,
 		                             uint32_t talonchannel2,
@@ -18,7 +18,7 @@ Drivetrain::Drivetrain(uint32_t talonchannel1,
 	SetSafetyEnabled(true);
 	SetExpiration(MOTOR_EXPIRATION);
 	std::printf("Expiration = %f", GetExpiration());
-	ir = new AnalogInput(infraredchannel)
+	ir = new AnalogInput(infraredchannel);
 	//import trackball or something? idk.
 }
 
@@ -45,7 +45,7 @@ void Drivetrain::stop()
 
 int16_t Drivetrain::getir()
 {
-	return ir->GetValue;
+	return ir->GetValue();
 }
 
 /*bool Drivetrain::SwitchSensor(float distance) // Infared sensor is used by default

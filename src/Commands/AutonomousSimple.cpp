@@ -1,14 +1,12 @@
-#include "ExampleCommand.h"
+#include "AutonomousSimple.h"
 
 /** The constructor of the Command might initialize any class variables pertinent to the Command.
  * Good examples of these variables might be a loop count, a timer.  Variables for robot
  * hardware, such as a motor controller, etc. should not be created here (but in a Subsystem).
  */
-ExampleCommand::ExampleCommand()
+AutonomousSimple::AutonomousSimple()
 {
-	// Use Requires() here to declare subsystem dependencies
-	// eg. Requires(chassis);
-	// We need to check this syntax for C++
+	timer = new Timer(); //New timer object
 }
 
 /** Called just before this Command runs the first time
@@ -16,9 +14,9 @@ ExampleCommand::ExampleCommand()
  * In many cases, this method is no different than the constructor, so adding code here
  * is not always necessary.
  */
-void ExampleCommand::Initialize()
+void AutonomousSimple::Initialize()
 {
-
+	timer->Start(); //Start the timer
 }
 
 /** Called repeatedly when this Command is scheduled to run
@@ -27,37 +25,34 @@ void ExampleCommand::Initialize()
  * in this method.
  *
  */
-void ExampleCommand::Execute()
+void AutonomousSimple::Execute()
 {
-
+	drivetrain->move(1.0,0.0,0.0); //Move the robot forward to score points
 }
 
-/** Make this return true when this Command no longer needs to run execute()
- * The method might return true for a variety of reasons, such as a Timer object reaching a count, 
- * or based on a switch value.  
- */
-bool ExampleCommand::IsFinished()
+bool AutonomousSimple::IsFinished()
 {
-	return false;
+	if(timer->Get() >= 4.0) //Check to see if timer is at 4 seconds or more
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
 
 /** Called once after isFinished returns true
  * This method is used to clean up variables, if necessary.  Dynamic local variables could be deleted to 
  * recover memory.
  */
-void ExampleCommand::End()
+void AutonomousSimple::End()
+{
+	delete timer; //Deletes timer for more memory
+}
+
+
+void AutonomousSimple::Interrupted()
 {
 
 }
-
-/** Called when another command which requires one or more of the same
- * subsystems is scheduled to run.
- * This method is used if the Subsystem has a requires() statement or if the Command was created
- * by a whileHeld() button action.  When the button is released, the active Command becomes interrupted
- * and canceled.
- */
-void ExampleCommand::Interrupted()
-{
-
-}
-

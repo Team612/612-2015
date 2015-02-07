@@ -1,11 +1,12 @@
-#include "LatchClose.h"
+#include "LatchEngage.h"
 
 /** The constructor of the Command might initialize any class variables pertinent to the Command.
  * Good examples of these variables might be a loop count, a timer.  Variables for robot
  * hardware, such as a motor controller, etc. should not be created here (but in a Subsystem).
  */
-LatchClose::LatchClose()
+LatchEngage::LatchEngage(bool engaged)
 {
+	this->engaged = engaged;
 }
 
 /** Called just before this Command runs the first time
@@ -13,7 +14,7 @@ LatchClose::LatchClose()
  * In many cases, this method is no different than the constructor, so adding code here
  * is not always necessary.
  */
-void LatchClose::Initialize()
+void LatchEngage::Initialize()
 {
 
 }
@@ -24,7 +25,7 @@ void LatchClose::Initialize()
  * in this method.
  *
  */
-void LatchClose::Execute()
+void LatchEngage::Execute()
 {
 
 }
@@ -33,7 +34,7 @@ void LatchClose::Execute()
  * The method might return true for a variety of reasons, such as a Timer object reaching a count,
  * or based on a switch value.
  */
-bool LatchClose::IsFinished()
+bool LatchEngage::IsFinished()
 {
 	return false;
 }
@@ -42,7 +43,7 @@ bool LatchClose::IsFinished()
  * This method is used to clean up variables, if necessary.  Dynamic local variables could be deleted to
  * recover memory.
  */
-void LatchClose::End()
+void LatchEngage::End()
 {
 
 }
@@ -53,7 +54,7 @@ void LatchClose::End()
  * by a whileHeld() button action.  When the button is released, the active Command becomes interrupted
  * and canceled.
  */
-void LatchClose::Interrupted()
+void LatchEngage::Interrupted()
 {
 
 }
