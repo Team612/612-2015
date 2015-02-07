@@ -14,8 +14,8 @@ void Robot::RobotInit()
 {
 	CommandBase::init();
 	lw = LiveWindow::GetInstance();
-
 	joystick = new Joystick(1);//Right hand joystick
+	joystick = new Joystick(DRIVER_JOY);//Right hand joystick
 	speedgun = new BuiltInAccelerometer(); // New accelerometer called speedgun
 	robot = this;
 }

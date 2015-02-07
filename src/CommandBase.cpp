@@ -7,8 +7,6 @@ Elevator* CommandBase::elevator = NULL;
 Drivetrain* CommandBase::drivetrain = NULL;
 Vision* CommandBase::vision = NULL;
 
-
-
 CommandBase::CommandBase(char const *name) :
 		Command(name)
 {
@@ -27,5 +25,4 @@ void CommandBase::init()
 	oi = new OI();
 	elevator = new Elevator();
 	drivetrain = new Drivetrain(MOTOR_LR, MOTOR_LF, MOTOR_RR, MOTOR_RF, INFRARED);
-
 }
