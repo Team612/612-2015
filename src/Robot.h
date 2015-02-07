@@ -1,6 +1,10 @@
 #ifndef ROBOT_H
 #define ROBOT_H
+<<<<<<< HEAD
 #include <Subsystems/Drivetrain.h>
+=======
+#include <Subsystems/DriveTrain.h>
+>>>>>>> 2ab036a4697cde7d0c943de9a978246519b3694a
 
 class Robot: public IterativeRobot
 {
@@ -30,6 +34,10 @@ public:
 	//612 functions
 	void TestPulley();
 	//612 Objects
+<<<<<<< HEAD
 	Drivetrain* robotDrive;
+=======
+	DriveTrain* robotDrive;
+>>>>>>> 2ab036a4697cde7d0c943de9a978246519b3694a
 };
 #endif

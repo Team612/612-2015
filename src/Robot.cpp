@@ -1,11 +1,16 @@
 #include "WPILib.h"
 #include "Commands/Command.h"
-#include "Commands/ExampleCommand.h"
 #include "CommandBase.h"
 #include <cstdio>
 #include <Joystick.h>
+<<<<<<< HEAD
 #include <Subsystems/Drivetrain.h>
 #include <Talon.h>
+=======
+#include <Subsystems/DriveTrain.h>
+#include <Talon.h>
+#include "Commands/AutonomousSimple.h"
+>>>>>>> 2ab036a4697cde7d0c943de9a978246519b3694a
 #include "Robot.h"
 #include "RobotMap.h"
 
@@ -13,9 +18,13 @@
 void Robot::RobotInit()
 {
 	CommandBase::init();
-	autonomousCommand = new ExampleCommand();
+	autonomousCommand = new AutonomousSimple(this);
 	lw = LiveWindow::GetInstance();
+<<<<<<< HEAD
 	robotDrive = new Drivetrain(MOTOR_LF,MOTOR_LR,MOTOR_RF,MOTOR_RR);//The 4 talons
+=======
+	robotDrive = new DriveTrain(MOTOR_LF,MOTOR_LR,MOTOR_RF,MOTOR_RR);//The 4 talons
+>>>>>>> 2ab036a4697cde7d0c943de9a978246519b3694a
 	joystick = new Joystick(1);//Right hand joystick
 	speedgun = new BuiltInAccelerometer(); // New accelerometer called speedgun
 	robot = this;
