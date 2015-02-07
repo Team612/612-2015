@@ -9,7 +9,6 @@
 #include "WPILib.h"
 #include "Subsystems/Elevator.h"
 #include "Subsystems/Vision.h"
-#include "Subsystems/DriveEncoder.h"
 #include "RobotMap.h"
 
 /**
@@ -29,8 +28,6 @@ public:
 	static Elevator* elevator;
 	static DriveTrain* drivetrain;
 	static Vision* vision;
-	static DriveEncoder* encoder;
-	static Ultrasonic612* ultrasonic612;
 };
 
 #endif

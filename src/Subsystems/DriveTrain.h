@@ -5,14 +5,14 @@
 #include "WPILib.h"
 #include <RobotDrive.h>
 #include <MotorSafetyHelper.h>
-#include <Subsystems/Infrared612.h>
-#include "Ultrasonic612.h"
+#include <AnalogInput.h>
+#include <Ultrasonic.h>
 
 class DriveTrain: public Subsystem, public RobotDrive
 {
 private:
-	Ultrasonic612 ultra;
-	Infrared612 infrared;
+	Ultrasonic* ultra;
+	AnalogInput* infrared;
 	bool useIR = false;
 
 	bool SwitchSensor(float distance); // Called in CheckSensor
