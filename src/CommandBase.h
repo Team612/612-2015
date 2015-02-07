@@ -1,7 +1,7 @@
 #ifndef COMMAND_BASE_H
 #define COMMAND_BASE_H
 
-#include <Subsystems/DriveTrain.h>
+#include <Subsystems/Drivetrain.h>
 #include <string>
 #include "Commands/Command.h"
 #include "Subsystems/ExampleSubsystem.h"
@@ -22,11 +22,9 @@ public:
 	CommandBase(char const *name);
 	CommandBase();
 	static void init();
-	// Create a single static instance of all of your subsystems
-	static ExampleSubsystem* examplesubsystem;
 	static OI* oi;
 	static Elevator* elevator;
-	static DriveTrain* drivetrain;
+	static Drivetrain* drivetrain;
 	static Vision* vision;
 };
 

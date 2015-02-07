@@ -4,9 +4,8 @@
  * Good examples of these variables might be a loop count, a timer.  Variables for robot
  * hardware, such as a motor controller, etc. should not be created here (but in a Subsystem).
  */
-AutonomousSimple::AutonomousSimple(Robot* r)
+AutonomousSimple::AutonomousSimple()
 {
-	robot = r;
 	timer = new Timer(); //New timer object
 }
 
@@ -28,7 +27,7 @@ void AutonomousSimple::Initialize()
  */
 void AutonomousSimple::Execute()
 {
-	robot->robotDrive->move(1.0,0.0,0.0); //Move the robot forward to score points
+	drivetrain->move(1.0,0.0,0.0); //Move the robot forward to score points
 }
 
 bool AutonomousSimple::IsFinished()

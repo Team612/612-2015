@@ -10,7 +10,7 @@
 class AutonomousSimple: public CommandBase
 {
 public:
-	AutonomousSimple(Robot* robot); ///< The constructor for the Example
+	AutonomousSimple(); ///< The constructor for the Example
 	void Initialize(); ///< Runs after the constructor
 	void Execute(); ///< This method is called repeatedly 
 	bool IsFinished(); ///< This method contains the logic of when the  should end
@@ -18,7 +18,6 @@ public:
 	void Interrupted(); ///< The clean-up method when a  ends abruptly (from another event, such as a button release)
 private:
 	Timer* timer; //New timer object
-	Robot* robot;
 };
 
 #endif /* AUTONOMOUS_SIMPLE_H */
