@@ -1,4 +1,5 @@
 #include "Elevator.h"
+#include <cmath>
 
 Elevator::Elevator() :
 	Subsystem("Elevator")
@@ -54,39 +55,34 @@ Encoder* Elevator::getEncoder()
 
 bool Elevator::getLeftAlignment()
 {
-	val = leftIR->GetVoltage();
+	float val = leftIR->GetVoltage();
 	val = IRVoltageToDistance(val);
-	
-	if (val >= (distance - BUFFER) && val <= (distance + BUFFER)) //Distance to ground +/- 2 inches TODO
+	float dist = 0.0f;
+	if (val >= (dist - BUFFER) && val <= (dist + BUFFER)) //Distance to ground +/- 2 inches TODO
 	{
 		return false;
 	}
-	else
-	{
-		return true;
-	}
-	
+
+	return true;
 }
+
 bool Elevator::getRightAlignment()
 {
-	val = rightIR->GetVoltage();
+	float val = rightIR->GetVoltage();
 	val = IRVoltageToDistance(val);
+	float dist = 0.0f;
 	
-	if (val >= (distance - BUFFER) && val <= (distance + BUFFER)) //Distance to ground +/- 2 inches TODO
+	if (val >= (dist - BUFFER) && val <= (dist + BUFFER)) //Distance to ground +/- 2 inches TODO
 	{
 		printf("Crate not found");
 		return false;
 	}
-	else
-	{
-		return true;
-	}
-	
+	return true;
 }
 
 float Elevator::IRVoltageToDistance(float val)
 {
-	return ((4187.8/val)**1.1060)/2.54; //make sure this is right, make sure it returns INCHES
+	return (pow((4187.8/val),1.1060))/2.54; //make sure this is right, make sure it returns INCHES
 }
 
 float Elevator::getElevatorHeight()
@@ -112,14 +108,15 @@ float Elevator::UltrasonicVoltageToDistance(float voltage)
 	
 }
 
-MainSensor Elevator::switchSensor()
+Elevator::MainSensor Elevator::switchSensor(float IRDistance, float UDistance)
 {
-	if(IR > MAX_IR)
+	if(IRDistance > MAX_IR)
 	{
 		return ULTRASONIC;
 	}
-	else if(U < MIN_ULTRA)
+	else if(UDistance < MIN_ULTRA)
 	{
 		return IR;
 	}
+	return IR;
 }

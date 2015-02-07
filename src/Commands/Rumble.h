@@ -15,8 +15,9 @@
 
 #include "Commands/Subsystem.h"
 #include "../Robot.h"
+#include "../CommandBase.h"
 
-class Rumble: public Command
+class Rumble: public CommandBase
 {
 public:
 	Rumble();

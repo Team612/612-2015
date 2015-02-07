@@ -17,13 +17,12 @@ Rumble::Rumble()
 	// Use requires() here to declare subsystem dependencies
 	// eg. requires(chassis);
 	Requires(haptic);
-	Requires(networktables)
 	this->counter = 0;
 }
 
 Rumble::~Rumble()
 {
-	delete this->counter;
+
 }
 
 // Called just before this Command runs the first time
