@@ -7,6 +7,9 @@ Elevator::Elevator() :
 	topSwitch = new DigitalInput(ELEVATOR_TOP_SWITCH);
 	bottomSwitch = new DigitalInput(ELEVATOR_BOTTOM_SWITCH);
 	encoder = new Encoder(ELEVATOR_ENCODER_A, ELEVATOR_ENCODER_B);
+	left = new AnalogInput(LEFT_IR);
+	right = new AnalogInput(RIGHT_IR);
+	sense = IR;
 }
 
 Elevator::~Elevator()
@@ -47,3 +50,43 @@ Encoder* Elevator::getEncoder()
 	return encoder;
 }
 
+bool Elevator::getLeftAlignment()
+{
+	val = left->GetVoltage();
+	val = voltageToDistance(val);
+	
+	if (val >= (distance - BUFFER) && val <= (distance + BUFFER)) //Distance to ground +/- 2 inches TODO
+	{
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	
+}
+bool Elevator::getRightAlignment()
+{
+	val = right->GetVoltage();
+	val = voltageToDistance(val);
+	
+	if (val >= (distance - BUFFER) && val <= (distance + BUFFER)) //Distance to ground +/- 2 inches TODO
+	{
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	
+}
+
+float Elevator::voltageToDistance(float val)
+{
+	return ((4187.8/val)**1.1060)/2.54; //make sure this is right, make sure it returns INCHES
+}
+
+float Elevator::getElevatorHeight()
+{
+	return 1.0f; //TODO
+}
