@@ -7,9 +7,11 @@ Elevator::Elevator() :
 	topSwitch = new DigitalInput(ELEVATOR_TOP_SWITCH);
 	bottomSwitch = new DigitalInput(ELEVATOR_BOTTOM_SWITCH);
 	encoder = new Encoder(ELEVATOR_ENCODER_A, ELEVATOR_ENCODER_B);
-	left = new AnalogInput(LEFT_IR);
-	right = new AnalogInput(RIGHT_IR);
-	sense = IR;
+	leftIR = new AnalogInput(LEFT_IR);
+	rightIR = new AnalogInput(RIGHT_IR);
+	sense = IR; //default to IR sensor
+	ultrasonic = new AnalogInput(ELEVATOR_ULTRASONIC);
+	elevatorIR = new AnalogInput(ELEVATOR_IR);
 }
 
 Elevator::~Elevator()
@@ -52,8 +54,8 @@ Encoder* Elevator::getEncoder()
 
 bool Elevator::getLeftAlignment()
 {
-	val = left->GetVoltage();
-	val = voltageToDistance(val);
+	val = leftIR->GetVoltage();
+	val = IRVoltageToDistance(val);
 	
 	if (val >= (distance - BUFFER) && val <= (distance + BUFFER)) //Distance to ground +/- 2 inches TODO
 	{
@@ -67,11 +69,12 @@ bool Elevator::getLeftAlignment()
 }
 bool Elevator::getRightAlignment()
 {
-	val = right->GetVoltage();
-	val = voltageToDistance(val);
+	val = rightIR->GetVoltage();
+	val = IRVoltageToDistance(val);
 	
 	if (val >= (distance - BUFFER) && val <= (distance + BUFFER)) //Distance to ground +/- 2 inches TODO
 	{
+		printf("Crate not found");
 		return false;
 	}
 	else
@@ -81,12 +84,42 @@ bool Elevator::getRightAlignment()
 	
 }
 
-float Elevator::voltageToDistance(float val)
+float Elevator::IRVoltageToDistance(float val)
 {
 	return ((4187.8/val)**1.1060)/2.54; //make sure this is right, make sure it returns INCHES
 }
 
 float Elevator::getElevatorHeight()
 {
-	return 1.0f; //TODO
+	if (sense == IR)
+	{
+		float voltage = elevatorIR->GetVoltage();
+		return IRVoltageToDistance(voltage);
+	}
+	else
+	{
+		float voltage = ultrasonic->GetVoltage();
+		return UltrasonicVoltageToDistance(voltage);
+	}
+}
+
+float Elevator::UltrasonicVoltageToDistance(float voltage)
+{
+	float VoltageInch = voltage/512.0;
+	VoltageInch *= 1000.0;
+	//formula from here: http://www.maxbotix.com/articles/032.htm confused by it
+	return 1.0f; //fix
+	
+}
+
+MainSensor Elevator::switchSensor()
+{
+	if(IR > MAX_IR)
+	{
+		return ULTRASONIC;
+	}
+	else if(U < MIN_ULTRA)
+	{
+		return IR;
+	}
 }

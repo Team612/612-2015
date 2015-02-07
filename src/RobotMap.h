@@ -53,6 +53,12 @@ const uint32_t RIGHT_IR = 2;
 const float CRATE_HEIGHT = 12.0f;
 const float BUFFER = 2.0f;
 
+const uint32_t ELEVATOR_ULTRASONIC = 1;
+const uint32_t ELEVATOR_IR = 2;
+
+const float MAX_IR = 60.0f; //TODO
+const float MIN_ULTRA = 20.0f; //TODO
+
 //LATCH
 const uint32_t SOLENOID_LATCH = 1;
 const uint32_t RELAY_LATCH = 1;
