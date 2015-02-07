@@ -46,6 +46,13 @@ const uint32_t ELEVATOR_TOP_SWITCH = 1;
 const uint32_t ELEVATOR_BOTTOM_SWITCH = 1;
 const uint32_t ELEVATOR_ENCODER_A = 1;
 const uint32_t ELEVATOR_ENCODER_B = 1;
+
+const uint32_t LEFT_IR = 1;
+const uint32_t RIGHT_IR = 2;
+
+const float CRATE_HEIGHT = 12.0f;
+const float BUFFER = 2.0f;
+
 //LATCH
 const uint32_t SOLENOID_LATCH = 1;
 const uint32_t RELAY_LATCH = 1;

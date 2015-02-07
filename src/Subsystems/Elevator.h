@@ -11,6 +11,17 @@ private:
 	DigitalInput* topSwitch;
 	DigitalInput* bottomSwitch;
 	Encoder* encoder;
+	AnalogInput* left;
+	AnalogInput* right;
+	float voltageToDistance(float val);
+	enum MainSensor{
+		ULTRASONIC, 
+		IR
+	};
+	MainSensor sense;
+	const float SWITCH_TO_ULTRASONIC = 12.0f;
+	const float SWITCH_TO_IR = 6.0f;
+	
 public:
 	Elevator();
 	virtual ~Elevator();
@@ -18,6 +29,9 @@ public:
 	void stop();
 	void InitDefaultCommand();
 	Encoder* getEncoder();
+	bool getLeftAlignment();
+	bool getRightAlignment();
+	float getElevatorHeight();
 };
 
 #endif /* SRC_SUBSYSTEMS_ELEVATOR_H_ */
