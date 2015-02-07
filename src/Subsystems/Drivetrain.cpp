@@ -19,6 +19,12 @@ Drivetrain::Drivetrain(uint32_t talonchannel1,
 	SetExpiration(MOTOR_EXPIRATION);
 	std::printf("Expiration = %f", GetExpiration());
 	ir = new AnalogInput(infraredchannel);
+
+	encoderLF = new Encoder(ENCODER_LF_A, ENCODER_LF_B);
+	encoderLR = new Encoder(ENCODER_LR_A, ENCODER_LR_B);
+	encoderRF = new Encoder(ENCODER_RF_A, ENCODER_RF_B);
+	encoderRR = new Encoder(ENCODER_RR_A, ENCODER_RR_B);
+
 	//import trackball or something? idk.
 }
 
@@ -46,6 +52,34 @@ void Drivetrain::stop()
 int16_t Drivetrain::getir()
 {
 	return ir->GetValue();
+}
+
+void Drivetrain::resetEncoders()
+{
+	//Calls reset on all encoders
+	encoderLF->Reset();
+	encoderLR->Reset();
+	encoderRF->Reset();
+	encoderRR->Reset();
+}
+
+int32_t Drivetrain::getDistance(MotorLocation motor)
+{
+	//Switch statement to check for the encoder distance
+	//Did not use break statements because the return statement will end the method anyways
+	switch(motor)
+	{
+	case LEFT_FRONT:
+		return encoderLF->Get();
+	case LEFT_REAR:
+		return encoderLR->Get();
+	case RIGHT_FRONT:
+		return encoderRF->Get();
+	case RIGHT_REAR:
+		return encoderRR->Get();
+	default:
+		return 0; //In case the enum somehow gets an addition
+	}
 }
 
 /*bool Drivetrain::SwitchSensor(float distance) // Infared sensor is used by default
