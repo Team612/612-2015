@@ -7,11 +7,11 @@
 
 #include <CANTalon612.h>
 
-CANTalon612::CANTalon612(uint32_t port, uint32_t encoderA, uint32_t encoderB, Preferences* pfs, bool inverted, bool override) : CANTalon(port)
+CANTalon612::CANTalon612(uint32_t port, uint32_t encoderA, uint32_t encoderB, bool inverted) : CANTalon(port)
 {
 	encoder = new Encoder(encoderA, encoderB, inverted);
-	prefs = pfs;
-	initPID(pfs, override);
+	prefs = Preferences::GetInstance();
+	initPID();
 }
 CANTalon612::CANTalon612(uint32_t port, uint32_t encoderA, uint32_t encoderB, float p, float i, float d, bool inverted, bool override) : CANTalon(port)
 {
@@ -19,11 +19,11 @@ CANTalon612::CANTalon612(uint32_t port, uint32_t encoderA, uint32_t encoderB, fl
 	prefs = Preferences::GetInstance();
 	initPID(p, i, d, override);
 }
-CANTalon612::CANTalon612(uint32_t port, Encoder* e, Preferences* pfs, bool override) : CANTalon(port)
+CANTalon612::CANTalon612(uint32_t port, Encoder* e) : CANTalon(port)
 {
 	encoder = e;
-	prefs = pfs;
-	initPID(pfs, override);
+	prefs = Preferences::GetInstance();
+	initPID();
 }
 CANTalon612::CANTalon612(uint32_t port, Encoder* e, float p, float i, float d, bool override) : CANTalon(port)
 {
@@ -32,12 +32,12 @@ CANTalon612::CANTalon612(uint32_t port, Encoder* e, float p, float i, float d, b
 	initPID(p, i, d, override);
 }
 
-void CANTalon612::initPID(Preferences* pfs, bool override)
+void CANTalon612::initPID()
 {
 	readPrefs();
 	pid = new PIDController(P, I, D, encoder, this);
 	pid->SetInputRange(-1.0,1.0);
-	pid->SetOutputRange(getMinOutput(), getMaxOutput());
+	pid->SetOutputRange(getMaxOutput()*-1.0f, getMaxOutput());
 }
 void CANTalon612::initPID(float p, float i, float d, bool override)
 {
@@ -51,7 +51,7 @@ void CANTalon612::initPID(float p, float i, float d, bool override)
 	}
 	pid = new PIDController(P, I, D, encoder, this);
 	pid->SetInputRange(-1.0,1.0);
-	pid->SetOutputRange(getMinOutput(), getMaxOutput());
+	pid->SetOutputRange(getMaxOutput()*1.0f, getMaxOutput());
 }
 void CANTalon612::readPrefs()
 {
@@ -110,32 +110,14 @@ float CANTalon612::getOutput()
 	//TODO make sure this works correctly
 	return (float)encoder->GetRate();
 }
-void CANTalon612::setMinOutput(float out)
-{
-	minOut = out;
-	prefs->PutFloat("Min", out);
-	prefs->Save();
-}
+
 void CANTalon612::setMaxOutput(float out)
 {
 	maxOut = out;
 	prefs->PutFloat("Max", out);
 	prefs->Save();
 }
-//use these for the first time to load from the file
-float CANTalon612::getMinOutput()
-{
-	if (prefs->ContainsKey("Min"))
-	{
-		minOut = prefs->GetFloat("Min");
-		return minOut;
-	}
-	else
-	{
-		minOut = -1.0f;
-		return minOut;
-	}
-}
+//use this for the first time to load from the file
 float CANTalon612::getMaxOutput()
 {
 	if (prefs->ContainsKey("Max"))
@@ -149,5 +131,3 @@ float CANTalon612::getMaxOutput()
 		return maxOut;
 	}
 }
-
-

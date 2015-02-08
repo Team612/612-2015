@@ -21,30 +21,39 @@ public:
 	 * Then we need an encoder, either by getting the channels and constructing them ourselves, or the actual encoder
 	 * After that, we need to get PID values. This can be done by either importing preferences or specifying
 	 * The override will save the new values over the old ones
+	 *
+	 * If PID values are not specified, then they will be recalled from Preferences. If they dont exist there, they will default to 0.0
 	 */
-	CANTalon612(uint32_t port, uint32_t encoderA, uint32_t encoderB, Preferences* pfs, bool inverted=false, bool override=false);
+	CANTalon612(uint32_t port, uint32_t encoderA, uint32_t encoderB, bool inverted=false);
 	CANTalon612(uint32_t port, uint32_t encoderA, uint32_t encoderB, float p, float i, float d, bool inverted=false, bool override=false);
-	CANTalon612(uint32_t port, Encoder* e, Preferences* pfs, bool override=false);
+	CANTalon612(uint32_t port, Encoder* e);
 	CANTalon612(uint32_t port, Encoder* e, float p, float i, float d, bool override=false);
 	virtual ~CANTalon612();
+	///Will set it to a value using PID
 	void Set(float value);
+	///returns the output of the motor
 	float getOutput();
 private:
-	void initPID(Preferences* pfs, bool override);
+	///Uses this one for if it is just grabbing from preferences
+	void initPID();
+	///uses this one for if it needs to set PID or needs to overwrite written values
 	void initPID(float p, float i, float d, bool override);
+	///Reads preferences and stores them into P I and D
 	void readPrefs();
+	///Checks to see if there are stored values for PID
 	bool checkPrefs();
+	///Writes the values to the preferences to be loaded later
 	int writePrefs(float p, float i, float d);
-	void setMinOutput(float out);
+	///Sets the maximum output
 	void setMaxOutput(float out);
 	//These two below will get from file NOT from the class variable
-	float getMinOutput();
 	float getMaxOutput();
+	/// PID Values and maximum output
 	float P;
 	float I;
 	float D;
 	float maxOut;
-	float minOut;
+	///Depreciated?
 	void PIDWrite(float output);
 	Preferences* prefs;
 	PIDController* pid;
