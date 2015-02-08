@@ -11,4 +11,15 @@ build.*
 *.xml
 /Simulate/
 wpilib/*
-
+.build/CMakeFiles/2.8.12.2/
+.build/CMakeFiles/CMakeDirectoryInformation.cmake
+.build/CMakeFiles/CMakeOutput.log
+.build/CMakeFiles/FRCProgram.dir/
+.build/CMakeFiles/Makefile.cmake
+.build/CMakeFiles/Makefile2
+.build/CMakeFiles/TargetDirectories.txt
+.build/CMakeFiles/progress.marks
+.build/FRCProgram
+.build/Makefile
+.build/cmake_install.cmake
+.build/CMakeCache.txt
