@@ -36,6 +36,8 @@ void CANTalon612::initPID(Preferences* pfs, bool override)
 {
 	readPrefs();
 	pid = new PIDController(P, I, D, encoder, this);
+	pid->SetInputRange(-1.0,1.0);
+	pid->SetOutputRange(minOut, maxOut);
 }
 void CANTalon612::initPID(float p, float i, float d, bool override)
 {
@@ -48,6 +50,8 @@ void CANTalon612::initPID(float p, float i, float d, bool override)
 		readPrefs();
 	}
 	pid = new PIDController(P, I, D, encoder, this);
+	pid->SetInputRange(-1.0,1.0);
+	pid->SetOutputRange(minOut, maxOut);
 }
 void CANTalon612::readPrefs()
 {
@@ -77,6 +81,7 @@ int CANTalon612::writePrefs(float p, float i, float d)
 	prefs->PutFloat("P", p);
 	prefs->PutFloat("I", i);
 	prefs->PutFloat("D", d);
+	prefs->Save();
 	return exit_status;
 }
 CANTalon612::~CANTalon612()
@@ -87,6 +92,54 @@ CANTalon612::~CANTalon612()
 void CANTalon612::PIDWrite(float output)
 {
 	Set(output);
+}
+void CANTalon612::Set(float value)
+{
+	CANTalon::Set(pid->Get());
+}
+float CANTalon612::getOutput()
+{
+	//TODO Figure out how to convert encoder values to a comparable number
+	return (float)encoder->GetRate();
+}
+void CANTalon612::setMinOutput(float out)
+{
+	minOut = out;
+	prefs->PutFloat("Min", out);
+	prefs->Save();
+}
+void CANTalon612::setMaxOutput(float out)
+{
+	maxOut = out;
+	prefs->PutFloat("Max", out);
+	prefs->Save();
+}
+//use these for the first time to load from the file
+float CANTalon612::getMinOutput()
+{
+	if (prefs->ContainsKey("Min"))
+	{
+		minOut = prefs->GetFloat("Min");
+		return minOut;
+	}
+	else
+	{
+		minOut = -1.0f;
+		return minOut;
+	}
+}
+float CANTalon612::getMaxOutput()
+{
+	if (prefs->ContainsKey("Max"))
+	{
+		maxOut = prefs->GetFloat("Max");
+		return maxOut;
+	}
+	else
+	{
+		maxOut = 1.0f;
+		return maxOut;
+	}
 }
 
 
