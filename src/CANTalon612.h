@@ -13,7 +13,7 @@
 #include <Preferences.h>
 #include <CANTalon.h>
 
-class CANTalon612: public CANTalon {
+class CANTalon612: public SpeedController {
 public:
 	/*
 	 * For the constructor, we need a channel to make the actual talon
@@ -32,8 +32,10 @@ public:
 	CANTalon612(uint32_t port, Encoder* e, float p, float i, float d, bool override=false);
 	virtual ~CANTalon612();
 	///Will set it to a value using PID
-	void Set(float value);
+	void Set(float value, uint8_t syncGroup=0);
 	///returns the output of the motor
+	float Get();
+	void Disable();
 	float getOutput();
 private:
 	///Uses this one for if it is just grabbing from preferences
@@ -60,6 +62,9 @@ private:
 	Preferences* prefs;
 	PIDController* pid;
 	Encoder* encoder;
+	CANTalon* talon;
+	const float MAX_INPUT = 1.0f;
+	const float MIN_INPUT = 1.0f;
 };
 
 #endif /* SRC_CANTALON612_H_ */

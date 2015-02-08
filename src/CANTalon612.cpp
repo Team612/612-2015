@@ -7,29 +7,33 @@
 
 #include <CANTalon612.h>
 
-CANTalon612::CANTalon612(uint32_t port, uint32_t encoderA, uint32_t encoderB, bool inverted) : CANTalon(port)
+CANTalon612::CANTalon612(uint32_t port, uint32_t encoderA, uint32_t encoderB, bool inverted)
 {
+	talon = new CANTalon(port);
 	encoder = new Encoder(encoderA, encoderB, inverted);
 	prefs = Preferences::GetInstance();
 	initPID();
 }
 
-CANTalon612::CANTalon612(uint32_t port, uint32_t encoderA, uint32_t encoderB, float p, float i, float d, bool inverted, bool override) : CANTalon(port)
+CANTalon612::CANTalon612(uint32_t port, uint32_t encoderA, uint32_t encoderB, float p, float i, float d, bool inverted, bool override)
 {
+	talon = new CANTalon(port);
 	encoder = new Encoder(encoderA, encoderB, inverted);
 	prefs = Preferences::GetInstance();
 	initPID(p, i, d, override);
 }
 
-CANTalon612::CANTalon612(uint32_t port, Encoder* e) : CANTalon(port)
+CANTalon612::CANTalon612(uint32_t port, Encoder* e)
 {
+	talon = new CANTalon(port);
 	encoder = e;
 	prefs = Preferences::GetInstance();
 	initPID();
 }
 
-CANTalon612::CANTalon612(uint32_t port, Encoder* e, float p, float i, float d, bool override) : CANTalon(port)
+CANTalon612::CANTalon612(uint32_t port, Encoder* e, float p, float i, float d, bool override)
 {
+	talon = new CANTalon(port);
 	encoder = e;
 	prefs = Preferences::GetInstance();
 	initPID(p, i, d, override);
@@ -38,15 +42,12 @@ CANTalon612::CANTalon612(uint32_t port, Encoder* e, float p, float i, float d, b
 void CANTalon612::initPID()
 {
 	readPrefs();
-	pid = new PIDController(P, I, D, encoder, this);
-	// I don't think we should extend a CANTalon.  Using this keyword here is
-	// not going to do the desired effect.  Your PID controller is going to
-	// use PIDWrite(), which calls Set() which changes the PIDController's
-	// SetSetPoint().  This in no way changes the motor output speed.
-	// Thus, you need a CANTalon object, separate from the this keyword object.
-	pid->SetInputRange(-1.0,1.0); // not sure we want to do this.
+	pid = new PIDController(P, I, D, encoder, talon);
+	pid->SetInputRange(MIN_INPUT,MAX_INPUT); // not sure we want to do this.
+	//TODO make this the actual input range
 	pid->SetOutputRange(getMaxOutput()*-1.0f, getMaxOutput());
-	// PID controllers also need to be enabled.  Look at WPILIB docs.
+	pid->Enable();
+	// PID controllers also need to be enabled.
 }
 
 void CANTalon612::initPID(float p, float i, float d, bool override)
@@ -59,9 +60,11 @@ void CANTalon612::initPID(float p, float i, float d, bool override)
 	{
 		readPrefs();
 	}
-	pid = new PIDController(P, I, D, encoder, this);
-	pid->SetInputRange(-1.0,1.0); // not sure we want to do this.
+	pid = new PIDController(P, I, D, encoder, talon);
+	pid->SetInputRange(MIN_INPUT,MAX_INPUT); // not sure we want to do this.
+	//TODO make this the actual input range
 	pid->SetOutputRange(getMaxOutput()*1.0f, getMaxOutput());
+	pid->Enable();
 }
 
 void CANTalon612::readPrefs()
@@ -107,20 +110,31 @@ CANTalon612::~CANTalon612()
 	//CANTalon::~CANTalon();
 }
 
+void CANTalon612::Set(float value, uint8_t syncGroup)
+{
+	float out = getOutput();
+	//make absolute value
+	if (out < 0)
+		out = out*-1;
+	//make the bigger max the new max
+	if (out > maxOut)
+		setMaxOutput(out);
+	//set the motor
+	pid->SetSetpoint(value*maxOut);
+}
+
+float CANTalon612::Get()
+{
+	return getOutput();
+}
+void CANTalon612::Disable()
+{
+	Set(0.0f);
+}
+
 void CANTalon612::PIDWrite(float output)
 {
 	Set(output);
-}
-
-void CANTalon612::Set(float value)
-{
-	float out = getOutput();
-	// todo: missing absolute value.
-	if (out > maxOut)
-	{
-		setMaxOutput(out);
-	}
-	pid->SetSetpoint(value*maxOut);
 }
 
 float CANTalon612::getOutput()
@@ -149,3 +163,4 @@ float CANTalon612::getMaxOutput()
 		return maxOut;
 	}
 }
+
