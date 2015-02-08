@@ -13,7 +13,8 @@
 #include <Preferences.h>
 #include <CANTalon.h>
 
-class CANTalon612: public CANTalon { public:
+class CANTalon612: public CANTalon {
+public:
 	/*
 	 * For the constructor, we need a channel to make the actual talon
 	 * (This would be the CAN ID Then we need an encoder, either by getting
