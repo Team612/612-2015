@@ -2,6 +2,7 @@
 #define ROBOT_H
 
 #include <Subsystems/Drivetrain.h>
+#include <Preferences.h>
 
 class Robot: public IterativeRobot
 {
@@ -31,5 +32,6 @@ public:
 	//612 functions
 	void TestPulley();
 	//612 Objects
+	Preferences* prefs;
 };
 #endif

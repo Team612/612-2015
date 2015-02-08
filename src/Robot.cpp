@@ -17,6 +17,7 @@ void Robot::RobotInit()
 	joystick = new Joystick(DRIVER_JOY);//Right hand joystick
 	speedgun = new BuiltInAccelerometer(); // New accelerometer called speedgun
 	robot = this;
+	prefs = Preferences::GetInstance();
 }
 
 void Robot::DisabledInit()
