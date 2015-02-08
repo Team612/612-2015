@@ -37,7 +37,7 @@ void CANTalon612::initPID(Preferences* pfs, bool override)
 	readPrefs();
 	pid = new PIDController(P, I, D, encoder, this);
 	pid->SetInputRange(-1.0,1.0);
-	pid->SetOutputRange(minOut, maxOut);
+	pid->SetOutputRange(getMinOutput(), getMaxOutput());
 }
 void CANTalon612::initPID(float p, float i, float d, bool override)
 {
@@ -51,7 +51,7 @@ void CANTalon612::initPID(float p, float i, float d, bool override)
 	}
 	pid = new PIDController(P, I, D, encoder, this);
 	pid->SetInputRange(-1.0,1.0);
-	pid->SetOutputRange(minOut, maxOut);
+	pid->SetOutputRange(getMinOutput(), getMaxOutput());
 }
 void CANTalon612::readPrefs()
 {
@@ -95,6 +95,7 @@ void CANTalon612::PIDWrite(float output)
 }
 void CANTalon612::Set(float value)
 {
+	//TODO this will NOT set it to the PID value
 	CANTalon::Set(pid->Get());
 }
 float CANTalon612::getOutput()

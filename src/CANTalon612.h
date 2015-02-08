@@ -30,7 +30,6 @@ public:
 	void Set(float value);
 	float getOutput();
 private:
-	//
 	void initPID(Preferences* pfs, bool override);
 	void initPID(float p, float i, float d, bool override);
 	void readPrefs();
