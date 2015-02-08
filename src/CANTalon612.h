@@ -65,6 +65,7 @@ private:
 	CANTalon* talon;
 	const float MAX_INPUT = 1.0f;
 	const float MIN_INPUT = 1.0f;
+	const float DEFAULT_MAX_OUT = 1.0f;
 };
 
 #endif /* SRC_CANTALON612_H_ */

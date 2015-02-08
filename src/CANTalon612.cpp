@@ -7,6 +7,20 @@
 
 #include <CANTalon612.h>
 
+/*
+ * Explanation of initialization:
+ * The object will build the talon, the encoder then get the pointer to preferences
+ * Then the object will check the preferences and if they exist, load them
+ * if they dont exist and no PID values were passed to it, it will default to P=1 I=D=0
+ * if you passed in PID values, then it will make those the values for THIS RUN ONLY unless
+ * you passed in the override or there are no existing values
+ *
+ * Then it just sets the input and output and enables the PID controller
+ *
+ * For use: Call set and it will check if the output is bigger than previous output. If it is
+ * then it will make that the new max and save it. then it will tell PID to set the motor to the PID'd value
+ */
+
 CANTalon612::CANTalon612(uint32_t port, uint32_t encoderA, uint32_t encoderB, bool inverted)
 {
 	talon = new CANTalon(port);
@@ -58,7 +72,9 @@ void CANTalon612::initPID(float p, float i, float d, bool override)
 	}
 	else
 	{
-		readPrefs();
+		P = p;
+		I = i;
+		D = d;
 	}
 	pid = new PIDController(P, I, D, encoder, talon);
 	pid->SetInputRange(MIN_INPUT,MAX_INPUT); // not sure we want to do this.
@@ -159,7 +175,7 @@ float CANTalon612::getMaxOutput()
 	}
 	else
 	{
-		maxOut = 1.0f;
+		maxOut = DEFAULT_MAX_OUT;
 		return maxOut;
 	}
 }
