@@ -57,9 +57,9 @@ void CANTalon612::initPID()
 {
 	readPrefs();
 	pid = new PIDController(P, I, D, encoder, talon);
-	pid->SetInputRange(MIN_INPUT,MAX_INPUT); // not sure we want to do this.
+	//pid->SetInputRange(MIN_INPUT,MAX_INPUT); // not sure we want to do this.
 	//TODO make this the actual input range
-	pid->SetOutputRange(getMaxOutput()*-1.0f, getMaxOutput());
+	//pid->SetOutputRange(getMaxOutput()*-1.0f, getMaxOutput());
 	pid->Enable();
 	// PID controllers also need to be enabled.
 }
@@ -77,9 +77,9 @@ void CANTalon612::initPID(float p, float i, float d, bool override)
 		D = d;
 	}
 	pid = new PIDController(P, I, D, encoder, talon);
-	pid->SetInputRange(MIN_INPUT,MAX_INPUT); // not sure we want to do this.
+	//pid->SetInputRange(MIN_INPUT,MAX_INPUT); // not sure we want to do this.
 	//TODO make this the actual input range
-	pid->SetOutputRange(getMaxOutput()*1.0f, getMaxOutput());
+	//pid->SetOutputRange(getMaxOutput()*1.0f, getMaxOutput());
 	pid->Enable();
 }
 
@@ -123,7 +123,8 @@ int CANTalon612::writePrefs(float p, float i, float d)
 CANTalon612::~CANTalon612()
 {
 	delete encoder;
-	//CANTalon::~CANTalon();
+	delete talon;
+	delete pid;
 }
 
 void CANTalon612::Set(float value, uint8_t syncGroup)
