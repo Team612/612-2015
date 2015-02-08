@@ -13,18 +13,21 @@ CANTalon612::CANTalon612(uint32_t port, uint32_t encoderA, uint32_t encoderB, bo
 	prefs = Preferences::GetInstance();
 	initPID();
 }
+
 CANTalon612::CANTalon612(uint32_t port, uint32_t encoderA, uint32_t encoderB, float p, float i, float d, bool inverted, bool override) : CANTalon(port)
 {
 	encoder = new Encoder(encoderA, encoderB, inverted);
 	prefs = Preferences::GetInstance();
 	initPID(p, i, d, override);
 }
+
 CANTalon612::CANTalon612(uint32_t port, Encoder* e) : CANTalon(port)
 {
 	encoder = e;
 	prefs = Preferences::GetInstance();
 	initPID();
 }
+
 CANTalon612::CANTalon612(uint32_t port, Encoder* e, float p, float i, float d, bool override) : CANTalon(port)
 {
 	encoder = e;
@@ -36,9 +39,16 @@ void CANTalon612::initPID()
 {
 	readPrefs();
 	pid = new PIDController(P, I, D, encoder, this);
-	pid->SetInputRange(-1.0,1.0);
+	// I don't think we should extend a CANTalon.  Using this keyword here is
+	// not going to do the desired effect.  Your PID controller is going to
+	// use PIDWrite(), which calls Set() which changes the PIDController's
+	// SetSetPoint().  This in no way changes the motor output speed.
+	// Thus, you need a CANTalon object, separate from the this keyword object.
+	pid->SetInputRange(-1.0,1.0); // not sure we want to do this.
 	pid->SetOutputRange(getMaxOutput()*-1.0f, getMaxOutput());
+	// PID controllers also need to be enabled.  Look at WPILIB docs.
 }
+
 void CANTalon612::initPID(float p, float i, float d, bool override)
 {
 	if (override || checkPrefs() == false)
@@ -50,9 +60,10 @@ void CANTalon612::initPID(float p, float i, float d, bool override)
 		readPrefs();
 	}
 	pid = new PIDController(P, I, D, encoder, this);
-	pid->SetInputRange(-1.0,1.0);
+	pid->SetInputRange(-1.0,1.0); // not sure we want to do this.
 	pid->SetOutputRange(getMaxOutput()*1.0f, getMaxOutput());
 }
+
 void CANTalon612::readPrefs()
 {
 	if (checkPrefs())
@@ -64,11 +75,12 @@ void CANTalon612::readPrefs()
 	else
 	{
 		std::printf("No Preferences found!\n");
-		P = 0.0f;
+		P = 1.0f; // don't default to all 3 being zero.
 		I = 0.0f;
 		D = 0.0f;
 	}
 }
+
 bool CANTalon612::checkPrefs()
 {
 	if (prefs->ContainsKey("P") && prefs->ContainsKey("I") && prefs->ContainsKey("D"))
@@ -76,6 +88,7 @@ bool CANTalon612::checkPrefs()
 	else
 		return false;
 }
+
 int CANTalon612::writePrefs(float p, float i, float d)
 {
 	int exit_status = 0;
@@ -87,24 +100,29 @@ int CANTalon612::writePrefs(float p, float i, float d)
 	prefs->Save();
 	return exit_status;
 }
+
 CANTalon612::~CANTalon612()
 {
 	delete encoder;
 	//CANTalon::~CANTalon();
 }
+
 void CANTalon612::PIDWrite(float output)
 {
 	Set(output);
 }
+
 void CANTalon612::Set(float value)
 {
 	float out = getOutput();
+	// todo: missing absolute value.
 	if (out > maxOut)
 	{
 		setMaxOutput(out);
 	}
 	pid->SetSetpoint(value*maxOut);
 }
+
 float CANTalon612::getOutput()
 {
 	//TODO make sure this works correctly
