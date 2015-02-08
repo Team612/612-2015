@@ -36,9 +36,9 @@ Contributors:
 
 | Name            | Github Username |
 |-----------------|-----------------|
+| Zack Alfakir    | ZackAlfakir     |
 | Benjamin Ward   | WardBenjamin    |
 | Swaraj Dhumne   | swarage         |
-| Zack Alfakir    | ZackAlfakir     |
 | Ethan Huey      | ethanhuey       |
 | Shaun Wu        | Alexbay218      |
 | Calvin Godfrey  | ggodfrey        |
