@@ -20,9 +20,9 @@
  * Explanation of initialization: The constructor builds the talon, the
  * encoder, and then get the pointer to preferences.  The maximum encoder rate
  * is stored as a preference.  If the preferences exist, they are loaded for
- * the constants.  If they dont exist an estimated value for the maximum encoder rate is used.
- * Finally, the initialization sets the input and output and enables the PID
- * controller.
+ * the constants.  If they dont exist an estimated value for the maximum
+ * encoder rate is used.  Finally, the initialization sets the input and output
+ * and enables the PID controller.
  *
  * For use: Call Set() and it will check if the encoder value is bigger than
  * previous maximum encoder value seen. If the new value is larger, it will
