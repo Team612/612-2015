@@ -87,15 +87,20 @@ void Robot::TeleopPeriodic()
 
 void Robot::TestInit()
 {
-
+	float P = 1.0f;
+	float I = 0.0f;
+	float D = 0.0f;
+	zack = new CANTalon612(5,0,1,P,I,D,false,true);
 }
 void Robot::TestPeriodic()
 {
 	lw->Run();
 	float val = joystick->GetRawAxis(5);//Takes input from joystick
+	/*
 	firstTalon->Set(val);//Gives joystick input to first talon
 	secondTalon->Set(val);
-	
+	*/
+	zack->Set(val);
 }
 
 

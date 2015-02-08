@@ -3,6 +3,7 @@
 
 #include <Subsystems/Drivetrain.h>
 #include <Preferences.h>
+#include "CANTalon612.h"
 
 class Robot: public IterativeRobot
 {
@@ -18,6 +19,7 @@ private:
 	double currentAcceleration = 0; // used for acceleration and accelerometer
 	double maxAcceleration = 0; // used for highest acceleration during total run time
 	Robot* robot;
+	CANTalon612* zack;
 public:
 	void RobotInit();
 	void AutonomousInit();
