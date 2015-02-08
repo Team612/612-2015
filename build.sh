@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #satisfy dependencies
-./.wpilib-download
-./.compiler-download
+./.wpilib-download.sh
+./.compiler-download.sh
 
 #build
 cd ./.build
