@@ -36,7 +36,7 @@ public:
 	///returns the output of the motor
 	float Get();
 	void Disable();
-	float getOutput();
+	float getEncoderValue();
 private:
 	///Uses this one for if it is just grabbing from preferences
 	void initPID();

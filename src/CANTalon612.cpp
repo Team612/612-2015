@@ -7,26 +7,34 @@
 
 #include <CANTalon612.h>
 
-/*
- * Explanation of initialization:
- * The object will build the talon, the encoder then get the pointer to preferences
- * Then the object will check the preferences and if they exist, load them
- * if they dont exist and no PID values were passed to it, it will default to P=1 I=D=0
- * if you passed in PID values, then it will make those the values for THIS RUN ONLY unless
- * you passed in the override or there are no existing values
+/* This class makes a PIDController function as a SpeedController, which allows
+ * for each motor to be driven independently by an internal PID controller.
+ * The goal of this code is to prevent drift in the Mecanum wheel drive.
  *
- * Then it just sets the input and output and enables the PID controller
+ * The concept is as follows: Each motor has its own encoder.  Rather than
+ * command the motors to spin based on a value, we command the motor speed
+ * until the encoder rate (not the position) matches a desired rate.  Due to
+ * mechanical variation (chain tension and alignment), each wheel has variation
+ * in the necessary motor speed to achieve an encoder rate.
  *
- * For use: Call set and it will check if the output is bigger than previous output. If it is
- * then it will make that the new max and save it. then it will tell PID to set the motor to the PID'd value
+ * Explanation of initialization: The constructor builds the talon, the
+ * encoder, and then get the pointer to preferences.  The maximum encoder rate
+ * is stored as a preference.  If the preferences exist, they are loaded for
+ * the constants.  If they dont exist an estimated value for the maximum encoder rate is used.
+ * Finally, the initialization sets the input and output and enables the PID
+ * controller.
+ *
+ * For use: Call Set() and it will check if the encoder value is bigger than
+ * previous maximum encoder value seen. If the new value is larger, it will
+ * make that the new max and save it. then it will tell PID to set the motor to
+ * the PID'd value
  */
 
-CANTalon612::CANTalon612(uint32_t port, uint32_t encoderA, uint32_t encoderB, bool inverted)
+CANTalon612::CANTalon612(uint32_t talonPWM, uint32_t encoderDigitalInputA, uint32_t encoderDigitalInputB, bool encoderInverted)
 {
-	talon = new CANTalon(port);
-	encoder = new Encoder(encoderA, encoderB, inverted);
-	prefs = Preferences::GetInstance();
-	initPID();
+	talon = new CANTalon(talonPWM);
+	encoder = new Encoder(encoderDigitalInputA, encoderDigitalInputB, encoderInverted);
+	prefs = Preferences::GetInstance(); initPID();
 }
 
 CANTalon612::CANTalon612(uint32_t port, uint32_t encoderA, uint32_t encoderB, float p, float i, float d, bool inverted, bool override)
@@ -142,21 +150,25 @@ void CANTalon612::Set(float value, uint8_t syncGroup)
 
 float CANTalon612::Get()
 {
-	return getOutput();
+	return getEncoderValue();
 }
 void CANTalon612::Disable()
 {
 	Set(0.0f);
+	// I'd set the motor to 0 --- not just Set()
+	// Also disable the PID controller.
 }
 
 void CANTalon612::PIDWrite(float output)
 {
-	Set(output);
+	Set(output);  // I'm concerned that you don't implement a Set(float)
+	// I think this doesn't call the function that you wrote.
 }
 
-float CANTalon612::getOutput()
+float CANTalon612::getEncoderValue()
 {
 	//TODO make sure this works correctly
+	// We do need to test this, but I like the programmed logic
 	return (float)encoder->GetRate();
 }
 
@@ -180,4 +192,3 @@ float CANTalon612::getMaxOutput()
 		return maxOut;
 	}
 }
-
