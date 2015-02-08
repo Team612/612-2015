@@ -3,4 +3,4 @@ compiler:
   - gcc
   - clang
 # Change this to your needs
-script: ./wpilib-download.sh && ./compiler-download.sh && ./build.sh
+script: ./.wpilib-download.sh && ./.compiler-download.sh && ./build.sh
