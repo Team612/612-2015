@@ -13,16 +13,17 @@
 #include <Preferences.h>
 #include <CANTalon.h>
 
-class CANTalon612: public CANTalon
-{
-public:
+class CANTalon612: public CANTalon { public:
 	/*
-	 * For the constructor, we need a channel to make the actual talon (This would be the CAN ID
-	 * Then we need an encoder, either by getting the channels and constructing them ourselves, or the actual encoder
-	 * After that, we need to get PID values. This can be done by either importing preferences or specifying
-	 * The override will save the new values over the old ones
+	 * For the constructor, we need a channel to make the actual talon
+	 * (This would be the CAN ID Then we need an encoder, either by getting
+	 * the channels and constructing them ourselves, or the actual encoder
+	 * After that, we need to get PID values. This can be done by either
+	 * importing preferences or specifying The override will save the new
+	 * values over the old ones
 	 *
-	 * If PID values are not specified, then they will be recalled from Preferences. If they dont exist there, they will default to 0.0
+	 * If PID values are not specified, then they will be recalled from
+	 * Preferences. If they dont exist there, they will default to 0.0
 	 */
 	CANTalon612(uint32_t port, uint32_t encoderA, uint32_t encoderB, bool inverted=false);
 	CANTalon612(uint32_t port, uint32_t encoderA, uint32_t encoderB, float p, float i, float d, bool inverted=false, bool override=false);
