@@ -1,4 +1,5 @@
 /Debug/
+build/*
 .settings/
 .settings/*
 .settings/language.settings.xml
@@ -9,3 +10,5 @@ sysProps.xml
 build.*
 *.xml
 /Simulate/
+wpilib/*
+
