@@ -64,6 +64,9 @@ void CANTalon612::readPrefs()
 	else
 	{
 		std::printf("No Preferences found!\n");
+		P = 0.0f;
+		I = 0.0f;
+		D = 0.0f;
 	}
 }
 bool CANTalon612::checkPrefs()
@@ -95,12 +98,16 @@ void CANTalon612::PIDWrite(float output)
 }
 void CANTalon612::Set(float value)
 {
-	//TODO this will NOT set it to the PID value
-	CANTalon::Set(pid->Get());
+	float out = getOutput();
+	if (out > maxOut)
+	{
+		setMaxOutput(out);
+	}
+	pid->SetSetpoint(value*maxOut);
 }
 float CANTalon612::getOutput()
 {
-	//TODO Figure out how to convert encoder values to a comparable number
+	//TODO make sure this works correctly
 	return (float)encoder->GetRate();
 }
 void CANTalon612::setMinOutput(float out)
