@@ -90,7 +90,7 @@ void Robot::TestInit()
 	float P = 1.0f;
 	float I = 0.0f;
 	float D = 0.0f;
-	zack = new CANTalon612(5,0,1,P,I,D,false,true);
+	//zack = new CANTalon612(5,0,1,P,I,D,false,true);
 }
 void Robot::TestPeriodic()
 {

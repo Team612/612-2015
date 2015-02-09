@@ -26,10 +26,10 @@ public:
 	 * If PID values are not specified, then they will be recalled from
 	 * Preferences. If they dont exist there, they will default to 0.0
 	 */
-	CANTalon612(uint32_t port, uint32_t encoderA, uint32_t encoderB, bool inverted=false);
-	CANTalon612(uint32_t port, uint32_t encoderA, uint32_t encoderB, float p, float i, float d, bool inverted=false, bool override=false);
-	CANTalon612(uint32_t port, Encoder* e);
-	CANTalon612(uint32_t port, Encoder* e, float p, float i, float d, bool override=false);
+	CANTalon612(char* name, uint32_t port, uint32_t encoderA, uint32_t encoderB, float p, float i, float d, bool inverted=false);
+	CANTalon612(char* name, uint32_t port, Encoder* e, float p, float i, float d);
+	CANTalon612(char* name, CANTalon* t, uint32_t encoderA, uint32_t encoderB, float p, float i, float d, bool inverted=false);
+	CANTalon612(char* name, CANTalon* t, Encoder* e, float p, float i, float d);
 	virtual ~CANTalon612();
 	///Will set it to a value using PID
 	void Set(float value, uint8_t syncGroup=0);
@@ -37,35 +37,28 @@ public:
 	float Get();
 	void Disable();
 	float getEncoderValue();
+	char* motor_name;
 private:
-	///Uses this one for if it is just grabbing from preferences
-	void initPID();
 	///uses this one for if it needs to set PID or needs to overwrite written values
-	void initPID(float p, float i, float d, bool override);
+	void initPID(float p, float i, float d);
 	///Reads preferences and stores them into P I and D
 	void readPrefs();
 	///Checks to see if there are stored values for PID
 	bool checkPrefs();
 	///Writes the values to the preferences to be loaded later
-	int writePrefs(float p, float i, float d);
-	///Sets the maximum output
-	void setMaxOutput(float out);
-	//These two below will get from file NOT from the class variable
-	float getMaxOutput();
+	int writePrefs(float encoderRate);
 	/// PID Values and maximum output
 	float P;
 	float I;
 	float D;
-	float maxOut;
+	float encoder_rate;
 	///Depreciated?
 	void PIDWrite(float output);
 	Preferences* prefs;
 	PIDController* pid;
 	Encoder* encoder;
 	CANTalon* talon;
-	const float MAX_INPUT = 1.0f;
-	const float MIN_INPUT = 1.0f;
-	const float DEFAULT_MAX_OUT = 1.0f;
+	const float DEFAULT_ENCODER_RATE = 1.0f;//TODO make this a real rate
 };
 
 #endif /* SRC_CANTALON612_H_ */

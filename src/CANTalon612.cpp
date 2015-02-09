@@ -30,39 +30,49 @@
  * the PID'd value
  */
 
-CANTalon612::CANTalon612(uint32_t talonPWM, uint32_t encoderDigitalInputA, uint32_t encoderDigitalInputB, bool encoderInverted)
+
+CANTalon612::CANTalon612(char* name, uint32_t talonID, uint32_t encoderDigitalInputA, uint32_t encoderDigitalInputB, float p, float i, float d, bool encoderInverted)
 {
-	talon = new CANTalon(talonPWM);
+	motor_name = name;
+	talon = new CANTalon(talonID);
 	encoder = new Encoder(encoderDigitalInputA, encoderDigitalInputB, encoderInverted);
-	prefs = Preferences::GetInstance(); initPID();
-}
-
-CANTalon612::CANTalon612(uint32_t port, uint32_t encoderA, uint32_t encoderB, float p, float i, float d, bool inverted, bool override)
-{
-	talon = new CANTalon(port);
-	encoder = new Encoder(encoderA, encoderB, inverted);
 	prefs = Preferences::GetInstance();
-	initPID(p, i, d, override);
+	initPID(p, i, d);
 }
 
-CANTalon612::CANTalon612(uint32_t port, Encoder* e)
+CANTalon612::CANTalon612(char* name, uint32_t talonID, Encoder* e, float p, float i, float d)
 {
-	talon = new CANTalon(port);
+	motor_name = name;
+	talon = new CANTalon(talonID);
 	encoder = e;
 	prefs = Preferences::GetInstance();
-	initPID();
+	initPID(p, i, d);
 }
 
-CANTalon612::CANTalon612(uint32_t port, Encoder* e, float p, float i, float d, bool override)
+CANTalon612::CANTalon612(char* name, CANTalon* t, uint32_t encoderDigitalInputA, uint32_t encoderDigitalInputB, float p, float i, float d, bool encoderInverted)
 {
-	talon = new CANTalon(port);
+	motor_name = name;
+	talon = t;
+	encoder = new Encoder(encoderDigitalInputA, encoderDigitalInputB, encoderInverted);
+	prefs = Preferences::GetInstance();
+	initPID(p, i, d);
+}
+
+CANTalon612::CANTalon612(char* name, CANTalon* t, Encoder* e, float p, float i, float d)
+{
+	motor_name = name;
+	talon = t;
 	encoder = e;
 	prefs = Preferences::GetInstance();
-	initPID(p, i, d, override);
+	initPID(p, i, d);
 }
 
-void CANTalon612::initPID()
+void CANTalon612::initPID(float p, float i, float d)
 {
+	P = p;
+	I = i;
+	D = d;
+
 	readPrefs();
 	pid = new PIDController(P, I, D, encoder, talon);
 	//pid->SetInputRange(MIN_INPUT,MAX_INPUT); // not sure we want to do this.
@@ -72,58 +82,34 @@ void CANTalon612::initPID()
 	// PID controllers also need to be enabled.
 }
 
-void CANTalon612::initPID(float p, float i, float d, bool override)
-{
-	if (override || checkPrefs() == false)
-	{
-		writePrefs(p,i,d);
-	}
-	else
-	{
-		P = p;
-		I = i;
-		D = d;
-	}
-	pid = new PIDController(P, I, D, encoder, talon);
-	//pid->SetInputRange(MIN_INPUT,MAX_INPUT); // not sure we want to do this.
-	//TODO make this the actual input range
-	//pid->SetOutputRange(getMaxOutput()*1.0f, getMaxOutput());
-	pid->Enable();
-}
-
 void CANTalon612::readPrefs()
 {
 	if (checkPrefs())
 	{
-		P = prefs->GetFloat("P");
-		I = prefs->GetFloat("I");
-		D = prefs->GetFloat("D");
+		encoder_rate = prefs->GetFloat(motor_name);
 	}
 	else
 	{
 		std::printf("No Preferences found!\n");
-		P = 1.0f; // don't default to all 3 being zero.
-		I = 0.0f;
-		D = 0.0f;
+		encoder_rate = DEFAULT_ENCODER_RATE;
+		writePrefs(encoder_rate);
 	}
 }
 
 bool CANTalon612::checkPrefs()
 {
-	if (prefs->ContainsKey("P") && prefs->ContainsKey("I") && prefs->ContainsKey("D"))
+	if (prefs->ContainsKey(motor_name))
 		return true;
 	else
 		return false;
 }
 
-int CANTalon612::writePrefs(float p, float i, float d)
+int CANTalon612::writePrefs(float encoderRate)
 {
 	int exit_status = 0;
 	if (checkPrefs())
 		exit_status = 1;
-	prefs->PutFloat("P", p);
-	prefs->PutFloat("I", i);
-	prefs->PutFloat("D", d);
+	prefs->PutFloat(motor_name, encoderRate);
 	prefs->Save();
 	return exit_status;
 }
@@ -137,15 +123,15 @@ CANTalon612::~CANTalon612()
 
 void CANTalon612::Set(float value, uint8_t syncGroup)
 {
-	float out = getOutput();
+	float rate = getEncoderValue();
 	//make absolute value
-	if (out < 0)
-		out = out*-1;
+	if (rate < 0)
+		rate = rate*-1;
 	//make the bigger max the new max
-	if (out > maxOut)
-		setMaxOutput(out);
+	if (rate > encoder_rate)
+		writePrefs(encoder_rate);
 	//set the motor
-	pid->SetSetpoint(value*maxOut);
+	pid->SetSetpoint(value*encoder_rate);
 }
 
 float CANTalon612::Get()
@@ -155,8 +141,10 @@ float CANTalon612::Get()
 void CANTalon612::Disable()
 {
 	Set(0.0f);
+	talon->Set(0.0f);
+	pid->Disable();
 	// I'd set the motor to 0 --- not just Set()
-	// Also disable the PID controller.
+	// maybe we should reset encoders here?
 }
 
 void CANTalon612::PIDWrite(float output)
@@ -170,25 +158,4 @@ float CANTalon612::getEncoderValue()
 	//TODO make sure this works correctly
 	// We do need to test this, but I like the programmed logic
 	return (float)encoder->GetRate();
-}
-
-void CANTalon612::setMaxOutput(float out)
-{
-	maxOut = out;
-	prefs->PutFloat("Max", out);
-	prefs->Save();
-}
-//use this for the first time to load from the file
-float CANTalon612::getMaxOutput()
-{
-	if (prefs->ContainsKey("Max"))
-	{
-		maxOut = prefs->GetFloat("Max");
-		return maxOut;
-	}
-	else
-	{
-		maxOut = DEFAULT_MAX_OUT;
-		return maxOut;
-	}
 }
