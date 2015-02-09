@@ -12,6 +12,7 @@
 
 void Robot::RobotInit()
 {
+	robot_status = ROBOTINIT;
 	CommandBase::init();
 	lw = LiveWindow::GetInstance();
 	joystick = new Joystick(DRIVER_JOY);//Right hand joystick
@@ -21,32 +22,33 @@ void Robot::RobotInit()
 
 void Robot::DisabledInit()
 {
-
-}
-
-void DisabledPeriodic()
-{
-	Scheduler::GetInstance()->Run();
+	robot_status = DISABLEDINIT;
 }
 
 void Robot::DisabledPeriodic()
 {
+	if (robot_status != DISABLEDPERIODIC)
+		robot_status = DISABLEDPERIODIC;
 	Scheduler::GetInstance()->Run();
 }
 
 void Robot::AutonomousInit()
 {
+	robot_status = AUTONOMOUSINIT;
 	if (autonomousCommand != NULL)
 		autonomousCommand->Start();
 }
 
 void Robot::AutonomousPeriodic()
 {
+	if (robot_status != AUTONOMOUSPERIODIC)
+		robot_status = AUTONOMOUSPERIODIC;
 	Scheduler::GetInstance()->Run();
 }
 
 void Robot::TeleopInit()
 {
+	robot_status = TELEOPINIT;
 	// This makes sure that the autonomous stops running when
 	// teleop starts running. If you want the autonomous to
 	// continue until interrupted by another command, remove
@@ -57,6 +59,8 @@ void Robot::TeleopInit()
 
 void Robot::TeleopPeriodic()
 {
+	if (robot_status != TELEOPPERIODIC)
+		robot_status = TELEOPPERIODIC;
 	Scheduler::GetInstance()->Run();
 
 	static unsigned int TimeChecked = 0;
@@ -86,10 +90,12 @@ void Robot::TeleopPeriodic()
 
 void Robot::TestInit()
 {
-
+	robot_status = TESTINIT;
 }
 void Robot::TestPeriodic()
 {
+	if (robot_status != TESTPERIODIC)
+		robot_status = TESTPERIODIC;
 	lw->Run();
 	float val = joystick->GetRawAxis(5);//Takes input from joystick
 	firstTalon->Set(val);//Gives joystick input to first talon

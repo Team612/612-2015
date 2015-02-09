@@ -31,5 +31,18 @@ public:
 	//612 functions
 	void TestPulley();
 	//612 Objects
+	enum ROBOT_STATUS{
+		NONE,
+		ROBOTINIT,
+		DISABLEDINIT,
+		DISABLEDPERIODIC,
+		AUTONOMOUSINIT,
+		AUTONOMOUSPERIODIC,
+		TELEOPINIT,
+		TELEOPPERIODIC,
+		TESTINIT,
+		TESTPERIODIC
+	};
+	ROBOT_STATUS robot_status;
 };
 #endif
