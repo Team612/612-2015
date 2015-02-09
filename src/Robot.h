@@ -35,5 +35,19 @@ public:
 	void TestPulley();
 	//612 Objects
 	Preferences* prefs;
+
+	enum ROBOT_STATUS{
+		NONE,
+		ROBOTINIT,
+		DISABLEDINIT,
+		DISABLEDPERIODIC,
+		AUTONOMOUSINIT,
+		AUTONOMOUSPERIODIC,
+		TELEOPINIT,
+		TELEOPPERIODIC,
+		TESTINIT,
+		TESTPERIODIC
+	};
+	ROBOT_STATUS robot_status;
 };
 #endif
