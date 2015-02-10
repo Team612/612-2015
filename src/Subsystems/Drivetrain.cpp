@@ -9,10 +9,10 @@ Drivetrain::Drivetrain(uint32_t talonchannel1,
 		                             uint32_t talonchannel4,
 									 uint32_t infraredchannel):
 		Subsystem("Drivetrain"),
-		RobotDrive(new Talon(talonchannel1),
-				   new Talon(talonchannel2),
-				   new Talon(talonchannel3),
-				   new Talon(talonchannel4))
+		RobotDrive(new CANTalon(talonchannel1),
+				   new CANTalon(talonchannel2),
+				   new CANTalon(talonchannel3),
+				   new CANTalon(talonchannel4))
 
 {
 	SetSafetyEnabled(true);

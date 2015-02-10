@@ -13,8 +13,8 @@ private:
 	//bool useIR = false;
 
 	AnalogInput* ir;
-	Ultrasonic* ultra;
-	AnalogInput* infrared;
+	//Ultrasonic* ultra;
+	//AnalogInput* infrared;
 
 	Encoder* encoderLR;
 	Encoder* encoderLF;

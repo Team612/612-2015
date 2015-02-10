@@ -6,7 +6,7 @@
 /*
  * SETTINGS
  */
-const float MOTOR_EXPIRATION = 0.1f; // float measured in ms
+const float MOTOR_EXPIRATION = 0.2f; // float measured in ms
 
 /*
  * Drivetrain
