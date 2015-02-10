@@ -6,8 +6,7 @@
 /*
  * SETTINGS
  */
-const float MOTOR_EXPIRATION = 0.2f; // float measured in ms
-
+const float MOTOR_EXPIRATION = 0.5f; // float measured in ms
 /*
  * Drivetrain
  */
@@ -25,8 +24,8 @@ const uint32_t ENCODER_RR_B = 0;
 const uint32_t ENCODER_RF_A = 0;
 const uint32_t ENCODER_RF_B = 0;
 
-const uint32_t MOTOR_LR = 1;
-const uint32_t MOTOR_LF = 2;
+const uint32_t MOTOR_LR = 2;
+const uint32_t MOTOR_LF = 1;
 const uint32_t MOTOR_RR = 3;
 const uint32_t MOTOR_RF = 4;
 
