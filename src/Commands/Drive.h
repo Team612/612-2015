@@ -9,7 +9,7 @@
 class Drive: public CommandBase
 {
 public:
-	Drive();
+	Drive(Joystick* stick);
 	void Initialize();
 	void Execute();
 	bool IsFinished();

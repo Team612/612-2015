@@ -25,6 +25,18 @@ Drivetrain::Drivetrain(uint32_t talonchannel1,
 	encoderRF = new Encoder(ENCODER_RF_A, ENCODER_RF_B);
 	encoderRR = new Encoder(ENCODER_RR_A, ENCODER_RR_B);
 
+	/**
+	 * rear left clockwise = backwards
+	 * rear right clockwise = forwards
+	 * front right clockwise = forwards
+	 * front left clockwise = backwards
+	 */
+
+	//SetInvertedMotor(kRearRightMotor, true);
+	//SetInvertedMotor(kRearLeftMotor, true);
+	SetInvertedMotor(kFrontRightMotor, true);
+	SetInvertedMotor(kFrontLeftMotor, true);
+
 	//import trackball or something? idk.
 }
 
