@@ -33,7 +33,7 @@ public:
 	void InitDefaultCommand();
 
 	//void CheckSensor(float distance);
-	void move(float magnitude, float direction, float rotation);
+	void move(float x, float y, float rotation);
 	void stop();
 	int16_t getir();
 

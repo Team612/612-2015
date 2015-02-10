@@ -2,11 +2,13 @@
 #define ROBOT_H
 
 #include <Subsystems/Drivetrain.h>
+#include "Commands/Drive.h"
 
 class Robot: public IterativeRobot
 {
 private:
 	Command* autonomousCommand;
+	Drive* move;
 	LiveWindow* lw;
 	Joystick* joystick;
 	Talon* firstTalon;

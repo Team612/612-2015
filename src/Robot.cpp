@@ -8,6 +8,7 @@
 #include "Commands/AutonomousSimple.h"
 #include "Robot.h"
 #include "RobotMap.h"
+#include "Commands/Drive.h"
 
 
 void Robot::RobotInit()
@@ -55,6 +56,7 @@ void Robot::TeleopInit()
 	// this line or comment it out.
 	if (autonomousCommand != NULL)
 		autonomousCommand->Cancel();
+	move->Start();
 }
 
 void Robot::TeleopPeriodic()
@@ -62,7 +64,7 @@ void Robot::TeleopPeriodic()
 	if (robot_status != TELEOPPERIODIC)
 		robot_status = TELEOPPERIODIC;
 	Scheduler::GetInstance()->Run();
-
+	//drivetrain->move(joystick->GetRawAxis(LEFT_X),joystick->GetRawAxis(LEFT_Y),joystick->GetRawAxis(RIGHT_X));
 	static unsigned int TimeChecked = 0;
 	TimeChecked++;
 	currentAcceleration = (speedgun -> GetY())*9.806; // covert from g force to acceleration

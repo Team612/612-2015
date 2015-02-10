@@ -37,15 +37,15 @@ void Drivetrain::InitDefaultCommand()
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
 
-void Drivetrain::move(float magnitude, float direction, float rotation)
+void Drivetrain::move(float x, float y, float rotation)
 {
-	MecanumDrive_Polar(magnitude, direction, rotation);
+	MecanumDrive_Cartesian(x, y, rotation);
 	m_safetyHelper->Feed();
 }
 
 void Drivetrain::stop()
 {
-	MecanumDrive_Polar(0.0f, 0.0f, 0.0f);
+	MecanumDrive_Cartesian(0.0f, 0.0f, 0.0f);
 	m_safetyHelper->Feed();
 }
 
