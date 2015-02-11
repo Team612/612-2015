@@ -1,11 +1,14 @@
 #ifndef ROBOT_H
 #define ROBOT_H
-#include "Subsystems/MecanumDrivetrain.h"
+
+#include <Subsystems/Drivetrain.h>
+#include "Commands/Drive.h"
 
 class Robot: public IterativeRobot
 {
 private:
 	Command* autonomousCommand;
+	Drive* move;
 	LiveWindow* lw;
 	Joystick* joystick;
 	Talon* firstTalon;
@@ -30,6 +33,18 @@ public:
 	//612 functions
 	void TestPulley();
 	//612 Objects
-	MecanumDrivetrain* robotDrive;
+	enum ROBOT_STATUS{
+		NONE,
+		ROBOTINIT,
+		DISABLEDINIT,
+		DISABLEDPERIODIC,
+		AUTONOMOUSINIT,
+		AUTONOMOUSPERIODIC,
+		TELEOPINIT,
+		TELEOPPERIODIC,
+		TESTINIT,
+		TESTPERIODIC
+	};
+	ROBOT_STATUS robot_status;
 };
 #endif

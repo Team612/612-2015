@@ -1,66 +1,72 @@
 #include "WPILib.h"
 #include "Commands/Command.h"
-#include "Commands/ExampleCommand.h"
 #include "CommandBase.h"
 #include <cstdio>
 #include <Joystick.h>
-#include <Talon.h>
-#include "Subsystems/MecanumDrivetrain.h"
+#include "Subsystems/Drivetrain.h"
+//#include <Talon.h>
+#include "Commands/AutonomousSimple.h"
 #include "Robot.h"
 #include "RobotMap.h"
+#include "Commands/Drive.h"
 
 
 void Robot::RobotInit()
 {
+	robot_status = ROBOTINIT;
 	CommandBase::init();
-	autonomousCommand = new ExampleCommand();
 	lw = LiveWindow::GetInstance();
-	robotDrive = new MecanumDrivetrain(MOTOR_LF,MOTOR_LR,MOTOR_RF,MOTOR_RR);//The 4 talons
-	joystick = new Joystick(DRIVER);//Right hand joystick
+
+	joystick = new Joystick(DRIVER_JOY);//Right hand joystick
 	speedgun = new BuiltInAccelerometer(); // New accelerometer called speedgun
 	robot = this;
 }
 
 void Robot::DisabledInit()
 {
-
-}
-
-void DisabledPeriodic()
-{
-	Scheduler::GetInstance()->Run();
+	robot_status = DISABLEDINIT;
 }
 
 void Robot::DisabledPeriodic()
 {
+	if (robot_status != DISABLEDPERIODIC)
+		robot_status = DISABLEDPERIODIC;
 	Scheduler::GetInstance()->Run();
 }
 
 void Robot::AutonomousInit()
 {
+	robot_status = AUTONOMOUSINIT;
 	if (autonomousCommand != NULL)
 		autonomousCommand->Start();
 }
 
 void Robot::AutonomousPeriodic()
 {
+	if (robot_status != AUTONOMOUSPERIODIC)
+		robot_status = AUTONOMOUSPERIODIC;
 	Scheduler::GetInstance()->Run();
 }
 
 void Robot::TeleopInit()
 {
+	robot_status = TELEOPINIT;
 	// This makes sure that the autonomous stops running when
 	// teleop starts running. If you want the autonomous to
 	// continue until interrupted by another command, remove
 	// this line or comment it out.
 	if (autonomousCommand != NULL)
 		autonomousCommand->Cancel();
+	move = new Drive(joystick);
+	move->Start();
 }
 
 void Robot::TeleopPeriodic()
 {
+	if (robot_status != TELEOPPERIODIC)
+		robot_status = TELEOPPERIODIC;
 	Scheduler::GetInstance()->Run();
-
+	//drivetrain->move(joystick->GetRawAxis(LEFT_X),joystick->GetRawAxis(LEFT_Y),joystick->GetRawAxis(RIGHT_X));
 	static unsigned int TimeChecked = 0;
 	TimeChecked++;
 	currentAcceleration = (speedgun -> GetY())*9.806; // covert from g force to acceleration
@@ -71,9 +77,10 @@ void Robot::TeleopPeriodic()
 	if (TimeChecked == 30) //print every half second
 	{
 		lw->Run();
-		float val = joystick->GetRawAxis(5);//Takes input from joystick
+
+		/*float val = joystick->GetRawAxis(5);//Takes input from joystick
 		float leftYAxis = joystick->GetRawAxis(2);
-		/*firstTalon->Set(val);//Gives joystick input to first talon
+		firstTalon->Set(val);//Gives joystick input to first talon
 		secondTalon->Set(val);
 		thirdTalon->Set(leftYAxis);*/
 	}
@@ -87,10 +94,12 @@ void Robot::TeleopPeriodic()
 
 void Robot::TestInit()
 {
-
+	robot_status = TESTINIT;
 }
 void Robot::TestPeriodic()
 {
+	if (robot_status != TESTPERIODIC)
+		robot_status = TESTPERIODIC;
 	lw->Run();
 	float val = joystick->GetRawAxis(5);//Takes input from joystick
 	firstTalon->Set(val);//Gives joystick input to first talon

@@ -1,15 +1,13 @@
+#include "CommandBase.h"
 #include "Drive.h"
 
-
-Drive::Drive()
+Drive::Drive(float x, float y, float rotation)
 {
-	// Use Requires() here to declare subsystem dependencies
-	// eg. Requires(chassis);
-
+	targetX = x;
+	targetY = y;
+	targetRotation = rotation;
 	Requires(drivetrain);
-
 }
-
 // Called just before this Command runs the first time
 void Drive::Initialize()
 {
@@ -17,9 +15,9 @@ void Drive::Initialize()
 }
 
 // Called repeatedly when this Command is scheduled to run
-void Drive::Execute(float x, float y, float rotation)
+void Drive::Execute()
 {
-	drivetrain->move(x,y,rotation);
+	drivetrain->move(targetX, targetY, targetRotation);
 }
 
 // Make this return true when this Command no longer needs to run execute()
@@ -34,8 +32,7 @@ void Drive::End()
 	drivetrain->stop();
 }
 
-// Called when another comma
-// Called repeatedly when this Cond which requires one or more of the same
+// Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void Drive::Interrupted()
 {
