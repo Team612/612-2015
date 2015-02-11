@@ -1,7 +1,6 @@
 #ifndef SRC_SUBSYSTEMS_ELEVATOR_H_
 #define SRC_SUBSYSTEMS_ELEVATOR_H_
 
-#include "Commands/Subsystem.h"
 #include "WPILib.h"
 #include "../RobotMap.h"
 
