@@ -3,8 +3,6 @@
 
 #include "WPILib.h"
 
-<<<<<<< HEAD
-
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
  * to a variable name. This provides flexibility changing wiring, makes checking
@@ -17,19 +15,6 @@
 //const int LEFTMOTOR = 1;
 //const int RIGHTMOTOR = 2;
 
-/*********Settings***********/
-#define DEBUG //Use this for debug statements
-const float THROTTLE = 0.3f;
-const float TOLORANCE = 0.1f;
-
-/******PORTS*******/
-//Gamepad
-const int DRIVER = 0;
-const int LEFT_X = 0; //reverse this axis
-const int LEFT_Y = 1;
-const int RIGHT_X = 4; //reverse this axis
-//drivetrain
-=======
 /*
  * SETTINGS
  */
@@ -51,7 +36,6 @@ const uint32_t ENCODER_RR_B = 0;
 const uint32_t ENCODER_RF_A = 0;
 const uint32_t ENCODER_RF_B = 0;
 
->>>>>>> master
 const uint32_t MOTOR_LR = 2;
 const uint32_t MOTOR_LF = 1;
 const uint32_t MOTOR_RR = 3;

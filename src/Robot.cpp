@@ -57,8 +57,6 @@ void Robot::TeleopInit()
 	// this line or comment it out.
 	if (autonomousCommand != NULL)
 		autonomousCommand->Cancel();
-	move = new Drive(joystick);
-	move->Start();
 }
 
 void Robot::TeleopPeriodic()
