@@ -40,7 +40,8 @@ const uint32_t INFRARED = 1; //fix this number
 /*
  * Elevator
  */
-const uint32_t ELEVATOR_MOTOR = 5;
+const uint32_t ELEVATOR_MOTOR_1 = 5;
+const uint32_t ELEVATOR_MOTOR_2 = 6;
 const uint32_t ELEVATOR_TOP_SWITCH = 1;
 const uint32_t ELEVATOR_BOTTOM_SWITCH = 1;
 const uint32_t ELEVATOR_ENCODER_A = 1;
