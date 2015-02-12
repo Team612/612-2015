@@ -9,7 +9,7 @@ class ElevatorMoveToPosition: public CommandBase
 private:
 	uint32_t targetPosition;
 	int targetSpins;
-	const int presets[4] = {0,1,2,3,4}; //filler value! TODO add real preset values!
+	const int presets[5] = {0,1,2,3,4}; //filler value! TODO add real preset values!
 	const uint32_t INTERVAL = 0; //Placeholder value TODO add real values!
 public:
 	ElevatorMoveToPosition(uint32_t position); //example of use: ElevatorMoveToPosition(0);
