@@ -52,19 +52,23 @@ Encoder* Elevator::getEncoder()
 void Elevator::firstSolOpen()
 {
 	firstsolenoid->Set(DoubleSolenoid::Value::kForward);
+	printf("Setting DoubleSolenoid 1 on!\n");
 }
 
 void Elevator::firstSolClose()
 {
 	firstsolenoid->Set(DoubleSolenoid::Value::kOff);
+	printf("Setting DoubleSolenoid 1 off!\n");
 }
 
 void Elevator::secondSolOpen()
 {
 	secondsolenoid->Set(DoubleSolenoid::Value::kForward);
+	printf("Setting DoubleSolenoid 2 on!\n");
 }
 
 void Elevator::secondSolClose()
 {
 	secondsolenoid->Set(DoubleSolenoid::Value::kOff);
+	printf("Setting DoubleSolenoid 2 off!\n");
 }
