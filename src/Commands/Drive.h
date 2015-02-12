@@ -17,6 +17,7 @@ public:
 	void Interrupted();
 private:
 	Joystick* joy;
+
 };
 
 #endif
