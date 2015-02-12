@@ -7,8 +7,8 @@ Elevator::Elevator() :
 	topSwitch = new DigitalInput(ELEVATOR_TOP_SWITCH);
 	bottomSwitch = new DigitalInput(ELEVATOR_BOTTOM_SWITCH);
 	encoder = new Encoder(ELEVATOR_ENCODER_A, ELEVATOR_ENCODER_B);
-	firstsolenoid = new DoubleSolenoid(FIRST_SOLENOID);
-	secondsolenoid = new DoubleSolenoid(SECOND_SOLENOID);
+	firstsolenoid = new DoubleSolenoid(FIRST_SOLENOID1, FIRST_SOLENOID2);
+	secondsolenoid = new DoubleSolenoid(SECOND_SOLENOID1, SECOND_SOLENOID2);
 }
 
 Elevator::~Elevator()

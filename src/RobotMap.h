@@ -46,8 +46,11 @@ const uint32_t ELEVATOR_BOTTOM_SWITCH = 1;
 const uint32_t ELEVATOR_ENCODER_A = 1;
 const uint32_t ELEVATOR_ENCODER_B = 1;
 
-const uint32_t FIRST_SOLENOID = 0;
-const uint32_t SECOND_SOLENOID = 1;
+//Double Solenoid Channel numbers. Place holders for now
+const uint32_t FIRST_SOLENOID1  = 0;
+const uint32_t FIRST_SOLENOID2  = 1;
+const uint32_t SECOND_SOLENOID1 = 2;
+const uint32_t SECOND_SOLENOID2 = 3;
 
 const float MOTOR_EXPIRATION = 0.1f; // float measured in seconds
 
