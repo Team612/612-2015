@@ -23,9 +23,7 @@ public:
 	//Elevator Operator Buttons
 
 	Joystick* gunner_controller;
-	Joystick* driverRight;
-	Joystick* driverLeft;
-	//Different
+	Joystick* driver_controller;
 
 	JoystickButton* button_x;
 	JoystickButton* button_y;

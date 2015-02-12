@@ -17,11 +17,13 @@ OI::OI()
 	//Buttons
 
 	gunner_controller = new Joystick(1);
-	driverLeft = new Joystick(2);
-	driverRight = new Joystick(2);
+	driver_controller = new Joystick(2);
 
 	button_b = new JoystickButton(gunner_controller,BUTTON_B);
 	button_x = new JoystickButton(gunner_controller,BUTTON_X);
 	button_y = new JoystickButton(gunner_controller,BUTTON_Y);
+
+	float dPadY = gunner_controller->GetRawAxis(7);
+
 
 }
