@@ -6,6 +6,7 @@
  */
 LatchOpen::LatchOpen()
 {
+	Requires(elevator);
 }
 
 /** Called just before this Command runs the first time
@@ -26,7 +27,8 @@ void LatchOpen::Initialize()
  */
 void LatchOpen::Execute()
 {
-
+	elevator->firstSolOpen();
+	elevator->secondSolOpen();
 }
 
 /** Make this return true when this Command no longer needs to run execute()
@@ -44,7 +46,8 @@ bool LatchOpen::IsFinished()
  */
 void LatchOpen::End()
 {
-
+	elevator->firstSolClose();
+	elevator->secondSolClose();
 }
 
 /** Called when another command which requires one or more of the same
@@ -55,5 +58,6 @@ void LatchOpen::End()
  */
 void LatchOpen::Interrupted()
 {
-
+	elevator->firstSolClose();
+	elevator->secondSolClose();
 }

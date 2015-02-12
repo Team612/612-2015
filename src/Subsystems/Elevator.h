@@ -4,13 +4,17 @@
 #include "Commands/Subsystem.h"
 #include "WPILib.h"
 #include "../RobotMap.h"
+#include <DoubleSolenoid.h>
+#include <TalonSRX.h>
 
 class Elevator : public Subsystem {
 private:
-	Talon* talon;
+	TalonSRX* talon;
 	DigitalInput* topSwitch;
 	DigitalInput* bottomSwitch;
 	Encoder* encoder;
+	DoubleSolenoid* firstsolenoid;
+	DoubleSolenoid* secondsolenoid;
 public:
 	Elevator();
 	virtual ~Elevator();
@@ -18,6 +22,10 @@ public:
 	void stop();
 	void InitDefaultCommand();
 	Encoder* getEncoder();
+	void firstSolClose();
+	void firstSolOpen();
+	void secondSolClose();
+	void secondSolOpen();
 };
 
 #endif /* SRC_SUBSYSTEMS_ELEVATOR_H_ */

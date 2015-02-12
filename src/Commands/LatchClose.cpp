@@ -6,6 +6,7 @@
  */
 LatchClose::LatchClose()
 {
+	Requires(elevator);
 }
 
 /** Called just before this Command runs the first time
@@ -26,7 +27,8 @@ void LatchClose::Initialize()
  */
 void LatchClose::Execute()
 {
-
+	elevator->firstSolClose();
+	elevator->secondSolClose();
 }
 
 /** Make this return true when this Command no longer needs to run execute()
@@ -44,7 +46,8 @@ bool LatchClose::IsFinished()
  */
 void LatchClose::End()
 {
-
+	elevator->firstSolClose();
+	elevator->secondSolClose();
 }
 
 /** Called when another command which requires one or more of the same
@@ -55,5 +58,6 @@ void LatchClose::End()
  */
 void LatchClose::Interrupted()
 {
-
+	elevator->firstSolClose();
+	elevator->secondSolClose();
 }
