@@ -23,6 +23,12 @@ OI::OI()
 	button_x = new JoystickButton(gunner_controller,BUTTON_X);
 	button_y = new JoystickButton(gunner_controller,BUTTON_Y);
 
+	ElevatorUp* elevatorUp = new ElevatorUp();
+	ElevatorDown* elevatorDown = new ElevatorDown();
+
+	button_x->WhileHeld(elevatorUp);
+	button_y->WhileHeld(elevatorDown);
+
 	float dPadY = gunner_controller->GetRawAxis(7);
 
 

@@ -5,6 +5,9 @@
 #include "WPILib.h"
 #include <Buttons/Button.h>
 #include <Joystick.h>
+#include "Commands/ElevatorUp.h"
+#include "Commands/ElevatorDown.h"
+
 
 class OI
 {
