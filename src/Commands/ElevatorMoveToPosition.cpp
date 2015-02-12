@@ -1,9 +1,9 @@
 #include "ElevatorMoveToPosition.h"
 
-ElevatorMoveToPosition::ElevatorMoveToPosition(uint32_t inPosition)
+ElevatorMoveToPosition::ElevatorMoveToPosition(uint32_t position)
 {
 	Requires(elevator);
-	targetPosition = inPosition;
+	targetPosition = presets[position];
 	targetSpins = targetPosition * INTERVAL;
 }
 
