@@ -3,6 +3,8 @@
 #define OI_H
 
 #include "WPILib.h"
+#include <Buttons/Button.h>
+#include <Joystick.h>
 
 class OI
 {
@@ -18,9 +20,19 @@ public:
 	JoystickButton* button_x;//for the X button
 	JoystickButton* button_y;//for the Y button
 */
-	/*
-	 * All functions from joysticks should inherit from OI
-	 */
+	//Elevator Operator Buttons
+
+	Joystick* gunner_controller;
+	Joystick* driverRight;
+	Joystick* driverLeft;
+	//Different
+
+	JoystickButton* button_x;
+	JoystickButton* button_y;
+	JoystickButton* button_b;
+
+
+
 };
 
 #endif
