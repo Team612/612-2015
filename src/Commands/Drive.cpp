@@ -3,11 +3,20 @@
 
 Drive::Drive(float x, float y, float rotation)
 {
+	Requires(drivetrain);
+	mode = MANUAL;
 	targetX = x;
 	targetY = y;
 	targetRotation = rotation;
-	Requires(drivetrain);
 }
+
+Drive::Drive(Joystick* joy)
+{
+	Requires(drivetrain);
+	mode = JOYSTICK;
+	joystick = joy;
+}
+
 // Called just before this Command runs the first time
 void Drive::Initialize()
 {
@@ -17,6 +26,13 @@ void Drive::Initialize()
 // Called repeatedly when this Command is scheduled to run
 void Drive::Execute()
 {
+	if (mode == JOYSTICK)
+	{
+		targetX = joystick->GetRawAxis(LEFT_X);
+		targetY = joystick->GetRawAxis(LEFT_Y);
+		targetRotation = joystick->GetRawAxis(RIGHT_X);
+	}
+
 	drivetrain->move(targetX, targetY, targetRotation);
 }
 
