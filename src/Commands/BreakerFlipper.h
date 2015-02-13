@@ -3,14 +3,13 @@
 
 #include "../CommandBase.h"
 #include "WPILib.h"
-#include "PowerBoard.h"
+#include "../Subsystems/PowerBoard.h"
 
 class BreakerFlipper: public CommandBase
 {
 private:
 	Timer* timer;
 	Encoder* encoder;
-	PIDSubsystem* pid;
 
 	const double ampLimit = 0.0; //TODO Fill in the right value
 	const uint8_t channelCheck = 0; //TODO Fill in the right value

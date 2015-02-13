@@ -3,8 +3,7 @@
 BreakerFlipper::BreakerFlipper()
 {
 	timer = new Timer();
-	encoder = new Encoder(channelCheck);
-	pid = new PIDSubsystem();
+	encoder = new Encoder(encoderChannelA, encoderChannelB);
 }
 
 // Called just before this Command runs the first time
@@ -17,7 +16,7 @@ void BreakerFlipper::CheckMotor()
 {
 	if (encoder->GetRaw() <= 0)
 	{
-
+		//TODO code here to stop the motor!
 	}
 }
 // Called repeatedly when this Command is scheduled to run
