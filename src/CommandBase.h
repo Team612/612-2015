@@ -10,7 +10,6 @@
 #include "Subsystems/Elevator.h"
 #include "Subsystems/Vision.h"
 #include "RobotMap.h"
-#include "Subsystems/Haptic.h"
 
 /**
  * The base for all commands. All atomic commands should subclass CommandBase.
@@ -27,7 +26,6 @@ public:
 	static Elevator* elevator;
 	static Drivetrain* drivetrain;
 	static Vision* vision;
-	static Haptic* haptic;
 };
 
 #endif
