@@ -7,8 +7,7 @@ Elevator::Elevator() :
 	topSwitch = new DigitalInput(ELEVATOR_TOP_SWITCH);
 	bottomSwitch = new DigitalInput(ELEVATOR_BOTTOM_SWITCH);
 	encoder = new Encoder(ELEVATOR_ENCODER_A, ELEVATOR_ENCODER_B);
-	firstsolenoid = new DoubleSolenoid(FIRST_SOLENOID1, FIRST_SOLENOID2);
-	secondsolenoid = new DoubleSolenoid(SECOND_SOLENOID1, SECOND_SOLENOID2);
+	latchSol = new DoubleSolenoid(FIRST_SOLENOID1, FIRST_SOLENOID2);
 }
 
 Elevator::~Elevator()
@@ -51,24 +50,12 @@ Encoder* Elevator::getEncoder()
 
 void Elevator::firstSolOpen()
 {
-	firstsolenoid->Set(DoubleSolenoid::Value::kForward);
+	latchSol->Set(DoubleSolenoid::Value::kForward);
 	printf("Setting DoubleSolenoid 1 on!\n");
 }
 
 void Elevator::firstSolClose()
 {
-	firstsolenoid->Set(DoubleSolenoid::Value::kOff);
+	latchSol->Set(DoubleSolenoid::Value::kOff);
 	printf("Setting DoubleSolenoid 1 off!\n");
-}
-
-void Elevator::secondSolOpen()
-{
-	secondsolenoid->Set(DoubleSolenoid::Value::kForward);
-	printf("Setting DoubleSolenoid 2 on!\n");
-}
-
-void Elevator::secondSolClose()
-{
-	secondsolenoid->Set(DoubleSolenoid::Value::kOff);
-	printf("Setting DoubleSolenoid 2 off!\n");
 }

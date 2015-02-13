@@ -13,8 +13,7 @@ private:
 	DigitalInput* topSwitch;
 	DigitalInput* bottomSwitch;
 	Encoder* encoder;
-	DoubleSolenoid* firstsolenoid;
-	DoubleSolenoid* secondsolenoid;
+	DoubleSolenoid* latchSol;
 public:
 	Elevator();
 	virtual ~Elevator();
