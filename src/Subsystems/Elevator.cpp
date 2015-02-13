@@ -4,7 +4,7 @@
 Elevator::Elevator() :
 	Subsystem("Elevator")
 {
-	talon = new Talon(ELEVATOR_MOTOR);
+	talon = new TalonSRX(ELEVATOR_MOTOR);
 	topSwitch = new DigitalInput(ELEVATOR_TOP_SWITCH);
 	bottomSwitch = new DigitalInput(ELEVATOR_BOTTOM_SWITCH);
 	encoder = new Encoder(ELEVATOR_ENCODER_A, ELEVATOR_ENCODER_B);
@@ -13,6 +13,7 @@ Elevator::Elevator() :
 	sense = IR; //default to IR sensor
 	ultrasonic = new AnalogInput(ELEVATOR_ULTRASONIC);
 	elevatorIR = new AnalogInput(ELEVATOR_IR);
+	latchSol = new DoubleSolenoid(LATCH_SOLENOID1, LATCH_SOLENOID2);
 }
 
 Elevator::~Elevator()
@@ -34,7 +35,7 @@ void Elevator::move(float magnitude)
 	//If the sensors give any input then the motors are set to a speed of 0
 	if (topInput || bottomInput)
 	{
-		talon->Set(0);
+		talon->Set(0.0f);
 	}
 	else
 	{
@@ -122,5 +123,16 @@ Elevator::MainSensor Elevator::switchSensor(float IRDistance, float UDistance)
 	{
 		return sense;
 	}
-	
+}
+
+void Elevator::latchSolOpen()
+{
+	latchSol->Set(DoubleSolenoid::Value::kForward);
+	printf("Setting DoubleSolenoid 1 on!\n");
+}
+
+void Elevator::latchSolClose()
+{
+	latchSol->Set(DoubleSolenoid::Value::kOff);
+	printf("Setting DoubleSolenoid 1 off!\n");
 }
