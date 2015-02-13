@@ -17,7 +17,7 @@ public:
 	void End();
 	void Interrupted();
 private:
-	typedef enum DriveMode {MANUAL, JOYSTICK};
+	enum DriveMode {MANUAL, JOYSTICK};
 
 	DriveMode mode;
 
@@ -26,7 +26,6 @@ private:
 	float targetRotation;
 
 	Joystick* joystick;
-
 };
 
 #endif

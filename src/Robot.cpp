@@ -13,55 +13,58 @@
 
 void Robot::RobotInit()
 {
-	robot_status = ROBOTINIT;
-	CommandBase::init();
+	robot_status = ROBOTINIT; // Makes the status equal ROBOTINIT
+	CommandBase::init(); // Constructor for CommandBase
 	lw = LiveWindow::GetInstance();
 
 	joystick = new Joystick(DRIVER_JOY);//Right hand joystick
 	speedgun = new BuiltInAccelerometer(); // New accelerometer called speedgun
+
 	robot = this;
 }
 
 void Robot::DisabledInit()
 {
-	robot_status = DISABLEDINIT;
+	robot_status = DISABLEDINIT; // Makes the status equal DISABLEDINIT
 }
 
 void Robot::DisabledPeriodic()
 {
 	if (robot_status != DISABLEDPERIODIC)
 		robot_status = DISABLEDPERIODIC;
-	Scheduler::GetInstance()->Run();
+	//Scheduler::GetInstance()->Run();
 }
 
 void Robot::AutonomousInit()
 {
-	robot_status = AUTONOMOUSINIT;
+	robot_status = AUTONOMOUSINIT; // Makes the status equal AUTONOMOUSINIT
 	if (autonomousCommand != NULL)
 		autonomousCommand->Start();
 }
 
 void Robot::AutonomousPeriodic()
 {
-	if (robot_status != AUTONOMOUSPERIODIC)
+	if (robot_status != AUTONOMOUSPERIODIC) // Makes the status equal AUTONOMOUSPERIODIC
 		robot_status = AUTONOMOUSPERIODIC;
 	Scheduler::GetInstance()->Run();
 }
 
 void Robot::TeleopInit()
 {
-	robot_status = TELEOPINIT;
-	// This makes sure that the autonomous stops running when
-	// teleop starts running. If you want the autonomous to
-	// continue until interrupted by another command, remove
-	// this line or comment it out.
+	robot_status = TELEOPINIT; // Makes the status equal TELEOPINIT
+	/*
+	 * This makes sure that the autonomous stops running when
+	 * teleop starts running. If you want the autonomous to
+	 * continue until interrupted by another command, remove
+	 * this line or comment it out.
+	 */
 	if (autonomousCommand != NULL)
 		autonomousCommand->Cancel();
 }
 
 void Robot::TeleopPeriodic()
 {
-	if (robot_status != TELEOPPERIODIC)
+	if (robot_status != TELEOPPERIODIC) // Makes the status equal TELEOPPERIODIC
 		robot_status = TELEOPPERIODIC;
 	Scheduler::GetInstance()->Run();
 	//drivetrain->move(joystick->GetRawAxis(LEFT_X),joystick->GetRawAxis(LEFT_Y),joystick->GetRawAxis(RIGHT_X));
@@ -72,7 +75,7 @@ void Robot::TeleopPeriodic()
 	{
 		maxAcceleration = currentAcceleration; //set the values
 	}
-	if (TimeChecked == 30) //print every half second
+	if (TimeChecked == 30) //print every half second for debug
 	{
 		lw->Run();
 
@@ -81,27 +84,28 @@ void Robot::TeleopPeriodic()
 		firstTalon->Set(val);//Gives joystick input to first talon
 		secondTalon->Set(val);
 		thirdTalon->Set(leftYAxis);*/
-	}
 
-	printf("Raw G-force on Y-axis is %f meters per second per second \n", speedgun -> GetY()); //prints raw g-force
-	printf("Acceleration is %f meters per second per second \n", currentAcceleration); //prints currentAcceleration
-	printf("Max acceleration is %f meters per second per second \n", maxAcceleration); //prints maxAcceleration
+		printf("Raw G-force on Y-axis is %f meters per second per second \n", speedgun -> GetY()); //prints raw g-force
+		printf("Acceleration is %f meters per second per second \n", currentAcceleration); //prints currentAcceleration
+		printf("Max acceleration is %f meters per second per second \n", maxAcceleration); //prints maxAcceleration
+	}
 	TimeChecked = 0;
 
 }
 
 void Robot::TestInit()
 {
-	robot_status = TESTINIT;
+	robot_status = TESTINIT; // Makes the status equal TESTINIT
+	printf("lel what are you even doing here scrub?\n");
 }
 void Robot::TestPeriodic()
 {
-	if (robot_status != TESTPERIODIC)
+	if (robot_status != TESTPERIODIC) // Makes the status equal TESTPERIODIC
 		robot_status = TESTPERIODIC;
 	lw->Run();
-	float val = joystick->GetRawAxis(5);//Takes input from joystick
-	firstTalon->Set(val);//Gives joystick input to first talon
-	secondTalon->Set(val);
+	//float val = joystick->GetRawAxis(5); //Takes input from joystick
+	//firstTalon->Set(val); //Gives joystick input to first talon
+	//secondTalon->Set(val);
 	
 }
 
