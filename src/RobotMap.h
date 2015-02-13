@@ -3,70 +3,76 @@
 
 #include "WPILib.h"
 
-/**
- * The RobotMap is a mapping from the ports sensors and actuators are wired into
- * to a variable name. This provides flexibility changing wiring, makes checking
- * the wiring easier and significantly reduces the number of magic numbers
- * floating around.
- */
- 
-// For example to map the left and right motors, you could define the
-// following variables to use with your drivetrain subsystem.
-//const int LEFTMOTOR = 1;
-//const int RIGHTMOTOR = 2;
 
-const uint32_t GYRO_CHANNEL = 0;
+//GYRO
+const uint32_t GYRO_CHANNEL = 0; // The channel for the gyro
 
-const uint32_t ENCODER_LR_A = 0;
+
+//ENCODER
+const uint32_t ENCODER_LR_A = 0; // The channels for the left rear encoder
 const uint32_t ENCODER_LR_B = 0;
 
-const uint32_t ENCODER_LF_A = 0;
+const uint32_t ENCODER_LF_A = 0; // The channels for the left front encoder
 const uint32_t ENCODER_LF_B = 0;
 
-const uint32_t ENCODER_RR_A = 0;
+const uint32_t ENCODER_RR_A = 0; // The channels for the right rear encoder
 const uint32_t ENCODER_RR_B = 0;
 
-const uint32_t ENCODER_RF_A = 0;
+const uint32_t ENCODER_RF_A = 0; // The channels for the right front encdoer
 const uint32_t ENCODER_RF_B = 0;
 
-const uint32_t MOTOR_LR = 1;
-const uint32_t MOTOR_LF = 2;
-const uint32_t MOTOR_RR = 3;
-const uint32_t MOTOR_RF = 4;
 
-// If you are using multiple modules, make sure to define both the port
-// number and the module. For example you with a rangefinder:
-//const int RANGE_FINDER_PORT = 1;
-//const int RANGE_FINDER_MODULE = 1;
+//MOTORS
+const uint32_t MOTOR_LR = 2; // The channel for the left rear motor
+const uint32_t MOTOR_LF = 1; // The channel for the left front motor
+const uint32_t MOTOR_RR = 3; // The channel for the right rear motor
+const uint32_t MOTOR_RF = 4; // The channel for the right front motor
 
-//Placeholder values for elevator channels
-const uint32_t ELEVATOR_MOTOR = 1;
-const uint32_t ELEVATOR_TOP_SWITCH = 1;
-const uint32_t ELEVATOR_BOTTOM_SWITCH = 1;
-const uint32_t ELEVATOR_ENCODER_A = 1;
+const float MOTOR_EXPIRATION = 0.5f; // float measured in milliseconds
+
+
+//INFRARED TODO fix this number
+const uint32_t INFRARED = 1; // The channel for infrared sensors
+
+
+//ELEVATOR TODO fix these numbers
+const uint32_t ELEVATOR_MOTOR = 1; // The channel for the elevator motors
+const uint32_t ELEVATOR_TOP_SWITCH = 1; // The channel for the top switch of the elevator
+const uint32_t ELEVATOR_BOTTOM_SWITCH = 1; // The channel for the bottom switch of the elevator
+const uint32_t ELEVATOR_ENCODER_A = 1; // The channels for the elevator encoder
 const uint32_t ELEVATOR_ENCODER_B = 1;
 
+<<<<<<< HEAD
 //Double Solenoid Channel numbers. Place holders for now
 const uint32_t FIRST_SOLENOID1  = 0;
 const uint32_t FIRST_SOLENOID2  = 1;
+=======
 
-const float MOTOR_EXPIRATION = 0.1f; // float measured in seconds
+//LATCH
+const uint32_t SOLENOID_LATCH = 1;
+const uint32_t RELAY_LATCH = 1;
+>>>>>>> a8fe2b6830f4657d30f0f04aaae386259930804c
 
-//Mapping the joystick stuff
-//Settings
-static const float DEADZONE = 0.1f;
-static const float THROTTLE = 1.0f;
-//Joystick ports
-static const uint32_t DRIVER_JOY = 0;
-static const uint32_t GUNNER_JOY = 1;
-//Axis
-static const uint32_t LEFT_X = 0;
-static const uint32_t LEFT_Y = 1;
-static const uint32_t RIGHT_X = 4;
-//Buttons
-static const uint32_t BUTTON_A = 1;
-static const uint32_t BUTTON_B = 2;
-static const uint32_t BUTTON_X = 3;
-static const uint32_t BUTTON_Y = 4;
+
+//JOYSTICK
+static const float DEADZONE = 0.1f; // The value for the joystick deadzone
+static const float THROTTLE = 1.0f;  // The value for the joystick throttle
+
+static const uint32_t DRIVER_JOY = 0; // The channels for the driver joystick
+static const uint32_t GUNNER_JOY = 1; // The channels for the gunner joystick
+
+static const uint32_t LEFT_X = 0; // port for left joystick, x axis
+static const uint32_t LEFT_Y = 1; // port for left joystick, y axis
+static const uint32_t RIGHT_X = 4; // port for right joystick, x axis
+
+static const uint32_t BUTTON_A = 1; // port for A button on xbox controller
+static const uint32_t BUTTON_B = 2; // port for B button on xbox controller
+static const uint32_t BUTTON_X = 3; // port for X button on xbox controller
+static const uint32_t BUTTON_Y = 4; // port for Y button on xbox controller
+
+	// If you are using multiple modules, make sure to define both the port
+	// number and the module. For example you with a rangefinder:
+	//const int RANGE_FINDER_PORT = 1;
+	//const int RANGE_FINDER_MODULE = 1;
 
 #endif

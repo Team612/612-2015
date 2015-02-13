@@ -1,17 +1,14 @@
 #ifndef COMMAND_BASE_H
 #define COMMAND_BASE_H
 
-#include <Subsystems/DriveAccelerometer.h>
+#include <Subsystems/Drivetrain.h>
 #include <string>
 #include "Commands/Command.h"
 #include "Subsystems/ExampleSubsystem.h"
 #include "OI.h"
 #include "WPILib.h"
 #include "Subsystems/Elevator.h"
-#include "Subsystems/MecanumDrivetrain.h"
 #include "Subsystems/Vision.h"
-#include "Subsystems/DriveEncoder.h"
-#include "Subsystems/DriveAccelerometer.h"
 #include "RobotMap.h"
 
 /**
@@ -25,15 +22,10 @@ public:
 	CommandBase(char const *name);
 	CommandBase();
 	static void init();
-	// Create a single static instance of all of your subsystems
-	static ExampleSubsystem* examplesubsystem;
 	static OI* oi;
 	static Elevator* elevator;
-	static MecanumDrivetrain* drivetrain;
+	static Drivetrain* drivetrain;
 	static Vision* vision;
-	static DriveEncoder* encoder;
-	static DriveAccelerometer* accelerometer;
-	static Ultrasonic612* ultrasonic612;
 };
 
 #endif

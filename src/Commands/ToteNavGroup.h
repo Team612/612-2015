@@ -1,9 +1,9 @@
 #ifndef SRC_COMMANDS_TOTENAVGROUP_H_
 #define SRC_COMMANDS_TOTENAVGROUP_H_
 
+#include "../Subsystems/Drivetrain.h"
 #include "CommandBase.h"
 #include "WPILib.h"
-#include "Subsystems/MecanumDrivetrain.h"
 
 class ToteNavGroup: public CommandGroup
 {

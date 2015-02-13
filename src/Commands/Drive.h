@@ -3,19 +3,20 @@
 
 #include "../CommandBase.h"
 #include "WPILib.h"
-#include "../Subsystems/MecanumDrivetrain.h"
 #include <Timer.h>
 #include "RobotMap.h"
 
 class Drive: public CommandBase
 {
 public:
-	Drive();
+	Drive(Joystick* stick);
 	void Initialize();
-	void Execute(float inMagnitude, float inDirection, float inRotation);
+	void Execute();
 	bool IsFinished();
 	void End();
 	void Interrupted();
+private:
+	Joystick* joy;
 };
 
 #endif

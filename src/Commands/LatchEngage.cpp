@@ -1,14 +1,16 @@
-#include "ExampleCommand.h"
+#include "LatchEngage.h"
 
 /** The constructor of the Command might initialize any class variables pertinent to the Command.
  * Good examples of these variables might be a loop count, a timer.  Variables for robot
  * hardware, such as a motor controller, etc. should not be created here (but in a Subsystem).
  */
-ExampleCommand::ExampleCommand()
+LatchEngage::LatchEngage(bool engaged)
 {
-	// Use Requires() here to declare subsystem dependencies
-	// eg. Requires(chassis);
-	// We need to check this syntax for C++
+<<<<<<< HEAD:src/Commands/LatchClose.cpp
+	Requires(elevator);
+=======
+	this->engaged = engaged;
+>>>>>>> a8fe2b6830f4657d30f0f04aaae386259930804c:src/Commands/LatchEngage.cpp
 }
 
 /** Called just before this Command runs the first time
@@ -16,7 +18,7 @@ ExampleCommand::ExampleCommand()
  * In many cases, this method is no different than the constructor, so adding code here
  * is not always necessary.
  */
-void ExampleCommand::Initialize()
+void LatchEngage::Initialize()
 {
 
 }
@@ -27,27 +29,29 @@ void ExampleCommand::Initialize()
  * in this method.
  *
  */
-void ExampleCommand::Execute()
+void LatchEngage::Execute()
 {
-
+	elevator->firstSolClose();
+	elevator->secondSolClose();
 }
 
 /** Make this return true when this Command no longer needs to run execute()
- * The method might return true for a variety of reasons, such as a Timer object reaching a count, 
- * or based on a switch value.  
+ * The method might return true for a variety of reasons, such as a Timer object reaching a count,
+ * or based on a switch value.
  */
-bool ExampleCommand::IsFinished()
+bool LatchEngage::IsFinished()
 {
 	return false;
 }
 
 /** Called once after isFinished returns true
- * This method is used to clean up variables, if necessary.  Dynamic local variables could be deleted to 
+ * This method is used to clean up variables, if necessary.  Dynamic local variables could be deleted to
  * recover memory.
  */
-void ExampleCommand::End()
+void LatchEngage::End()
 {
-
+	elevator->firstSolClose();
+	elevator->secondSolClose();
 }
 
 /** Called when another command which requires one or more of the same
@@ -56,8 +60,8 @@ void ExampleCommand::End()
  * by a whileHeld() button action.  When the button is released, the active Command becomes interrupted
  * and canceled.
  */
-void ExampleCommand::Interrupted()
+void LatchEngage::Interrupted()
 {
-
+	elevator->firstSolClose();
+	elevator->secondSolClose();
 }
-
