@@ -14,7 +14,8 @@ private:
 	const int AXIS_SHOULDER = 3;
 	const int AXIS_RIGHT_X = 4;
 	const int AXIS_RIGHT_Y = 5;
-	const int AXIS_DPAD = 6;
+	const int AXIS_DPAD_X = 6;
+	const int AXIS_DPAD_Y = 7;
 
 	// Buttons
 	const int Button_A = 2;
@@ -38,25 +39,27 @@ public:
 	float getRightX();
 	float getLeftY();
 	float getRightY();
-	bool getButtonStateA();
-	bool getButtonStateB();
-	bool getButtonStateX();
-	bool getButtonStateY();
-	JoystickButton* getButtonA();
-	JoystickButton* getButtonB();
-	JoystickButton* getButtonX();
-	JoystickButton* getButtonY();
-	float getDPadX();
-	bool getDPadLeft();
-	bool getDPadRight();
-	JoystickButton* getStartButton();
-	JoystickButton* getBackButton();
-	JoystickButton* getLeftShoulder();
-	JoystickButton* getRightShoulder();
-	JoystickButton* getLeftStickClick();
-	JoystickButton* getRightStickClick();
-	JoystickButton* getLeftTriggerClick();
-	JoystickButton* getRightTriggerClick();
+	float getDPad();
+	bool  getDPadLeft();
+	bool  getDPadRight();
+	bool  getDPadUp();
+	bool  getDPadDown();
+	bool  getButtonStateA();
+	bool  getButtonStateB();
+	bool  getButtonStateX();
+	bool  getButtonStateY();
+	JoystickButton* ButtonA;
+	JoystickButton* ButtonB;
+	JoystickButton* ButtonX;
+	JoystickButton* ButtonY;
+	JoystickButton* StartButton;
+	JoystickButton* BackButton;
+	JoystickButton* LeftShoulder;
+	JoystickButton* RightShoulder;
+	JoystickButton* LeftStickClick;
+	JoystickButton* RightStickClick;
+	JoystickButton* LeftTriggerClick;
+	JoystickButton* RightTriggerClick;
 };
 
 #endif
