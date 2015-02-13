@@ -42,10 +42,18 @@ const uint32_t ELEVATOR_BOTTOM_SWITCH = 1; // The channel for the bottom switch 
 const uint32_t ELEVATOR_ENCODER_A = 1; // The channels for the elevator encoder
 const uint32_t ELEVATOR_ENCODER_B = 1;
 
+const uint32_t LEFT_IR = 1;
+const uint32_t RIGHT_IR = 2;
 
-//LATCH
-const uint32_t SOLENOID_LATCH = 1;
-const uint32_t RELAY_LATCH = 1;
+const float CRATE_HEIGHT = 12.0f;
+const float BUFFER = 2.0f;
+
+const uint32_t ELEVATOR_ULTRASONIC = 1;
+const uint32_t ELEVATOR_IR = 2;
+
+const float MAX_IR = 60.0f; //TODO
+const float MIN_ULTRA = 20.0f; //TODO
+
 
 
 //JOYSTICK
@@ -63,10 +71,5 @@ static const uint32_t BUTTON_A = 1; // port for A button on xbox controller
 static const uint32_t BUTTON_B = 2; // port for B button on xbox controller
 static const uint32_t BUTTON_X = 3; // port for X button on xbox controller
 static const uint32_t BUTTON_Y = 4; // port for Y button on xbox controller
-
-	// If you are using multiple modules, make sure to define both the port
-	// number and the module. For example you with a rangefinder:
-	//const int RANGE_FINDER_PORT = 1;
-	//const int RANGE_FINDER_MODULE = 1;
 
 #endif
