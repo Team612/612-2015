@@ -1,5 +1,8 @@
 #include "OI.h"
 #include "RobotMap.h"
+#include "Commands/ElevatorUp.h"
+#include "Commands/ElevatorDown.h"
+#include "Commands/Drive.h"
 
 OI::OI()
 {
@@ -22,6 +25,9 @@ OI::OI()
 	button_b = new JoystickButton(gunner_controller,BUTTON_B);
 	button_x = new JoystickButton(gunner_controller,BUTTON_X);
 	button_y = new JoystickButton(gunner_controller,BUTTON_Y);
+
+	Drive* drive = new Drive(driver_controller);
+	drive->Start();
 
 	ElevatorUp* elevatorUp = new ElevatorUp();
 	ElevatorDown* elevatorDown = new ElevatorDown();
