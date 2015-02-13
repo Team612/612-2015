@@ -70,7 +70,7 @@ bool Elevator::getRightAlignment()
 {
 	float val = rightIR->GetVoltage();
 	val = IRVoltageToDistance(val);
-	float dist = 0.0f;
+	float dist = 0.0f; //FIX THIS PLACEHOLDER VALUE TODO
 	
 	if (val >= (dist - BUFFER) && val <= (dist + BUFFER)) //Distance to ground +/- 2 inches TODO
 	{
@@ -118,5 +118,9 @@ Elevator::MainSensor Elevator::switchSensor(float IRDistance, float UDistance)
 	{
 		return IR;
 	}
-	return IR;
+	else //Buffer zone
+	{
+		return sense;
+	}
+	
 }
