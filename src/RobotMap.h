@@ -42,16 +42,9 @@ const uint32_t ELEVATOR_BOTTOM_SWITCH = 1; // The channel for the bottom switch 
 const uint32_t ELEVATOR_ENCODER_A = 1; // The channels for the elevator encoder
 const uint32_t ELEVATOR_ENCODER_B = 1;
 
-<<<<<<< HEAD
 //Double Solenoid Channel numbers. Place holders for now
 const uint32_t FIRST_SOLENOID1  = 0;
 const uint32_t FIRST_SOLENOID2  = 1;
-=======
-
-//LATCH
-const uint32_t SOLENOID_LATCH = 1;
-const uint32_t RELAY_LATCH = 1;
->>>>>>> a8fe2b6830f4657d30f0f04aaae386259930804c
 
 
 //JOYSTICK

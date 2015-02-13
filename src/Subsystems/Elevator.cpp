@@ -48,13 +48,13 @@ Encoder* Elevator::getEncoder()
 	return encoder;
 }
 
-void Elevator::firstSolOpen()
+void Elevator::latchSolOpen()
 {
 	latchSol->Set(DoubleSolenoid::Value::kForward);
 	printf("Setting DoubleSolenoid 1 on!\n");
 }
 
-void Elevator::firstSolClose()
+void Elevator::latchSolClose()
 {
 	latchSol->Set(DoubleSolenoid::Value::kOff);
 	printf("Setting DoubleSolenoid 1 off!\n");

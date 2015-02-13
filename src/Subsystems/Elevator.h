@@ -21,10 +21,8 @@ public:
 	void stop();
 	void InitDefaultCommand();
 	Encoder* getEncoder();
-	void firstSolClose();
-	void firstSolOpen();
-	void secondSolClose();
-	void secondSolOpen();
+	void latchSolClose();
+	void latchSolOpen();
 };
 
 #endif /* SRC_SUBSYSTEMS_ELEVATOR_H_ */

@@ -1,6 +1,6 @@
-#include "LatchOpen.h"
+#include "LatchClose.h"
 
-LatchOpen::LatchOpen()
+LatchClose::LatchClose()
 {
 	// Use Requires() here to declare subsystem dependencies
 	// eg. Requires(chassis);
@@ -8,32 +8,32 @@ LatchOpen::LatchOpen()
 }
 
 // Called just before this Command runs the first time
-void LatchOpen::Initialize()
+void LatchClose::Initialize()
 {
 
 }
 
 // Called repeatedly when this Command is scheduled to run
-void LatchOpen::Execute()
+void LatchClose::Execute()
 {
-	elevator->latchSolOpen();
+	elevator->latchSolClose();
 }
 
 // Make this return true when this Command no longer needs to run execute()
-bool LatchOpen::IsFinished()
+bool LatchClose::IsFinished()
 {
 	return false;
 }
 
 // Called once after isFinished returns true
-void LatchOpen::End()
+void LatchClose::End()
 {
 
 }
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
-void LatchOpen::Interrupted()
+void LatchClose::Interrupted()
 {
 	elevator->latchSolClose();
 }
