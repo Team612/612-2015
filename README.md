@@ -1,6 +1,8 @@
 612-2015
 ========
 
+[![Build Status](https://travis-ci.org/Chantilly612Code/612-2015.svg?branch=master)](https://travis-ci.org/Chantilly612Code/612-2015)
+
 This is the code repository for the [Chantilly Robotics](http://chantillyrobotics.org/) [FIRST](http://www.usfirst.org/roboticsprograms/frc/) Team 612 robot competing in the 2014-2015 season game Recycle Rush.
 
 The code uses the C++ programming language and the [WPILib](http://first.wpi.edu/FRC/).   
@@ -36,9 +38,9 @@ Contributors:
 
 | Name            | Github Username |
 |-----------------|-----------------|
+| Zack Alfakir    | ZackAlfakir     |
 | Benjamin Ward   | WardBenjamin    |
 | Swaraj Dhumne   | swarage         |
-| Zack Alfakir    | ZackAlfakir     |
 | Ethan Huey      | ethanhuey       |
 | Shaun Wu        | Alexbay218      |
 | Calvin Godfrey  | ggodfrey        |
