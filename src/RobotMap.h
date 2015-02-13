@@ -21,7 +21,6 @@ const uint32_t ENCODER_RR_B = 0;
 const uint32_t ENCODER_RF_A = 0; // The channels for the right front encdoer
 const uint32_t ENCODER_RF_B = 0;
 
-
 //MOTORS
 const uint32_t MOTOR_LR = 2; // The channel for the left rear motor
 const uint32_t MOTOR_LF = 1; // The channel for the left front motor

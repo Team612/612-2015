@@ -14,4 +14,22 @@ OI::OI()
 	button_y = new JoystickButton(xbox_controller,BUTTON_Y);//Y button
 	*/
 	//TODO find the right port stuff and fix it
+	//Buttons
+
+	gunner_controller = new Joystick(1);
+	driver_controller = new Joystick(2);
+
+	button_b = new JoystickButton(gunner_controller,BUTTON_B);
+	button_x = new JoystickButton(gunner_controller,BUTTON_X);
+	button_y = new JoystickButton(gunner_controller,BUTTON_Y);
+
+	ElevatorUp* elevatorUp = new ElevatorUp();
+	ElevatorDown* elevatorDown = new ElevatorDown();
+
+	button_x->WhileHeld(elevatorUp);
+	button_y->WhileHeld(elevatorDown);
+
+	float dPadY = gunner_controller->GetRawAxis(7);
+
+
 }
