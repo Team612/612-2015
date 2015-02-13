@@ -4,6 +4,7 @@ BreakerFlipper::BreakerFlipper()
 {
 	timer = new Timer();
 	encoder = new Encoder(encoderChannelA, encoderChannelB);
+	powerboard = new PowerBoard();
 }
 
 // Called just before this Command runs the first time
@@ -22,7 +23,8 @@ void BreakerFlipper::CheckMotor()
 // Called repeatedly when this Command is scheduled to run
 void BreakerFlipper::Execute()
 {
-	if(PowerBoard->GetCurrent(channelCheck) > ampLimit)
+	double current = powerboard->GetCurrent(channelCheck);
+	if(current > ampLimit)
 	{
 		CheckMotor();
 	}

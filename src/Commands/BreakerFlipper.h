@@ -10,6 +10,7 @@ class BreakerFlipper: public CommandBase
 private:
 	Timer* timer;
 	Encoder* encoder;
+	PowerBoard* powerboard;
 
 	const double ampLimit = 0.0; //TODO Fill in the right value
 	const uint8_t channelCheck = 0; //TODO Fill in the right value
