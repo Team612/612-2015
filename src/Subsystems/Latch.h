@@ -3,7 +3,7 @@
 
 #include "WPILib.h"
 #include <Solenoid.h>
-#include <Relay.h>
+// #include <Relay.h>
 
 class Latch: public Subsystem
 {
@@ -13,7 +13,7 @@ private:
     // see https://chantilly612code.github.io/612-2015/classRelay.html
     // see https://chantilly612code.github.io/612-2015/classSolenoid.html
 	Solenoid* solenoid;
-	Relay* relay;
+	// Relay* relay;
 
 public:
 	Latch();
