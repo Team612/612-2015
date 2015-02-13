@@ -5,6 +5,7 @@ Elevator::Elevator() :
 	Subsystem("Elevator")
 {
 	talon = new TalonSRX(ELEVATOR_MOTOR);
+	talon2 = new TalonSRX(ELEVATOR_MOTOR);
 	topSwitch = new DigitalInput(ELEVATOR_TOP_SWITCH);
 	bottomSwitch = new DigitalInput(ELEVATOR_BOTTOM_SWITCH);
 	encoder = new Encoder(ELEVATOR_ENCODER_A, ELEVATOR_ENCODER_B);
@@ -19,6 +20,7 @@ Elevator::Elevator() :
 Elevator::~Elevator()
 {
 	delete talon;
+	delete talon2;
 }
 
 void Elevator::InitDefaultCommand()
@@ -36,10 +38,12 @@ void Elevator::move(float magnitude)
 	if (topInput || bottomInput)
 	{
 		talon->Set(0.0f);
+		talon2->Set(0.0f);
 	}
 	else
 	{
 		talon->Set(magnitude);
+		talon2->Set(magnitude);
 	}
 }
 
@@ -47,6 +51,7 @@ void Elevator::stop()
 {
 	//Sets motor speed to nothing
 	talon->Set(0);
+	talon2->Set(0);
 }
 
 Encoder* Elevator::getEncoder()
