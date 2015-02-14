@@ -34,9 +34,12 @@ void Drive::Execute()
 		targetX = joystick->GetRawAxis(LEFT_X);
 		targetY = joystick->GetRawAxis(LEFT_Y);
 		targetRotation = joystick->GetRawAxis(RIGHT_X);
+		drivetrain->move(targetX, targetY, targetRotation);
 	}
-
-	drivetrain->move(targetX, targetY, targetRotation);
+	else
+	{
+		drivetrain->move(targetX, targetY, targetRotation);
+	}
 }
 
 // Make this return true when this Command no longer needs to run execute()
