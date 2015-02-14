@@ -2,6 +2,8 @@
 #define ROBOT_H
 
 #include <Subsystems/Drivetrain.h>
+#include <Preferences.h>
+#include "CANTalon612.h"
 #include "Commands/Drive.h"
 
 class Robot: public IterativeRobot
@@ -37,6 +39,7 @@ private:
 	double maxAcceleration = 0; // used for highest acceleration during total run time
 
 	Robot* robot;
+	//CANTalon612* zack;
 public:
 	//CONSTRUCTOR
 	void RobotInit();
@@ -52,9 +55,9 @@ public:
 
 	//612 FUNCTIONS
 	void TestPulley();
+	//612 Objects
+	Preferences* prefs;
 
-
-	//612 OBJECTS
 	enum ROBOT_STATUS{
 		NONE,
 		ROBOTINIT,

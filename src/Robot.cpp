@@ -19,6 +19,7 @@ void Robot::RobotInit()
 	joystick = new Joystick(DRIVER_JOY); // Construct left hand joystick
 	speedgun = new BuiltInAccelerometer(); // Construct new accelerometer called speedgun
 	robot = this;
+	prefs = Preferences::GetInstance();
 }
 
 void Robot::DisabledInit()
@@ -95,17 +96,26 @@ void Robot::TeleopPeriodic()
 
 void Robot::TestInit()
 {
-	robot_status = TESTINIT; // Makes the status equal TESTINIT
+	robot_status = TESTINIT;
+	/*
+	float P = 1.0f;
+	float I = 0.0f;
+	float D = 0.0f;
+	//zack = new CANTalon612(5,0,1,P,I,D,false,true);
+	*/
 }
+
 void Robot::TestPeriodic()
 {
 	if (robot_status != TESTPERIODIC) // Makes the status equal TESTPERIODIC
 		robot_status = TESTPERIODIC;
 	lw->Run();
+	/*
 	float val = joystick->GetRawAxis(5); //Takes input from joystick
 	firstTalon->Set(val); //Gives joystick input to first talon
 	secondTalon->Set(val);
-	
+	*/
+	//zack->Set(val);
 }
 
 

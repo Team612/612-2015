@@ -5,8 +5,8 @@ Latch::Latch() :
 	Subsystem("Latch")
 {
     // Initialize the variable you made in Latch.h
-	solenoid = new Solenoid(SOLENOID_LATCH);
-	relay = new Relay(RELAY_LATCH);
+	//solenoid = new Solenoid(SOLENOID_LATCH);
+	//relay = new Relay(RELAY_LATCH);
 }
 
 void Latch::Open()
