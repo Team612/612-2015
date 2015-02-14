@@ -101,8 +101,8 @@ float Elevator::getElevatorHeight()
 
 float Elevator::UltrasonicVoltageToDistance(float voltage)
 {
-	int16_t inputVoltage = ultrasonic->GetValue(); //0V to 5V
-	float voltsPerInch = inputVoltage/512.0; //Very small number
+	//int16_t inputVoltage = ultrasonic->GetValue(); //Zach said this should always be 5, so I'll try that
+	float voltsPerInch = 5.0/512.0; //Very small number
 	voltsPerInch *= 1000; //converts to mV
 	//formula from here: http://www.maxbotix.com/articles/032.htm confused by it
 	return voltage/voltsPerInch; //TODO test to make sure this works
