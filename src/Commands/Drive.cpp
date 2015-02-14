@@ -33,10 +33,7 @@ void Drive::Execute()
 {
 	if (mode == JOYSTICK)
 	{
-		targetX = joyObj->GetLeftXSmooth();
-		targetY = joyObj->GetRightXSmooth();
-		targetRotation = joyObj->GetRawAxis(RIGHT_X);
-		drivetrain->move(targetX, targetY, targetRotation);
+		drivetrain->move(joyObj->GetLeftXSmooth(), joyObj->GetLeftYSmooth(), joyObj->GetRightXSmooth());
 
 		SmartDashboard::PutNumber("Front left Talon value", drivetrain->fl612Talon->Get());
 		SmartDashboard::PutNumber("Front right Talon value", drivetrain->fr612Talon->Get());
