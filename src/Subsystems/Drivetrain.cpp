@@ -101,7 +101,7 @@ int32_t Drivetrain::getDistance(MotorLocation motor)
 	return (distance < 6);
 
 	// OLD
-	/*
+
 	if(d < 6)
 	{
 		return true;
