@@ -3,6 +3,7 @@
 
 #include <Subsystems/Drivetrain.h>
 #include "Commands/Drive.h"
+#include "OI.h"
 
 class Robot: public IterativeRobot
 {
@@ -18,10 +19,6 @@ private:
 
 	//LIVEWINDOW
 	LiveWindow* lw;
-
-
-	//JOYSTICK
-	Joystick* joystick; // Used for joystick
 
 
 	//TALON

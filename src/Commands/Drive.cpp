@@ -10,7 +10,7 @@ Drive::Drive(float x, float y, float rotation)
 	targetRotation = rotation;
 }
 
-Drive::Drive(Joystick* joystick)
+Drive::Drive(GamePad* joystick)
 {
 	Requires(drivetrain);
 	mode = JOYSTICK;
@@ -33,8 +33,8 @@ void Drive::Execute()
 {
 	if (mode == JOYSTICK)
 	{
-		targetX = joyObj->GetRawAxis(LEFT_X);
-		targetY = joyObj->GetRawAxis(LEFT_Y);
+		targetX = joyObj->GetLeftXSmooth();
+		targetY = joyObj->GetRightXSmooth();
 		targetRotation = joyObj->GetRawAxis(RIGHT_X);
 		drivetrain->move(targetX, targetY, targetRotation);
 

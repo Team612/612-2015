@@ -1,18 +1,19 @@
 #ifndef DRIVE_H
 #define DRIVE_H
 
-#include "../CommandBase.h"
+#include "CommandBase.h"
 #include "WPILib.h"
 #include <Timer.h>
 #include "RobotMap.h"
-#include "../Subsystems/Drivetrain.h"
+#include "Subsystems/Drivetrain.h"
 #include <CANTalon.h>
+#include "GamePad.h"
 
 class Drive: public CommandBase
 {
 public:
 	Drive(float x, float y, float rotation);
-	Drive(Joystick* joystick);
+	Drive(GamePad* joystick);
 	void Initialize();
 	void Execute();
 	bool IsFinished();
@@ -27,7 +28,7 @@ private:
 	float targetRotation;
 
 
-	Joystick* joyObj;
+	GamePad* joyObj;
 };
 
 #endif

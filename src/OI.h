@@ -11,8 +11,8 @@ class OI
 public:
 	OI();
 	//Elevator Operator Buttons
-	GamePad* driver;
-	GamePad* gunner;
+	static GamePad* driver;
+	static GamePad* gunner;
 };
 
 #endif
