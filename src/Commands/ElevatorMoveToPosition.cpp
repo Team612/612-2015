@@ -10,7 +10,7 @@ ElevatorMoveToPosition::ElevatorMoveToPosition(uint32_t inPosition)
 // Called just before this Command runs the first time
 void ElevatorMoveToPosition::Initialize()
 {
-
+	printf("ElevatorMoveToPosition Initialized!");
 }
 
 // Called repeatedly when this Command is scheduled to run
@@ -29,6 +29,12 @@ void ElevatorMoveToPosition::Execute()
 	{
 		//Using 0.8 as a temporary value
 		elevator->move(0.8);
+	}
+	//Doesn't move if (spins == targetSpins)
+	static int count = 0;
+	if (count % 60 == 0)
+	{
+		printf("ElevatorMoveToPosition Execution Called! Spins= %d", spins);
 	}
 }
 
@@ -52,5 +58,5 @@ void ElevatorMoveToPosition::End()
 // subsystems is scheduled to run
 void ElevatorMoveToPosition::Interrupted()
 {
-	elevator -> stop();
+	elevator -> stop(); //make sure elevator doesn't go whacko
 }
