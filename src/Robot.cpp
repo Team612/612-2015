@@ -19,6 +19,7 @@ void Robot::RobotInit()
 
 	joystick = new Joystick(DRIVER_JOY);//Right hand joystick
 	speedgun = new BuiltInAccelerometer(); // New accelerometer called speedgun
+	move = new Drive(joystick);
 
 	robot = this;
 }
@@ -60,6 +61,7 @@ void Robot::TeleopInit()
 	 */
 	if (autonomousCommand != NULL)
 		autonomousCommand->Cancel();
+	move->Start();
 }
 
 void Robot::TeleopPeriodic()
