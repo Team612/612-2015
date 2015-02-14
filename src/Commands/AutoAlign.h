@@ -3,8 +3,10 @@
 
 #include "Commands/CommandGroup.h"
 #include "../Subsystems/Drivetrain.h"
+#include "Drive.h"
 
-class AutoAlign: public CommandGroup {
+class AutoAlign: public CommandBase
+{
 public:
 	AutoAlign();
 	void RoughAlign(float distanceToTote, float bearingToTote, float distanceToBeAway); //bearing is in degrees. look at issue #126
