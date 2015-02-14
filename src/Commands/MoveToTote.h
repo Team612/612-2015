@@ -1,5 +1,5 @@
-#ifndef SRC_COMMANDS_MOVETOTOTE_H_
-#define SRC_COMMANDS_MOVETOTOTE_H_
+#ifndef LATCH_CPP_SRC_COMMANDS_MOVETOTOTE_H_
+#define LATCH_CPP_SRC_COMMANDS_MOVETOTOTE_H_
 
 #include "../CommandBase.h"
 #include "WPILib.h"
@@ -15,4 +15,4 @@ public:
 	void Interrupted(); ///< The clean-up method when a command ends abruptly (from another event, such as a button release)
 };
 
-#endif /* SRC_COMMANDS_MOVETOTOTE_H_ */
+#endif /* LATCH_CPP_SRC_COMMANDS_MOVETOTOTE_H_ */
