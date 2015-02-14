@@ -1,6 +1,6 @@
 #ifndef ROBOTMAP_H
 #define ROBOTMAP_H
-
+//#define TALON //uncomment if elevator has two talons
 #include "WPILib.h"
 
 

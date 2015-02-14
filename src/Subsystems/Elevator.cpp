@@ -1,11 +1,12 @@
 #include "Elevator.h"
 #include <cmath>
-
 Elevator::Elevator() :
 	Subsystem("Elevator")
 {
 	talon = new TalonSRX(ELEVATOR_MOTOR);
+	#ifdef
 	talon2 = new TalonSRX(ELEVATOR_MOTOR);
+	#endif
 	topSwitch = new DigitalInput(ELEVATOR_TOP_SWITCH);
 	bottomSwitch = new DigitalInput(ELEVATOR_BOTTOM_SWITCH);
 	encoder = new Encoder(ELEVATOR_ENCODER_A, ELEVATOR_ENCODER_B);
@@ -20,7 +21,9 @@ Elevator::Elevator() :
 Elevator::~Elevator()
 {
 	delete talon;
+	#ifdef TALON
 	delete talon2;
+	#endif
 }
 
 void Elevator::InitDefaultCommand()
@@ -38,12 +41,16 @@ void Elevator::move(float magnitude)
 	if (topInput || bottomInput)
 	{
 		talon->Set(0.0f);
+		#ifdef TALON
 		talon2->Set(0.0f);
+		#endif
 	}
 	else
 	{
 		talon->Set(magnitude);
+		#ifdef TALON
 		talon2->Set(magnitude);
+		#endif
 	}
 }
 
@@ -51,7 +58,9 @@ void Elevator::stop()
 {
 	//Sets motor speed to nothing
 	talon->Set(0);
+	#ifdef TALON
 	talon2->Set(0);
+	#endif
 }
 
 Encoder* Elevator::getEncoder()

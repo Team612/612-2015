@@ -1,6 +1,5 @@
 #ifndef SRC_SUBSYSTEMS_ELEVATOR_H_
 #define SRC_SUBSYSTEMS_ELEVATOR_H_
-
 #include "Commands/Subsystem.h"
 #include "WPILib.h"
 #include "../RobotMap.h"
@@ -10,7 +9,9 @@
 class Elevator : public Subsystem {
 private:
 	TalonSRX* talon;
+	#ifdef TALON
 	TalonSRX* talon2;
+	#endif
 	DigitalInput* topSwitch;
 	DigitalInput* bottomSwitch;
 	Encoder* encoder;
