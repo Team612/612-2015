@@ -1,0 +1,5 @@
+<map id="AnalogPotentiometer::Get" name="AnalogPotentiometer::Get">
+<area shape="rect" id="node3" href="$class_analog_input.html#a1da927d1b5784b66cf99f921bbfbe36b" title="AnalogInput::GetVoltage" alt="" coords="247,5,409,32"/>
+<area shape="rect" id="node7" href="$class_controller_power.html#a407d69acf87b0689659160746c75f331" title="ControllerPower::GetVoltage5V" alt="" coords="227,56,429,83"/>
+<area shape="rect" id="node5" href="$class_error_base.html#a05790f219c9e436a09752f73f7344024" title="Check if the current error code represents a fatal error. " alt="" coords="477,5,643,32"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="PWM::SetPosition" name="PWM::SetPosition">
+<area shape="rect" id="node3" href="$class_servo.html#a9ab93d2e70c8be9d2599aa225a6f8610" title="Servo::Set" alt="" coords="200,5,283,32"/>
+<area shape="rect" id="node5" href="$class_servo.html#a0046f9431e42de3fe63f8ce1b3995eb5" title="Servo::SetAngle" alt="" coords="184,56,299,83"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="RobotDrive::SetLeftRightMotorOutputs" name="RobotDrive::SetLeftRightMotorOutputs">
+<area shape="rect" id="node3" href="$class_speed_controller.html#adc3d0010c1c684979261b98d438f8db5" title="SpeedController::Set" alt="" coords="246,5,389,32"/>
+<area shape="rect" id="node5" href="$class_robot_drive.html#aa7d99fd794c6f8c0b5486603f508a3a7" title="RobotDrive::Limit" alt="" coords="257,56,377,83"/>
+<area shape="rect" id="node7" href="$class_c_a_n_jaguar.html#a225e0588b0955681a24da6ab0d2c8bc0" title="CANJaguar::UpdateSyncGroup" alt="" coords="217,107,418,133"/>
+<area shape="rect" id="node9" href="$class_motor_safety_helper.html#a67b80e9817dc725e0678de5e8f0bb39e" title="MotorSafetyHelper::Feed" alt="" coords="234,157,401,184"/>
+<area shape="rect" id="node11" href="$class_timer.html#a7fa6e6dffec055e5104ccd6bcadec9aa" title="Timer::GetFPGATimestamp" alt="" coords="467,157,650,184"/>
+<area shape="rect" id="node13" href="$_utility_8h.html#ababf055d95368485d48bd9a0231853f3" title="GetFPGATime" alt="" coords="699,157,805,184"/>
+</map>

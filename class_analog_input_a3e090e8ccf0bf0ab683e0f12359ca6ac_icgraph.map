@@ -1,0 +1,4 @@
+<map id="AnalogInput::GetAverageValue" name="AnalogInput::GetAverageValue">
+<area shape="rect" id="node3" href="$class_gyro.html#ae5da50d9e7d6cf3ddd87744f4b797e7a" title="Gyro::GetRate" alt="" coords="253,5,360,32"/>
+<area shape="rect" id="node5" href="$class_gyro.html#aca619c0201c5fb85e2bbaeef0f39e8e6" title="Gyro::PIDGet" alt="" coords="409,5,509,32"/>
+</map>

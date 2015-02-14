@@ -1,0 +1,9 @@
+<map id="PWM::GetSpeed" name="PWM::GetSpeed">
+<area shape="rect" id="node3" href="$class_jaguar.html#a7ce9aa9378ec4f0907dca524f63bfdd1" title="Jaguar::Get" alt="" coords="199,5,289,32"/>
+<area shape="rect" id="node5" href="$class_p_w_m.html#a963e92607792f13d6a4d05e3ccf04cbd" title="PWM::UpdateTable" alt="" coords="177,56,311,83"/>
+<area shape="rect" id="node9" href="$class_talon.html#a5b9cd39bb76bdc9bfa27d4cc72fce3ea" title="Talon::Get" alt="" coords="203,107,285,133"/>
+<area shape="rect" id="node11" href="$class_talon_s_r_x.html#a5d72e618d1328c758e01aa54a28910c8" title="TalonSRX::Get" alt="" coords="191,157,297,184"/>
+<area shape="rect" id="node13" href="$class_victor.html#a71f7b8a475186a823515c4508af7498c" title="Victor::Get" alt="" coords="201,208,287,235"/>
+<area shape="rect" id="node15" href="$class_victor_s_p.html#a84bea364d16a3bfa19474ed1eb5837a0" title="VictorSP::Get" alt="" coords="193,259,295,285"/>
+<area shape="rect" id="node7" href="$class_p_w_m.html#a7b8183e4e39c2092b8b5ac2914761873" title="PWM::InitTable" alt="" coords="361,56,471,83"/>
+</map>

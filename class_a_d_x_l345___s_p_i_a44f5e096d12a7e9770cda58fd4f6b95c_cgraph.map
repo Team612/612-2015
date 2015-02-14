@@ -1,0 +1,8 @@
+<map id="ADXL345_SPI::InitTable" name="ADXL345_SPI::InitTable">
+<area shape="rect" id="node3" href="$class_a_d_x_l345___s_p_i.html#a9cb14691ba1afa6bf3676222936d8c19" title="ADXL345_SPI::UpdateTable" alt="" coords="214,56,397,83"/>
+<area shape="rect" id="node5" href="$class_a_d_x_l345___s_p_i.html#ae91bd240c7ce0715d79e12644a67bcf1" title="ADXL345_SPI::GetX" alt="" coords="447,5,585,32"/>
+<area shape="rect" id="node11" href="$class_a_d_x_l345___s_p_i.html#a1a6e48ce4713239f7cade3e9a7335c70" title="ADXL345_SPI::GetY" alt="" coords="445,56,587,83"/>
+<area shape="rect" id="node14" href="$class_a_d_x_l345___s_p_i.html#a54306b7ba6ea3227444ed8705cf0b9bf" title="ADXL345_SPI::GetZ" alt="" coords="447,107,585,133"/>
+<area shape="rect" id="node7" href="$class_a_d_x_l345___s_p_i.html#acae8aee7785e91d4efe1e695478ca727" title="ADXL345_SPI::GetAcceleration" alt="" coords="635,56,839,83"/>
+<area shape="rect" id="node9" href="$class_s_p_i.html#a57e9c8cac374878879b32f43667e1e09" title="SPI::Transaction" alt="" coords="889,56,1007,83"/>
+</map>

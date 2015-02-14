@@ -1,0 +1,6 @@
+<map id="RobotBase::RobotBase" name="RobotBase::RobotBase">
+<area shape="rect" id="node3" href="$class_driver_station.html#ab0995c2d3f0b40cb13ac5aff656e46d0" title="DriverStation::GetInstance" alt="" coords="213,31,387,57"/>
+<area shape="rect" id="node5" href="$class_driver_station.html#a343945cc9bbf870e0ada94b47f3fec92" title="DriverStation::DriverStation" alt="" coords="435,31,611,57"/>
+<area shape="rect" id="node7" href="$class_sensor_base.html#a97a6a31683483f3fe3f6f1d971ca9615" title="SensorBase::AddToSingletonList" alt="" coords="659,5,872,32"/>
+<area shape="rect" id="node9" href="$class_task.html#a6e8e638dd9a8faad92e259b587ca82f8" title="Task::Start" alt="" coords="722,56,809,83"/>
+</map>

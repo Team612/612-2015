@@ -1,0 +1,5 @@
+<map id="JoystickButton" name="JoystickButton">
+<area shape="rect" id="node2" href="$class_button.html" title="Button" alt="" coords="29,155,88,181"/>
+<area shape="rect" id="node4" href="$class_trigger.html" title="Trigger" alt="" coords="28,80,89,107"/>
+<area shape="rect" id="node6" href="$class_sendable.html" title="Sendable" alt="" coords="21,5,96,32"/>
+</map>

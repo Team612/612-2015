@@ -1,0 +1,7 @@
+<map id="AnalogPotentiometer::InitTable" name="AnalogPotentiometer::InitTable">
+<area shape="rect" id="node3" href="$class_analog_potentiometer.html#a66cead815a94e4d0bbac7637def36ce9" title="AnalogPotentiometer\l::UpdateTable" alt="" coords="198,23,341,65"/>
+<area shape="rect" id="node5" href="$class_analog_potentiometer.html#a7803d490e15d2aa9811559505828be17" title="AnalogPotentiometer::Get" alt="" coords="390,31,562,57"/>
+<area shape="rect" id="node7" href="$class_analog_input.html#a1da927d1b5784b66cf99f921bbfbe36b" title="AnalogInput::GetVoltage" alt="" coords="631,5,793,32"/>
+<area shape="rect" id="node11" href="$class_controller_power.html#a407d69acf87b0689659160746c75f331" title="ControllerPower::GetVoltage5V" alt="" coords="611,56,813,83"/>
+<area shape="rect" id="node9" href="$class_error_base.html#a05790f219c9e436a09752f73f7344024" title="Check if the current error code represents a fatal error. " alt="" coords="861,5,1027,32"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="Counter::Counter" name="Counter::Counter">
+<area shape="rect" id="node3" href="$class_counter.html#a8abf01f2594d96b85ac3f76ab8f1257e" title="Counter::SetUpSource" alt="" coords="191,5,343,32"/>
+<area shape="rect" id="node7" href="$class_analog_trigger.html#a78d5a8093c65e4a204716b8b6af41bfe" title="AnalogTrigger::CreateOutput" alt="" coords="173,56,360,83"/>
+<area shape="rect" id="node10" href="$class_counter.html#a14f57c89d5e20d5ca590877dcc6be50f" title="Counter::ClearDownSource" alt="" coords="177,107,356,133"/>
+<area shape="rect" id="node5" href="$class_error_base.html#a05790f219c9e436a09752f73f7344024" title="Check if the current error code represents a fatal error. " alt="" coords="408,56,573,83"/>
+</map>

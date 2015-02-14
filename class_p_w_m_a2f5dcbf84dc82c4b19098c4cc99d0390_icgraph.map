@@ -1,0 +1,6 @@
+<map id="PWM::GetPosition" name="PWM::GetPosition">
+<area shape="rect" id="node3" href="$class_servo.html#a5ecdde666455fa3c20d4ae1b6184a047" title="Servo::Get" alt="" coords="201,5,284,32"/>
+<area shape="rect" id="node9" href="$class_servo.html#a0ccee0191f0026d94db4646e6662700c" title="Servo::GetAngle" alt="" coords="185,56,301,83"/>
+<area shape="rect" id="node5" href="$class_servo.html#a76cca4c9e061ad6b36bcf8282e6bb9d2" title="Servo::UpdateTable" alt="" coords="350,5,485,32"/>
+<area shape="rect" id="node7" href="$class_servo.html#ae429a4197d8868503fbecb24a2935220" title="Servo::InitTable" alt="" coords="534,5,645,32"/>
+</map>

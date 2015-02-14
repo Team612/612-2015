@@ -1,0 +1,6 @@
+<map id="Gyro::GetRate" name="Gyro::GetRate">
+<area shape="rect" id="node3" href="$class_analog_input.html#a3e090e8ccf0bf0ab683e0f12359ca6ac" title="AnalogInput::GetAverageValue" alt="" coords="166,5,365,32"/>
+<area shape="rect" id="node7" href="$class_analog_input.html#af34dfab137f2fed40c98b4f0871c84cc" title="AnalogInput::GetLSBWeight" alt="" coords="173,56,358,83"/>
+<area shape="rect" id="node10" href="$class_analog_input.html#a713786ced6451b57fbcec31cf7cb1340" title="AnalogInput::GetOversampleBits" alt="" coords="160,107,371,133"/>
+<area shape="rect" id="node5" href="$class_error_base.html#a05790f219c9e436a09752f73f7344024" title="Check if the current error code represents a fatal error. " alt="" coords="419,56,584,83"/>
+</map>

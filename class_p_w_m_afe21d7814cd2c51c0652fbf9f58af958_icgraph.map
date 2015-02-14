@@ -1,0 +1,15 @@
+<map id="PWM::GetRaw" name="PWM::GetRaw">
+<area shape="rect" id="node3" href="$class_p_w_m.html#a2f5dcbf84dc82c4b19098c4cc99d0390" title="PWM::GetPosition" alt="" coords="163,56,293,83"/>
+<area shape="rect" id="node13" href="$class_p_w_m.html#a42b209cbe7e63732918cbbcb55bfaac7" title="PWM::GetSpeed" alt="" coords="167,208,289,235"/>
+<area shape="rect" id="node5" href="$class_servo.html#a5ecdde666455fa3c20d4ae1b6184a047" title="Servo::Get" alt="" coords="368,5,451,32"/>
+<area shape="rect" id="node11" href="$class_servo.html#a0ccee0191f0026d94db4646e6662700c" title="Servo::GetAngle" alt="" coords="351,56,467,83"/>
+<area shape="rect" id="node7" href="$class_servo.html#a76cca4c9e061ad6b36bcf8282e6bb9d2" title="Servo::UpdateTable" alt="" coords="526,5,661,32"/>
+<area shape="rect" id="node9" href="$class_servo.html#ae429a4197d8868503fbecb24a2935220" title="Servo::InitTable" alt="" coords="710,5,821,32"/>
+<area shape="rect" id="node15" href="$class_jaguar.html#a7ce9aa9378ec4f0907dca524f63bfdd1" title="Jaguar::Get" alt="" coords="365,107,454,133"/>
+<area shape="rect" id="node17" href="$class_p_w_m.html#a963e92607792f13d6a4d05e3ccf04cbd" title="PWM::UpdateTable" alt="" coords="342,157,477,184"/>
+<area shape="rect" id="node21" href="$class_talon.html#a5b9cd39bb76bdc9bfa27d4cc72fce3ea" title="Talon::Get" alt="" coords="368,208,451,235"/>
+<area shape="rect" id="node23" href="$class_talon_s_r_x.html#a5d72e618d1328c758e01aa54a28910c8" title="TalonSRX::Get" alt="" coords="356,259,463,285"/>
+<area shape="rect" id="node25" href="$class_victor.html#a71f7b8a475186a823515c4508af7498c" title="Victor::Get" alt="" coords="367,309,452,336"/>
+<area shape="rect" id="node27" href="$class_victor_s_p.html#a84bea364d16a3bfa19474ed1eb5837a0" title="VictorSP::Get" alt="" coords="358,360,461,387"/>
+<area shape="rect" id="node19" href="$class_p_w_m.html#a7b8183e4e39c2092b8b5ac2914761873" title="PWM::InitTable" alt="" coords="538,157,649,184"/>
+</map>

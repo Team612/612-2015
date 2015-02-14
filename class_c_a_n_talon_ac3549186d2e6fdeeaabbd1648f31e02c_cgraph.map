@@ -1,0 +1,5 @@
+<map id="CANTalon::Set" name="CANTalon::Set">
+<area shape="rect" id="node3" href="$class_motor_safety_helper.html#a67b80e9817dc725e0678de5e8f0bb39e" title="MotorSafetyHelper::Feed" alt="" coords="163,5,330,32"/>
+<area shape="rect" id="node5" href="$class_timer.html#a7fa6e6dffec055e5104ccd6bcadec9aa" title="Timer::GetFPGATimestamp" alt="" coords="379,5,562,32"/>
+<area shape="rect" id="node7" href="$_utility_8h.html#ababf055d95368485d48bd9a0231853f3" title="GetFPGATime" alt="" coords="611,5,717,32"/>
+</map>

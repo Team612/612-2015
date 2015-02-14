@@ -1,0 +1,9 @@
+<map id="LiveWindow::AddSensor" name="LiveWindow::AddSensor">
+<area shape="rect" id="node3" href="$class_live_window.html#a9eb9ac4b7d33ff0fc9ffc5899639febb" title="LiveWindow::AddSensor" alt="" coords="231,5,393,32"/>
+<area shape="rect" id="node5" href="$class_a_d_x_l345___i2_c.html#ace28299f55450a560f959cf72613489a" title="ADXL345_I2C::ADXL345_I2C" alt="" coords="218,56,406,83"/>
+<area shape="rect" id="node7" href="$class_a_d_x_l345___s_p_i.html#afd6ce38c4905606f32ae96342b2d29ca" title="ADXL345_SPI::ADXL345_SPI" alt="" coords="216,107,408,133"/>
+<area shape="rect" id="node9" href="$class_built_in_accelerometer.html#ac76efde6517e1483e5ea9597e1c605bd" title="BuiltInAccelerometer\l::BuiltInAccelerometer" alt="" coords="237,158,387,199"/>
+<area shape="rect" id="node11" href="$class_gear_tooth.html#abc7cf72d7856aaf50b8eff53d461a979" title="GearTooth::GearTooth" alt="" coords="237,224,387,251"/>
+<area shape="rect" id="node13" href="$class_gyro.html#ae26b1bacc0c5a4e1f9d85836fcb90736" title="Gyro::InitGyro" alt="" coords="261,275,363,301"/>
+<area shape="rect" id="node15" href="$class_gyro.html#a06521f58180be9e342d941643f9b2491" title="Gyro::Gyro" alt="" coords="457,275,543,301"/>
+</map>

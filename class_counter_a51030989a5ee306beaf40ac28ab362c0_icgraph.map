@@ -1,0 +1,12 @@
+<map id="Counter::GetPeriod" name="Counter::GetPeriod">
+<area shape="rect" id="node3" href="$class_encoder.html#a9825883787337876f6d62951d7eaac24" title="Encoder::GetPeriod" alt="" coords="211,56,347,83"/>
+<area shape="rect" id="node13" href="$class_ultrasonic.html#a73c80fe92b2085107714c6a110d90d70" title="Ultrasonic::GetRangeInches" alt="" coords="187,132,371,159"/>
+<area shape="rect" id="node5" href="$class_encoder.html#a72423acddb85ee347fc213b8600843f7" title="Encoder::GetRate" alt="" coords="439,43,566,69"/>
+<area shape="rect" id="node7" href="$class_encoder.html#a08665d9e47c9fa77606dfe8611612e73" title="Encoder::PIDGet" alt="" coords="651,5,771,32"/>
+<area shape="rect" id="node9" href="$class_encoder.html#a2f6a1ab80e3590e2687551b22d8669e4" title="Encoder::UpdateTable" alt="" coords="635,56,786,83"/>
+<area shape="rect" id="node11" href="$class_encoder.html#a9e1ff7a1231b13de80a6b8ec06cc6886" title="Encoder::InitTable" alt="" coords="835,56,962,83"/>
+<area shape="rect" id="node15" href="$class_ultrasonic.html#af35c9a3273f1ffcf0eb17308d986d7c0" title="Ultrasonic::GetRangeMM" alt="" coords="419,93,587,120"/>
+<area shape="rect" id="node17" href="$class_ultrasonic.html#a8ec6de749ccd7e93b28735e9cc6d0b22" title="Ultrasonic::PIDGet" alt="" coords="645,132,776,159"/>
+<area shape="rect" id="node20" href="$class_ultrasonic.html#aa91dcad8c1595bd3c4bdd3e798afb736" title="Ultrasonic::UpdateTable" alt="" coords="423,195,583,221"/>
+<area shape="rect" id="node22" href="$class_ultrasonic.html#a63320495a2d314cbc09cc9e4b6d1569d" title="Ultrasonic::InitTable" alt="" coords="643,195,779,221"/>
+</map>

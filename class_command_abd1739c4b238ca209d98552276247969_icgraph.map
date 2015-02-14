@@ -1,0 +1,4 @@
+<map id="Command::Requires" name="Command::Requires">
+<area shape="rect" id="node3" href="$class_command_group.html#a37206a473a9a01ba8098d73f452de71b" title="CommandGroup::AddSequential" alt="" coords="195,5,403,32"/>
+<area shape="rect" id="node5" href="$class_command_group.html#a3c7e096849f7586389769454b3148be3" title="CommandGroup::AddParallel" alt="" coords="203,56,394,83"/>
+</map>

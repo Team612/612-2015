@@ -1,0 +1,6 @@
+<map id="SolenoidBase" name="SolenoidBase">
+<area shape="rect" id="node2" href="$class_sensor_base.html" title="SensorBase" alt="" coords="5,187,99,213"/>
+<area shape="rect" id="node4" href="$class_error_base.html" title="ErrorBase" alt="" coords="47,109,127,136"/>
+<area shape="rect" id="node8" href="$class_resource.html" title="Resource" alt="" coords="123,187,200,213"/>
+<area shape="rect" id="node6" href="$class_error.html" title="Error" alt="" coords="61,5,112,32"/>
+</map>

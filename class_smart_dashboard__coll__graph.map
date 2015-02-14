@@ -1,0 +1,5 @@
+<map id="SmartDashboard" name="SmartDashboard">
+<area shape="rect" id="node2" href="$class_sensor_base.html" title="SensorBase" alt="" coords="17,187,111,213"/>
+<area shape="rect" id="node4" href="$class_error_base.html" title="ErrorBase" alt="" coords="24,109,104,136"/>
+<area shape="rect" id="node6" href="$class_error.html" title="Error" alt="" coords="39,5,89,32"/>
+</map>

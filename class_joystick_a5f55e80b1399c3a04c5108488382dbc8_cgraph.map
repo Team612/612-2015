@@ -1,0 +1,9 @@
+<map id="Joystick::GetAxis" name="Joystick::GetAxis">
+<area shape="rect" id="node3" href="$class_joystick.html#a684f7ef395e7cf4d1137e816554446c9" title="Joystick::GetX" alt="" coords="197,5,304,32"/>
+<area shape="rect" id="node9" href="$class_joystick.html#a6f413b0da6c62d848113409acc9cb971" title="Joystick::GetY" alt="" coords="197,56,305,83"/>
+<area shape="rect" id="node12" href="$class_joystick.html#a4e8c04b243729f58bf360a6584eac775" title="Joystick::GetZ" alt="" coords="197,107,304,133"/>
+<area shape="rect" id="node15" href="$class_joystick.html#a3b29a1a8121657bd3ba4aa95db050a5f" title="Joystick::GetTwist" alt="" coords="186,157,315,184"/>
+<area shape="rect" id="node18" href="$class_joystick.html#a3330cc651d36c58bffea669ff0b77161" title="Joystick::GetThrottle" alt="" coords="179,208,322,235"/>
+<area shape="rect" id="node5" href="$class_joystick.html#a1011135df443771aa07e3afa4a839b05" title="Joystick::GetRawAxis" alt="" coords="371,107,522,133"/>
+<area shape="rect" id="node7" href="$class_driver_station.html#a3d0f8b9b6dd45cd071773a47d35059ac" title="DriverStation::GetStickAxis" alt="" coords="571,107,751,133"/>
+</map>

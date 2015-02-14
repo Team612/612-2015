@@ -1,0 +1,10 @@
+<map id="CANJaguar::SetI" name="CANJaguar::SetI">
+<area shape="rect" id="node3" href="$class_c_a_n_jaguar.html#a97fe9cb246f90060495c808e31070650" title="CANJaguar::verify" alt="" coords="179,44,303,71"/>
+<area shape="rect" id="node11" href="$class_c_a_n_jaguar.html#a27a017dfbfbb580251b4dd342ccbfd6d" title="CANJaguar::SetPID" alt="" coords="173,120,309,147"/>
+<area shape="rect" id="node5" href="$class_c_a_n_jaguar.html#a3a22b02ece406993619f993b1e09012a" title="CANJaguar::Set" alt="" coords="397,31,512,57"/>
+<area shape="rect" id="node7" href="$class_c_a_n_jaguar.html#a2355d55f42083ab82870c79f742620e4" title="CANJaguar::PIDWrite" alt="" coords="616,5,763,32"/>
+<area shape="rect" id="node9" href="$class_c_a_n_jaguar_test.html#a3c9026e62eb65e2d497bb7bbfaded297" title="CANJaguarTest::SetJaguar" alt="" coords="600,56,779,83"/>
+<area shape="rect" id="node13" href="$class_c_a_n_jaguar.html#ae0b07bf7199611ea8e2e04109b08a3ad" title="CANJaguar::SetCurrentMode" alt="" coords="360,81,549,108"/>
+<area shape="rect" id="node15" href="$class_c_a_n_jaguar.html#aa02549873d5551b00d3f2bdb08709e5a" title="CANJaguar::SetSpeedMode" alt="" coords="363,132,547,159"/>
+<area shape="rect" id="node17" href="$class_c_a_n_jaguar.html#a870f456a238bb9c55552b94cd86faad0" title="CANJaguar::SetPositionMode" alt="" coords="357,183,552,209"/>
+</map>

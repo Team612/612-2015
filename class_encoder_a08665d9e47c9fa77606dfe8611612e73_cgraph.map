@@ -1,0 +1,9 @@
+<map id="Encoder::PIDGet" name="Encoder::PIDGet">
+<area shape="rect" id="node3" href="$class_error_base.html#a05790f219c9e436a09752f73f7344024" title="Check if the current error code represents a fatal error. " alt="" coords="739,121,904,147"/>
+<area shape="rect" id="node5" href="$class_encoder.html#a523cc5a0cbd52f937f2a25a14185bc22" title="Encoder::GetDistance" alt="" coords="174,45,325,71"/>
+<area shape="rect" id="node14" href="$class_encoder.html#a72423acddb85ee347fc213b8600843f7" title="Encoder::GetRate" alt="" coords="186,171,313,198"/>
+<area shape="rect" id="node8" href="$class_encoder.html#a0fd1cdb3939029d070c0663a96c3ae6d" title="Encoder::GetRaw" alt="" coords="379,70,503,97"/>
+<area shape="rect" id="node11" href="$class_counter.html#a72086dbd17d7baf28bacfb13562af6b6" title="Counter::Get" alt="" coords="576,121,672,147"/>
+<area shape="rect" id="node17" href="$class_encoder.html#a9825883787337876f6d62951d7eaac24" title="Encoder::GetPeriod" alt="" coords="373,222,509,249"/>
+<area shape="rect" id="node20" href="$class_counter.html#a51030989a5ee306beaf40ac28ab362c0" title="Counter::GetPeriod" alt="" coords="557,273,691,299"/>
+</map>

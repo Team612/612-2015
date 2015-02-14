@@ -1,0 +1,15 @@
+<map id="CANJaguar::updatePeriodicStatus" name="CANJaguar::updatePeriodicStatus">
+<area shape="rect" id="node3" href="$class_c_a_n_jaguar.html#af76e1d83af648156e1b134235f1d8a67" title="CANJaguar::GetBusVoltage" alt="" coords="249,5,431,32"/>
+<area shape="rect" id="node5" href="$class_c_a_n_jaguar.html#a646e3e93374bd6a084f1bdbd0ccf4693" title="CANJaguar::GetOutputVoltage" alt="" coords="241,56,439,83"/>
+<area shape="rect" id="node7" href="$class_c_a_n_jaguar.html#abb041b49997e2929ac22ba3d078c5da0" title="CANJaguar::GetOutputCurrent" alt="" coords="241,107,439,133"/>
+<area shape="rect" id="node9" href="$class_c_a_n_jaguar.html#a22612130552d75e71b80f65f0013b9dc" title="CANJaguar::GetTemperature" alt="" coords="246,157,434,184"/>
+<area shape="rect" id="node19" href="$class_c_a_n_jaguar.html#a7b2f80fccf8ca7bb7413c9f25e12f99a" title="CANJaguar::GetPosition" alt="" coords="259,208,421,235"/>
+<area shape="rect" id="node22" href="$class_c_a_n_jaguar.html#a135a7e271d877a45183c58df6e6fcafe" title="CANJaguar::GetSpeed" alt="" coords="263,259,417,285"/>
+<area shape="rect" id="node24" href="$class_c_a_n_jaguar.html#a43c288c014f5700dd91e714916a52413" title="CANJaguar::GetForwardLimitOK" alt="" coords="235,309,445,336"/>
+<area shape="rect" id="node26" href="$class_c_a_n_jaguar.html#a94282dbd5921d645819953279198d52f" title="CANJaguar::GetReverseLimitOK" alt="" coords="235,360,445,387"/>
+<area shape="rect" id="node28" href="$class_c_a_n_jaguar.html#aa64fd18ae27ff40b16add78ffa38c23d" title="CANJaguar::GetFaults" alt="" coords="264,411,416,437"/>
+<area shape="rect" id="node11" href="$class_c_a_n_jaguar.html#a97fe9cb246f90060495c808e31070650" title="CANJaguar::verify" alt="" coords="494,208,618,235"/>
+<area shape="rect" id="node13" href="$class_c_a_n_jaguar.html#a3a22b02ece406993619f993b1e09012a" title="CANJaguar::Set" alt="" coords="667,208,781,235"/>
+<area shape="rect" id="node15" href="$class_c_a_n_jaguar.html#a2355d55f42083ab82870c79f742620e4" title="CANJaguar::PIDWrite" alt="" coords="845,183,992,209"/>
+<area shape="rect" id="node17" href="$class_c_a_n_jaguar_test.html#a3c9026e62eb65e2d497bb7bbfaded297" title="CANJaguarTest::SetJaguar" alt="" coords="829,233,1008,260"/>
+</map>

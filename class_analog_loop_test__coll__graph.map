@@ -1,0 +1,11 @@
+<map id="AnalogLoopTest" name="AnalogLoopTest">
+<area shape="rect" id="node2" href="$classtesting_1_1_test.html" title="testing::Test" alt="" coords="5,264,99,291"/>
+<area shape="rect" id="node4" href="$class_analog_input.html" title="AnalogInput" alt="" coords="249,264,340,291"/>
+<area shape="rect" id="node6" href="$class_sensor_base.html" title="SensorBase" alt="" coords="105,187,199,213"/>
+<area shape="rect" id="node21" href="$class_analog_output.html" title="AnalogOutput" alt="" coords="124,264,225,291"/>
+<area shape="rect" id="node8" href="$class_error_base.html" title="ErrorBase" alt="" coords="112,109,192,136"/>
+<area shape="rect" id="node10" href="$class_error.html" title="Error" alt="" coords="127,5,177,32"/>
+<area shape="rect" id="node12" href="$class_p_i_d_source.html" title="PIDSource" alt="" coords="391,187,475,213"/>
+<area shape="rect" id="node14" href="$class_live_window_sendable.html" title="LiveWindowSendable" alt="" coords="223,187,367,213"/>
+<area shape="rect" id="node16" href="$class_sendable.html" title="Sendable" alt="" coords="257,109,332,136"/>
+</map>

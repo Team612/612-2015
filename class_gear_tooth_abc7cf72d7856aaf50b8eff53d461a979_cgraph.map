@@ -1,0 +1,9 @@
+<map id="GearTooth::GearTooth" name="GearTooth::GearTooth">
+<area shape="rect" id="node3" href="$class_gear_tooth.html#a0bec962d2920dc28f8d4ef53b5fa2c65" title="GearTooth::EnableDirection\lSensing" alt="" coords="205,5,387,46"/>
+<area shape="rect" id="node9" href="$class_live_window.html#a329c07efec22a0e0644d70279688aa35" title="LiveWindow::GetInstance" alt="" coords="212,71,380,97"/>
+<area shape="rect" id="node15" href="$class_live_window.html#a5dc37b1651d0bced92127dd2c69a94ce" title="LiveWindow::AddSensor" alt="" coords="215,121,377,148"/>
+<area shape="rect" id="node5" href="$class_counter.html#adc8d4c41b26c8654fe3775afdb6439f5" title="Counter::SetPulseLengthMode" alt="" coords="435,12,634,39"/>
+<area shape="rect" id="node7" href="$class_error_base.html#a05790f219c9e436a09752f73f7344024" title="Check if the current error code represents a fatal error. " alt="" coords="683,12,848,39"/>
+<area shape="rect" id="node11" href="$class_live_window.html#ac33cec031b5990d91e5c68efb3340b68" title="LiveWindow::LiveWindow" alt="" coords="451,71,618,97"/>
+<area shape="rect" id="node13" href="$class_scheduler.html#a5cc7ff43cb79880d28586b07ec967070" title="Scheduler::GetInstance" alt="" coords="686,71,845,97"/>
+</map>

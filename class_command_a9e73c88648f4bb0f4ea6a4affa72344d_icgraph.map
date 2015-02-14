@@ -1,0 +1,5 @@
+<map id="Command::TimeSinceInitialized" name="Command::TimeSinceInitialized">
+<area shape="rect" id="node3" href="$class_command.html#ad1283feb94bb07985eaafe1586ab2ff7" title="Command::IsTimedOut" alt="" coords="259,35,413,61"/>
+<area shape="rect" id="node5" href="$class_wait_command.html#a118c9fa181b03cd80969a1a2b16508a5" title="WaitCommand::IsFinished" alt="" coords="462,5,637,32"/>
+<area shape="rect" id="node7" href="$class_modified_mock_command.html#a52cc2a489224ec94d97145870ed3ef8c" title="ModifiedMockCommand\l::IsFinished" alt="" coords="469,57,630,98"/>
+</map>

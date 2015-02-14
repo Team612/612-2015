@@ -1,0 +1,6 @@
+<map id="Ultrasonic::GetRangeInches" name="Ultrasonic::GetRangeInches">
+<area shape="rect" id="node3" href="$class_ultrasonic.html#af35c9a3273f1ffcf0eb17308d986d7c0" title="Ultrasonic::GetRangeMM" alt="" coords="237,5,405,32"/>
+<area shape="rect" id="node5" href="$class_ultrasonic.html#a8ec6de749ccd7e93b28735e9cc6d0b22" title="Ultrasonic::PIDGet" alt="" coords="456,31,587,57"/>
+<area shape="rect" id="node8" href="$class_ultrasonic.html#aa91dcad8c1595bd3c4bdd3e798afb736" title="Ultrasonic::UpdateTable" alt="" coords="241,107,401,133"/>
+<area shape="rect" id="node10" href="$class_ultrasonic.html#a63320495a2d314cbc09cc9e4b6d1569d" title="Ultrasonic::InitTable" alt="" coords="453,107,589,133"/>
+</map>

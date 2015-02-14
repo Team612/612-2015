@@ -1,0 +1,5 @@
+<map id="AnalogTrigger::CreateOutput" name="AnalogTrigger::CreateOutput">
+<area shape="rect" id="node3" href="$class_counter.html#a51efc97323b6d5c42de11fa827655118" title="Counter::Counter" alt="" coords="264,5,384,32"/>
+<area shape="rect" id="node5" href="$class_counter.html#ad7660cd2787f0d0b37a99f15a2332340" title="Counter::SetUpSource" alt="" coords="248,56,400,83"/>
+<area shape="rect" id="node7" href="$class_counter.html#af8ed8904ff88de6e059c4592f299d7e9" title="Counter::SetDownSource" alt="" coords="240,107,408,133"/>
+</map>

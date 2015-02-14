@@ -1,0 +1,10 @@
+<map id="Jaguar::PIDWrite" name="Jaguar::PIDWrite">
+<area shape="rect" id="node3" href="$class_jaguar.html#aac394eb2d4f46b29b477a7939cdec2a9" title="Jaguar::Set" alt="" coords="173,56,261,83"/>
+<area shape="rect" id="node5" href="$class_safe_p_w_m.html#af1ed936d88f3ee6446b01c17feb24b78" title="SafePWM::SetSpeed" alt="" coords="309,56,456,83"/>
+<area shape="rect" id="node7" href="$class_p_w_m.html#a947e5f6073da9e4d1b60db0c7791ca9c" title="PWM::SetSpeed" alt="" coords="528,31,648,57"/>
+<area shape="rect" id="node14" href="$class_motor_safety_helper.html#a67b80e9817dc725e0678de5e8f0bb39e" title="MotorSafetyHelper::Feed" alt="" coords="505,81,671,108"/>
+<area shape="rect" id="node9" href="$class_error_base.html#a05790f219c9e436a09752f73f7344024" title="Check if the current error code represents a fatal error. " alt="" coords="952,5,1117,32"/>
+<area shape="rect" id="node11" href="$class_p_w_m.html#a0c546e1aa7d5d091447a819e50fae9ca" title="PWM::SetRaw" alt="" coords="758,31,866,57"/>
+<area shape="rect" id="node16" href="$class_timer.html#a7fa6e6dffec055e5104ccd6bcadec9aa" title="Timer::GetFPGATimestamp" alt="" coords="721,81,903,108"/>
+<area shape="rect" id="node18" href="$_utility_8h.html#ababf055d95368485d48bd9a0231853f3" title="GetFPGATime" alt="" coords="981,81,1088,108"/>
+</map>

@@ -1,0 +1,24 @@
+<map id="Gyro::Gyro" name="Gyro::Gyro">
+<area shape="rect" id="node3" href="$class_gyro.html#ae26b1bacc0c5a4e1f9d85836fcb90736" title="Gyro::InitGyro" alt="" coords="142,347,245,373"/>
+<area shape="rect" id="node5" href="$class_analog_input.html#a49fa8f8599be4e8a81db751e503fd5ad" title="AnalogInput::IsAccumulator\lChannel" alt="" coords="561,5,743,46"/>
+<area shape="rect" id="node9" href="$class_analog_input.html#a1d5162718b2c678892eceab7be35d5a3" title="AnalogInput::SetAverageBits" alt="" coords="559,71,745,97"/>
+<area shape="rect" id="node12" href="$class_analog_input.html#aa60bbfb59ab3b08186dcd9048286c0c2" title="AnalogInput::SetOversampleBits" alt="" coords="547,121,757,148"/>
+<area shape="rect" id="node15" href="$class_analog_input.html#a0c796dc3aac607b1451eecb9a8f84665" title="AnalogInput::SetSampleRate" alt="" coords="301,172,491,199"/>
+<area shape="rect" id="node17" href="$class_analog_input.html#a621b2612c428e8d06f3e6bfcfa12b1a5" title="AnalogInput::InitAccumulator" alt="" coords="558,172,746,199"/>
+<area shape="rect" id="node20" href="$class_analog_input.html#ad783c1e390adc95921f2d4c73b645365" title="AnalogInput::GetAccumulator\lOutput" alt="" coords="300,274,492,315"/>
+<area shape="rect" id="node23" href="$class_analog_input.html#ae5ddd13542e7c997f39e9d21c7f2f623" title="AnalogInput::SetAccumulator\lCenter" alt="" coords="301,339,491,381"/>
+<area shape="rect" id="node26" href="$class_analog_input.html#a0c6b4387695c1522860a2fb1e5fbee82" title="AnalogInput::ResetAccumulator" alt="" coords="293,405,499,432"/>
+<area shape="rect" id="node36" href="$class_gyro.html#a579957af7a1f693cde4b85c48e85ef7a" title="Gyro::SetDeadband" alt="" coords="328,467,464,493"/>
+<area shape="rect" id="node45" href="$class_gyro.html#aaeaaf91d0da573f1dc90d0bffb34b7ae" title="Gyro::SetPIDSourceParameter" alt="" coords="296,517,496,544"/>
+<area shape="rect" id="node47" href="$class_analog_input.html#ae1a03d52531f2dc16a8c6b4a8040fa57" title="AnalogInput::GetChannel" alt="" coords="313,568,479,595"/>
+<area shape="rect" id="node50" href="$class_live_window.html#a329c07efec22a0e0644d70279688aa35" title="LiveWindow::GetInstance" alt="" coords="312,619,480,645"/>
+<area shape="rect" id="node56" href="$class_live_window.html#a5dc37b1651d0bced92127dd2c69a94ce" title="LiveWindow::AddSensor" alt="" coords="315,669,477,696"/>
+<area shape="rect" id="node7" href="$class_error_base.html#a05790f219c9e436a09752f73f7344024" title="Check if the current error code represents a fatal error. " alt="" coords="805,273,971,300"/>
+<area shape="rect" id="node29" href="$class_analog_input.html#a3e81e6477668b15b1da6965972987596" title="AnalogInput::GetSampleRate" alt="" coords="557,375,747,401"/>
+<area shape="rect" id="node31" href="$class_analog_input.html#a713786ced6451b57fbcec31cf7cb1340" title="AnalogInput::GetOversampleBits" alt="" coords="547,476,757,503"/>
+<area shape="rect" id="node34" href="$class_analog_input.html#a24193ed1cb0260e7626aecabcf812ef2" title="AnalogInput::GetAverageBits" alt="" coords="558,425,746,452"/>
+<area shape="rect" id="node38" href="$class_analog_input.html#af34dfab137f2fed40c98b4f0871c84cc" title="AnalogInput::GetLSBWeight" alt="" coords="559,527,745,553"/>
+<area shape="rect" id="node42" href="$class_analog_input.html#a4f0f6a1049d6f150fcaa4429cc322ac7" title="AnalogInput::SetAccumulator\lDeadband" alt="" coords="557,578,747,619"/>
+<area shape="rect" id="node52" href="$class_live_window.html#ac33cec031b5990d91e5c68efb3340b68" title="LiveWindow::LiveWindow" alt="" coords="569,695,735,721"/>
+<area shape="rect" id="node54" href="$class_scheduler.html#a5cc7ff43cb79880d28586b07ec967070" title="Scheduler::GetInstance" alt="" coords="809,695,967,721"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="Task::Start" name="Task::Start">
+<area shape="rect" id="node3" href="$class_driver_station.html#a343945cc9bbf870e0ada94b47f3fec92" title="DriverStation::DriverStation" alt="" coords="153,41,329,68"/>
+<area shape="rect" id="node11" href="$class_preferences.html#ae8ce1d8967e205e584e9cca1dbf86919" title="Preferences::Save" alt="" coords="178,92,305,119"/>
+<area shape="rect" id="node13" href="$class_ultrasonic.html#a16105fb0a316d780b8ea1554e3109825" title="Ultrasonic::SetAutomaticMode" alt="" coords="142,143,341,169"/>
+<area shape="rect" id="node5" href="$class_driver_station.html#ab0995c2d3f0b40cb13ac5aff656e46d0" title="DriverStation::GetInstance" alt="" coords="389,41,563,68"/>
+<area shape="rect" id="node7" href="$class_motor_safety_helper.html#a951390af947b507a299d1175b7e717cf" title="MotorSafetyHelper::\lCheck" alt="" coords="622,5,759,46"/>
+<area shape="rect" id="node9" href="$class_robot_base.html#a3043a0a78f4ec0e1e449eeed0a5db6e5" title="RobotBase::RobotBase" alt="" coords="611,71,770,97"/>
+<area shape="rect" id="node15" href="$class_ultrasonic.html#ab5066b2bfeac723140c18b9f8340abad" title="Ultrasonic::~Ultrasonic" alt="" coords="399,143,553,169"/>
+</map>

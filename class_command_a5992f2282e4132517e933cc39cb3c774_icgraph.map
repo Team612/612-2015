@@ -1,0 +1,4 @@
+<map id="Command::SetParent" name="Command::SetParent">
+<area shape="rect" id="node3" href="$class_command_group.html#a37206a473a9a01ba8098d73f452de71b" title="CommandGroup::AddSequential" alt="" coords="200,5,408,32"/>
+<area shape="rect" id="node5" href="$class_command_group.html#a3c7e096849f7586389769454b3148be3" title="CommandGroup::AddParallel" alt="" coords="209,56,399,83"/>
+</map>

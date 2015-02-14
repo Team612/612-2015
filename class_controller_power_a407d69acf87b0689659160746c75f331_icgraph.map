@@ -1,0 +1,6 @@
+<map id="ControllerPower::GetVoltage5V" name="ControllerPower::GetVoltage5V">
+<area shape="rect" id="node3" href="$class_analog_potentiometer.html#a7803d490e15d2aa9811559505828be17" title="AnalogPotentiometer::Get" alt="" coords="257,45,429,72"/>
+<area shape="rect" id="node5" href="$class_analog_potentiometer.html#a28436ae080febab11235680e3181390d" title="AnalogPotentiometer\l::PIDGet" alt="" coords="478,5,621,46"/>
+<area shape="rect" id="node7" href="$class_analog_potentiometer.html#a66cead815a94e4d0bbac7637def36ce9" title="AnalogPotentiometer\l::UpdateTable" alt="" coords="478,70,621,111"/>
+<area shape="rect" id="node9" href="$class_analog_potentiometer.html#a3ccaf0866c56b0a1c79e12419b683e77" title="AnalogPotentiometer\l::InitTable" alt="" coords="670,70,813,111"/>
+</map>

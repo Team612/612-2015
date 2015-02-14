@@ -1,0 +1,7 @@
+<map id="Ultrasonic::GetRangeMM" name="Ultrasonic::GetRangeMM">
+<area shape="rect" id="node3" href="$class_ultrasonic.html#a73c80fe92b2085107714c6a110d90d70" title="Ultrasonic::GetRangeInches" alt="" coords="221,31,405,57"/>
+<area shape="rect" id="node5" href="$class_ultrasonic.html#a765c830f4ff4c68e83de2f14d43fa54c" title="Ultrasonic::IsRangeValid" alt="" coords="454,5,618,32"/>
+<area shape="rect" id="node11" href="$class_counter.html#a51030989a5ee306beaf40ac28ab362c0" title="Counter::GetPeriod" alt="" coords="667,56,800,83"/>
+<area shape="rect" id="node7" href="$class_counter.html#a72086dbd17d7baf28bacfb13562af6b6" title="Counter::Get" alt="" coords="685,5,781,32"/>
+<area shape="rect" id="node9" href="$class_error_base.html#a05790f219c9e436a09752f73f7344024" title="Check if the current error code represents a fatal error. " alt="" coords="848,31,1013,57"/>
+</map>

@@ -1,0 +1,27 @@
+<map id="SampleRobot::StartCompetition" name="SampleRobot::StartCompetition">
+<area shape="rect" id="node3" href="$class_live_window.html#a329c07efec22a0e0644d70279688aa35" title="LiveWindow::GetInstance" alt="" coords="275,5,443,32"/>
+<area shape="rect" id="node9" href="$class_sample_robot.html#a7e1a70c41806f2f22e4a5dbd88d03538" title="SampleRobot::RobotMain" alt="" coords="273,56,444,83"/>
+<area shape="rect" id="node11" href="$class_live_window.html#a32b93a8ff3f60440654af8b5c351bc5f" title="LiveWindow::SetEnabled" alt="" coords="276,107,441,133"/>
+<area shape="rect" id="node13" href="$class_sample_robot.html#a892614bbdf3a98e76e7c0eb38d273db9" title="SampleRobot::RobotInit" alt="" coords="279,157,438,184"/>
+<area shape="rect" id="node15" href="$class_robot_base.html#a75fb5e396eaee765e65d3bf24d5c2a08" title="RobotBase::IsDisabled" alt="" coords="281,208,436,235"/>
+<area shape="rect" id="node19" href="$class_driver_station.html#aa4dcf7380058351a899409956c2f4894" title="DriverStation::InDisabled" alt="" coords="277,259,440,285"/>
+<area shape="rect" id="node21" href="$class_sample_robot.html#a6ca2bdc173ea32981fa08d37576a7628" title="SampleRobot::Disabled" alt="" coords="279,309,438,336"/>
+<area shape="rect" id="node23" href="$class_driver_station.html#ad1649357c3e7888a0e47c7dc1e91d1e4" title="DriverStation::WaitForData" alt="" coords="271,360,447,387"/>
+<area shape="rect" id="node25" href="$class_robot_base.html#a9eac80c5e53650e1e3e26e7b5f8cb5aa" title="RobotBase::IsAutonomous" alt="" coords="270,411,447,437"/>
+<area shape="rect" id="node29" href="$class_driver_station.html#a7900262f3e202b831340eee39ce00fee" title="DriverStation::InAutonomous" alt="" coords="265,461,452,488"/>
+<area shape="rect" id="node31" href="$class_sample_robot.html#aee64b40ffeea86c0557be3360c8f67ed" title="SampleRobot::Autonomous" alt="" coords="268,512,449,539"/>
+<area shape="rect" id="node33" href="$class_robot_base.html#a597e7b256dd4a950ff25e1823df5f2ae" title="RobotBase::IsEnabled" alt="" coords="283,563,434,589"/>
+<area shape="rect" id="node37" href="$class_robot_base.html#adfc40b5a85b1747b056c43ec3571db38" title="RobotBase::IsTest" alt="" coords="294,613,423,640"/>
+<area shape="rect" id="node41" href="$class_driver_station.html#aad0f43ea94cbbe2adb7b57c46457e25b" title="DriverStation::InTest" alt="" coords="289,664,428,691"/>
+<area shape="rect" id="node43" href="$class_sample_robot.html#a5cd39223d4f3040013110aec623a51d0" title="SampleRobot::Test" alt="" coords="292,715,425,741"/>
+<area shape="rect" id="node45" href="$class_driver_station.html#abe59eecc8f79e13cc9524d9a4af1a853" title="DriverStation::InOperator\lControl" alt="" coords="277,766,440,807"/>
+<area shape="rect" id="node47" href="$class_sample_robot.html#aeb2c7d1d5ea1d0f8452d580038c60b21" title="SampleRobot::OperatorControl" alt="" coords="259,832,458,859"/>
+<area shape="rect" id="node49" href="$class_robot_base.html#a05c699856acfe35b0ffb2172c39e23de" title="RobotBase::IsOperatorControl" alt="" coords="261,883,456,909"/>
+<area shape="rect" id="node5" href="$class_live_window.html#ac33cec031b5990d91e5c68efb3340b68" title="LiveWindow::LiveWindow" alt="" coords="517,5,683,32"/>
+<area shape="rect" id="node7" href="$class_scheduler.html#a5cc7ff43cb79880d28586b07ec967070" title="Scheduler::GetInstance" alt="" coords="742,5,901,32"/>
+<area shape="rect" id="node17" href="$class_driver_station.html#afcccb82207e0342596133e81dc7a047f" title="DriverStation::IsDisabled" alt="" coords="519,208,681,235"/>
+<area shape="rect" id="node27" href="$class_driver_station.html#ae7f9794664d49a36b65a3cd4a6e6987b" title="DriverStation::IsAutonomous" alt="" coords="507,411,693,437"/>
+<area shape="rect" id="node35" href="$class_driver_station.html#a7e0490ebe441784f803e09325436ac10" title="DriverStation::IsEnabled" alt="" coords="520,563,680,589"/>
+<area shape="rect" id="node39" href="$class_driver_station.html#af3ae56342fb009434d06f7cd66528a64" title="DriverStation::IsTest" alt="" coords="531,613,669,640"/>
+<area shape="rect" id="node51" href="$class_driver_station.html#a092c3018d93ff244bea1b6570a48054b" title="DriverStation::IsOperator\lControl" alt="" coords="519,875,681,917"/>
+</map>

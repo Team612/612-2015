@@ -1,0 +1,4 @@
+<map id="AnalogInput::SetAccumulatorCenter" name="AnalogInput::SetAccumulatorCenter">
+<area shape="rect" id="node3" href="$class_gyro.html#ae26b1bacc0c5a4e1f9d85836fcb90736" title="Gyro::InitGyro" alt="" coords="246,12,349,39"/>
+<area shape="rect" id="node5" href="$class_gyro.html#a06521f58180be9e342d941643f9b2491" title="Gyro::Gyro" alt="" coords="398,12,485,39"/>
+</map>

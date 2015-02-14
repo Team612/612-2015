@@ -1,0 +1,10 @@
+<map id="Encoder::InitTable" name="Encoder::InitTable">
+<area shape="rect" id="node3" href="$class_encoder.html#a2f6a1ab80e3590e2687551b22d8669e4" title="Encoder::UpdateTable" alt="" coords="182,72,333,99"/>
+<area shape="rect" id="node5" href="$class_encoder.html#a72423acddb85ee347fc213b8600843f7" title="Encoder::GetRate" alt="" coords="394,34,521,60"/>
+<area shape="rect" id="node15" href="$class_encoder.html#a523cc5a0cbd52f937f2a25a14185bc22" title="Encoder::GetDistance" alt="" coords="382,110,533,136"/>
+<area shape="rect" id="node7" href="$class_error_base.html#a05790f219c9e436a09752f73f7344024" title="Check if the current error code represents a fatal error. " alt="" coords="947,84,1112,111"/>
+<area shape="rect" id="node9" href="$class_encoder.html#a9825883787337876f6d62951d7eaac24" title="Encoder::GetPeriod" alt="" coords="581,34,717,60"/>
+<area shape="rect" id="node12" href="$class_counter.html#a51030989a5ee306beaf40ac28ab362c0" title="Counter::GetPeriod" alt="" coords="765,59,899,86"/>
+<area shape="rect" id="node18" href="$class_encoder.html#a0fd1cdb3939029d070c0663a96c3ae6d" title="Encoder::GetRaw" alt="" coords="587,160,711,187"/>
+<area shape="rect" id="node21" href="$class_counter.html#a72086dbd17d7baf28bacfb13562af6b6" title="Counter::Get" alt="" coords="784,211,880,238"/>
+</map>

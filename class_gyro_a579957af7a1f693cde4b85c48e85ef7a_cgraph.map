@@ -1,0 +1,6 @@
+<map id="Gyro::SetDeadband" name="Gyro::SetDeadband">
+<area shape="rect" id="node3" href="$class_analog_input.html#af34dfab137f2fed40c98b4f0871c84cc" title="AnalogInput::GetLSBWeight" alt="" coords="202,5,387,32"/>
+<area shape="rect" id="node7" href="$class_analog_input.html#a713786ced6451b57fbcec31cf7cb1340" title="AnalogInput::GetOversampleBits" alt="" coords="189,56,400,83"/>
+<area shape="rect" id="node10" href="$class_analog_input.html#a4f0f6a1049d6f150fcaa4429cc322ac7" title="AnalogInput::SetAccumulator\lDeadband" alt="" coords="199,107,390,149"/>
+<area shape="rect" id="node5" href="$class_error_base.html#a05790f219c9e436a09752f73f7344024" title="Check if the current error code represents a fatal error. " alt="" coords="448,56,613,83"/>
+</map>

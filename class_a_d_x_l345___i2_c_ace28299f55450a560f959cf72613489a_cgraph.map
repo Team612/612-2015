@@ -1,0 +1,8 @@
+<map id="ADXL345_I2C::ADXL345_I2C" name="ADXL345_I2C::ADXL345_I2C">
+<area shape="rect" id="node3" href="$class_i2_c.html#a2986f86f60397011ec733ed087418f79" title="I2C::Write" alt="" coords="503,5,583,32"/>
+<area shape="rect" id="node5" href="$class_a_d_x_l345___i2_c.html#a1c123bbc51aa59863643f1d513969bc4" title="ADXL345_I2C::SetRange" alt="" coords="243,31,410,57"/>
+<area shape="rect" id="node8" href="$class_live_window.html#a329c07efec22a0e0644d70279688aa35" title="LiveWindow::GetInstance" alt="" coords="243,81,411,108"/>
+<area shape="rect" id="node14" href="$class_live_window.html#a5dc37b1651d0bced92127dd2c69a94ce" title="LiveWindow::AddSensor" alt="" coords="245,132,408,159"/>
+<area shape="rect" id="node10" href="$class_live_window.html#ac33cec031b5990d91e5c68efb3340b68" title="LiveWindow::LiveWindow" alt="" coords="459,81,626,108"/>
+<area shape="rect" id="node12" href="$class_scheduler.html#a5cc7ff43cb79880d28586b07ec967070" title="Scheduler::GetInstance" alt="" coords="675,81,834,108"/>
+</map>

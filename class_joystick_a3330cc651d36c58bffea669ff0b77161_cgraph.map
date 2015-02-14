@@ -1,0 +1,4 @@
+<map id="Joystick::GetThrottle" name="Joystick::GetThrottle">
+<area shape="rect" id="node3" href="$class_joystick.html#a1011135df443771aa07e3afa4a839b05" title="Joystick::GetRawAxis" alt="" coords="198,5,349,32"/>
+<area shape="rect" id="node5" href="$class_driver_station.html#a3d0f8b9b6dd45cd071773a47d35059ac" title="DriverStation::GetStickAxis" alt="" coords="398,5,578,32"/>
+</map>

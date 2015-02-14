@@ -1,0 +1,5 @@
+<map id="DriverStation::IsAutonomous" name="DriverStation::IsAutonomous">
+<area shape="rect" id="node3" href="$class_robot_base.html#a9eac80c5e53650e1e3e26e7b5f8cb5aa" title="RobotBase::IsAutonomous" alt="" coords="241,31,418,57"/>
+<area shape="rect" id="node5" href="$class_iterative_robot.html#ab0af04a781b0390981b9f0dd75358515" title="IterativeRobot::StartCompetition" alt="" coords="467,5,672,32"/>
+<area shape="rect" id="node7" href="$class_sample_robot.html#aa9c849963713b505a4e032516c028829" title="SampleRobot::StartCompetition" alt="" coords="467,56,672,83"/>
+</map>

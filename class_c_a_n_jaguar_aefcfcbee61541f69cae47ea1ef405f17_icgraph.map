@@ -1,0 +1,10 @@
+<map id="CANJaguar::ConfigPotentiometerTurns" name="CANJaguar::ConfigPotentiometerTurns">
+<area shape="rect" id="node3" href="$class_c_a_n_jaguar.html#a97fe9cb246f90060495c808e31070650" title="CANJaguar::verify" alt="" coords="302,31,426,57"/>
+<area shape="rect" id="node11" href="$class_c_a_n_jaguar.html#a179186b1241b539377e61d1fdc43d3a1" title="CANJaguar::SetPercentMode" alt="" coords="268,81,460,108"/>
+<area shape="rect" id="node13" href="$class_c_a_n_jaguar.html#aaf192c1ec9d25507218665b47d1c3845" title="CANJaguar::SetCurrentMode" alt="" coords="269,132,459,159"/>
+<area shape="rect" id="node15" href="$class_c_a_n_jaguar.html#a1b464ad2f6c282d0bed5a012fcc61fa8" title="CANJaguar::SetPositionMode" alt="" coords="267,183,461,209"/>
+<area shape="rect" id="node17" href="$class_c_a_n_jaguar.html#a7c41e6c0020498a3eaca4e67002d193e" title="CANJaguar::SetVoltageMode" alt="" coords="269,233,459,260"/>
+<area shape="rect" id="node5" href="$class_c_a_n_jaguar.html#a3a22b02ece406993619f993b1e09012a" title="CANJaguar::Set" alt="" coords="509,31,624,57"/>
+<area shape="rect" id="node7" href="$class_c_a_n_jaguar.html#a2355d55f42083ab82870c79f742620e4" title="CANJaguar::PIDWrite" alt="" coords="688,5,835,32"/>
+<area shape="rect" id="node9" href="$class_c_a_n_jaguar_test.html#a3c9026e62eb65e2d497bb7bbfaded297" title="CANJaguarTest::SetJaguar" alt="" coords="672,56,851,83"/>
+</map>

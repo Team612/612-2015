@@ -1,0 +1,6 @@
+<map id="DriverStation::IsTest" name="DriverStation::IsTest">
+<area shape="rect" id="node3" href="$class_motor_safety_helper.html#a951390af947b507a299d1175b7e717cf" title="MotorSafetyHelper::\lCheck" alt="" coords="193,5,330,46"/>
+<area shape="rect" id="node5" href="$class_robot_base.html#adfc40b5a85b1747b056c43ec3571db38" title="RobotBase::IsTest" alt="" coords="197,71,326,97"/>
+<area shape="rect" id="node7" href="$class_iterative_robot.html#ab0af04a781b0390981b9f0dd75358515" title="IterativeRobot::StartCompetition" alt="" coords="379,45,584,72"/>
+<area shape="rect" id="node9" href="$class_sample_robot.html#aa9c849963713b505a4e032516c028829" title="SampleRobot::StartCompetition" alt="" coords="379,96,584,123"/>
+</map>

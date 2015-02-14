@@ -1,0 +1,13 @@
+<map id="PWM" name="PWM">
+<area shape="rect" id="node16" href="$class_safe_p_w_m.html" title="SafePWM" alt="" coords="154,229,235,256"/>
+<area shape="rect" id="node2" href="$class_sensor_base.html" title="SensorBase" alt="" coords="25,80,119,107"/>
+<area shape="rect" id="node4" href="$class_error_base.html" title="ErrorBase" alt="" coords="32,5,112,32"/>
+<area shape="rect" id="node8" href="$class_live_window_sendable.html" title="LiveWindowSendable" alt="" coords="271,80,415,107"/>
+<area shape="rect" id="node10" href="$class_sendable.html" title="Sendable" alt="" coords="305,5,380,32"/>
+<area shape="rect" id="node18" href="$class_jaguar.html" title="Jaguar" alt="" coords="5,304,64,331"/>
+<area shape="rect" id="node21" href="$class_servo.html" title="Servo" alt="" coords="89,304,143,331"/>
+<area shape="rect" id="node23" href="$class_talon.html" title="Talon" alt="" coords="168,304,221,331"/>
+<area shape="rect" id="node26" href="$class_talon_s_r_x.html" title="TalonSRX" alt="" coords="246,304,324,331"/>
+<area shape="rect" id="node28" href="$class_victor.html" title="Victor" alt="" coords="349,304,405,331"/>
+<area shape="rect" id="node31" href="$class_victor_s_p.html" title="VictorSP" alt="" coords="429,304,504,331"/>
+</map>

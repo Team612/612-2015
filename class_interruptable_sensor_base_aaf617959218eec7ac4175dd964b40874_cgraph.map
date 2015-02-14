@@ -1,0 +1,5 @@
+<map id="InterruptableSensorBase::RequestInterrupts" name="InterruptableSensorBase::RequestInterrupts">
+<area shape="rect" id="node3" href="$class_error_base.html#a05790f219c9e436a09752f73f7344024" title="Check if the current error code represents a fatal error. " alt="" coords="432,27,597,54"/>
+<area shape="rect" id="node5" href="$class_resource.html#ae7cf0288517fb7faceb241d481b23452" title="Resource::Allocate" alt="" coords="235,23,367,50"/>
+<area shape="rect" id="node7" href="$class_interruptable_sensor_base.html#ae6c87ec6aa4d7c6c43c70837a7a7b53e" title="InterruptableSensorBase\l::SetUpSourceEdge" alt="" coords="219,75,383,116"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="CalibrationReferencePoints_struct" name="CalibrationReferencePoints_struct">
+<area shape="rect" id="node2" href="$struct_image_size__struct.html" title="ImageSize_struct" alt="" coords="5,5,128,32"/>
+<area shape="rect" id="node4" href="$struct_point_double__struct.html" title="PointDouble_struct" alt="" coords="153,5,284,32"/>
+</map>

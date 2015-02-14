@@ -1,0 +1,14 @@
+<map id="ADXL345_SPI::ADXL345_SPI" name="ADXL345_SPI::ADXL345_SPI">
+<area shape="rect" id="node3" href="$class_a_d_x_l345___s_p_i.html#a4fc291813cfeba26060014221a0ba156" title="ADXL345_SPI::Init" alt="" coords="265,183,393,209"/>
+<area shape="rect" id="node20" href="$class_live_window.html#a329c07efec22a0e0644d70279688aa35" title="LiveWindow::GetInstance" alt="" coords="245,284,413,311"/>
+<area shape="rect" id="node26" href="$class_live_window.html#a5dc37b1651d0bced92127dd2c69a94ce" title="LiveWindow::AddSensor" alt="" coords="248,335,411,361"/>
+<area shape="rect" id="node5" href="$class_s_p_i.html#a27b450354fc78eb4441e7d59f8fe65f2" title="SPI::SetClockRate" alt="" coords="495,5,625,32"/>
+<area shape="rect" id="node7" href="$class_s_p_i.html#a66ed807d9a76400a74e815837b3ff32b" title="SPI::SetMSBFirst" alt="" coords="497,56,623,83"/>
+<area shape="rect" id="node9" href="$class_s_p_i.html#a463dc7cb26d0b865c44c73538bc23ae0" title="SPI::SetSampleDataOnFalling" alt="" coords="461,107,659,133"/>
+<area shape="rect" id="node11" href="$class_s_p_i.html#aa1b8cb48216e0a502bb34486636da047" title="SPI::SetClockActiveLow" alt="" coords="479,157,641,184"/>
+<area shape="rect" id="node13" href="$class_s_p_i.html#a21151e848fec7a76dac93175d87c15cc" title="SPI::SetChipSelectActiveHigh" alt="" coords="463,208,657,235"/>
+<area shape="rect" id="node15" href="$class_s_p_i.html#a57e9c8cac374878879b32f43667e1e09" title="SPI::Transaction" alt="" coords="727,284,846,311"/>
+<area shape="rect" id="node17" href="$class_a_d_x_l345___s_p_i.html#addf684facb418bba3b282cefb9f4df0f" title="ADXL345_SPI::SetRange" alt="" coords="476,309,644,336"/>
+<area shape="rect" id="node22" href="$class_live_window.html#ac33cec031b5990d91e5c68efb3340b68" title="LiveWindow::LiveWindow" alt="" coords="477,360,643,387"/>
+<area shape="rect" id="node24" href="$class_scheduler.html#a5cc7ff43cb79880d28586b07ec967070" title="Scheduler::GetInstance" alt="" coords="707,360,866,387"/>
+</map>

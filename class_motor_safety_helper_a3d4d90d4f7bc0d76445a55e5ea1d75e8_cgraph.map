@@ -1,0 +1,4 @@
+<map id="MotorSafetyHelper::IsAlive" name="MotorSafetyHelper::IsAlive">
+<area shape="rect" id="node3" href="$class_timer.html#a7fa6e6dffec055e5104ccd6bcadec9aa" title="Timer::GetFPGATimestamp" alt="" coords="193,12,375,39"/>
+<area shape="rect" id="node5" href="$_utility_8h.html#ababf055d95368485d48bd9a0231853f3" title="GetFPGATime" alt="" coords="424,12,531,39"/>
+</map>

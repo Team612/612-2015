@@ -1,0 +1,4 @@
+<map id="AnalogOutput::GetVoltage" name="AnalogOutput::GetVoltage">
+<area shape="rect" id="node3" href="$class_analog_output.html#aa619a8e67de681f5963f082ba7b1b12c" title="AnalogOutput::UpdateTable" alt="" coords="229,5,411,32"/>
+<area shape="rect" id="node5" href="$class_analog_output.html#a87691aea201657e7c33f82dce0d3a8a7" title="AnalogOutput::InitTable" alt="" coords="459,5,616,32"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="CANJaguar::CANJaguar" name="CANJaguar::CANJaguar">
+<area shape="rect" id="node3" href="$class_resource.html#a147c8d5e09e81724d3e726b90af758f3" title="Resource::CreateResource\lObject" alt="" coords="220,5,399,46"/>
+<area shape="rect" id="node5" href="$class_resource.html#ae7cf0288517fb7faceb241d481b23452" title="Resource::Allocate" alt="" coords="243,71,375,97"/>
+<area shape="rect" id="node7" href="$class_c_a_n_jaguar.html#ac2d2c69ce26f0ccbf4191349e4eba055" title="CANJaguar::SetPercentMode" alt="" coords="213,121,405,148"/>
+<area shape="rect" id="node21" href="$class_c_a_n_jaguar.html#a44ea3760f054da59612cb0c3972c0696" title="CANJaguar::ConfigMaxOutput\lVoltage" alt="" coords="461,198,656,239"/>
+<area shape="rect" id="node9" href="$class_c_a_n_jaguar.html#ad359943907bf802075474a3753f7fb02" title="CANJaguar::SetControlMode" alt="" coords="465,45,653,72"/>
+<area shape="rect" id="node15" href="$class_c_a_n_jaguar.html#a4ea009bbaaa337eeb10efba61203ee38" title="CANJaguar::SetPositionReference" alt="" coords="713,96,933,123"/>
+<area shape="rect" id="node18" href="$class_c_a_n_jaguar.html#ac6780a940570ec0386d234b309fb260d" title="CANJaguar::SetSpeedReference" alt="" coords="453,147,664,173"/>
+<area shape="rect" id="node11" href="$class_c_a_n_jaguar.html#a6bbbf784a74cf95f7b4a5660a3d53cc2" title="CANJaguar::DisableControl" alt="" coords="733,45,912,72"/>
+<area shape="rect" id="node13" href="$class_c_a_n_jaguar.html#a6b82b54cc4033c3c5218ab04fb6c8282" title="CANJaguar::sendMessage" alt="" coords="981,121,1157,148"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="Resource::Free" name="Resource::Free">
+<area shape="rect" id="node3" href="$class_analog_input.html#a07b124974bf5959f390b46faf34b38a1" title="AnalogInput::~AnalogInput" alt="" coords="187,5,362,32"/>
+<area shape="rect" id="node5" href="$class_analog_output.html#a7848a6b7b7c15bba5c75f0f82f3c1d53" title="AnalogOutput::~AnalogOutput" alt="" coords="177,56,373,83"/>
+<area shape="rect" id="node7" href="$class_digital_input.html#a7fb442a9bba43bdf7303504441d1569e" title="DigitalInput::~DigitalInput" alt="" coords="191,107,358,133"/>
+<area shape="rect" id="node9" href="$class_double_solenoid.html#a6bb0815514cc362a87def521fd544508" title="DoubleSolenoid::~DoubleSolenoid" alt="" coords="165,157,384,184"/>
+<area shape="rect" id="node11" href="$class_interruptable_sensor_base.html#a3a520da3879ef6fa5e383783ba10c361" title="Free up the underlying chipobject functions. " alt="" coords="193,209,357,250"/>
+<area shape="rect" id="node13" href="$class_relay.html#a858c668bc7e353db53ed07b1a4ef1dbd" title="Relay::~Relay" alt="" coords="223,275,327,301"/>
+<area shape="rect" id="node15" href="$class_solenoid.html#a34907a41f61848e199967e0319154d13" title="Solenoid::~Solenoid" alt="" coords="205,325,344,352"/>
+</map>

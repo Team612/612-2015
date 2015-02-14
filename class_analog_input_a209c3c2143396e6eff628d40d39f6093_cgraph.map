@@ -1,0 +1,4 @@
+<map id="AnalogInput::UpdateTable" name="AnalogInput::UpdateTable">
+<area shape="rect" id="node3" href="$class_analog_input.html#a48743112f8b15e3b2cea8a64ed541308" title="AnalogInput::GetAverageVoltage" alt="" coords="225,5,434,32"/>
+<area shape="rect" id="node5" href="$class_error_base.html#a05790f219c9e436a09752f73f7344024" title="Check if the current error code represents a fatal error. " alt="" coords="483,5,648,32"/>
+</map>

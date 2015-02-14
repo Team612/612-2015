@@ -1,0 +1,7 @@
+<map id="Encoder::GetRaw" name="Encoder::GetRaw">
+<area shape="rect" id="node3" href="$class_encoder.html#ae2f56d8ab8994835bd954cad75f5a670" title="Encoder::Get" alt="" coords="205,5,304,32"/>
+<area shape="rect" id="node5" href="$class_encoder.html#a523cc5a0cbd52f937f2a25a14185bc22" title="Encoder::GetDistance" alt="" coords="179,56,330,83"/>
+<area shape="rect" id="node7" href="$class_encoder.html#a08665d9e47c9fa77606dfe8611612e73" title="Encoder::PIDGet" alt="" coords="395,31,515,57"/>
+<area shape="rect" id="node9" href="$class_encoder.html#a2f6a1ab80e3590e2687551b22d8669e4" title="Encoder::UpdateTable" alt="" coords="379,81,530,108"/>
+<area shape="rect" id="node11" href="$class_encoder.html#a9e1ff7a1231b13de80a6b8ec06cc6886" title="Encoder::InitTable" alt="" coords="579,81,706,108"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="AnalogInput::GetAverageVoltage" name="AnalogInput::GetAverageVoltage">
+<area shape="rect" id="node3" href="$class_analog_accelerometer.html#aa21aff5e668d132c48be8789e693cfb5" title="AnalogAccelerometer\l::GetAcceleration" alt="" coords="276,45,423,86"/>
+<area shape="rect" id="node11" href="$class_analog_input.html#a2055fa06647cf71c9bc3a3990ac40e72" title="AnalogInput::PIDGet" alt="" coords="279,111,419,137"/>
+<area shape="rect" id="node13" href="$class_analog_input.html#a209c3c2143396e6eff628d40d39f6093" title="AnalogInput::UpdateTable" alt="" coords="264,161,435,188"/>
+<area shape="rect" id="node5" href="$class_analog_accelerometer.html#ab0bfe1a3e2940c5e6938aa2f86c92fd8" title="AnalogAccelerometer\l::PIDGet" alt="" coords="483,5,629,46"/>
+<area shape="rect" id="node7" href="$class_analog_accelerometer.html#a4506c2606a6a840ed32b9e9c0ff96a9b" title="AnalogAccelerometer\l::UpdateTable" alt="" coords="483,70,629,111"/>
+<area shape="rect" id="node9" href="$class_analog_accelerometer.html#af1c0dc939fcd0671eeaa8a25e9a28611" title="AnalogAccelerometer\l::InitTable" alt="" coords="677,70,824,111"/>
+<area shape="rect" id="node15" href="$class_analog_input.html#aba20595d1241b51b5201c1075c727d49" title="AnalogInput::InitTable" alt="" coords="483,161,629,188"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="testing::Test" name="testing::Test">
+<area shape="rect" id="node3" href="$class_analog_loop_test.html" title="AnalogLoopTest" alt="" coords="183,5,297,32"/>
+<area shape="rect" id="node5" href="$class_analog_potentiometer_test.html" title="AnalogPotentiometerTest" alt="" coords="156,56,324,83"/>
+<area shape="rect" id="node7" href="$class_c_a_n_jaguar_test.html" title="CANJaguarTest" alt="" coords="184,107,296,133"/>
+<area shape="rect" id="node9" href="$class_command_test.html" title="CommandTest" alt="" coords="187,157,293,184"/>
+<area shape="rect" id="node11" href="$class_counter_test.html" title="CounterTest" alt="" coords="194,208,286,235"/>
+<area shape="rect" id="node13" href="$class_d_i_o_loop_test.html" title="DIOLoopTest" alt="" coords="191,259,289,285"/>
+<area shape="rect" id="node15" href="$class_fake_encoder_test.html" title="FakeEncoderTest" alt="" coords="178,309,302,336"/>
+<area shape="rect" id="node17" href="$class_p_c_m_test.html" title="PCMTest" alt="" coords="202,360,278,387"/>
+<area shape="rect" id="node19" href="$class_power_distribution_panel_test.html" title="PowerDistributionPanelTest" alt="" coords="149,411,331,437"/>
+<area shape="rect" id="node21" href="$class_relay_test.html" title="RelayTest" alt="" coords="200,461,280,488"/>
+<area shape="rect" id="node23" href="$class_tilt_pan_camera_test.html" title="TiltPanCameraTest" alt="" coords="174,512,306,539"/>
+<area shape="rect" id="node25" href="$class_timer_test.html" title="TimerTest" alt="" coords="201,563,279,589"/>
+</map>

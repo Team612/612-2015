@@ -1,0 +1,5 @@
+<map id="Timer::HasPeriodPassed" name="Timer::HasPeriodPassed">
+<area shape="rect" id="node3" href="$class_timer.html#aadc180bcac64bc164f134d9c8076e1a3" title="Timer::Get" alt="" coords="221,5,304,32"/>
+<area shape="rect" id="node5" href="$class_timer.html#a7fa6e6dffec055e5104ccd6bcadec9aa" title="Timer::GetFPGATimestamp" alt="" coords="353,5,535,32"/>
+<area shape="rect" id="node7" href="$_utility_8h.html#ababf055d95368485d48bd9a0231853f3" title="GetFPGATime" alt="" coords="584,5,691,32"/>
+</map>

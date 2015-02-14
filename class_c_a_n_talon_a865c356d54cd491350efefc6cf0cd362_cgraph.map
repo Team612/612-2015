@@ -1,0 +1,5 @@
+<map id="CANTalon::Get" name="CANTalon::Get">
+<area shape="rect" id="node3" href="$class_c_a_n_talon.html#a1179c6e26aacdead84ba16c3894efe00" title="CANTalon::GetOutputVoltage" alt="" coords="163,5,355,32"/>
+<area shape="rect" id="node7" href="$class_c_a_n_talon.html#addf6b222e747a57638bb8067ed1ea9ae" title="CANTalon::GetOutputCurrent" alt="" coords="163,56,354,83"/>
+<area shape="rect" id="node5" href="$class_c_a_n_talon.html#a4aeb5e2516e6b4a1475186ebee3da321" title="CANTalon::GetBusVoltage" alt="" coords="403,5,579,32"/>
+</map>

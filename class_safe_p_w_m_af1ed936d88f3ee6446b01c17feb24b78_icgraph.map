@@ -1,0 +1,12 @@
+<map id="SafePWM::SetSpeed" name="SafePWM::SetSpeed">
+<area shape="rect" id="node3" href="$class_jaguar.html#aac394eb2d4f46b29b477a7939cdec2a9" title="Jaguar::Set" alt="" coords="209,5,297,32"/>
+<area shape="rect" id="node7" href="$class_talon.html#a139bb330021efa545fd6047fa291dbeb" title="Talon::Set" alt="" coords="213,56,294,83"/>
+<area shape="rect" id="node11" href="$class_talon_s_r_x.html#a9d7dab854708bf4deb2d57da2cbcf9a9" title="TalonSRX::Set" alt="" coords="200,107,307,133"/>
+<area shape="rect" id="node15" href="$class_victor.html#aeb1931d5462dcce004ba9bb5079b501a" title="Victor::Set" alt="" coords="211,157,295,184"/>
+<area shape="rect" id="node19" href="$class_victor_s_p.html#a5a776c3577f261f2679f77f5212e9d9c" title="VictorSP::Set" alt="" coords="202,208,305,235"/>
+<area shape="rect" id="node5" href="$class_jaguar.html#af03d1c5b19cae7363d9eafdcb9ec354e" title="Jaguar::PIDWrite" alt="" coords="364,5,484,32"/>
+<area shape="rect" id="node9" href="$class_talon.html#a8485adbd32b68543d34bb7b2ad4d3ccb" title="Talon::PIDWrite" alt="" coords="367,56,481,83"/>
+<area shape="rect" id="node13" href="$class_talon_s_r_x.html#acd94bb75b221f4a0c09437731c574869" title="TalonSRX::PIDWrite" alt="" coords="355,107,493,133"/>
+<area shape="rect" id="node17" href="$class_victor.html#a9b0d32b9299b6525d6450ff88c3365a7" title="Victor::PIDWrite" alt="" coords="366,157,482,184"/>
+<area shape="rect" id="node21" href="$class_victor_s_p.html#a9178b159144029faea02ae32f024ba84" title="VictorSP::PIDWrite" alt="" coords="357,208,491,235"/>
+</map>

@@ -1,0 +1,22 @@
+<map id="IterativeRobot::StartCompetition" name="IterativeRobot::StartCompetition">
+<area shape="rect" id="node3" href="$class_live_window.html#a329c07efec22a0e0644d70279688aa35" title="LiveWindow::GetInstance" alt="" coords="275,5,443,32"/>
+<area shape="rect" id="node7" href="$class_scheduler.html#a5cc7ff43cb79880d28586b07ec967070" title="Scheduler::GetInstance" alt="" coords="742,31,901,57"/>
+<area shape="rect" id="node9" href="$class_iterative_robot.html#a5296334b4a48ad2123c29f49209b9f62" title="IterativeRobot::RobotInit" alt="" coords="279,107,438,133"/>
+<area shape="rect" id="node11" href="$class_live_window.html#a32b93a8ff3f60440654af8b5c351bc5f" title="LiveWindow::SetEnabled" alt="" coords="276,157,441,184"/>
+<area shape="rect" id="node13" href="$class_robot_base.html#a75fb5e396eaee765e65d3bf24d5c2a08" title="RobotBase::IsDisabled" alt="" coords="281,208,436,235"/>
+<area shape="rect" id="node17" href="$class_iterative_robot.html#a428a5875274cb886730530d633a50db9" title="IterativeRobot::DisabledInit" alt="" coords="271,259,446,285"/>
+<area shape="rect" id="node19" href="$class_iterative_robot.html#a00265f02550b12295ca2cffde2c9c838" title="IterativeRobot::Disabled\lPeriodic" alt="" coords="279,310,438,351"/>
+<area shape="rect" id="node21" href="$class_robot_base.html#a9eac80c5e53650e1e3e26e7b5f8cb5aa" title="RobotBase::IsAutonomous" alt="" coords="270,376,447,403"/>
+<area shape="rect" id="node25" href="$class_iterative_robot.html#aa936c0a4526e12e32defd50609cca90c" title="IterativeRobot::AutonomousInit" alt="" coords="259,427,458,453"/>
+<area shape="rect" id="node27" href="$class_iterative_robot.html#ac579e155cc4613ced00d5e740cf98667" title="IterativeRobot::Autonomous\lPeriodic" alt="" coords="268,478,449,519"/>
+<area shape="rect" id="node29" href="$class_robot_base.html#adfc40b5a85b1747b056c43ec3571db38" title="RobotBase::IsTest" alt="" coords="294,544,423,571"/>
+<area shape="rect" id="node33" href="$class_iterative_robot.html#aa3f1a1d6eac11db9027d66d2c934fe27" title="IterativeRobot::TestInit" alt="" coords="283,595,434,621"/>
+<area shape="rect" id="node35" href="$class_iterative_robot.html#afedfc0de674c22c15df86abd4179476d" title="IterativeRobot::TestPeriodic" alt="" coords="269,645,449,672"/>
+<area shape="rect" id="node37" href="$class_iterative_robot.html#a7365e781f0a04674b94bb1fb5767d83e" title="IterativeRobot::TeleopInit" alt="" coords="277,696,440,723"/>
+<area shape="rect" id="node40" href="$class_iterative_robot.html#a3336d7f71d644e646dba70839f4f4672" title="IterativeRobot::TeleopPeriodic" alt="" coords="262,747,455,773"/>
+<area shape="rect" id="node42" href="$class_driver_station.html#ad1649357c3e7888a0e47c7dc1e91d1e4" title="DriverStation::WaitForData" alt="" coords="271,797,447,824"/>
+<area shape="rect" id="node5" href="$class_live_window.html#ac33cec031b5990d91e5c68efb3340b68" title="LiveWindow::LiveWindow" alt="" coords="517,5,683,32"/>
+<area shape="rect" id="node15" href="$class_driver_station.html#afcccb82207e0342596133e81dc7a047f" title="DriverStation::IsDisabled" alt="" coords="519,208,681,235"/>
+<area shape="rect" id="node23" href="$class_driver_station.html#ae7f9794664d49a36b65a3cd4a6e6987b" title="DriverStation::IsAutonomous" alt="" coords="507,376,693,403"/>
+<area shape="rect" id="node31" href="$class_driver_station.html#af3ae56342fb009434d06f7cd66528a64" title="DriverStation::IsTest" alt="" coords="531,544,669,571"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="ADXL345_SPI::Init" name="ADXL345_SPI::Init">
+<area shape="rect" id="node3" href="$class_s_p_i.html#a27b450354fc78eb4441e7d59f8fe65f2" title="SPI::SetClockRate" alt="" coords="215,5,345,32"/>
+<area shape="rect" id="node5" href="$class_s_p_i.html#a66ed807d9a76400a74e815837b3ff32b" title="SPI::SetMSBFirst" alt="" coords="217,56,343,83"/>
+<area shape="rect" id="node7" href="$class_s_p_i.html#a463dc7cb26d0b865c44c73538bc23ae0" title="SPI::SetSampleDataOnFalling" alt="" coords="181,107,379,133"/>
+<area shape="rect" id="node9" href="$class_s_p_i.html#aa1b8cb48216e0a502bb34486636da047" title="SPI::SetClockActiveLow" alt="" coords="199,157,361,184"/>
+<area shape="rect" id="node11" href="$class_s_p_i.html#a21151e848fec7a76dac93175d87c15cc" title="SPI::SetChipSelectActiveHigh" alt="" coords="183,208,377,235"/>
+<area shape="rect" id="node13" href="$class_s_p_i.html#a57e9c8cac374878879b32f43667e1e09" title="SPI::Transaction" alt="" coords="427,284,546,311"/>
+<area shape="rect" id="node15" href="$class_a_d_x_l345___s_p_i.html#addf684facb418bba3b282cefb9f4df0f" title="ADXL345_SPI::SetRange" alt="" coords="196,309,364,336"/>
+</map>

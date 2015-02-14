@@ -1,0 +1,10 @@
+<map id="AnalogInput::GetSampleRate" name="AnalogInput::GetSampleRate">
+<area shape="rect" id="node3" href="$class_analog_input.html#a0c6b4387695c1522860a2fb1e5fbee82" title="AnalogInput::ResetAccumulator" alt="" coords="245,56,451,83"/>
+<area shape="rect" id="node11" href="$class_gyro.html#a37c29b42b58b90fe1ed11f04c2635d4f" title="Gyro::GetAngle" alt="" coords="292,107,404,133"/>
+<area shape="rect" id="node5" href="$class_gyro.html#ae26b1bacc0c5a4e1f9d85836fcb90736" title="Gyro::InitGyro" alt="" coords="513,5,615,32"/>
+<area shape="rect" id="node9" href="$class_gyro.html#ae13fc1c339cb0267740b86c0585ceac7" title="Gyro::Reset" alt="" coords="518,56,610,83"/>
+<area shape="rect" id="node7" href="$class_gyro.html#a06521f58180be9e342d941643f9b2491" title="Gyro::Gyro" alt="" coords="687,5,774,32"/>
+<area shape="rect" id="node13" href="$class_gyro.html#aca619c0201c5fb85e2bbaeef0f39e8e6" title="Gyro::PIDGet" alt="" coords="514,107,614,133"/>
+<area shape="rect" id="node15" href="$class_gyro.html#ad0113532a29eccdbe514eaae2002012c" title="Gyro::UpdateTable" alt="" coords="499,157,629,184"/>
+<area shape="rect" id="node17" href="$class_gyro.html#ae00778b633c9c62f6a54039f544125d3" title="Gyro::InitTable" alt="" coords="677,157,784,184"/>
+</map>

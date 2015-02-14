@@ -1,0 +1,4 @@
+<map id="SensorBase::CheckSolenoidModule" name="SensorBase::CheckSolenoidModule">
+<area shape="rect" id="node3" href="$class_double_solenoid.html#a6bb0815514cc362a87def521fd544508" title="DoubleSolenoid::~DoubleSolenoid" alt="" coords="243,5,461,32"/>
+<area shape="rect" id="node5" href="$class_solenoid.html#a34907a41f61848e199967e0319154d13" title="Solenoid::~Solenoid" alt="" coords="283,56,421,83"/>
+</map>

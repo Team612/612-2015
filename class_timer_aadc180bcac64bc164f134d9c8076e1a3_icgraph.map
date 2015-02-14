@@ -1,0 +1,5 @@
+<map id="Timer::Get" name="Timer::Get">
+<area shape="rect" id="node3" href="$class_timer.html#a6379e797f968aaee6ac3bb12dc6b81c5" title="Timer::Stop" alt="" coords="175,5,265,32"/>
+<area shape="rect" id="node7" href="$class_timer.html#a044e56cf40905d2f5037745e44cc3881" title="Timer::HasPeriodPassed" alt="" coords="137,56,303,83"/>
+<area shape="rect" id="node5" href="$class_iterative_robot.html#a1e49eb27408751ea8ce757bfe38717e2" title="IterativeRobot::SetPeriod" alt="" coords="352,5,517,32"/>
+</map>

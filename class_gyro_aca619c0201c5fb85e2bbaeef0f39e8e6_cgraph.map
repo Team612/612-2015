@@ -1,0 +1,11 @@
+<map id="Gyro::PIDGet" name="Gyro::PIDGet">
+<area shape="rect" id="node3" href="$class_gyro.html#ae5da50d9e7d6cf3ddd87744f4b797e7a" title="Gyro::GetRate" alt="" coords="157,81,264,108"/>
+<area shape="rect" id="node15" href="$class_gyro.html#a37c29b42b58b90fe1ed11f04c2635d4f" title="Gyro::GetAngle" alt="" coords="155,165,267,192"/>
+<area shape="rect" id="node5" href="$class_analog_input.html#a3e090e8ccf0bf0ab683e0f12359ca6ac" title="AnalogInput::GetAverageValue" alt="" coords="321,5,519,32"/>
+<area shape="rect" id="node9" href="$class_analog_input.html#af34dfab137f2fed40c98b4f0871c84cc" title="AnalogInput::GetLSBWeight" alt="" coords="327,107,513,133"/>
+<area shape="rect" id="node12" href="$class_analog_input.html#a713786ced6451b57fbcec31cf7cb1340" title="AnalogInput::GetOversampleBits" alt="" coords="315,56,525,83"/>
+<area shape="rect" id="node7" href="$class_error_base.html#a05790f219c9e436a09752f73f7344024" title="Check if the current error code represents a fatal error. " alt="" coords="573,81,739,108"/>
+<area shape="rect" id="node17" href="$class_analog_input.html#ad783c1e390adc95921f2d4c73b645365" title="AnalogInput::GetAccumulator\lOutput" alt="" coords="324,158,516,199"/>
+<area shape="rect" id="node21" href="$class_analog_input.html#a24193ed1cb0260e7626aecabcf812ef2" title="AnalogInput::GetAverageBits" alt="" coords="326,224,514,251"/>
+<area shape="rect" id="node23" href="$class_analog_input.html#a3e81e6477668b15b1da6965972987596" title="AnalogInput::GetSampleRate" alt="" coords="325,275,515,301"/>
+</map>

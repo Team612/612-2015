@@ -1,0 +1,6 @@
+<map id="Task::Verify" name="Task::Verify">
+<area shape="rect" id="node3" href="$class_task.html#a552b56dc92a117812a9ae3f24320eede" title="Task::Stop" alt="" coords="147,5,232,32"/>
+<area shape="rect" id="node5" href="$class_ultrasonic.html#a16105fb0a316d780b8ea1554e3109825" title="Ultrasonic::SetAutomaticMode" alt="" coords="283,31,482,57"/>
+<area shape="rect" id="node9" href="$class_task.html#a436552d685339615f68e3071a914a0e0" title="Task::GetID" alt="" coords="144,107,235,133"/>
+<area shape="rect" id="node7" href="$class_ultrasonic.html#ab5066b2bfeac723140c18b9f8340abad" title="Ultrasonic::~Ultrasonic" alt="" coords="531,31,685,57"/>
+</map>

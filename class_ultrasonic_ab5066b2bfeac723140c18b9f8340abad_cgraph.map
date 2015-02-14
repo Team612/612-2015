@@ -1,0 +1,8 @@
+<map id="Ultrasonic::~Ultrasonic" name="Ultrasonic::~Ultrasonic">
+<area shape="rect" id="node3" href="$class_ultrasonic.html#a16105fb0a316d780b8ea1554e3109825" title="Ultrasonic::SetAutomaticMode" alt="" coords="209,81,407,108"/>
+<area shape="rect" id="node5" href="$class_counter.html#a006032d39fada9ad683ccc849d2f60d3" title="Counter::Reset" alt="" coords="456,5,565,32"/>
+<area shape="rect" id="node9" href="$class_task.html#af3367e19bf2d011c8de81a8064b7c0f4" title="Task::Verify" alt="" coords="651,107,741,133"/>
+<area shape="rect" id="node11" href="$class_task.html#a6e8e638dd9a8faad92e259b587ca82f8" title="Task::Start" alt="" coords="467,107,554,133"/>
+<area shape="rect" id="node13" href="$class_task.html#a552b56dc92a117812a9ae3f24320eede" title="Task::Stop" alt="" coords="468,157,553,184"/>
+<area shape="rect" id="node7" href="$class_error_base.html#a05790f219c9e436a09752f73f7344024" title="Check if the current error code represents a fatal error. " alt="" coords="613,5,779,32"/>
+</map>

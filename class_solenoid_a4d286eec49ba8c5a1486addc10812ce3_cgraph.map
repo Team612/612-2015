@@ -1,0 +1,5 @@
+<map id="Solenoid::StopLiveWindowMode" name="Solenoid::StopLiveWindowMode">
+<area shape="rect" id="node3" href="$class_solenoid.html#a913e4530ea804c7c0e3baf2458b4dee3" title="Solenoid::Set" alt="" coords="262,31,362,57"/>
+<area shape="rect" id="node5" href="$class_error_base.html#a05790f219c9e436a09752f73f7344024" title="Check if the current error code represents a fatal error. " alt="" coords="411,5,576,32"/>
+<area shape="rect" id="node7" href="$class_solenoid_base.html#a28d8153c8d7d758f910807537c53963c" title="SolenoidBase::Set" alt="" coords="428,56,559,83"/>
+</map>

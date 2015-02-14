@@ -1,0 +1,20 @@
+<map id="CANJaguarTest" name="CANJaguarTest">
+<area shape="rect" id="node2" href="$classtesting_1_1_test.html" title="testing::Test" alt="" coords="1223,177,1318,204"/>
+<area shape="rect" id="node4" href="$class_c_a_n_jaguar.html" title="CANJaguar" alt="" coords="770,227,857,253"/>
+<area shape="rect" id="node6" href="$class_motor_safety.html" title="MotorSafety" alt="" coords="435,5,527,32"/>
+<area shape="rect" id="node8" href="$class_c_a_n_speed_controller.html" title="CANSpeedController" alt="" coords="411,56,552,83"/>
+<area shape="rect" id="node10" href="$class_speed_controller.html" title="SpeedController" alt="" coords="211,56,325,83"/>
+<area shape="rect" id="node12" href="$class_p_i_d_output.html" title="PIDOutput" alt="" coords="5,56,88,83"/>
+<area shape="rect" id="node15" href="$class_error_base.html" title="ErrorBase" alt="" coords="228,327,308,353"/>
+<area shape="rect" id="node27" href="$class_motor_safety_helper.html" title="MotorSafetyHelper" alt="" coords="417,327,546,353"/>
+<area shape="rect" id="node41" href="$class_sensor_base.html" title="SensorBase" alt="" coords="435,483,528,509"/>
+<area shape="rect" id="node44" href="$class_resource.html" title="Resource" alt="" coords="443,705,520,732"/>
+<area shape="rect" id="node17" href="$class_error.html" title="Error" alt="" coords="21,327,72,353"/>
+<area shape="rect" id="node19" href="$class_live_window_sendable.html" title="LiveWindowSendable" alt="" coords="409,607,553,633"/>
+<area shape="rect" id="node35" href="$class_digital_output.html" title="DigitalOutput" alt="" coords="1222,415,1319,441"/>
+<area shape="rect" id="node49" href="$class_analog_output.html" title="AnalogOutput" alt="" coords="763,561,864,588"/>
+<area shape="rect" id="node53" href="$class_relay.html" title="Relay" alt="" coords="786,483,841,509"/>
+<area shape="rect" id="node21" href="$class_sendable.html" title="Sendable" alt="" coords="230,607,306,633"/>
+<area shape="rect" id="node37" href="$class_digital_source.html" title="DigitalSource" alt="" coords="947,485,1045,512"/>
+<area shape="rect" id="node39" href="$class_interruptable_sensor_base.html" title="InterruptableSensorBase" alt="" coords="731,652,895,679"/>
+</map>

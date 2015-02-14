@@ -1,0 +1,8 @@
+<map id="ADXL345_I2C::UpdateTable" name="ADXL345_I2C::UpdateTable">
+<area shape="rect" id="node3" href="$class_a_d_x_l345___i2_c.html#a4606027648ba713e43482308b01f54fa" title="ADXL345_I2C::GetX" alt="" coords="235,5,373,32"/>
+<area shape="rect" id="node11" href="$class_a_d_x_l345___i2_c.html#aa42d83f295dcc41a7ba3b510ba6ad594" title="ADXL345_I2C::GetY" alt="" coords="235,56,373,83"/>
+<area shape="rect" id="node14" href="$class_a_d_x_l345___i2_c.html#a772d16004a9f5e67ed391426b88f6d43" title="ADXL345_I2C::GetZ" alt="" coords="235,107,373,133"/>
+<area shape="rect" id="node5" href="$class_a_d_x_l345___i2_c.html#abc3a0bb889882e01cee781e3ab33af84" title="ADXL345_I2C::GetAcceleration" alt="" coords="421,56,624,83"/>
+<area shape="rect" id="node7" href="$class_i2_c.html#a4115857de2e0675f0483787933be0552" title="I2C::Read" alt="" coords="673,56,751,83"/>
+<area shape="rect" id="node9" href="$class_i2_c.html#aefe3a40857733f5ec164dbe1fb82b299" title="I2C::Transaction" alt="" coords="801,56,917,83"/>
+</map>

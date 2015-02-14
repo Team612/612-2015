@@ -1,0 +1,5 @@
+<map id="Gyro::GetAngle" name="Gyro::GetAngle">
+<area shape="rect" id="node3" href="$class_gyro.html#aca619c0201c5fb85e2bbaeef0f39e8e6" title="Gyro::PIDGet" alt="" coords="181,5,281,32"/>
+<area shape="rect" id="node5" href="$class_gyro.html#ad0113532a29eccdbe514eaae2002012c" title="Gyro::UpdateTable" alt="" coords="165,56,296,83"/>
+<area shape="rect" id="node7" href="$class_gyro.html#ae00778b633c9c62f6a54039f544125d3" title="Gyro::InitTable" alt="" coords="344,56,451,83"/>
+</map>

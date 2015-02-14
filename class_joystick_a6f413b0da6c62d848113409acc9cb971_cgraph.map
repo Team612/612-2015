@@ -1,0 +1,4 @@
+<map id="Joystick::GetY" name="Joystick::GetY">
+<area shape="rect" id="node3" href="$class_joystick.html#a1011135df443771aa07e3afa4a839b05" title="Joystick::GetRawAxis" alt="" coords="163,5,314,32"/>
+<area shape="rect" id="node5" href="$class_driver_station.html#a3d0f8b9b6dd45cd071773a47d35059ac" title="DriverStation::GetStickAxis" alt="" coords="363,5,543,32"/>
+</map>

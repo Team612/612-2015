@@ -1,0 +1,6 @@
+<map id="DriverStation::GetStickButton" name="DriverStation::GetStickButton">
+<area shape="rect" id="node3" href="$class_joystick.html#ab090aadee2aaf077f0674eacdd3dd45e" title="Joystick::GetRawButton" alt="" coords="245,31,408,57"/>
+<area shape="rect" id="node5" href="$class_joystick.html#a17c9682c8bbfd77d9377d2352fb836dd" title="Joystick::GetTrigger" alt="" coords="456,5,595,32"/>
+<area shape="rect" id="node9" href="$class_joystick.html#a451c9a35875271e7918af8843e39f3cc" title="Joystick::GetTop" alt="" coords="465,56,585,83"/>
+<area shape="rect" id="node7" href="$class_joystick.html#ac8cf87154ee2b2241bc6d375dcebd728" title="Joystick::GetButton" alt="" coords="643,31,781,57"/>
+</map>

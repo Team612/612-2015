@@ -1,0 +1,9 @@
+<map id="Gyro::InitTable" name="Gyro::InitTable">
+<area shape="rect" id="node3" href="$class_gyro.html#ad0113532a29eccdbe514eaae2002012c" title="Gyro::UpdateTable" alt="" coords="160,96,291,123"/>
+<area shape="rect" id="node5" href="$class_gyro.html#a37c29b42b58b90fe1ed11f04c2635d4f" title="Gyro::GetAngle" alt="" coords="339,96,451,123"/>
+<area shape="rect" id="node7" href="$class_analog_input.html#ad783c1e390adc95921f2d4c73b645365" title="AnalogInput::GetAccumulator\lOutput" alt="" coords="499,5,691,46"/>
+<area shape="rect" id="node11" href="$class_analog_input.html#af34dfab137f2fed40c98b4f0871c84cc" title="AnalogInput::GetLSBWeight" alt="" coords="502,71,687,97"/>
+<area shape="rect" id="node14" href="$class_analog_input.html#a24193ed1cb0260e7626aecabcf812ef2" title="AnalogInput::GetAverageBits" alt="" coords="501,121,689,148"/>
+<area shape="rect" id="node16" href="$class_analog_input.html#a3e81e6477668b15b1da6965972987596" title="AnalogInput::GetSampleRate" alt="" coords="499,172,690,199"/>
+<area shape="rect" id="node9" href="$class_error_base.html#a05790f219c9e436a09752f73f7344024" title="Check if the current error code represents a fatal error. " alt="" coords="739,41,904,68"/>
+</map>

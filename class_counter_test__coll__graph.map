@@ -1,0 +1,21 @@
+<map id="CounterTest" name="CounterTest">
+<area shape="rect" id="node2" href="$classtesting_1_1_test.html" title="testing::Test" alt="" coords="5,459,99,485"/>
+<area shape="rect" id="node4" href="$class_jaguar.html" title="Jaguar" alt="" coords="123,459,183,485"/>
+<area shape="rect" id="node6" href="$class_safe_p_w_m.html" title="SafePWM" alt="" coords="55,355,136,381"/>
+<area shape="rect" id="node36" href="$class_victor.html" title="Victor" alt="" coords="213,459,269,485"/>
+<area shape="rect" id="node42" href="$class_talon.html" title="Talon" alt="" coords="299,459,352,485"/>
+<area shape="rect" id="node8" href="$class_p_w_m.html" title="PWM" alt="" coords="153,277,207,304"/>
+<area shape="rect" id="node10" href="$class_sensor_base.html" title="SensorBase" alt="" coords="420,187,513,213"/>
+<area shape="rect" id="node48" href="$class_counter.html" title="Counter" alt="" coords="421,459,488,485"/>
+<area shape="rect" id="node59" href="$class_interruptable_sensor_base.html" title="InterruptableSensorBase" alt="" coords="505,277,668,304"/>
+<area shape="rect" id="node12" href="$class_error_base.html" title="ErrorBase" alt="" coords="481,109,561,136"/>
+<area shape="rect" id="node62" href="$class_resource.html" title="Resource" alt="" coords="539,187,616,213"/>
+<area shape="rect" id="node14" href="$class_error.html" title="Error" alt="" coords="496,5,547,32"/>
+<area shape="rect" id="node18" href="$class_live_window_sendable.html" title="LiveWindowSendable" alt="" coords="252,187,396,213"/>
+<area shape="rect" id="node20" href="$class_sendable.html" title="Sendable" alt="" coords="286,109,361,136"/>
+<area shape="rect" id="node25" href="$class_motor_safety.html" title="MotorSafety" alt="" coords="37,277,128,304"/>
+<area shape="rect" id="node29" href="$class_speed_controller.html" title="SpeedController" alt="" coords="213,355,328,381"/>
+<area shape="rect" id="node31" href="$class_p_i_d_output.html" title="PIDOutput" alt="" coords="232,277,315,304"/>
+<area shape="rect" id="node51" href="$class_counter_base.html" title="CounterBase" alt="" coords="505,355,601,381"/>
+<area shape="rect" id="node57" href="$class_digital_source.html" title="DigitalSource" alt="" coords="627,355,725,381"/>
+</map>

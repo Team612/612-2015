@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node3" href="$classgazebo_1_1msgs_1_1_bool.html" title="gazebo::msgs::Bool" alt="" coords="152,5,291,32"/>
+<area shape="rect" id="node5" href="$classgazebo_1_1msgs_1_1_driver_station.html" title="gazebo::msgs::DriverStation" alt="" coords="129,56,314,83"/>
+<area shape="rect" id="node7" href="$classgazebo_1_1msgs_1_1_float64.html" title="gazebo::msgs::Float64" alt="" coords="144,107,299,133"/>
+<area shape="rect" id="node9" href="$classgazebo_1_1msgs_1_1_joystick.html" title="gazebo::msgs::Joystick" alt="" coords="141,157,301,184"/>
+</map>

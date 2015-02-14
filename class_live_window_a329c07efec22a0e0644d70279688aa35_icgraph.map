@@ -1,0 +1,10 @@
+<map id="LiveWindow::GetInstance" name="LiveWindow::GetInstance">
+<area shape="rect" id="node3" href="$class_a_d_x_l345___i2_c.html#ace28299f55450a560f959cf72613489a" title="ADXL345_I2C::ADXL345_I2C" alt="" coords="230,5,418,32"/>
+<area shape="rect" id="node5" href="$class_a_d_x_l345___s_p_i.html#afd6ce38c4905606f32ae96342b2d29ca" title="ADXL345_SPI::ADXL345_SPI" alt="" coords="228,56,420,83"/>
+<area shape="rect" id="node7" href="$class_built_in_accelerometer.html#ac76efde6517e1483e5ea9597e1c605bd" title="BuiltInAccelerometer\l::BuiltInAccelerometer" alt="" coords="249,107,399,149"/>
+<area shape="rect" id="node9" href="$class_gear_tooth.html#abc7cf72d7856aaf50b8eff53d461a979" title="GearTooth::GearTooth" alt="" coords="249,173,399,200"/>
+<area shape="rect" id="node11" href="$class_gyro.html#ae26b1bacc0c5a4e1f9d85836fcb90736" title="Gyro::InitGyro" alt="" coords="273,224,375,251"/>
+<area shape="rect" id="node15" href="$class_iterative_robot.html#ab0af04a781b0390981b9f0dd75358515" title="IterativeRobot::StartCompetition" alt="" coords="221,275,427,301"/>
+<area shape="rect" id="node17" href="$class_sample_robot.html#aa9c849963713b505a4e032516c028829" title="SampleRobot::StartCompetition" alt="" coords="221,325,427,352"/>
+<area shape="rect" id="node13" href="$class_gyro.html#a06521f58180be9e342d941643f9b2491" title="Gyro::Gyro" alt="" coords="475,224,562,251"/>
+</map>

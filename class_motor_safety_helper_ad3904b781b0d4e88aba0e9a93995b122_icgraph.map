@@ -1,0 +1,5 @@
+<map id="MotorSafetyHelper::SetSafetyEnabled" name="MotorSafetyHelper::SetSafetyEnabled">
+<area shape="rect" id="node3" href="$class_robot_drive.html#ae57d5bb728428fac6cbd7eade67c569d" title="RobotDrive::InitRobotDrive" alt="" coords="204,5,375,32"/>
+<area shape="rect" id="node7" href="$class_safe_p_w_m.html#a882453a32c881e9114623072b7d905e5" title="SafePWM::SetSafetyEnabled" alt="" coords="193,56,386,83"/>
+<area shape="rect" id="node5" href="$class_robot_drive.html#aae039ef574600e668f8bc03ef47f37a4" title="RobotDrive::RobotDrive" alt="" coords="435,5,589,32"/>
+</map>

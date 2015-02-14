@@ -1,0 +1,32 @@
+<map id="LiveWindowSendable" name="LiveWindowSendable">
+<area shape="rect" id="node5" href="$class_a_d_x_l345___i2_c.html" title="ADXL345_I2C" alt="" coords="351,5,452,32"/>
+<area shape="rect" id="node7" href="$class_a_d_x_l345___s_p_i.html" title="ADXL345_SPI" alt="" coords="350,56,453,83"/>
+<area shape="rect" id="node9" href="$class_analog_accelerometer.html" title="AnalogAccelerometer" alt="" coords="328,107,475,133"/>
+<area shape="rect" id="node11" href="$class_analog_input.html" title="AnalogInput" alt="" coords="356,157,447,184"/>
+<area shape="rect" id="node14" href="$class_analog_output.html" title="AnalogOutput" alt="" coords="351,208,452,235"/>
+<area shape="rect" id="node16" href="$class_analog_potentiometer.html" title="AnalogPotentiometer" alt="" coords="330,259,473,285"/>
+<area shape="rect" id="node19" href="$class_built_in_accelerometer.html" title="BuiltInAccelerometer" alt="" coords="330,309,473,336"/>
+<area shape="rect" id="node21" href="$class_c_a_n_jaguar.html" title="CANJaguar" alt="" coords="358,360,445,387"/>
+<area shape="rect" id="node23" href="$class_compressor.html" title="Compressor" alt="" coords="355,411,447,437"/>
+<area shape="rect" id="node25" href="$class_counter.html" title="Counter" alt="" coords="368,461,435,488"/>
+<area shape="rect" id="node30" href="$class_digital_input.html" title="DigitalInput" alt="" coords="358,512,445,539"/>
+<area shape="rect" id="node33" href="$class_digital_output.html" title="DigitalOutput" alt="" coords="353,563,450,589"/>
+<area shape="rect" id="node35" href="$class_double_solenoid.html" title="DoubleSolenoid" alt="" coords="345,613,457,640"/>
+<area shape="rect" id="node38" href="$class_encoder.html" title="Encoder" alt="" coords="366,664,437,691"/>
+<area shape="rect" id="node41" href="$class_gyro.html" title="Gyro" alt="" coords="376,715,427,741"/>
+<area shape="rect" id="node44" href="$class_p_i_d_controller.html" title="PIDController" alt="" coords="352,765,451,792"/>
+<area shape="rect" id="node46" href="$class_power_distribution_panel.html" title="PowerDistributionPanel" alt="" coords="323,816,479,843"/>
+<area shape="rect" id="node48" href="$class_p_w_m.html" title="PWM" alt="" coords="374,867,429,893"/>
+<area shape="rect" id="node69" href="$class_relay.html" title="Relay" alt="" coords="374,917,429,944"/>
+<area shape="rect" id="node72" href="$class_solenoid.html" title="Solenoid" alt="" coords="365,968,437,995"/>
+<area shape="rect" id="node75" href="$class_ultrasonic.html" title="Ultrasonic" alt="" coords="361,1019,441,1045"/>
+<area shape="rect" id="node2" href="$class_sendable.html" title="Sendable" alt="" coords="6,563,82,589"/>
+<area shape="rect" id="node27" href="$class_gear_tooth.html" title="GearTooth" alt="" coords="528,461,611,488"/>
+<area shape="rect" id="node50" href="$class_safe_p_w_m.html" title="SafePWM" alt="" coords="529,867,610,893"/>
+<area shape="rect" id="node52" href="$class_jaguar.html" title="Jaguar" alt="" coords="669,765,729,792"/>
+<area shape="rect" id="node55" href="$class_servo.html" title="Servo" alt="" coords="671,816,726,843"/>
+<area shape="rect" id="node57" href="$class_talon.html" title="Talon" alt="" coords="672,867,725,893"/>
+<area shape="rect" id="node60" href="$class_talon_s_r_x.html" title="TalonSRX" alt="" coords="659,917,738,944"/>
+<area shape="rect" id="node62" href="$class_victor.html" title="Victor" alt="" coords="671,968,727,995"/>
+<area shape="rect" id="node65" href="$class_victor_s_p.html" title="VictorSP" alt="" coords="661,1019,736,1045"/>
+</map>

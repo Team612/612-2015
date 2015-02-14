@@ -1,0 +1,5 @@
+<map id="CANJaguar::SetPID" name="CANJaguar::SetPID">
+<area shape="rect" id="node3" href="$class_c_a_n_jaguar.html#ae0b07bf7199611ea8e2e04109b08a3ad" title="CANJaguar::SetCurrentMode" alt="" coords="192,5,381,32"/>
+<area shape="rect" id="node5" href="$class_c_a_n_jaguar.html#aa02549873d5551b00d3f2bdb08709e5a" title="CANJaguar::SetSpeedMode" alt="" coords="195,56,379,83"/>
+<area shape="rect" id="node7" href="$class_c_a_n_jaguar.html#a870f456a238bb9c55552b94cd86faad0" title="CANJaguar::SetPositionMode" alt="" coords="189,107,384,133"/>
+</map>

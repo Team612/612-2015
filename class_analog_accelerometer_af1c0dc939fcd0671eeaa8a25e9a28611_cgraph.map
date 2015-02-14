@@ -1,0 +1,6 @@
+<map id="AnalogAccelerometer::InitTable" name="AnalogAccelerometer::InitTable">
+<area shape="rect" id="node3" href="$class_analog_accelerometer.html#a4506c2606a6a840ed32b9e9c0ff96a9b" title="AnalogAccelerometer\l::UpdateTable" alt="" coords="200,5,347,46"/>
+<area shape="rect" id="node5" href="$class_analog_accelerometer.html#aa21aff5e668d132c48be8789e693cfb5" title="AnalogAccelerometer\l::GetAcceleration" alt="" coords="395,5,541,46"/>
+<area shape="rect" id="node7" href="$class_analog_input.html#a48743112f8b15e3b2cea8a64ed541308" title="AnalogInput::GetAverageVoltage" alt="" coords="590,12,799,39"/>
+<area shape="rect" id="node9" href="$class_error_base.html#a05790f219c9e436a09752f73f7344024" title="Check if the current error code represents a fatal error. " alt="" coords="848,12,1013,39"/>
+</map>

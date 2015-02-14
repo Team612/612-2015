@@ -1,0 +1,5 @@
+<map id="AnalogInput::ResetAccumulator" name="AnalogInput::ResetAccumulator">
+<area shape="rect" id="node3" href="$class_gyro.html#ae26b1bacc0c5a4e1f9d85836fcb90736" title="Gyro::InitGyro" alt="" coords="259,5,362,32"/>
+<area shape="rect" id="node7" href="$class_gyro.html#ae13fc1c339cb0267740b86c0585ceac7" title="Gyro::Reset" alt="" coords="265,56,357,83"/>
+<area shape="rect" id="node5" href="$class_gyro.html#a06521f58180be9e342d941643f9b2491" title="Gyro::Gyro" alt="" coords="411,5,498,32"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Ultrasonic::Ping" name="Ultrasonic::Ping">
+<area shape="rect" id="node3" href="$class_counter.html#a006032d39fada9ad683ccc849d2f60d3" title="Counter::Reset" alt="" coords="183,5,292,32"/>
+<area shape="rect" id="node7" href="$class_digital_output.html#a02c70b0de12b60f4d931cdc59e5e3bed" title="DigitalOutput::Pulse" alt="" coords="168,56,307,83"/>
+<area shape="rect" id="node5" href="$class_error_base.html#a05790f219c9e436a09752f73f7344024" title="Check if the current error code represents a fatal error. " alt="" coords="355,31,520,57"/>
+</map>

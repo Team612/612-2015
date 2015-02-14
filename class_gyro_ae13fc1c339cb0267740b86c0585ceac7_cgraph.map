@@ -1,0 +1,7 @@
+<map id="Gyro::Reset" name="Gyro::Reset">
+<area shape="rect" id="node3" href="$class_analog_input.html#a0c6b4387695c1522860a2fb1e5fbee82" title="AnalogInput::ResetAccumulator" alt="" coords="147,52,352,79"/>
+<area shape="rect" id="node5" href="$class_error_base.html#a05790f219c9e436a09752f73f7344024" title="Check if the current error code represents a fatal error. " alt="" coords="659,27,824,53"/>
+<area shape="rect" id="node7" href="$class_analog_input.html#a3e81e6477668b15b1da6965972987596" title="AnalogInput::GetSampleRate" alt="" coords="410,27,601,53"/>
+<area shape="rect" id="node9" href="$class_analog_input.html#a713786ced6451b57fbcec31cf7cb1340" title="AnalogInput::GetOversampleBits" alt="" coords="400,77,611,104"/>
+<area shape="rect" id="node12" href="$class_analog_input.html#a24193ed1cb0260e7626aecabcf812ef2" title="AnalogInput::GetAverageBits" alt="" coords="411,128,599,155"/>
+</map>

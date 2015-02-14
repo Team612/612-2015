@@ -1,0 +1,7 @@
+<map id="PowerDistributionPanel::InitTable" name="PowerDistributionPanel::InitTable">
+<area shape="rect" id="node3" href="$class_power_distribution_panel.html#aa371c1359b1529c45aeece524a94fc3b" title="PowerDistributionPanel\l::UpdateTable" alt="" coords="211,70,367,111"/>
+<area shape="rect" id="node5" href="$class_power_distribution_panel.html#a073d1d0222d5b0286310997715a225cc" title="PowerDistributionPanel\l::GetCurrent" alt="" coords="417,5,573,46"/>
+<area shape="rect" id="node9" href="$class_power_distribution_panel.html#a74ccaa2a3b2461916dac11edf2feea72" title="PowerDistributionPanel\l::GetVoltage" alt="" coords="417,70,573,111"/>
+<area shape="rect" id="node11" href="$class_power_distribution_panel.html#ae900ddd91b935bc667226328306010e7" title="PowerDistributionPanel\l::GetTotalCurrent" alt="" coords="417,135,573,177"/>
+<area shape="rect" id="node7" href="$class_sensor_base.html#a3ec58d60b04fe85afbdbf92302bc1bba" title="SensorBase::CheckPDPChannel" alt="" coords="622,12,834,39"/>
+</map>

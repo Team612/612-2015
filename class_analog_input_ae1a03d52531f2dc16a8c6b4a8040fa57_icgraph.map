@@ -1,0 +1,5 @@
+<map id="AnalogInput::GetChannel" name="AnalogInput::GetChannel">
+<area shape="rect" id="node3" href="$class_analog_trigger.html#a410526608099ad546839bc0fccb6d546" title="AnalogTrigger::AnalogTrigger" alt="" coords="222,5,410,32"/>
+<area shape="rect" id="node5" href="$class_gyro.html#ae26b1bacc0c5a4e1f9d85836fcb90736" title="Gyro::InitGyro" alt="" coords="265,56,367,83"/>
+<area shape="rect" id="node7" href="$class_gyro.html#a06521f58180be9e342d941643f9b2491" title="Gyro::Gyro" alt="" coords="459,56,546,83"/>
+</map>

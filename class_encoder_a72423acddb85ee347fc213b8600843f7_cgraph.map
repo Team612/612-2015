@@ -1,0 +1,5 @@
+<map id="Encoder::GetRate" name="Encoder::GetRate">
+<area shape="rect" id="node3" href="$class_error_base.html#a05790f219c9e436a09752f73f7344024" title="Check if the current error code represents a fatal error. " alt="" coords="547,31,712,57"/>
+<area shape="rect" id="node5" href="$class_encoder.html#a9825883787337876f6d62951d7eaac24" title="Encoder::GetPeriod" alt="" coords="181,31,317,57"/>
+<area shape="rect" id="node8" href="$class_counter.html#a51030989a5ee306beaf40ac28ab362c0" title="Counter::GetPeriod" alt="" coords="365,81,499,108"/>
+</map>

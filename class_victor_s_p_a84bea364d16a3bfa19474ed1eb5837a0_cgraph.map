@@ -1,0 +1,5 @@
+<map id="VictorSP::Get" name="VictorSP::Get">
+<area shape="rect" id="node3" href="$class_p_w_m.html#a42b209cbe7e63732918cbbcb55bfaac7" title="PWM::GetSpeed" alt="" coords="158,5,279,32"/>
+<area shape="rect" id="node5" href="$class_error_base.html#a05790f219c9e436a09752f73f7344024" title="Check if the current error code represents a fatal error. " alt="" coords="485,5,651,32"/>
+<area shape="rect" id="node7" href="$class_p_w_m.html#afe21d7814cd2c51c0652fbf9f58af958" title="PWM::GetRaw" alt="" coords="328,31,437,57"/>
+</map>

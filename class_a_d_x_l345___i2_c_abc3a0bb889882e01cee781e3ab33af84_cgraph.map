@@ -1,0 +1,4 @@
+<map id="ADXL345_I2C::GetAcceleration" name="ADXL345_I2C::GetAcceleration">
+<area shape="rect" id="node3" href="$class_i2_c.html#a4115857de2e0675f0483787933be0552" title="I2C::Read" alt="" coords="257,5,335,32"/>
+<area shape="rect" id="node5" href="$class_i2_c.html#aefe3a40857733f5ec164dbe1fb82b299" title="I2C::Transaction" alt="" coords="385,5,501,32"/>
+</map>

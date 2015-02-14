@@ -1,0 +1,11 @@
+<map id="ContourInfo2_struct" name="ContourInfo2_struct">
+<area shape="rect" id="node2" href="$struct_r_g_b_value__struct.html" title="RGBValue_struct" alt="" coords="493,88,616,115"/>
+<area shape="rect" id="node4" href="$union_contour_union__union.html" title="ContourUnion_union" alt="" coords="485,139,624,165"/>
+<area shape="rect" id="node6" href="$struct_closed_contour__struct.html" title="ClosedContour_struct" alt="" coords="189,37,336,64"/>
+<area shape="rect" id="node8" href="$struct_point__struct.html" title="Point_struct" alt="" coords="6,83,98,109"/>
+<area shape="rect" id="node10" href="$struct_open_contour__struct.html" title="OpenContour_struct" alt="" coords="193,88,332,115"/>
+<area shape="rect" id="node13" href="$struct_line__struct.html" title="Line_struct" alt="" coords="219,139,306,165"/>
+<area shape="rect" id="node21" href="$struct_annulus__struct.html" title="Annulus_struct" alt="" coords="208,189,317,216"/>
+<area shape="rect" id="node16" href="$struct_rotated_rect__struct.html" title="RotatedRect_struct" alt="" coords="195,240,330,267"/>
+<area shape="rect" id="node19" href="$struct_rect__struct.html" title="Rect_struct" alt="" coords="218,295,307,321"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="SolenoidBase::Set" name="SolenoidBase::Set">
+<area shape="rect" id="node3" href="$class_double_solenoid.html#a538ae9e357b7c97e01f213f8fe0a7c20" title="DoubleSolenoid::Set" alt="" coords="185,77,325,104"/>
+<area shape="rect" id="node9" href="$class_solenoid.html#a913e4530ea804c7c0e3baf2458b4dee3" title="Solenoid::Set" alt="" coords="205,136,305,163"/>
+<area shape="rect" id="node5" href="$class_double_solenoid.html#aeab409cef80470519fbe54ac9b9facb2" title="DoubleSolenoid::StartLive\lWindowMode" alt="" coords="392,5,563,46"/>
+<area shape="rect" id="node7" href="$class_double_solenoid.html#a991a18f242f93a0c8474bc95fa13a0a2" title="DoubleSolenoid::StopLive\lWindowMode" alt="" coords="393,70,562,111"/>
+<area shape="rect" id="node11" href="$class_solenoid.html#aa412316a159139255355193c5f9c221a" title="Solenoid::StartLiveWindowMode" alt="" coords="373,136,581,163"/>
+<area shape="rect" id="node13" href="$class_solenoid.html#a4d286eec49ba8c5a1486addc10812ce3" title="Solenoid::StopLiveWindowMode" alt="" coords="374,187,581,213"/>
+</map>

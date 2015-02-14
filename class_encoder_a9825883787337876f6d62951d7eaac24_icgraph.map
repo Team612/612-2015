@@ -1,0 +1,6 @@
+<map id="Encoder::GetPeriod" name="Encoder::GetPeriod">
+<area shape="rect" id="node3" href="$class_encoder.html#a72423acddb85ee347fc213b8600843f7" title="Encoder::GetRate" alt="" coords="190,31,317,57"/>
+<area shape="rect" id="node5" href="$class_encoder.html#a08665d9e47c9fa77606dfe8611612e73" title="Encoder::PIDGet" alt="" coords="381,5,501,32"/>
+<area shape="rect" id="node7" href="$class_encoder.html#a2f6a1ab80e3590e2687551b22d8669e4" title="Encoder::UpdateTable" alt="" coords="366,56,517,83"/>
+<area shape="rect" id="node9" href="$class_encoder.html#a9e1ff7a1231b13de80a6b8ec06cc6886" title="Encoder::InitTable" alt="" coords="566,56,693,83"/>
+</map>

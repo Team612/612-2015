@@ -1,0 +1,6 @@
+<map id="Counter::Reset" name="Counter::Reset">
+<area shape="rect" id="node3" href="$class_encoder.html#a4375bf4d88d56f5f5d09860f9062d691" title="Encoder::Reset" alt="" coords="207,5,319,32"/>
+<area shape="rect" id="node5" href="$class_ultrasonic.html#a16105fb0a316d780b8ea1554e3109825" title="Ultrasonic::SetAutomaticMode" alt="" coords="163,56,362,83"/>
+<area shape="rect" id="node9" href="$class_ultrasonic.html#aff9a83272ddaf8579ce2434e20f0b965" title="Ultrasonic::Ping" alt="" coords="205,107,320,133"/>
+<area shape="rect" id="node7" href="$class_ultrasonic.html#ab5066b2bfeac723140c18b9f8340abad" title="Ultrasonic::~Ultrasonic" alt="" coords="411,56,565,83"/>
+</map>

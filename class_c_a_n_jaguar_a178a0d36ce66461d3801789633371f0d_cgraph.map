@@ -1,0 +1,12 @@
+<map id="CANJaguar::SetCurrentMode" name="CANJaguar::SetCurrentMode">
+<area shape="rect" id="node3" href="$class_c_a_n_jaguar.html#ad359943907bf802075474a3753f7fb02" title="CANJaguar::SetControlMode" alt="" coords="254,5,442,32"/>
+<area shape="rect" id="node9" href="$class_c_a_n_jaguar.html#a4ea009bbaaa337eeb10efba61203ee38" title="CANJaguar::SetPositionReference" alt="" coords="502,56,722,83"/>
+<area shape="rect" id="node12" href="$class_c_a_n_jaguar.html#ac6780a940570ec0386d234b309fb260d" title="CANJaguar::SetSpeedReference" alt="" coords="243,107,453,133"/>
+<area shape="rect" id="node15" href="$class_c_a_n_jaguar.html#a24bce09f963f2f7f0c38000197551e2d" title="CANJaguar::ConfigEncoder\lCodesPerRev" alt="" coords="259,158,437,199"/>
+<area shape="rect" id="node18" href="$class_c_a_n_jaguar.html#a27a017dfbfbb580251b4dd342ccbfd6d" title="CANJaguar::SetPID" alt="" coords="280,241,416,268"/>
+<area shape="rect" id="node5" href="$class_c_a_n_jaguar.html#a6bbbf784a74cf95f7b4a5660a3d53cc2" title="CANJaguar::DisableControl" alt="" coords="523,5,701,32"/>
+<area shape="rect" id="node7" href="$class_c_a_n_jaguar.html#a6b82b54cc4033c3c5218ab04fb6c8282" title="CANJaguar::sendMessage" alt="" coords="771,157,947,184"/>
+<area shape="rect" id="node20" href="$class_c_a_n_jaguar.html#a22a1787a38fd35abc2cdf15bb7d81da5" title="CANJaguar::SetP" alt="" coords="550,208,674,235"/>
+<area shape="rect" id="node23" href="$class_c_a_n_jaguar.html#a99abdf41fc6ce39d51f0c9d2fbbcfcb0" title="CANJaguar::SetI" alt="" coords="553,259,671,285"/>
+<area shape="rect" id="node26" href="$class_c_a_n_jaguar.html#a5c5228b40626981bcb5009044edc28d7" title="CANJaguar::SetD" alt="" coords="550,309,674,336"/>
+</map>
