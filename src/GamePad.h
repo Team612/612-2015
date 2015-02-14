@@ -7,8 +7,44 @@
 
 class GamePad : public Joystick
 {
+public:
+	GamePad(int port, float throttle = 1.0f, float deadzone = 0.1f);
+	float GetLeftXRaw();
+	float GetLeftXSmooth();
+	float GetRightXRaw();
+	float GetRightXSmooth();
+	float GetLeftYRaw();
+	float GetLeftYSmooth();
+	float GetRightYRaw();
+	float GetRightYSmooth();
+	float GetDPad();
+	bool  GetDPadUp();
+	bool  GetDPadDown();
+	bool  GetDPadLeft();
+	bool  GetDPadRight();
+	bool  GetButtonStateA();
+	bool  GetButtonStateB();
+	bool  GetButtonStateX();
+	bool  GetButtonStateY();
+
+	void SetThrottle(float throttle);
+	void SetDeadZone(float deadzone);
+
+	JoystickButton* ButtonA;
+	JoystickButton* ButtonB;
+	JoystickButton* ButtonX;
+	JoystickButton* ButtonY;
+	JoystickButton* StartButton;
+	JoystickButton* BackButton;
+	JoystickButton* LeftShoulder;
+	JoystickButton* RightShoulder;
+	JoystickButton* LeftStickClick;
+	JoystickButton* RightStickClick;
+	JoystickButton* LeftTriggerClick;
+	JoystickButton* RightTriggerClick;
+
 private:
-	// Axis ports
+	// Axis Ports
 	const int AXIS_LEFT_X = 1;
 	const int AXIS_LEFT_Y = 2;
 	const int AXIS_SHOULDER = 3;
@@ -17,7 +53,7 @@ private:
 	const int AXIS_DPAD_X = 6;
 	const int AXIS_DPAD_Y = 7;
 
-	// Buttons
+	// Buttons Numbers
 	const int Button_A = 2;
 	const int Button_B = 3;
 	const int Button_X = 1;
@@ -33,33 +69,12 @@ private:
 	const int Button_MODE = -1;
 	const int Button_XBOX = -1;
 
-public:
-	GamePad(int port);
-	float getLeftX();
-	float getRightX();
-	float getLeftY();
-	float getRightY();
-	float getDPad();
-	bool  getDPadLeft();
-	bool  getDPadRight();
-	bool  getDPadUp();
-	bool  getDPadDown();
-	bool  getButtonStateA();
-	bool  getButtonStateB();
-	bool  getButtonStateX();
-	bool  getButtonStateY();
-	JoystickButton* ButtonA;
-	JoystickButton* ButtonB;
-	JoystickButton* ButtonX;
-	JoystickButton* ButtonY;
-	JoystickButton* StartButton;
-	JoystickButton* BackButton;
-	JoystickButton* LeftShoulder;
-	JoystickButton* RightShoulder;
-	JoystickButton* LeftStickClick;
-	JoystickButton* RightStickClick;
-	JoystickButton* LeftTriggerClick;
-	JoystickButton* RightTriggerClick;
+	float DEADZONE = 0.1f; // The value for the Joystick deadzone
+	float THROTTLE = 1.0f;  // The value for the Joystick throttle
+
+	// Private internal methods for smoothing joystick values
+	bool inDeadZone(float raw);
+	float SmoothValue(float raw);
 };
 
 #endif
