@@ -5,6 +5,7 @@ BreakerFlipper::BreakerFlipper()
 	timer = new Timer();
 	encoder = new Encoder(encoderChannelA, encoderChannelB);
 	powerboard = new PowerBoard();
+	talonsrx = new TalonSRX(channelCheck);
 }
 
 // Called just before this Command runs the first time
@@ -17,7 +18,7 @@ void BreakerFlipper::CheckMotor()
 {
 	if (encoder->GetRaw() <= 0 && timer->Get() > timeLimit)
 	{
-		//TODO code here to stop the motor!
+		talonsrx->Set(0.0);
 	}
 	else if (timer->Get() < timeLimit)
 	{
