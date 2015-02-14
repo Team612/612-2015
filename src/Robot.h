@@ -12,20 +12,16 @@ private:
 	//COMMAND
 	Command* autonomousCommand;
 
-
 	//DRIVETRAIN
 	Drive* move;
 
-
 	//LIVEWINDOW
 	LiveWindow* lw;
-
 
 	//TALON
 	//Talon* firstTalon;
 	//Talon* secondTalon;
 	//Talon* thirdTalon;
-
 
 	//ACCELEROMETER
 	// All acceleration is measured in meters per second squared
