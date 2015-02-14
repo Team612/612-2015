@@ -25,9 +25,9 @@ private:
 
 
 	//TALON
-	Talon* firstTalon;
-	Talon* secondTalon;
-	Talon* thirdTalon;
+	//Talon* firstTalon;
+	//Talon* secondTalon;
+	//Talon* thirdTalon;
 
 
 	//ACCELEROMETER

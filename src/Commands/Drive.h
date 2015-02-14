@@ -9,14 +9,23 @@
 class Drive: public CommandBase
 {
 public:
-	Drive(Joystick* stick);
+	Drive(float x, float y, float rotation);
+	Drive(Joystick* joystick);
 	void Initialize();
 	void Execute();
 	bool IsFinished();
 	void End();
 	void Interrupted();
 private:
-	Joystick* joy;
+	enum DriveMode {MANUAL, JOYSTICK};
+
+	DriveMode mode;
+
+	float targetX;
+	float targetY;
+	float targetRotation;
+
+	Joystick* joystick;
 };
 
 #endif

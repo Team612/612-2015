@@ -40,7 +40,7 @@ public:
 	//Encoder Methods
 	enum MotorLocation {LEFT_FRONT, LEFT_REAR, RIGHT_FRONT, RIGHT_REAR}; //For use in getDistance
 	void resetEncoders(); //Resets ALL encoders
-	int32_t getDistance(MotorLocation); //Gets the distance of a specific  motor
+	int32_t getDistance(MotorLocation location); //Gets the distance of a specific  motor
 
 };
 
