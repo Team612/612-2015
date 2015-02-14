@@ -6,6 +6,7 @@
 #include <RobotDrive.h>
 #include <MotorSafetyHelper.h>
 #include <AnalogInput.h>
+#include <CANTalon.h>
 
 class Drivetrain: public Subsystem, public RobotDrive
 {
@@ -40,7 +41,12 @@ public:
 	//Encoder Methods
 	enum MotorLocation {LEFT_FRONT, LEFT_REAR, RIGHT_FRONT, RIGHT_REAR}; //For use in getDistance
 	void resetEncoders(); //Resets ALL encoders
-	int32_t getDistance(MotorLocation); //Gets the distance of a specific  motor
+	int32_t getDistance(MotorLocation location); //Gets the distance of a specific  motor
+
+	CANTalon* fl612Talon;
+	CANTalon* fr612Talon;
+	CANTalon* bl612Talon;
+	CANTalon* br612Talon;
 
 };
 
