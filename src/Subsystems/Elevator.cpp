@@ -34,7 +34,7 @@ void Elevator::move(float magnitude)
 	bool topInput = topSwitch->Get();
 	bool bottomInput = bottomSwitch->Get();
 
-	//If the sensors give any input then the motors are set to a speed of 0
+	//If the sensors give any input then the elevator can't be moved more that way, so don't move
 	if (topInput || bottomInput)
 	{
 		talon->Set(0);
@@ -46,6 +46,11 @@ void Elevator::move(float magnitude)
 		talon->Set(magnitude);
 		talon2->Set(magnitude);
 	}
+	static int count = 0;
+	if (count % 60 == 0)
+	{
+		printf("Elevator motor moved! Speed = %f", magnitude));
+	}
 }
 
 void Elevator::stop()
@@ -53,6 +58,7 @@ void Elevator::stop()
 	//Sets motor speed to nothing
 	talon->Set(0);
 	talon2->Set(0);
+	printf("Stop elevator motor");
 }
 
 Encoder* Elevator::getEncoder()
@@ -108,10 +114,11 @@ float Elevator::getElevatorHeight()
 
 float Elevator::UltrasonicVoltageToDistance(float voltage)
 {
-	float VoltageInch = voltage/512.0;
-	VoltageInch *= 1000.0;
+	//int16_t inputVoltage = ultrasonic->GetValue(); //Zach said this should always be 5, so I'll try that
+	float voltsPerInch = 5.0/512.0; //Very small number
+	voltsPerInch *= 1000; //converts to mV
 	//formula from here: http://www.maxbotix.com/articles/032.htm confused by it
-	return 1.0f; //fix
+	return voltage/voltsPerInch; //TODO test to make sure this works
 	
 }
 
