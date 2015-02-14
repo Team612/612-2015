@@ -9,7 +9,7 @@
 class Elevator : public Subsystem {
 private:
 	TalonSRX* talon;
-#ifdef TALOn
+#ifdef TALON
 	TalonSRX* talon2;
 #endif
 	DigitalInput* topSwitch;
