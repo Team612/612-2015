@@ -24,5 +24,5 @@ void CommandBase::init()
 	// line should be repeated for each subsystem in the project.
 	oi = new OI();
 	elevator = new Elevator();
-	drivetrain = new Drivetrain(MOTOR_LR, MOTOR_LF, MOTOR_RR, MOTOR_RF, INFRARED);
+	drivetrain = new Drivetrain(new CANTalon(MOTOR_LR), new CANTalon(MOTOR_LF), new CANTalon(MOTOR_RR), new CANTalon(MOTOR_RF), new AnalogInput(INFRARED));
 }

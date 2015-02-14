@@ -26,11 +26,7 @@ private:
 	//bool SwitchSensor(float distance); // Called in CheckSensor
 
 public:
-	Drivetrain(uint32_t talonchannel1,
-					  uint32_t talonchannel2,
-					  uint32_t talonchannel3,
-					  uint32_t talonchannel4,
-					  uint32_t infraredchannel);
+	Drivetrain(CANTalon* fl, CANTalon* fr, CANTalon* rf,CANTalon* rr, AnalogInput* infrared);
 	void InitDefaultCommand();
 
 	//void CheckSensor(float distance);
@@ -43,10 +39,10 @@ public:
 	void resetEncoders(); //Resets ALL encoders
 	int32_t getDistance(MotorLocation location); //Gets the distance of a specific  motor
 
-	CANTalon* fl612Talon;
-	CANTalon* fr612Talon;
-	CANTalon* bl612Talon;
-	CANTalon* br612Talon;
+	CANTalon* fl;
+	CANTalon* rl;
+	CANTalon* fr;
+	CANTalon* rr;
 
 };
 

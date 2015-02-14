@@ -8,6 +8,7 @@ Drive::Drive(float x, float y, float rotation)
 	targetX = x;
 	targetY = y;
 	targetRotation = rotation;
+	joyObj = NULL;
 }
 
 Drive::Drive(GamePad* joystick)
@@ -35,10 +36,10 @@ void Drive::Execute()
 	{
 		drivetrain->move(joyObj->GetLeftXSmooth(), joyObj->GetLeftYSmooth(), joyObj->GetRightXSmooth());
 
-		SmartDashboard::PutNumber("Front left Talon value", drivetrain->fl612Talon->Get());
-		SmartDashboard::PutNumber("Front right Talon value", drivetrain->fr612Talon->Get());
-		SmartDashboard::PutNumber("Back left Talon value", drivetrain->bl612Talon->Get());
-		SmartDashboard::PutNumber("Back right Talon value", drivetrain->br612Talon->Get());
+		SmartDashboard::PutNumber("Front left Talon value", drivetrain->fl->Get());
+		SmartDashboard::PutNumber("Front right Talon value", drivetrain->fr->Get());
+		SmartDashboard::PutNumber("Back left Talon value", drivetrain->rl->Get());
+		SmartDashboard::PutNumber("Back right Talon value", drivetrain->rr->Get());
 	}
 	else
 	{
