@@ -10,24 +10,30 @@ BreakerFlipper::BreakerFlipper()
 // Called just before this Command runs the first time
 void BreakerFlipper::Initialize()
 {
-
+	previousAmp = powerboard->GetCurrent(channelCheck);
 }
 
 void BreakerFlipper::CheckMotor()
 {
-	if (encoder->GetRaw() <= 0)
+	if (encoder->GetRaw() <= 0 && timer->Get() > timeLimit)
 	{
 		//TODO code here to stop the motor!
+	}
+	else if (timer->Get() < timeLimit)
+	{
+		CheckMotor();
 	}
 }
 // Called repeatedly when this Command is scheduled to run
 void BreakerFlipper::Execute()
 {
-	double current = powerboard->GetCurrent(channelCheck);
-	if(current > ampLimit)
+	if(previousAmp - powerboard->GetCurrent(channelCheck) < ampLimit)
 	{
+		timer->Reset();
+		timer->Start();
 		CheckMotor();
 	}
+	previousAmp = powerboard->GetCurrent(channelCheck);
 }
 
 // Make this return true when this Command no longer needs to run execute()
