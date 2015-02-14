@@ -9,10 +9,10 @@ Drivetrain::Drivetrain(uint32_t talonchannel1,
 		                             uint32_t talonchannel4,
 									 uint32_t infraredchannel):
 		Subsystem("Drivetrain"),
-		RobotDrive(new Talon(talonchannel1),
-				   new Talon(talonchannel2),
-				   new Talon(talonchannel3),
-				   new Talon(talonchannel4))
+		RobotDrive(new CANTalon(talonchannel1),
+				   new CANTalon(talonchannel2),
+				   new CANTalon(talonchannel3),
+				   new CANTalon(talonchannel4))
 
 {
 	SetSafetyEnabled(true);
@@ -24,6 +24,18 @@ Drivetrain::Drivetrain(uint32_t talonchannel1,
 	encoderLR = new Encoder(ENCODER_LR_A, ENCODER_LR_B);
 	encoderRF = new Encoder(ENCODER_RF_A, ENCODER_RF_B);
 	encoderRR = new Encoder(ENCODER_RR_A, ENCODER_RR_B);
+
+	/**
+	 * rear left clockwise = backwards
+	 * rear right clockwise = forwards
+	 * front right clockwise = forwards
+	 * front left clockwise = backwards
+	 */
+
+	//SetInvertedMotor(kRearRightMotor, true);
+	//SetInvertedMotor(kRearLeftMotor, true);
+	SetInvertedMotor(kFrontRightMotor, true);
+	SetInvertedMotor(kFrontLeftMotor, true);
 
 	//import trackball or something? idk.
 }
@@ -37,15 +49,15 @@ void Drivetrain::InitDefaultCommand()
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
 
-void Drivetrain::move(float magnitude, float direction, float rotation)
+void Drivetrain::move(float x, float y, float rotation)
 {
-	MecanumDrive_Polar(magnitude, direction, rotation);
+	MecanumDrive_Cartesian(x, y, rotation);
 	m_safetyHelper->Feed();
 }
 
 void Drivetrain::stop()
 {
-	MecanumDrive_Polar(0.0f, 0.0f, 0.0f);
+	MecanumDrive_Cartesian(0.0f, 0.0f, 0.0f);
 	m_safetyHelper->Feed();
 }
 

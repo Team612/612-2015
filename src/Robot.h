@@ -4,23 +4,44 @@
 #include <Subsystems/Drivetrain.h>
 #include <Preferences.h>
 #include "CANTalon612.h"
+#include "Commands/Drive.h"
 
 class Robot: public IterativeRobot
 {
 private:
+
+	//COMMAND
 	Command* autonomousCommand;
+
+
+	//DRIVETRAIN
+	Drive* move;
+
+
+	//LIVEWINDOW
 	LiveWindow* lw;
-	Joystick* joystick;
+
+
+	//JOYSTICK
+	Joystick* joystick; // Used for joystick
+
+
+	//TALON
 	Talon* firstTalon;
 	Talon* secondTalon;
 	Talon* thirdTalon;
-	//all acceleration is measured in meters per second squared
+
+
+	//ACCELEROMETER
+	// All acceleration is measured in meters per second squared
 	BuiltInAccelerometer* speedgun; // Used for speedgun, a accelerometer
 	double currentAcceleration = 0; // used for acceleration and accelerometer
 	double maxAcceleration = 0; // used for highest acceleration during total run time
+
 	Robot* robot;
-	CANTalon612* zack;
+	//CANTalon612* zack;
 public:
+	//CONSTRUCTOR
 	void RobotInit();
 	void AutonomousInit();
 	void AutonomousPeriodic();
@@ -31,7 +52,8 @@ public:
 	void DisabledInit();
 	void DisabledPeriodic();
 
-	//612 functions
+
+	//612 FUNCTIONS
 	void TestPulley();
 	//612 Objects
 	Preferences* prefs;

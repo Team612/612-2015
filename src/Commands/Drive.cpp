@@ -1,10 +1,11 @@
 #include "CommandBase.h"
 #include "Drive.h"
 
-Drive::Drive()
+Drive::Drive(Joystick* stick)
 {
 	// Use Requirevas() here to declare subsystem dependencies
 	// eg. Requires(chassis)
+	joy = stick;
 	Requires(drivetrain);
 }
 // Called just before this Command runs the first time
@@ -14,9 +15,9 @@ void Drive::Initialize()
 }
 
 // Called repeatedly when this Command is scheduled to run
-void Drive::Execute(float inMagnitude, float inDirection, float inRotation)
+void Drive::Execute()
 {
-	drivetrain->move(inMagnitude, inDirection, inRotation);
+	drivetrain->move(joy->GetRawAxis(LEFT_X),joy->GetRawAxis(LEFT_Y),joy->GetRawAxis(RIGHT_X));
 }
 
 // Make this return true when this Command no longer needs to run execute()

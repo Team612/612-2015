@@ -9,11 +9,13 @@
 
 # TODO: script determining the latest .jar file based on the date string
 # rather than a hard coded file name.
-version="0.1.0.201501221609"
+# The latest version can be determined from
+# http://first.wpi.edu/FRC/roborio/release/eclipse/site.xml
+version="0.1.0.201502102241"
 
 source wpilib/version.txt
-if [ ! "$version" = "$downloaded_version" ] ; then 
-	wget --quiet -O wpicpp.zip http://first.wpi.edu/FRC/roborio/release/eclipse/plugins/edu.wpi.first.wpilib.plugins.cpp_$version.jar 
+if [ ! "$version" = "$downloaded_version" ] ; then
+	wget --quiet -O wpicpp.zip http://first.wpi.edu/FRC/roborio/release/eclipse/plugins/edu.wpi.first.wpilib.plugins.cpp_$version.jar
 	unzip wpicpp.zip resources/cpp.zip
 	mkdir wpilib
 	mv resources/cpp.zip ./

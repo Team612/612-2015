@@ -1,23 +1,18 @@
-#ifndef DRIVE_H
-#define DRIVE_H
+#ifndef BOUNDING_BOX_H
+#define BOUNDING_BOX_H
 
 #include "../CommandBase.h"
 #include "WPILib.h"
-#include <Timer.h>
-#include "RobotMap.h"
 
-class Drive: public CommandBase
+class GetBoundingBox: public CommandBase
 {
 public:
-	Drive(Joystick* stick);
+	GetBoundingBox();
 	void Initialize();
 	void Execute();
 	bool IsFinished();
 	void End();
 	void Interrupted();
-private:
-	Joystick* joy;
-
 };
 
 #endif
