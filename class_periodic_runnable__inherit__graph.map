@@ -1,5 +1,0 @@
-<map id="PeriodicRunnable" name="PeriodicRunnable">
-<area shape="rect" id="node3" href="$class_connection_monitor_thread.html" title="ConnectionMonitorThread" alt="" coords="5,80,173,107"/>
-<area shape="rect" id="node5" href="$class_server_incoming_stream_monitor.html" title="ServerIncomingStreamMonitor" alt="" coords="199,80,393,107"/>
-<area shape="rect" id="node7" href="$class_write_manager.html" title="WriteManager" alt="" coords="418,80,520,107"/>
-</map>

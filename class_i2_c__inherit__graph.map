@@ -1,5 +1,0 @@
-<map id="I2C" name="I2C">
-<area shape="rect" id="node7" href="$class_a_d_x_l345___i2_c.html" title="ADXL345_I2C" alt="" coords="5,229,107,256"/>
-<area shape="rect" id="node2" href="$class_sensor_base.html" title="SensorBase" alt="" coords="9,80,103,107"/>
-<area shape="rect" id="node4" href="$class_error_base.html" title="ErrorBase" alt="" coords="16,5,96,32"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="Accelerometer" name="Accelerometer">
-<area shape="rect" id="node3" href="$class_a_d_x_l345___i2_c.html" title="ADXL345_I2C" alt="" coords="5,80,107,107"/>
-<area shape="rect" id="node5" href="$class_a_d_x_l345___s_p_i.html" title="ADXL345_SPI" alt="" coords="131,80,233,107"/>
-<area shape="rect" id="node7" href="$class_built_in_accelerometer.html" title="BuiltInAccelerometer" alt="" coords="258,80,400,107"/>
-</map>

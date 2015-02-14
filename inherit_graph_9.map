@@ -1,8 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node3" href="$class_bad_message_exception.html" title="BadMessageException" alt="" coords="154,5,310,32"/>
-<area shape="rect" id="node5" href="$class_illegal_state_exception.html" title="IllegalStateException" alt="" coords="160,56,304,83"/>
-<area shape="rect" id="node7" href="$class_i_o_exception.html" title="IOException" alt="" coords="185,107,279,133"/>
-<area shape="rect" id="node11" href="$class_table_key_exists_with_different_type_exception.html" title="TableKeyExistsWithDifferent\lTypeException" alt="" coords="139,158,325,199"/>
-<area shape="rect" id="node13" href="$class_table_key_not_defined_exception.html" title="TableKeyNotDefinedException" alt="" coords="133,224,331,251"/>
-<area shape="rect" id="node9" href="$class_e_o_f_exception.html" title="EOFException" alt="" coords="379,107,485,133"/>
-</map>

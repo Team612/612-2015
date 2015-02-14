@@ -1,6 +1,0 @@
-<map id="ServerConnectionAdapter" name="ServerConnectionAdapter">
-<area shape="rect" id="node2" href="$class_connection_adapter.html" title="ConnectionAdapter" alt="" coords="5,80,136,107"/>
-<area shape="rect" id="node4" href="$class_incoming_entry_receiver.html" title="IncomingEntryReceiver" alt="" coords="161,80,316,107"/>
-<area shape="rect" id="node6" href="$class_flushable_outgoing_entry_receiver.html" title="FlushableOutgoingEntryReceiver" alt="" coords="340,80,551,107"/>
-<area shape="rect" id="node8" href="$class_outgoing_entry_receiver.html" title="OutgoingEntryReceiver" alt="" coords="368,5,523,32"/>
-</map>

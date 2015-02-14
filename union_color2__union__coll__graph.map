@@ -1,8 +1,0 @@
-<map id="Color2_union" name="Color2_union">
-<area shape="rect" id="node2" href="$struct_r_g_b_value__struct.html" title="RGBValue_struct" alt="" coords="13,5,136,32"/>
-<area shape="rect" id="node4" href="$struct_h_s_i_value__struct.html" title="HSIValue_struct" alt="" coords="17,56,133,83"/>
-<area shape="rect" id="node6" href="$struct_h_s_v_value__struct.html" title="HSVValue_struct" alt="" coords="13,107,136,133"/>
-<area shape="rect" id="node8" href="$struct_c_i_e_lab_value__struct.html" title="CIELabValue_struct" alt="" coords="6,157,143,184"/>
-<area shape="rect" id="node10" href="$struct_c_i_e_x_y_z_value__struct.html" title="CIEXYZValue_struct" alt="" coords="5,208,144,235"/>
-<area shape="rect" id="node12" href="$struct_h_s_l_value__struct.html" title="HSLValue_struct" alt="" coords="15,259,135,285"/>
-</map>

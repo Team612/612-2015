@@ -1,6 +1,0 @@
-<map id="ColorImage" name="ColorImage">
-<area shape="rect" id="node7" href="$class_h_s_l_image.html" title="HSLImage" alt="" coords="5,229,88,256"/>
-<area shape="rect" id="node9" href="$class_r_g_b_image.html" title="RGBImage" alt="" coords="112,229,197,256"/>
-<area shape="rect" id="node2" href="$class_image_base.html" title="ImageBase" alt="" coords="57,80,143,107"/>
-<area shape="rect" id="node4" href="$class_error_base.html" title="ErrorBase" alt="" coords="60,5,140,32"/>
-</map>

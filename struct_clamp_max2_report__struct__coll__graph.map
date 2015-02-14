@@ -1,6 +1,0 @@
-<map id="ClampMax2Report_struct" name="ClampMax2Report_struct">
-<area shape="rect" id="node2" href="$struct_clamp_points__struct.html" title="ClampPoints_struct" alt="" coords="15,213,151,240"/>
-<area shape="rect" id="node4" href="$struct_point_double_pair__struct.html" title="PointDoublePair_struct" alt="" coords="5,109,160,136"/>
-<area shape="rect" id="node6" href="$struct_point_double__struct.html" title="PointDouble_struct" alt="" coords="17,5,148,32"/>
-<area shape="rect" id="node8" href="$struct_clamp_results__struct.html" title="ClampResults_struct" alt="" coords="175,213,317,240"/>
-</map>

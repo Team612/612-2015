@@ -1,6 +1,0 @@
-<map id="FlushableOutgoingEntryReceiver" name="FlushableOutgoingEntryReceiver">
-<area shape="rect" id="node5" href="$class_client_connection_adapter.html" title="ClientConnectionAdapter" alt="" coords="5,155,171,181"/>
-<area shape="rect" id="node7" href="$class_server_connection_adapter.html" title="ServerConnectionAdapter" alt="" coords="195,155,363,181"/>
-<area shape="rect" id="node9" href="$class_server_connection_list.html" title="ServerConnectionList" alt="" coords="387,155,531,181"/>
-<area shape="rect" id="node2" href="$class_outgoing_entry_receiver.html" title="OutgoingEntryReceiver" alt="" coords="201,5,356,32"/>
-</map>

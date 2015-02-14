@@ -1,7 +1,0 @@
-<map id="StringArray" name="StringArray">
-<area shape="rect" id="node2" href="$class_array_data.html" title="ArrayData" alt="" coords="20,160,100,187"/>
-<area shape="rect" id="node4" href="$class_complex_data.html" title="ComplexData" alt="" coords="5,83,104,109"/>
-<area shape="rect" id="node6" href="$class_array_entry_type.html" title="ArrayEntryType" alt="" coords="127,160,239,187"/>
-<area shape="rect" id="node8" href="$class_complex_entry_type.html" title="ComplexEntryType" alt="" coords="129,83,260,109"/>
-<area shape="rect" id="node10" href="$class_network_table_entry_type.html" title="NetworkTableEntryType" alt="" coords="115,5,273,32"/>
-</map>

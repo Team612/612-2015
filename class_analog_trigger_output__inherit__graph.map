@@ -1,6 +1,0 @@
-<map id="AnalogTriggerOutput" name="AnalogTriggerOutput">
-<area shape="rect" id="node2" href="$class_digital_source.html" title="DigitalSource" alt="" coords="37,229,136,256"/>
-<area shape="rect" id="node4" href="$class_interruptable_sensor_base.html" title="InterruptableSensorBase" alt="" coords="5,155,168,181"/>
-<area shape="rect" id="node6" href="$class_sensor_base.html" title="SensorBase" alt="" coords="40,80,133,107"/>
-<area shape="rect" id="node8" href="$class_error_base.html" title="ErrorBase" alt="" coords="47,5,127,32"/>
-</map>
