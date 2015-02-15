@@ -1,5 +1,5 @@
-#ifndef SRC_SUBSYSTEMS_ELEVATOR_H_
-#define SRC_SUBSYSTEMS_ELEVATOR_H_
+#ifndef LATCH_CPP_SRC_SUBSYSTEMS_ELEVATOR_H_
+#define LATCH_CPP_SRC_SUBSYSTEMS_ELEVATOR_H_
 
 #include "WPILib.h"
 #include "../RobotMap.h"
@@ -44,4 +44,4 @@ public:
 	void latchSolOpen();
 };
 
-#endif /* SRC_SUBSYSTEMS_ELEVATOR_H_ */
+#endif /* LATCH_CPP_SRC_SUBSYSTEMS_ELEVATOR_H_ */

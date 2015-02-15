@@ -1,7 +1,7 @@
 // Benjamin Ward, Jan 13, 2015
 
-#ifndef SRC_DATALOGGING_H_
-#define SRC_DATALOGGING_H_
+#ifndef LATCH_CPP_SRC_DATALOGGING_H_
+#define LATCH_CPP_SRC_DATALOGGING_H_
 
 #include <iostream>
 #include <fstream>
@@ -35,4 +35,4 @@ private:
 
 };
 
-#endif /* SRC_DATALOGGING_H_ */
+#endif /* LATCH_CPP_SRC_DATALOGGING_H_ */

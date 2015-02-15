@@ -19,10 +19,6 @@ const uint32_t ENCODER_RR_B = 0;
 const uint32_t ENCODER_RF_A = 0; // The channels for the right front encdoer
 const uint32_t ENCODER_RF_B = 0;
 
-//LATCH
-const uint32_t SOLENOID_LATCH = 1;
-const uint32_t RELAY_LATCH = 1;
-
 //MOTORS
 const uint32_t MOTOR_LR = 2; // The channel for the left rear motor
 const uint32_t MOTOR_LF = 1; // The channel for the left front motor
@@ -42,8 +38,6 @@ const uint32_t ELEVATOR_BOTTOM_SWITCH = 1; // The channel for the bottom switch 
 const uint32_t ELEVATOR_ENCODER_A = 1; // The channels for the elevator encoder
 const uint32_t ELEVATOR_ENCODER_B = 2;
 const uint32_t ELEVATOR_MOTOR         = 1; // The channel for the elevator motors
-const uint32_t LATCH_SOLENOID1        = 1;
-const uint32_t LATCH_SOLENOID2        = 2;
 
 const uint32_t LEFT_IR  = 1;
 const uint32_t RIGHT_IR = 2;
@@ -72,5 +66,8 @@ static const uint32_t BUTTON_A = 1; // port for A button on xbox controller
 static const uint32_t BUTTON_B = 2; // port for B button on xbox controller
 static const uint32_t BUTTON_X = 3; // port for X button on xbox controller
 static const uint32_t BUTTON_Y = 4; // port for Y button on xbox controller
+
+const uint32_t SOLENOIDCHAN1 = 0; // check correct values
+const uint32_t SOLENOIDCHAN2 = 1;
 
 #endif
