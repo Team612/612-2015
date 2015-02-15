@@ -46,10 +46,10 @@ const uint32_t ELEVATOR_BOTTOM_SWITCH = 1;
 const uint32_t ELEVATOR_ENCODER_A = 1;
 const uint32_t ELEVATOR_ENCODER_B = 1;
 
-const uint32_t FIRST_SOLENOID = 0; // check correct values
-const uint32_t SECOND_SOLENOID = 1; // check correct values
+const uint32_t SOLENOIDCHAN1 = 0; // check correct values
+const uint32_t SOLENOIDCHAN2 = 1;
 
-const float MOTOR_EXPIRATION = 0.1f; // float measured in seconds
+const float MOTOR_EXPIRATION = 100.0f; // float measured in seconds
 
 //Mapping the joystick stuff
 //Settings

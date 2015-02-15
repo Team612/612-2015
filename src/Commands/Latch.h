@@ -1,5 +1,5 @@
-#ifndef LatchOpen_H
-#define LatchOpen_H
+#ifndef Latch_H
+#define Latch_H
 
 #include "RobotMap.h"
 #include "../CommandBase.h"
@@ -7,16 +7,21 @@
 #include <Timer.h>
 #include <DoubleSolenoid.h>
 
-class LatchOpen: public CommandBase
+class Latch: public CommandBase
 {
 public:
 	Timer* timer;
-	LatchOpen();
+	Latch(bool latchState);
 	void Initialize();
+	void Execute();
+	bool IsFinished();
 	void End();
+	void Interrupted();
+
 private:
-	DoubleSolenoid* firstsolenoid;
-	DoubleSolenoid* secondsolenoid;
+	DoubleSolenoid* solenoid;
+	enum action {Open, Close};
+	action openClose;
 };
 
 #endif

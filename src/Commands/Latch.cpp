@@ -5,24 +5,49 @@
  * In many cases, this method is no different than the constructor, so adding code here
  * is not always necessary.
  */
-void LatchOpen::Initialize()
+Latch::Latch(bool latchState)
 {
 	timer = new Timer();
-	firstsolenoid = new DoubleSolenoid(FIRST_SOLENOID);
-	secondsolenoid = new DoubleSolenoid(SECOND_SOLENOID);
-	firstsolenoid->Set(DoubleSolenoid::Value::kForward);
-	secondsolenoid->Set(DoubleSolenoid::Value::kForward);
+	solenoid = new DoubleSolenoid(SOLENOIDCHAN1, SOLENOIDCHAN2);
+	if (latchState)
+	{
+		openClose = Open;
+	}
+	else
+	{
+		openClose = Close;
+	}
+}
+
+void Latch::Initialize()
+{
 	timer->Start();
-	End();
+	if(openClose == Open)
+	{
+		solenoid->Set(DoubleSolenoid::Value::kForward);
+	}
+	else
+	{
+		solenoid->Set(DoubleSolenoid::Value::kReverse);
+	}
+}
+
+void Latch::Execute()
+{
+
+}
+
+bool Latch::IsFinished()
+{
+	return true;
 }
 
 // clean-up method
-void LatchOpen::End()
+void Latch::End()
 {
 	if(timer->Get() >= 1.0)
 	{
-		firstsolenoid->Set(DoubleSolenoid::Value::kOff);
-		firstsolenoid->Set(DoubleSolenoid::Value::kOff);
+		solenoid->Set(DoubleSolenoid::Value::kOff);
 	}
 	else
 	{
@@ -30,3 +55,7 @@ void LatchOpen::End()
 	}
 }
 
+void Latch::Interrupted()
+{
+	solenoid->Set(DoubleSolenoid::Value::kOff);
+}

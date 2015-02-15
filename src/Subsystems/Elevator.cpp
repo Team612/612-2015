@@ -46,23 +46,3 @@ Encoder* Elevator::getEncoder()
 {
 	return encoder;
 }
-
-void Elevator::firstSolOpen()
-{
-	firstsolenoid->Set(DoubleSolenoid::Value::kForward);
-}
-
-void Elevator::firstSolClose()
-{
-	firstsolenoid->Set(DoubleSolenoid::Value::kOff);
-}
-
-void Elevator::secondSolOpen()
-{
-	secondsolenoid->Set(DoubleSolenoid::Value::kForward);
-}
-
-void Elevator::secondSolClose()
-{
-	secondsolenoid->Set(DoubleSolenoid::Value::kOff);
-}
