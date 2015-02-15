@@ -4,6 +4,7 @@
 #include <Subsystems/Drivetrain.h>
 #include "Commands/Drive.h"
 #include "OI.h"
+#include "Commands/Latch.h"
 
 class Robot: public IterativeRobot
 {

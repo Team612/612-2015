@@ -11,7 +11,7 @@ class Latch: public CommandBase
 {
 public:
 	Timer* timer;
-	Latch(bool latchState);
+	Latch();
 	void Initialize();
 	void Execute();
 	bool IsFinished();

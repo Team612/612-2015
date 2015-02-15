@@ -29,7 +29,7 @@ float GamePad::GetLeftXSmooth()
 
 float GamePad::GetRightXRaw()
 {
-	return GetRawAxis(AXIS_RIGHT_X);
+	return GetRawAxis(AXIS_RIGHT_X) * -1;
 }
 
 float GamePad::GetRightXSmooth()
@@ -39,7 +39,7 @@ float GamePad::GetRightXSmooth()
 
 float GamePad::GetLeftYRaw()
 {
-	return GetRawAxis(AXIS_LEFT_Y);
+	return GetRawAxis(AXIS_LEFT_Y) * -1;
 }
 
 float GamePad::GetLeftYSmooth()

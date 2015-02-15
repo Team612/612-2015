@@ -4,6 +4,7 @@
 
 #include "WPILib.h"
 #include "GamePad.h"
+#include "RobotMap.h"
 
 
 class OI

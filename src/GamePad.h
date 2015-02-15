@@ -1,5 +1,5 @@
-#ifndef GamePad_H
-#define GamePad_H
+#ifndef GAMEPAD_H
+#define GAMEPAD_H
 
 #include <Joystick.h>
 #include <Buttons/Button.h>
@@ -45,13 +45,12 @@ public:
 
 private:
 	// Axis Ports
-	const int AXIS_LEFT_X = 1;
-	const int AXIS_LEFT_Y = 2;
-	const int AXIS_SHOULDER = 3;
-	const int AXIS_RIGHT_X = 4;
-	const int AXIS_RIGHT_Y = 5;
-	const int AXIS_DPAD_X = 6;
-	const int AXIS_DPAD_Y = 7;
+	const int AXIS_LEFT_X     = 1;
+	const int AXIS_LEFT_Y     = 0;
+	const int AXIS_RIGHT_X    = 4;
+	const int AXIS_RIGHT_Y    = 5;
+	const int AXIS_TRIGGER_L  = 2;
+	const int AXIS_TRIGGER_R  = 3;
 
 	// Buttons Numbers
 	const int Button_A = 2;

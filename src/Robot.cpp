@@ -4,7 +4,7 @@
 #include <cstdio>
 #include <Joystick.h>
 #include "Subsystems/Drivetrain.h"
-//#include <Talon.h>
+#include <Talon.h>
 #include "Commands/AutonomousSimple.h"
 #include "Robot.h"
 #include "RobotMap.h"
@@ -19,7 +19,6 @@ void Robot::RobotInit()
 
 	speedgun = new BuiltInAccelerometer(); // New accelerometer called speedgun
 	move = new Drive(CommandBase::oi->driver);
-
 	robot = this;
 }
 
