@@ -50,6 +50,9 @@ const uint32_t ELEVATOR_IR = 2;
 const float MAX_IR    = 60.0f; //TODO
 const float MIN_ULTRA = 20.0f; //TODO make better todos
 
+const float FLOATSPEED = 0.8f;
+const double DOUBLESPEED = 0.8;
+
 //JOYSTICK
 static const float DEADZONE = 0.1f; // The value for the joystick deadzone
 static const float THROTTLE = 1.0f;  // The value for the joystick throttle

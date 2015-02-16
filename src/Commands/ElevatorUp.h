@@ -3,6 +3,7 @@
 
 #include "WPILib.h"
 #include "../CommandBase.h"
+#include "RobotMap.h"
 
 class ElevatorUp: public CommandBase
 {
