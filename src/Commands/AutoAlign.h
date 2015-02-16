@@ -12,7 +12,6 @@ private:
 	const float distanceToAutoAlign = 10.0; //should be smaller than maxAlignDistance. The optimal distance (robot to tote) to autoalign.
 public:
 	AutoAlign();
-	void RoughAlign(float distanceToTote, float bearingToTote, float distanceToBeAway); //bearing is in degrees. look at issue #126
 	float CalculateBearing(float firstPointDistance, float firstPointAngle, float secondPointDistance, float secondPointAngle); //first point is the further edge, second point is the closest edge
 	void AutonoumousAutoAlign(float firstPointDistance, float firstPointAngle, float secondPointDistance, float secondPointAngle);
 };
