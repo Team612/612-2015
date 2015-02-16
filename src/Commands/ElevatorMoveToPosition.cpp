@@ -21,12 +21,12 @@ void ElevatorMoveToPosition::Execute()
 	//Moves down if the spins are more than the target spins
 	if (spins > targetSpins)
 	{
-		elevator->move(-SPEED);
+		elevator->move(-FLOATSPEED);
 	}
 	// Moves up if the spins are less than the target spins
 	else if (spins < targetSpins)
 	{
-		elevator->move(SPEED);
+		elevator->move(FLOATSPEED);
 	}
 	//Doesn't move if (spins == targetSpins)
 	static int count = 0;
