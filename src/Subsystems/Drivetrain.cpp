@@ -4,15 +4,15 @@
 #include "Drivetrain.h"
 
 Drivetrain::Drivetrain(uint32_t talonchannel1,
-		                             uint32_t talonchannel2,
-		                             uint32_t talonchannel3,
-		                             uint32_t talonchannel4,
-									 uint32_t infraredchannel):
-		Subsystem("Drivetrain"),
-		RobotDrive(new CANTalon(talonchannel1),
-				   new CANTalon(talonchannel2),
-				   new CANTalon(talonchannel3),
-				   new CANTalon(talonchannel4))
+					   uint32_t talonchannel2,
+					   uint32_t talonchannel3,
+					   uint32_t talonchannel4,
+					   uint32_t infraredchannel):
+				Subsystem("Drivetrain"),
+				RobotDrive(new CANTalon(talonchannel1),
+						   new CANTalon(talonchannel2),
+						   new CANTalon(talonchannel3),
+						   new CANTalon(talonchannel4))
 
 {
 	SetSafetyEnabled(true);
