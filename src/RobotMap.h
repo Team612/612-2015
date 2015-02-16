@@ -70,6 +70,6 @@ const uint32_t SOLENOIDCHAN1 = 0; // check correct values
 const uint32_t SOLENOIDCHAN2 = 1;
 const uint32_t TIMER_VALUE = 1.1;
 
-const uint32_t PCM = 11;
+const uint32_t PCM = 0;
 
 #endif
