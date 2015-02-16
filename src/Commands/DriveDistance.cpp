@@ -1,12 +1,33 @@
 #include <Commands/DriveDistance.h>
 #include <math.h>
 
-DriveDistance::DriveDistance(float rotations)
+DriveDistance::DriveDistance(float rotationsX, float rotationsY)
 {
 	Requires(drivetrain);
-	targetDistance = rotations;
-	targetDistance *= 90/(8*3.14159);
-	distance = 0;
+	targetDistanceX = rotationsX * (90/(8*3.14159));
+	targetDistanceY = rotationsY * (90/(8*3.14159));
+	distanceX = 0;
+	distanceY = 0;
+	xRatio = targetDistanceX/targetDistanceY;
+	yRatio = targetDistanceY/targetDistanceX;
+	if(xRatio > 0 && targetDistanceX < 0)
+	{
+		xRatio *= -1;
+	}
+	if(yRatio > 0 && targetDistanceY < 0)
+	{
+		yRatio *= -1;
+	}
+	if(xRatio > 1 || xRatio < -1)
+	{
+		xRatio *= yRatio;
+		yRatio *= yRatio;
+	}
+	if(yRatio > 1 || yRatio < -1)
+	{
+		yRatio *= xRatio;
+		xRatio *= xRatio;
+	}
 	std::printf("Constructor called\n");
 }
 
@@ -19,26 +40,30 @@ void DriveDistance::Initialize()
 // Called repeatedly when this Command is scheduled to run
 void DriveDistance::Execute()
 {
-	distance = abs(drivetrain->getDistance(Drivetrain::MotorLocation::RIGHT_FRONT));
-	drivetrain->move(0.0f, 0.8f, 0.0f);
+	distanceX = drivetrain->getDistance(Drivetrain::MotorLocation::RIGHT_FRONT);
+	distanceY = drivetrain->getDistance(Drivetrain::MotorLocation::RIGHT_FRONT);
+	drivetrain->move(xRatio, yRatio, 0.0f);
 	static int count = 0;
 	if (count % 60 == 0)
+	{
 		std::printf("Execute called\n");
-		std::printf("distance: %f\n", distance);
-	count++;
+		count++;
+	}
 }
 
 // Make this return true when this Command no longer needs to run execute()
 bool DriveDistance::IsFinished()
 {
-	static int c = 0;
-	bool status = (distance >= targetDistance);
-	if (status)
-		std::printf("Finished!\n");
-	else if (c % 30 == 0)
-		std::printf("Not finished!\n");
-	c++;
-	return status;
+	if(((distanceX >= targetDistanceX && targetDistanceX > 0) || (distanceX <= targetDistanceX && targetDistanceX < 0)) &&
+	   ((distanceY >= targetDistanceY && targetDistanceY > 0) || (distanceY <= targetDistanceY && targetDistanceY < 0)))
+	{
+		drivetrain->stop();
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
 
 // Called once after isFinished returns true

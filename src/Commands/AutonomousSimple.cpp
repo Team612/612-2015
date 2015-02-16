@@ -7,7 +7,7 @@
  */
 AutonomousSimple::AutonomousSimple()
 {
-	DriveDistance(120.0);
+	DriveDistance(120.0 , 0.0);
 }
 
 /** Called just before this Command runs the first time

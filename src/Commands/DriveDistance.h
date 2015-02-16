@@ -7,11 +7,15 @@
 class DriveDistance: public CommandBase
 {
 private:
-	float targetDistance;
-	float distance;
+	float targetDistanceX;
+	float targetDistanceY;
+	float distanceX;
+	float distanceY;
+	float xRatio;
+	float yRatio;
 
 public:
-	DriveDistance(float rotations);
+	DriveDistance(float rotationsX, float rotationsY);
 	void Initialize();
 	void Execute();
 	bool IsFinished();
