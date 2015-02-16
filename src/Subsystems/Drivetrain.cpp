@@ -3,22 +3,19 @@
 #include <MotorSafetyHelper.h>
 #include "Drivetrain.h"
 
-Drivetrain::Drivetrain(uint32_t talonchannel1,
-		                             uint32_t talonchannel2,
-		                             uint32_t talonchannel3,
-		                             uint32_t talonchannel4,
-									 uint32_t infraredchannel):
+Drivetrain::Drivetrain(CANTalon* t_fl, CANTalon* t_fr, CANTalon* t_rl, CANTalon* t_rr, AnalogInput* infrared):
 		Subsystem("Drivetrain"),
-		RobotDrive(new CANTalon(talonchannel1),
-				   new CANTalon(talonchannel2),
-				   new CANTalon(talonchannel3),
-				   new CANTalon(talonchannel4))
-
+		RobotDrive(t_fl, t_fr, t_rl, t_rr)
 {
+	fl = t_fl;
+	fr = t_fr;
+	rl = t_rl;
+	rr = t_rr;
+
 	SetSafetyEnabled(true);
 	SetExpiration(MOTOR_EXPIRATION);
 	std::printf("Expiration = %f", GetExpiration());
-	ir = new AnalogInput(infraredchannel);
+	ir = infrared;
 
 	encoderLF = new Encoder(ENCODER_LF_A, ENCODER_LF_B);
 	encoderLR = new Encoder(ENCODER_LR_A, ENCODER_LR_B);
@@ -33,8 +30,8 @@ Drivetrain::Drivetrain(uint32_t talonchannel1,
 	 */
 
 	//SetInvertedMotor(kRearRightMotor, true);
-	//SetInvertedMotor(kRearLeftMotor, true);
-	SetInvertedMotor(kFrontRightMotor, true);
+	SetInvertedMotor(kRearLeftMotor, true);
+	//SetInvertedMotor(kFrontRightMotor, true);
 	SetInvertedMotor(kFrontLeftMotor, true);
 
 	//import trackball or something? idk.
@@ -101,7 +98,7 @@ int32_t Drivetrain::getDistance(MotorLocation motor)
 	return (distance < 6);
 
 	// OLD
-	/*
+
 	if(d < 6)
 	{
 		return true;

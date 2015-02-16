@@ -10,6 +10,7 @@ private:
 	uint32_t targetPosition;
 	int targetSpins;
 	const uint32_t INTERVAL = 1; //TODO Placeholder value
+	const float SPEED = 0.8f;
 public:
 	ElevatorMoveToPosition(uint32_t position);
 	void Initialize();

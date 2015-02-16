@@ -21,14 +21,12 @@ void ElevatorMoveToPosition::Execute()
 	//Moves down if the spins are more than the target spins
 	if (spins > targetSpins)
 	{
-		//Using -0.8 as a temporary value
-		elevator->move(-0.8);
+		elevator->move(-SPEED);
 	}
 	// Moves up if the spins are less than the target spins
 	else if (spins < targetSpins)
 	{
-		//Using 0.8 as a temporary value
-		elevator->move(0.8);
+		elevator->move(SPEED);
 	}
 	//Doesn't move if (spins == targetSpins)
 	static int count = 0;

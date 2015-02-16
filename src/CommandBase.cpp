@@ -1,5 +1,6 @@
 #include "CommandBase.h"
 #include "RobotMap.h"
+#include <CANTalon.h>
 
 // Initialize a single static instance of all of your subsystems to NULL
 OI* CommandBase::oi = NULL;
@@ -24,5 +25,5 @@ void CommandBase::init()
 	// line should be repeated for each subsystem in the project.
 	oi = new OI();
 	elevator = new Elevator();
-	drivetrain = new Drivetrain(MOTOR_LR, MOTOR_LF, MOTOR_RR, MOTOR_RF, INFRARED);
+	drivetrain = new Drivetrain(new CANTalon(MOTOR_FL), new CANTalon(MOTOR_RL), new CANTalon(MOTOR_FR), new CANTalon(MOTOR_RR), new AnalogInput(INFRARED));
 }

@@ -3,6 +3,9 @@
 
 #include <Subsystems/Drivetrain.h>
 #include "Commands/Drive.h"
+#include "OI.h"
+#include "Commands/Latch.h"
+#include <Compressor.h>
 
 class Robot: public IterativeRobot
 {
@@ -11,26 +14,20 @@ private:
 	//COMMAND
 	Command* autonomousCommand;
 
-
 	//DRIVETRAIN
 	Drive* move;
-
 
 	//LIVEWINDOW
 	LiveWindow* lw;
 
-
-	//JOYSTICK
-	Joystick* joystick; // Used for joystick
-
-
 	//TALON
-	Talon* firstTalon;
-	Talon* secondTalon;
-	Talon* thirdTalon;
-
+	//Talon* firstTalon;
+	//Talon* secondTalon;
+	//Talon* thirdTalon;
 
 	//ACCELEROMETER
+
+	Compressor* compressor;
 	// All acceleration is measured in meters per second squared
 	BuiltInAccelerometer* speedgun; // Used for speedgun, a accelerometer
 	double currentAcceleration = 0; // used for acceleration and accelerometer
@@ -67,6 +64,8 @@ public:
 		TESTINIT,
 		TESTPERIODIC
 	};
+
+
 	ROBOT_STATUS robot_status;
 };
 #endif

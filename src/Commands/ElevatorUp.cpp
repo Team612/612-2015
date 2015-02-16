@@ -1,38 +1,37 @@
-#include "GetBoundingBox.h"
+#include "ElevatorUp.h"
 
-GetBoundingBox::GetBoundingBox()
+ElevatorUp::ElevatorUp()
 {
-	// Use Requires() here to declare subsystem dependencies
-	// eg. Requires(chassis);
+	Requires(elevator);
 }
 
 // Called just before this Command runs the first time
-void GetBoundingBox::Initialize()
+void ElevatorUp::Initialize()
 {
 
 }
 
 // Called repeatedly when this Command is scheduled to run
-void GetBoundingBox::Execute()
+void ElevatorUp::Execute()
 {
-
+	elevator->move(0.8);
 }
 
 // Make this return true when this Command no longer needs to run execute()
-bool GetBoundingBox::IsFinished()
+bool ElevatorUp::IsFinished()
 {
 	return false;
 }
 
 // Called once after isFinished returns true
-void GetBoundingBox::End()
+void ElevatorUp::End()
 {
-
+	elevator->stop();
 }
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
-void GetBoundingBox::Interrupted()
+void ElevatorUp::Interrupted()
 {
-
+	elevator->stop();
 }

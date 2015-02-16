@@ -1,5 +1,5 @@
-#ifndef SRC_COMMANDS_TOTENAVGROUP_H_
-#define SRC_COMMANDS_TOTENAVGROUP_H_
+#ifndef LATCH_CPP_SRC_COMMANDS_TOTENAVGROUP_H_
+#define LATCH_CPP_SRC_COMMANDS_TOTENAVGROUP_H_
 
 #include "../Subsystems/Drivetrain.h"
 #include "CommandBase.h"
@@ -11,4 +11,4 @@ public:
 	ToteNavGroup();
 };
 
-#endif /* SRC_COMMANDS_TOTENAVGROUP_H_ */
+#endif /* LATCH_CPP_SRC_COMMANDS_TOTENAVGROUP_H_ */

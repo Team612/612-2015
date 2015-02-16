@@ -4,7 +4,7 @@
 #include <cstdio>
 #include <Joystick.h>
 #include "Subsystems/Drivetrain.h"
-//#include <Talon.h>
+#include <Talon.h>
 #include "Commands/AutonomousSimple.h"
 #include "Robot.h"
 #include "RobotMap.h"
@@ -16,9 +16,11 @@ void Robot::RobotInit()
 	robot_status = ROBOTINIT; // Makes the status equal ROBOTINIT
 	CommandBase::init(); // Constructor for CommandBase
 	lw = LiveWindow::GetInstance();
-	joystick = new Joystick(DRIVER_JOY); // Construct left hand joystick
-	speedgun = new BuiltInAccelerometer(); // Construct new accelerometer called speedgun
+
+	speedgun = new BuiltInAccelerometer(); // New accelerometer called speedgun
+	move = new Drive(CommandBase::oi->driver);
 	robot = this;
+	compressor = new Compressor(PCM);
 }
 
 void Robot::DisabledInit()
@@ -30,7 +32,7 @@ void Robot::DisabledPeriodic()
 {
 	if (robot_status != DISABLEDPERIODIC)
 		robot_status = DISABLEDPERIODIC;
-	Scheduler::GetInstance()->Run();
+	//Scheduler::GetInstance()->Run();
 }
 
 void Robot::AutonomousInit()
@@ -38,6 +40,7 @@ void Robot::AutonomousInit()
 	robot_status = AUTONOMOUSINIT; // Makes the status equal AUTONOMOUSINIT
 	if (autonomousCommand != NULL)
 		autonomousCommand->Start();
+	compressor->Start();
 }
 
 void Robot::AutonomousPeriodic()
@@ -58,8 +61,8 @@ void Robot::TeleopInit()
 	 */
 	if (autonomousCommand != NULL)
 		autonomousCommand->Cancel();
-	move = new Drive(joystick);
 	move->Start();
+	compressor->Start();
 }
 
 void Robot::TeleopPeriodic()
@@ -96,15 +99,16 @@ void Robot::TeleopPeriodic()
 void Robot::TestInit()
 {
 	robot_status = TESTINIT; // Makes the status equal TESTINIT
+	printf("lel what are you even doing here scrub?\n");
 }
 void Robot::TestPeriodic()
 {
 	if (robot_status != TESTPERIODIC) // Makes the status equal TESTPERIODIC
 		robot_status = TESTPERIODIC;
 	lw->Run();
-	float val = joystick->GetRawAxis(5); //Takes input from joystick
-	firstTalon->Set(val); //Gives joystick input to first talon
-	secondTalon->Set(val);
+	//float val = joystick->GetRawAxis(5); //Takes input from joystick
+	//firstTalon->Set(val); //Gives joystick input to first talon
+	//secondTalon->Set(val);
 	
 }
 
