@@ -13,14 +13,21 @@
 
 void Robot::RobotInit()
 {
+	printf("Robotinit1\n");
 	robot_status = ROBOTINIT; // Makes the status equal ROBOTINIT
+	printf("Robotinit2\n");
 	CommandBase::init(); // Constructor for CommandBase
+	printf("Robotinit3\n");
 	lw = LiveWindow::GetInstance();
-
+	printf("Robotinit4\n");
 	speedgun = new BuiltInAccelerometer(); // New accelerometer called speedgun
+	printf("Robotinit5\n");
 	move = new Drive(CommandBase::oi->driver);
+	printf("Robotinit6\n");
 	robot = this;
+	printf("Robotinit7\n");
 	compressor = new Compressor(PCM);
+	printf("Robotinit8\n");
 }
 
 void Robot::DisabledInit()
@@ -52,6 +59,7 @@ void Robot::AutonomousPeriodic()
 
 void Robot::TeleopInit()
 {
+	printf("Teleopinit\n");
 	robot_status = TELEOPINIT; // Makes the status equal TELEOPINIT
 	/*
 	 * This makes sure that the autonomous stops running when

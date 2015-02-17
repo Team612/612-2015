@@ -26,7 +26,7 @@ Drive::Drive(GamePad* joystick)
 // Called just before this Command runs the first time
 void Drive::Initialize()
 {
-
+	printf("DriveInit\n");
 }
 
 // Called repeatedly when this Command is scheduled to run
@@ -34,8 +34,9 @@ void Drive::Execute()
 {
 	if (mode == JOYSTICK)
 	{
-		drivetrain->move((-1.0f)*joyObj->GetLeftXSmooth(), (1.0f)*joyObj->GetLeftYSmooth(), (1.0f)*joyObj->GetRightXSmooth());
-
+		//printf("DriveExec0\n %f", joyObj->GetLeftYSmooth());
+		drivetrain->move((-1.0f)*joyObj->GetLeftXSmooth(), (-1.0f)*joyObj->GetLeftYSmooth(), (-1.0f)*joyObj->GetRightXSmooth());
+		//printf("DriveExec1\n");
 		SmartDashboard::PutNumber("Front left Talon value", drivetrain->fl->Get());
 		SmartDashboard::PutNumber("Front right Talon value", drivetrain->fr->Get());
 		SmartDashboard::PutNumber("Back left Talon value", drivetrain->rl->Get());
@@ -43,7 +44,9 @@ void Drive::Execute()
 	}
 	else
 	{
+		printf("DriveExec2\n");
 		drivetrain->move(targetX, targetY, targetRotation);
+		printf("DriveExec3\n");
 	}
 }
 
