@@ -23,7 +23,11 @@ void CommandBase::init()
 {
 	// Create a single static instance of all of your subsystems. The following
 	// line should be repeated for each subsystem in the project.
-	oi = new OI();
+
+	printf("CMDBinit1\n");
 	elevator = new Elevator();
+	printf("CMDBinit2\n");
 	drivetrain = new Drivetrain(new CANTalon(MOTOR_FL), new CANTalon(MOTOR_RL), new CANTalon(MOTOR_FR), new CANTalon(MOTOR_RR), new AnalogInput(INFRARED));
+	printf("CMDBinit3\n");
+		oi = new OI();
 }

@@ -48,13 +48,17 @@ void Drivetrain::InitDefaultCommand()
 
 void Drivetrain::move(float x, float y, float rotation)
 {
+	//printf("MoveY %f\n", y);
 	MecanumDrive_Cartesian(x, y, rotation);
+	//printf("MoveX %f\n", x);
+	// FEED ME SEYMORE
 	m_safetyHelper->Feed();
 }
 
 void Drivetrain::stop()
 {
 	MecanumDrive_Cartesian(0.0f, 0.0f, 0.0f);
+	// FEED ME SEYMORE
 	m_safetyHelper->Feed();
 }
 

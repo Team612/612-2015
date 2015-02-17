@@ -53,7 +53,7 @@ const float MIN_ULTRA = 20.0f; //TODO make better todos
 const float ELEV_SPEED_FLOAT = 0.8f;
 const double ELEV_SPEED_DOUBLE = 0.8;
 
-const int ELEVATOR_TOLERANCE = 20;
+const int ELEVATOR_TOLERANCE = 50;
 
 //JOYSTICK
 static const float DEADZONE = 0.1f; // The value for the joystick deadzone
