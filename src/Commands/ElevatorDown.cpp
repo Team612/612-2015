@@ -14,7 +14,7 @@ void ElevatorDown::Initialize()
 // Called repeatedly when this Command is scheduled to run
 void ElevatorDown::Execute()
 {
-	elevator->move(-DOUBLESPEED);
+	elevator->move(-ELEV_SPEED_DOUBLE);
 }
 
 // Make this return true when this Command no longer needs to run execute()
