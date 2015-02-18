@@ -53,16 +53,16 @@ private:
 	const int AXIS_TRIGGER_R  = 3;
 
 	// Buttons Numbers
-	const int Button_A = 2;
-	const int Button_B = 3;
-	const int Button_X = 1;
+	const int Button_A = 1;
+	const int Button_B = 2;
+	const int Button_X = 3;
 	const int Button_Y = 4;
 	const int Button_SHOULDER_LEFT = 5;
 	const int Button_SHOULDER_RIGHT = 6;
 	const int Button_TRIGGER_LEFT = 7;
 	const int Button_TRIGGER_RIGHT = 8;
-	const int Button_BACK = 9;
-	const int Button_START = 10;
+	const int Button_BACK = 10;
+	const int Button_START = 9;
 	const int Button_LEFT_STICK = 11;
 	const int Button_RIGHT_STICK = 12;
 	const int Button_MODE = -1;

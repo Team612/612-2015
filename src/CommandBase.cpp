@@ -29,5 +29,5 @@ void CommandBase::init()
 	printf("CMDBinit2\n");
 	drivetrain = new Drivetrain(new CANTalon(MOTOR_FL), new CANTalon(MOTOR_RL), new CANTalon(MOTOR_FR), new CANTalon(MOTOR_RR), new AnalogInput(INFRARED));
 	printf("CMDBinit3\n");
-		oi = new OI();
+	oi = new OI();
 }

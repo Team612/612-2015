@@ -30,9 +30,9 @@ Drivetrain::Drivetrain(CANTalon* t_fl, CANTalon* t_fr, CANTalon* t_rl, CANTalon*
 	 */
 
 	//SetInvertedMotor(kRearRightMotor, true);
-	SetInvertedMotor(kRearLeftMotor, true);
+	SetInvertedMotor(kRearRightMotor, true);
 	//SetInvertedMotor(kFrontRightMotor, true);
-	SetInvertedMotor(kFrontLeftMotor, true);
+	SetInvertedMotor(kFrontRightMotor, true);
 
 	//import trackball or something? idk.
 }
