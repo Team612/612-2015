@@ -70,6 +70,7 @@ static const uint32_t BUTTON_A = 1; // port for A button on xbox controller
 static const uint32_t BUTTON_B = 2; // port for B button on xbox controller
 static const uint32_t BUTTON_X = 3; // port for X button on xbox controller
 static const uint32_t BUTTON_Y = 4; // port for Y button on xbox controller
+static const uint32_t BUTTON_RB = 6; // port for Y button on xbox controller
 
 const uint32_t SOLENOIDCHAN1 = 0; // check correct values
 const uint32_t SOLENOIDCHAN2 = 1;
