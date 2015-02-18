@@ -19,6 +19,8 @@ private:
 	bool hasDriven;
 	float val;
 	float preval;
+
+	Command* elevatorC;
 };
 
 #endif

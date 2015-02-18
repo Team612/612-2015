@@ -21,7 +21,7 @@ void ElevatorDown::Execute()
 // Make this return true when this Command no longer needs to run execute()
 bool ElevatorDown::IsFinished()
 {
-	return true;
+	return false;
 }
 
 // Called once after isFinished returns true
