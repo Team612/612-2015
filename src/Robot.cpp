@@ -105,7 +105,8 @@ void Robot::TeleopPeriodic()
 		printf("Max acceleration is %f meters per second per second \n", maxAcceleration); //prints maxAcceleration
 	}
 	TimeChecked = 0;
-
+	CommandBase::oi->handleLatch();
+	CommandBase::oi->handleElevator();
 }
 
 void Robot::TestInit()
