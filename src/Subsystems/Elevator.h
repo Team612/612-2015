@@ -33,7 +33,7 @@ private:
 public:
 	Elevator();
 	virtual ~Elevator();
-	void move(float magnitude);
+	void move(float speed);
 	void stop();
 	void InitDefaultCommand();
 	Encoder* getEncoder();

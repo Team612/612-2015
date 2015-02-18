@@ -32,7 +32,7 @@ void Elevator::InitDefaultCommand()
 	//SetDefaultCommand(new ElevatorUp());
 }
 
-void Elevator::move(float magnitude)
+void Elevator::move(float speed)
 {
 	/*
 	//Checks the sensors to see if the elevator is at the top or the bottom
@@ -57,7 +57,8 @@ void Elevator::move(float magnitude)
 		printf("Elevator motor moved! Speed = %f", magnitude);
 	}
 	*/
-	talon->Set(magnitude);
+	talon->Set(speed);
+	printf("setting talon to 1 now");
 #ifdef TALON
 	talon2->Set(magnitude);
 #endif
