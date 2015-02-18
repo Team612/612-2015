@@ -16,11 +16,13 @@ void ElevatorUp::Initialize()
 void ElevatorUp::Execute()
 {
 	elevator->move(1.0f);
+
 }
 
 // Make this return true when this Command no longer needs to run execute()
 bool ElevatorUp::IsFinished()
 {
+	std::printf("ElevatorUp::IsFinished\n");
 	return false;
 }
 
@@ -35,4 +37,6 @@ void ElevatorUp::End()
 void ElevatorUp::Interrupted()
 {
 	elevator->stop();
+	std::printf("ElevatorUp::Interrupted\n");
+
 }

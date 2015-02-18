@@ -110,7 +110,7 @@ void Robot::TeleopPeriodic()
 	}
 	TimeChecked = 0;
 	CommandBase::oi->handleLatch();
-	CommandBase::oi->handleElevator();
+	//CommandBase::oi->handleElevator();
 }
 
 void Robot::TestInit()
