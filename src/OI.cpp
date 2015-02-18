@@ -53,26 +53,27 @@ void OI::handleElevator()
 {
 	//move Elevator Up
 	val = gunner->GetRightYSmooth();
-	if(val > 0.1f)
+	if(val > 0.1f && hasDriven == false)
 	{
 		hasDriven = true;
-		ElevatorUp* up = new ElevatorUp();
+		elevatorC = new ElevatorUp();
 		printf("Elev up\n");
-		up->Start();
+		elevatorC->Start();
 		std::printf("We should be moving up now\n");
 	}
 
 	//Move Elevator Down
-	else if(val < 0.1f)
+	else if(val < 0.1f && hasDriven == false)
 	{
 		hasDriven = true;
-		ElevatorDown* down = new ElevatorDown();
+		elevatorC = new ElevatorDown();
 		printf("Elev down\n");
-		down->Start();
+		elevatorC->Start();
 	}
 	else
 	{
-		ElevatorStop* stop = new ElevatorStop();
+		elevatorC = new ElevatorStop();
+		elevatorC->Start();
 		hasDriven = false;
 	}
 	preval = val;
