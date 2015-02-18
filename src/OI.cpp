@@ -4,6 +4,7 @@
 #include "Commands/ElevatorDown.h"
 #include <DoubleSolenoid.h>
 #include "Commands/ElevatorStop.h"
+#include "RobotMap.h"
 
 GamePad* OI::driver = NULL;
 GamePad* OI::gunner = NULL;
@@ -30,7 +31,7 @@ OI::OI()
 //You better be thankful drive team -_-
 void OI::handleLatch()
 {
-	if(gunner->GetRawButton(6))
+	if(gunner->GetRawButton(BUTTON_RB))
 	{
 		if(toggleOpen) //if the latch is open
 		{
