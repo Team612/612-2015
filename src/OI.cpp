@@ -4,6 +4,7 @@
 #include "Commands/ElevatorDown.h"
 #include <DoubleSolenoid.h>
 #include "Commands/ElevatorStop.h"
+#include "Commands/ElevatorMove.h"
 #include "RobotMap.h"
 
 GamePad* OI::driver = NULL;
@@ -26,6 +27,8 @@ OI::OI()
 	printf("OIinit5\n");
 	gunner->ButtonA->WhileHeld(new ElevatorDown());
 	printf("OIinit6\n");*/
+	ElevatorMove* elevatormove = new ElevatorMove(gunner);
+	elevatormove->Start();
 }
 
 //You better be thankful drive team -_-
@@ -53,18 +56,17 @@ void OI::handleLatch()
 void OI::handleElevator()
 {
 	//move Elevator Up
-	val = gunner->GetRightYSmooth();
+	/*val = gunner->GetRightYSmooth();
 	if(val > 0.1f && hasDriven == false)
 	{
 		hasDriven = true;
 		elevatorC = new ElevatorUp();
 		std::printf("Elev up\n");
 		elevatorC->Start();
-		std::printf("We should be moving up now\n");
 	}
 
 	//Move Elevator Down
-	else if(val < 0.1f && hasDriven == false)
+	else if(val < -0.1f && hasDriven == false)
 	{
 		hasDriven = true;
 		elevatorC = new ElevatorDown();
@@ -77,5 +79,5 @@ void OI::handleElevator()
 		elevatorC->Start();
 		hasDriven = false;
 	}
-	preval = val;
+	preval = val;*/
 }

@@ -4,6 +4,7 @@
 #include "../CommandBase.h"
 #include "WPILib.h"
 #include "RobotMap.h"
+#include "GamePad.h"
 
 class ElevatorDown: public CommandBase
 {

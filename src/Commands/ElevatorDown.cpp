@@ -15,14 +15,14 @@ void ElevatorDown::Initialize()
 // Called repeatedly when this Command is scheduled to run
 void ElevatorDown::Execute()
 {
-	elevator->move(-1.0f);
+	elevator->move(-1.0);
 }
 
 // Make this return true when this Command no longer needs to run execute()
 bool ElevatorDown::IsFinished()
 {
-	return true;
 	std::printf("ElevatorDown::IsFinished\n");
+	return false;
 }
 
 // Called once after isFinished returns true
