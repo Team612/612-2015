@@ -1,11 +1,8 @@
-
 #ifndef OI_H
 #define OI_H
 
 #include "WPILib.h"
 #include "GamePad.h"
-#include "RobotMap.h"
-
 
 class OI
 {
@@ -14,6 +11,11 @@ public:
 	//Elevator Operator Buttons
 	static GamePad* driver;
 	static GamePad* gunner;
+
+	void handleLatch();
+	void handleElevator();
+private:
+	bool toggleOpen;
 };
 
 #endif

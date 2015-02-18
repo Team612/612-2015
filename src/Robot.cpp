@@ -71,6 +71,10 @@ void Robot::TeleopInit()
 		autonomousCommand->Cancel();
 	move->Start();
 	compressor->Start();
+
+	//Driveteam's stuff
+	CommandBase::oi->handleLatch();
+	CommandBase::oi->handleElevator();
 }
 
 void Robot::TeleopPeriodic()

@@ -25,7 +25,7 @@ const uint32_t MOTOR_FL = 1; // The channel for the front left motor
 const uint32_t MOTOR_RR = 3; // The channel for the rear right motor
 const uint32_t MOTOR_RL = 4; // The channel for the front right motor
 
-const float MOTOR_EXPIRATION = 100.0f; // float measured in milliseconds
+const float MOTOR_EXPIRATION = 1000.0f; // float measured in milliseconds
 
 //INFRARED TODO fix this number
 const uint32_t INFRARED = 1; // The channel for infrared sensors

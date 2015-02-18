@@ -11,7 +11,7 @@ AutonomousSimple::AutonomousSimple()
 
 /** Called just before this Command runs the first time
  * This is run after the constructor.  The initialization code could be done here, too.
- * In many cases, this method is no different than the constructor, so adding code here
+ * In many cases, this method is no differen tthan the constructor, so adding code here
  * is not always necessary.
  */
 void AutonomousSimple::Initialize()
