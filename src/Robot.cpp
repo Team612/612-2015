@@ -31,6 +31,7 @@ void Robot::RobotInit()
 
 	CameraServer::GetInstance()->SetQuality(50);
 	CameraServer::GetInstance()->StartAutomaticCapture("cam0");
+	std::printf("Starting camera server\n");
 }
 
 void Robot::DisabledInit()
