@@ -29,28 +29,35 @@ OI::OI()
 	printf("OIinit6\n");*/
 	ElevatorMove* elevatormove = new ElevatorMove(gunner);
 	elevatormove->Start();
+	isLatchPressed = false;
+	wasLatchPressed = false;
+	toggleOpen = true;
+	Latch* open = new Latch(CommandBase::elevator->getSolenoid(), DoubleSolenoid::kReverse);
+	open->Start();
 }
 
 //You better be thankful drive team -_-
 void OI::handleLatch()
 {
-	if(gunner->GetRawButton(BUTTON_RB))
+	isLatchPressed = gunner->GetRawButton(BUTTON_RB);
+	if(isLatchPressed && !wasLatchPressed)
 	{
 		if(toggleOpen) //if the latch is open
 		{
 			Latch* close = new Latch(CommandBase::elevator->getSolenoid(), DoubleSolenoid::kForward); //Close the latch
 			std::printf("Latch close(oi)\n");
 			close->Start();
-			toggleOpen = !toggleOpen;
+			toggleOpen = false;
 		}
 		else //if the latch is closed
 		{
 			Latch* open = new Latch(CommandBase::elevator->getSolenoid(), DoubleSolenoid::kReverse); //open the latch
 			std::printf("Latch open(oi)\n");
 			open->Start();
-			toggleOpen = !toggleOpen;
+			toggleOpen = true;
 		}
 	}
+	wasLatchPressed = isLatchPressed;
 }
 
 void OI::handleElevator()
