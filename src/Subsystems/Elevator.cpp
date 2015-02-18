@@ -58,7 +58,7 @@ void Elevator::move(float speed)
 	}
 	*/
 	talon->Set(speed);
-	printf("setting talon to 1 now");
+	printf("setting talon to 1 now\n");
 #ifdef TALON
 	talon2->Set(magnitude);
 #endif
