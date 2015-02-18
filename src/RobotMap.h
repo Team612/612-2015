@@ -39,10 +39,12 @@ const uint32_t ELEVATOR_ENCODER_A = 1; // The channels for the elevator encoder
 const uint32_t ELEVATOR_ENCODER_B = 2;
 const uint32_t ELEVATOR_MOTOR = 1; // The channel for the elevator motors
 
-const uint32_t L_ELEVATOR_LED_GREEN = 0; //ports for the LEDs TODO
-const uint32_t L_ELEVATOR_LED_RED = 1;
+const uint32_t L_ELEVATOR_LED_GREEN = 6; //ports for the LEDs TODO
+const uint32_t L_ELEVATOR_LED_RED = 7;
 const uint32_t R_ELEVATOR_LED_GREEN = 2;
 const uint32_t R_ELEVATOR_LED_RED = 3;
+
+
 
 const uint32_t LEFT_IR  = 1;
 const uint32_t RIGHT_IR = 2;
@@ -55,6 +57,9 @@ const uint32_t ELEVATOR_IR = 2;
 
 const float MAX_IR    = 60.0f; //TODO
 const float MIN_ULTRA = 20.0f; //TODO make better todos
+
+const float FLOATSPEED = 0.8f;
+const double DOUBLESPEED = 0.8;
 
 //JOYSTICK
 static const float DEADZONE = 0.1f; // The value for the joystick deadzone
@@ -76,4 +81,7 @@ const uint32_t SOLENOIDCHAN1 = 0; // check correct values
 const uint32_t SOLENOIDCHAN2 = 1;
 const uint32_t TIMER_VALUE = 1.1;
 
+const uint32_t PCM = 0;
+
 #endif
+
