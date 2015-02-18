@@ -3,6 +3,7 @@
 
 #include "WPILib.h"
 #include "GamePad.h"
+#include <Timer.h>
 
 class OI
 {
@@ -17,6 +18,8 @@ public:
 private:
 	bool toggleOpen;
 	bool hasDriven;
+	bool isLatchPressed;
+	bool wasLatchPressed;
 	float val;
 	float preval;
 };
