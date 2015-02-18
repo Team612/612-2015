@@ -53,12 +53,14 @@ void OI::handleElevator()
 	{
 		ElevatorUp* up = new ElevatorUp();
 		up->Start();
+		std::printf("We should be moving up now\n");
 	}
 
 	//Move Elevator Down
 	if(gunner->GetRightYSmooth() < 0.0f)
 	{
 		ElevatorDown* down = new ElevatorDown();
+		std::printf("We should be moving down now\n");
 		down->Start();
 	}
 }

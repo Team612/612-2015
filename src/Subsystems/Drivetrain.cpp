@@ -12,8 +12,8 @@ Drivetrain::Drivetrain(CANTalon* t_fl, CANTalon* t_fr, CANTalon* t_rl, CANTalon*
 	rl = t_rl;
 	rr = t_rr;
 
-	SetSafetyEnabled(true);
-	SetExpiration(MOTOR_EXPIRATION);
+	SetSafetyEnabled(false);
+	//SetExpiration(MOTOR_EXPIRATION);
 	std::printf("Expiration = %f", GetExpiration());
 	ir = infrared;
 

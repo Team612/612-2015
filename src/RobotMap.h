@@ -31,8 +31,8 @@ const float MOTOR_EXPIRATION = 1000.0f; // float measured in milliseconds
 const uint32_t INFRARED = 1; // The channel for infrared sensors
 
 //ELEVATOR TODO fix these numbers
-const uint32_t ELEVATOR_MOTOR_1 = 1; // The channel for the elevator motors
-const uint32_t ELEVATOR_MOTOR_2 = 2;
+const uint32_t ELEVATOR_MOTOR_1 = 6; // The channel for the elevator motors
+const uint32_t ELEVATOR_MOTOR_2 = 7;
 const uint32_t ELEVATOR_TOP_SWITCH = 1; // The channel for the top switch of the elevator
 const uint32_t ELEVATOR_BOTTOM_SWITCH = 1; // The channel for the bottom switch of the elevator
 const uint32_t ELEVATOR_ENCODER_A = 1; // The channels for the elevator encoder

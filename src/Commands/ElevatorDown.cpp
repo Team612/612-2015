@@ -3,6 +3,7 @@
 ElevatorDown::ElevatorDown()
 {
 	Requires(elevator);
+	std::printf("Elevator Down contructor\n");
 }
 
 // Called just before this Command runs the first time
@@ -14,7 +15,7 @@ void ElevatorDown::Initialize()
 // Called repeatedly when this Command is scheduled to run
 void ElevatorDown::Execute()
 {
-	elevator->move(-ELEV_SPEED_DOUBLE);
+	elevator->move(-1.0f);
 }
 
 // Make this return true when this Command no longer needs to run execute()
