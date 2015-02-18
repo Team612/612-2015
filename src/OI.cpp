@@ -36,14 +36,14 @@ void OI::handleLatch()
 		if(toggleOpen) //if the latch is open
 		{
 			Latch* close = new Latch(CommandBase::elevator->getSolenoid(), DoubleSolenoid::kForward); //Close the latch
-			printf("Latch close\n");
+			std::printf("Latch close\n");
 			close->Start();
 			toggleOpen = !toggleOpen;
 		}
 		else //if the latch is closed
 		{
 			Latch* open = new Latch(CommandBase::elevator->getSolenoid(), DoubleSolenoid::kReverse); //open the latch
-			printf("Latch open\n");
+			std::printf("Latch open\n");
 			open->Start();
 			toggleOpen = !toggleOpen;
 		}
@@ -58,7 +58,7 @@ void OI::handleElevator()
 	{
 		hasDriven = true;
 		elevatorC = new ElevatorUp();
-		printf("Elev up\n");
+		std::printf("Elev up\n");
 		elevatorC->Start();
 		std::printf("We should be moving up now\n");
 	}
@@ -68,7 +68,7 @@ void OI::handleElevator()
 	{
 		hasDriven = true;
 		elevatorC = new ElevatorDown();
-		printf("Elev down\n");
+		std::printf("Elev down\n");
 		elevatorC->Start();
 	}
 	else
