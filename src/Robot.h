@@ -3,6 +3,8 @@
 
 #include <Subsystems/Drivetrain.h>
 #include "Commands/Drive.h"
+#include "OI.h"
+#include "Commands/Latch.h"
 
 class Robot: public IterativeRobot
 {
@@ -11,24 +13,16 @@ private:
 	//COMMAND
 	Command* autonomousCommand;
 
-
 	//DRIVETRAIN
 	Drive* move;
-
 
 	//LIVEWINDOW
 	LiveWindow* lw;
 
-
-	//JOYSTICK
-	Joystick* joystick; // Used for joystick
-
-
 	//TALON
-	Talon* firstTalon;
-	Talon* secondTalon;
-	Talon* thirdTalon;
-
+	//Talon* firstTalon;
+	//Talon* secondTalon;
+	//Talon* thirdTalon;
 
 	//ACCELEROMETER
 	// All acceleration is measured in meters per second squared

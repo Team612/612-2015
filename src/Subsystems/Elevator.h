@@ -1,12 +1,15 @@
-#ifndef SRC_SUBSYSTEMS_ELEVATOR_H_
-#define SRC_SUBSYSTEMS_ELEVATOR_H_
+#ifndef LATCH_CPP_SRC_SUBSYSTEMS_ELEVATOR_H_
+#define LATCH_CPP_SRC_SUBSYSTEMS_ELEVATOR_H_
 
 #include "WPILib.h"
 #include "../RobotMap.h"
+#include <DoubleSolenoid.h>
+#include <TalonSRX.h>
 
 class Elevator : public Subsystem {
 private:
-	Talon* talon;
+	CANTalon* talon;
+	CANTalon* talon2;
 	DigitalInput* topSwitch;
 	DigitalInput* bottomSwitch;
 	Encoder* encoder;
@@ -24,7 +27,7 @@ private:
 	AnalogInput* ultrasonic;
 	AnalogInput* elevatorIR;
 	MainSensor switchSensor(float IRDistance, float UDistance);
-	
+	DoubleSolenoid* latchSol;
 public:
 	Elevator();
 	virtual ~Elevator();
@@ -37,7 +40,8 @@ public:
 	float getElevatorHeight();
 	float UltrasonicVoltageToDistance(float val);
 	float IRVoltageToDistance(float val);
-
+	void latchSolClose();
+	void latchSolOpen();
 };
 
-#endif /* SRC_SUBSYSTEMS_ELEVATOR_H_ */
+#endif /* LATCH_CPP_SRC_SUBSYSTEMS_ELEVATOR_H_ */

@@ -4,7 +4,8 @@
 Elevator::Elevator() :
 	Subsystem("Elevator")
 {
-	talon = new Talon(ELEVATOR_MOTOR); //constants in src/RobotMap.h
+	talon = new CANTalon(ELEVATOR_MOTOR_1);
+	talon2 = new CANTalon(ELEVATOR_MOTOR_2);
 	topSwitch = new DigitalInput(ELEVATOR_TOP_SWITCH);
 	bottomSwitch = new DigitalInput(ELEVATOR_BOTTOM_SWITCH);
 	encoder = new Encoder(ELEVATOR_ENCODER_A, ELEVATOR_ENCODER_B);
@@ -18,6 +19,7 @@ Elevator::Elevator() :
 Elevator::~Elevator()
 {
 	delete talon;
+	delete talon2;
 }
 
 void Elevator::InitDefaultCommand()
@@ -34,16 +36,19 @@ void Elevator::move(float magnitude)
 	//If the sensors give any input then the elevator can't be moved more that way, so don't move
 	if (topInput || bottomInput)
 	{
-		talon->Set(0); //sets speed to 0
+		talon->Set(0);
+		talon2->Set(0);
 	}
 	else
 	{
-		talon->Set(magnitude); //Sets speed to inputted speed
+
+		talon->Set(magnitude);
+		talon2->Set(magnitude);
 	}
 	static int count = 0;
 	if (count % 60 == 0)
 	{
-		printf("Elevator motor moved! Speed = %f", magnitude));
+		printf("Elevator motor moved! Speed = %f", magnitude);
 	}
 }
 
@@ -51,6 +56,7 @@ void Elevator::stop()
 {
 	//Sets motor speed to nothing
 	talon->Set(0);
+	talon2->Set(0);
 	printf("Stop elevator motor");
 }
 
@@ -129,5 +135,4 @@ Elevator::MainSensor Elevator::switchSensor(float IRDistance, float UDistance)
 	{
 		return sense;
 	}
-	
 }

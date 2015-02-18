@@ -1,17 +1,22 @@
 #include "OI.h"
 #include "RobotMap.h"
+#include "Commands/ElevatorUp.h"
+#include "Commands/ElevatorDown.h"
+#include "Commands/Drive.h"
+#include "Commands/Latch.h"
+#include "Commands/RedLEDOn.h"
+#include "Commands/GreenLEDOn.h"
+#include "GamePad.h"
+
+GamePad* OI::driver = NULL;
+GamePad* OI::gunner = NULL;
 
 OI::OI()
 {
-	/*
-	xbox_controller = new Joystick(XBOX_CONTROLLER); //the actual xbox controller (don't know which port it is)
-	left_joystick = new Joystick(LEFT_JOYSTICK); //the left joystick
-	right_joystick = new Joystick(RIGHT_JOYSTICK);//the right joystick
+	driver = new GamePad(DRIVER_JOY);
+	gunner = new GamePad(GUNNER_JOY);
 
-	button_a = new JoystickButton(xbox_controller,BUTTON_A);//A button
-	button_b = new JoystickButton(xbox_controller,BUTTON_B);//B button
-	button_x = new JoystickButton(xbox_controller,BUTTON_X);//X button
-	button_y = new JoystickButton(xbox_controller,BUTTON_Y);//Y button
-	*/
-	//TODO find the right port stuff and fix it
+	gunner->ButtonX->WhenPressed(new Latch());
+	driver->LeftShoulder->WhenPressed(new GreenLEDOn());
+	driver->RightShoulder->WhenPressed(new RedLEDOn());
 }
