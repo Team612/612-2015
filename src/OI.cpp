@@ -3,6 +3,7 @@
 #include "Commands/ElevatorUp.h"
 #include "Commands/ElevatorDown.h"
 #include <DoubleSolenoid.h>
+#include "Commands/ElevatorStop.h"
 
 GamePad* OI::driver = NULL;
 GamePad* OI::gunner = NULL;
@@ -51,8 +52,10 @@ void OI::handleLatch()
 void OI::handleElevator()
 {
 	//move Elevator Up
-	if(gunner->GetRightYSmooth() > 0.0f)
+	val = gunner->GetRightYSmooth();
+	if(val > 0.1f)
 	{
+		hasDriven = true;
 		ElevatorUp* up = new ElevatorUp();
 		printf("Elev up");
 		up->Start();
@@ -60,10 +63,17 @@ void OI::handleElevator()
 	}
 
 	//Move Elevator Down
-	if(gunner->GetRightYSmooth() < 0.0f)
+	else if(val < 0.1f)
 	{
+		hasDriven = true;
 		ElevatorDown* down = new ElevatorDown();
 		printf("Elev down");
 		down->Start();
 	}
+	else
+	{
+		ElevatorStop* stop = new ElevatorStop();
+		hasDriven = false;
+	}
+	preval = val;
 }
