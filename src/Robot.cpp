@@ -28,6 +28,9 @@ void Robot::RobotInit()
 	printf("Robotinit7\n");
 	compressor = new Compressor(PCM);
 	printf("Robotinit8\n");
+
+	CameraServer::GetInstance()->SetQuality(50);
+	CameraServer::GetInstance()->StartAutomaticCapture("cam0");
 }
 
 void Robot::DisabledInit()
