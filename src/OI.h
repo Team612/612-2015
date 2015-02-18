@@ -16,6 +16,9 @@ public:
 	void handleElevator();
 private:
 	bool toggleOpen;
+	bool hasDriven;
+	float val;
+	float preval;
 };
 
 #endif
