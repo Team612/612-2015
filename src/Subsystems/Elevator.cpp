@@ -71,7 +71,7 @@ void Elevator::stop()
 #ifdef TALON
 	talon2->Set(0);
 #endif
-	printf("Stop elevator motor");
+	std::printf("Stop elevator motor\n");
 }
 
 Encoder* Elevator::getEncoder()
