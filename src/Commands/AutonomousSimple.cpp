@@ -4,18 +4,21 @@
  * Good examples of these variables might be a loop count, a timer.  Variables for robot
  * hardware, such as a motor controller, etc. should not be created here (but in a Subsystem).
  */
-AutonomousSimple::AutonomousSimple()
+AutonomousSimple::AutonomousSimple(float autoTime, float autoSpeed)
 {
 	timer = new Timer(); //New timer object
+	autotime = autoTime;
+	autospeed = autoSpeed;
 }
 
 /** Called just before this Command runs the first time
  * This is run after the constructor.  The initialization code could be done here, too.
- * In many cases, this method is no differen tthan the constructor, so adding code here
+ * In many cases, this method is no different than the constructor, so adding code here
  * is not always necessary.
  */
 void AutonomousSimple::Initialize()
 {
+	timer->Reset();
 	timer->Start(); //Start the timer
 }
 
@@ -27,12 +30,12 @@ void AutonomousSimple::Initialize()
  */
 void AutonomousSimple::Execute()
 {
-	drivetrain->move(1.0,0.0,0.0); //Move the robot forward to score points
+	drivetrain->move(0.0, autospeed, 0.0); //Move the robot forward to score points
 }
 
 bool AutonomousSimple::IsFinished()
 {
-	if(timer->Get() >= 4.0) //Check to see if timer is at 4 seconds or more
+	if(timer->Get() >= autotime) //Check to see if timer is at 4 seconds or more
 	{
 		return true;
 	}
@@ -48,11 +51,13 @@ bool AutonomousSimple::IsFinished()
  */
 void AutonomousSimple::End()
 {
+	drivetrain->stop();
 	delete timer; //Deletes timer for more memory
 }
 
 
 void AutonomousSimple::Interrupted()
 {
-
+	drivetrain->stop();
+	delete timer; //Deletes timer for more memory
 }
