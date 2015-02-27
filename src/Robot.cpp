@@ -30,11 +30,11 @@ void Robot::RobotInit()
 	printf("Robotinit8\n");
 
 	/// CLOSER PLATFORM
-	autonomousCommand = new AutonomousSimple(0.7f, 0.4f);//Initializes simple autonomous program with
+	autonomousCommand = new AutonomousSimple(1.4f, 0.2f);//Initializes simple autonomous program with
 														 //time in seconds to move forward, and motor velocity
-														 //between 0 and 1.
+															 //between 0 and 1.
 	/// FARTHER PLATFORM
-	//autonomousCommand = new AutonomousSimple(2.5f, 0.4f);
+	//autonomousCommand = new AutonomousSimple(5f, 0.2f);
 
 
 	//autonomousCommand = new Autonomous();
