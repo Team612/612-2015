@@ -44,6 +44,8 @@ public:
 	CANTalon* fr;
 	CANTalon* rr;
 
+	float motor_power;
+
 };
 
 #endif

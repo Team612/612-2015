@@ -26,6 +26,8 @@ const uint32_t MOTOR_RR = 3; // The channel for the rear right motor
 const uint32_t MOTOR_RL = 4; // The channel for the front right motor
 
 const float MOTOR_EXPIRATION = 1000.0f; // float measured in milliseconds
+const float MOTOR_LOW = 0.4f;
+const float MOTOR_HIGH = 1.0f;
 
 //INFRARED TODO fix this number
 const uint32_t INFRARED = 1; // The channel for infrared sensors
@@ -71,6 +73,9 @@ static const uint32_t BUTTON_B = 2; // port for B button on xbox controller
 static const uint32_t BUTTON_X = 3; // port for X button on xbox controller
 static const uint32_t BUTTON_Y = 4; // port for Y button on xbox controller
 static const uint32_t BUTTON_RB = 6; // port for Y button on xbox controller
+static const uint32_t BUTTON_L2 = 5;
+static const uint32_t BUTTON_R2 = 6;
+
 
 const uint32_t SOLENOIDCHAN1 = 0; // check correct values
 const uint32_t SOLENOIDCHAN2 = 1;

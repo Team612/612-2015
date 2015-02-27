@@ -34,8 +34,13 @@ void Drive::Execute()
 {
 	if (mode == JOYSTICK)
 	{
+		float* power = &drivetrain->motor_power;
+		if (joyObj->GetRawButton(BUTTON_R2))
+			*power = MOTOR_HIGH;
+		else if (joyObj->GetRawButton(BUTTON_L2))
+			*power = MOTOR_LOW;
 		//printf("DriveExec0\n %f", joyObj->GetLeftYSmooth());
-		drivetrain->move((1.0f)*joyObj->GetLeftXSmooth(), (-1.0f)*joyObj->GetLeftYSmooth(), (-1.0f)*joyObj->GetRightXSmooth());
+		drivetrain->move((*power)*joyObj->GetLeftXSmooth(), (-*power)*joyObj->GetLeftYSmooth(), (-*power)*joyObj->GetRightXSmooth());
 		//printf("DriveExec1\n");
 		SmartDashboard::PutNumber("Front left Talon value", drivetrain->fl->Get());
 		SmartDashboard::PutNumber("Front right Talon value", drivetrain->fr->Get());

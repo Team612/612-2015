@@ -7,6 +7,7 @@ Drivetrain::Drivetrain(CANTalon* t_fl, CANTalon* t_fr, CANTalon* t_rl, CANTalon*
 		Subsystem("Drivetrain"),
 		RobotDrive(t_fl, t_fr, t_rl, t_rr)
 {
+	motor_power = 1.0f;
 	fl = t_fl;
 	fr = t_fr;
 	rl = t_rl;
