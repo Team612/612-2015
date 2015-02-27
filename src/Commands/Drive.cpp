@@ -26,7 +26,7 @@ Drive::Drive(GamePad* joystick)
 // Called just before this Command runs the first time
 void Drive::Initialize()
 {
-	printf("DriveInit\n");
+	//printf("DriveInit\n");
 }
 
 // Called repeatedly when this Command is scheduled to run
@@ -49,9 +49,9 @@ void Drive::Execute()
 	}
 	else
 	{
-		printf("DriveExec2\n");
+		//printf("DriveExec2\n");
 		drivetrain->move(targetX, targetY, targetRotation);
-		printf("DriveExec3\n");
+		//printf("DriveExec3\n");
 	}
 }
 
