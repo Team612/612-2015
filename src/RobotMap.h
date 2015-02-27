@@ -3,6 +3,9 @@
 
 #include "WPILib.h"
 
+//Setings
+#define IMU
+
 //GYRO
 const uint32_t GYRO_CHANNEL = 0; // The channel for the gyro
 
