@@ -17,11 +17,11 @@ public:
 	void handleElevator();
 private:
 	bool toggleOpen;
-	bool hasDriven;
+	//bool hasDriven;
 	bool isLatchPressed;
 	bool wasLatchPressed;
-	float val;
-	float preval;
+	//float val;
+	//float preval;
 };
 
 #endif

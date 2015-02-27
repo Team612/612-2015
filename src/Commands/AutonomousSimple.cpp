@@ -6,9 +6,10 @@
  */
 AutonomousSimple::AutonomousSimple(float autoTime, float autoSpeed)
 {
+	Requires(drivetrain);
 	timer = new Timer(); //New timer object
 	autotime = autoTime;
-	autospeed = autoSpeed;
+	autospeed = (-1.0f) * autoSpeed;
 }
 
 /** Called just before this Command runs the first time
@@ -52,6 +53,7 @@ bool AutonomousSimple::IsFinished()
 void AutonomousSimple::End()
 {
 	drivetrain->stop();
+	timer->Reset();
 	delete timer; //Deletes timer for more memory
 }
 
@@ -59,5 +61,6 @@ void AutonomousSimple::End()
 void AutonomousSimple::Interrupted()
 {
 	drivetrain->stop();
+	timer->Reset();
 	delete timer; //Deletes timer for more memory
 }
