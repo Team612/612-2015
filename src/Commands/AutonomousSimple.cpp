@@ -9,7 +9,7 @@ AutonomousSimple::AutonomousSimple(float autoTime, float autoSpeed)
 	Requires(drivetrain);
 	timer = new Timer(); //New timer object
 	autotime = autoTime;
-	autospeed = (-1.0f) * autoSpeed;
+	autospeed = (-1.0f) * autoSpeed; //invert to go forward
 }
 
 /** Called just before this Command runs the first time
