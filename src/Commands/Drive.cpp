@@ -40,6 +40,9 @@ void Drive::Execute()
 		else if (joyObj->GetRawButton(BUTTON_L2))
 			*power = MOTOR_LOW;
 		//printf("DriveExec0\n %f", joyObj->GetLeftYSmooth());
+#ifndef GAMEPAD
+		*power = joyObj->GetRawAxis(-SLIDER);
+#endif
 		drivetrain->move((*power)*joyObj->GetLeftXSmooth(), (-*power)*joyObj->GetLeftYSmooth(), (-*power)*joyObj->GetRightXSmooth());
 		//printf("DriveExec1\n");
 		SmartDashboard::PutNumber("Front left Talon value", drivetrain->fl->Get());
