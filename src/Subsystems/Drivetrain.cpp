@@ -12,15 +12,20 @@ Drivetrain::Drivetrain(CANTalon* t_fl, CANTalon* t_fr, CANTalon* t_rl, CANTalon*
 	rl = t_rl;
 	rr = t_rr;
 
+	fl->SetFeedbackDevice(CANTalon::QuadEncoder);
+	fr->SetFeedbackDevice(CANTalon::QuadEncoder);
+	rl->SetFeedbackDevice(CANTalon::QuadEncoder);
+	rr->SetFeedbackDevice(CANTalon::QuadEncoder);
+
 	SetSafetyEnabled(false);
 	//SetExpiration(MOTOR_EXPIRATION);
 	std::printf("Expiration = %f", GetExpiration());
 	ir = infrared;
 
-	encoderLF = new Encoder(ENCODER_LF_A, ENCODER_LF_B);
-	encoderLR = new Encoder(ENCODER_LR_A, ENCODER_LR_B);
-	encoderRF = new Encoder(ENCODER_RF_A, ENCODER_RF_B);
-	encoderRR = new Encoder(ENCODER_RR_A, ENCODER_RR_B);
+	//encoderLF = new Encoder(ENCODER_LF_A, ENCODER_LF_B);
+	//encoderLR = new Encoder(ENCODER_LR_A, ENCODER_LR_B);
+	//encoderRF = new Encoder(ENCODER_RF_A, ENCODER_RF_B);
+	//encoderRR = new Encoder(ENCODER_RR_A, ENCODER_RR_B);
 
 	/**
 	 * rear left clockwise = backwards
@@ -67,14 +72,14 @@ int16_t Drivetrain::getir()
 	return ir->GetValue();
 }
 
-void Drivetrain::resetEncoders()
+/*void Drivetrain::resetEncoders()
 {
-	//Calls reset on all encoders
+	//So this seems pretty useless, im gonna comment this out to avoid messing things up.
 	encoderLF->Reset();
 	encoderLR->Reset();
 	encoderRF->Reset();
 	encoderRR->Reset();
-}
+}*/
 
 int32_t Drivetrain::getDistance(MotorLocation motor)
 {
@@ -83,15 +88,15 @@ int32_t Drivetrain::getDistance(MotorLocation motor)
 	switch(motor)
 	{
 	case LEFT_FRONT:
-		return encoderLF->Get();
+
 	case LEFT_REAR:
-		return encoderLR->Get();
+
 	case RIGHT_FRONT:
-		return encoderRF->Get();
+
 	case RIGHT_REAR:
-		return encoderRR->Get();
+
 	default:
-		return 0; //In case the enum somehow gets an addition
+		return 0;
 	}
 }
 

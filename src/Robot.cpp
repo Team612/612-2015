@@ -29,6 +29,11 @@ void Robot::RobotInit()
 	compressor = new Compressor(PCM);
 	printf("Robotinit8\n");
 
+	//autonomousCommand = new AutonomousSimple(2.0f, 0.4f);//Initializes simple autonomous program with
+														 //time in seconds to move forward, and motor velocity
+														 //between 0 and 1.
+	//autonomousCommand = new Autonomous();
+
 	CameraServer::GetInstance()->SetQuality(50);
 	CameraServer::GetInstance()->StartAutomaticCapture("cam0");
 	std::printf("Starting camera server\n");
