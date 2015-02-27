@@ -43,6 +43,10 @@ const uint32_t ELEVATOR_ENCODER_B = 2;
 const uint32_t LEFT_IR  = 1;
 const uint32_t RIGHT_IR = 2;
 
+//IMU
+const uint32_t SERIAL_PORT = 0;
+const uint8_t REFRESH_RATE = 50;
+
 const float CRATE_HEIGHT = 12.0f;
 const float BUFFER       = 2.0f;
 

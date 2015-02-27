@@ -7,6 +7,7 @@
 #include <MotorSafetyHelper.h>
 #include <AnalogInput.h>
 #include <CANTalon.h>
+#include <./include/IMU.h>
 
 class Drivetrain: public Subsystem, public RobotDrive
 {
@@ -46,6 +47,7 @@ public:
 
 	float motor_power;
 
+	IMU* imu;
 };
 
 #endif

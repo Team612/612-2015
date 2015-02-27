@@ -7,6 +7,7 @@ Drivetrain::Drivetrain(CANTalon* t_fl, CANTalon* t_fr, CANTalon* t_rl, CANTalon*
 		Subsystem("Drivetrain"),
 		RobotDrive(t_fl, t_fr, t_rl, t_rr)
 {
+	imu = new IMU(new SerialPort(57600,SerialPort::kMXP),REFRESH_RATE);
 	motor_power = 1.0f;
 	fl = t_fl;
 	fr = t_fr;
@@ -49,6 +50,7 @@ void Drivetrain::InitDefaultCommand()
 
 void Drivetrain::move(float x, float y, float rotation)
 {
+	std::printf("Gyro = %f\n", imu->GetYaw());
 	//printf("MoveY %f\n", y);
 	MecanumDrive_Cartesian(x, y, rotation);
 	//printf("MoveX %f\n", x);
