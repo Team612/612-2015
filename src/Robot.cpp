@@ -34,6 +34,7 @@ void Robot::RobotInit()
 														 //time in seconds to move forward, and motor velocity
 														 //between 0 and 1.
 	/// Moves to auto zone sideways
+	//Strafes to the left
 	//autonomousCommand = new AutonomousSimple(3.5f, 0.4f, true);
 
 	/// FARTHER PLATFORM
