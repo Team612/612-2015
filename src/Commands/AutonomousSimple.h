@@ -10,7 +10,7 @@
 class AutonomousSimple: public CommandBase
 {
 public:
-	AutonomousSimple(float autoTime, float autoSpeed); ///< The constructor for the Example
+	AutonomousSimple(float autoTime, float autoSpeed, bool sideways=false); ///< The constructor for the Example
 	void Initialize(); ///< Runs after the constructor
 	void Execute(); ///< This method is called repeatedly 
 	bool IsFinished(); ///< This method contains the logic of when the  should end
@@ -20,6 +20,7 @@ private:
 	Timer* timer; //New timer object
 	float autotime;
 	float autospeed;
+	bool side;
 };
 
 #endif /* AUTONOMOUS_SIMPLE_H */

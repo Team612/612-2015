@@ -29,10 +29,13 @@ void Robot::RobotInit()
 	compressor = new Compressor(PCM);
 	printf("Robotinit8\n");
 
-	/// CLOSER PLATFORM
+	/// AUTO ZONE
 	autonomousCommand = new AutonomousSimple(3.5f, 0.4f);//Initializes simple autonomous program with
 														 //time in seconds to move forward, and motor velocity
-	                                                                                                                         //between 0 and 1.
+														 //between 0 and 1.
+	/// Moves to auto zone sideways
+	//autonomousCommand = new AutonomousSimple(3.5f, 0.4f, true);
+
 	/// FARTHER PLATFORM
 	//autonomousCommand = new AutonomousSimple(5.5f, 0.4f);
 
