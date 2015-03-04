@@ -4,11 +4,11 @@
  * Good examples of these variables might be a loop count, a timer.  Variables for robot
  * hardware, such as a motor controller, etc. should not be created here (but in a Subsystem).
  */
+
 AutonomousSimple::AutonomousSimple(float autoTime, float autoSpeed, bool sideways)
 {
 	Requires(drivetrain);
 	timer = new Timer(); //New timer object
-	autotime = autoTime;
 	autospeed = (-1.0f) * autoSpeed; //invert to go forward
 	side = sideways;
 }
