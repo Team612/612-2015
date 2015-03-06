@@ -9,6 +9,7 @@ AutonomousSimple::AutonomousSimple(float autoTime, float autoSpeed, bool sideway
 {
 	Requires(drivetrain);
 	timer = new Timer(); //New timer object
+	autotime = autoTime;
 	autospeed = (-1.0f) * autoSpeed; //invert to go forward
 	side = sideways;
 }
