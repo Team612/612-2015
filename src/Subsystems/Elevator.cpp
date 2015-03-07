@@ -4,20 +4,27 @@
 Elevator::Elevator() :
 	Subsystem("Elevator")
 {
-	talon = new Talon(ELEVATOR_MOTOR); //constants in src/RobotMap.h
-	topSwitch = new DigitalInput(ELEVATOR_TOP_SWITCH);
-	bottomSwitch = new DigitalInput(ELEVATOR_BOTTOM_SWITCH);
+	talon = new CANTalon(ELEVATOR_MOTOR_1);
+#ifdef TALON
+	talon2 = new CANTalon(ELEVATOR_MOTOR_2);
+#endif
+	//topSwitch = new DigitalInput(ELEVATOR_TOP_SWITCH);
+	//bottomSwitch = new DigitalInput(ELEVATOR_BOTTOM_SWITCH);
 	encoder = new Encoder(ELEVATOR_ENCODER_A, ELEVATOR_ENCODER_B);
-	leftIR = new AnalogInput(LEFT_IR);
-	rightIR = new AnalogInput(RIGHT_IR);
+	//leftIR = new AnalogInput(LEFT_IR);
+	//rightIR = new AnalogInput(RIGHT_IR);
 	sense = IR; //default to IR sensor
 	ultrasonic = new AnalogInput(ELEVATOR_ULTRASONIC);
 	elevatorIR = new AnalogInput(ELEVATOR_IR);
+	latchSol = new DoubleSolenoid(SOLENOIDCHAN1, SOLENOIDCHAN2);
 }
 
 Elevator::~Elevator()
 {
 	delete talon;
+#ifdef TALON
+	delete talon2;
+#endif
 }
 
 void Elevator::InitDefaultCommand()
@@ -25,8 +32,9 @@ void Elevator::InitDefaultCommand()
 	//SetDefaultCommand(new ElevatorUp());
 }
 
-void Elevator::move(float magnitude)
+void Elevator::move(float speed)
 {
+	/*
 	//Checks the sensors to see if the elevator is at the top or the bottom
 	bool topInput = topSwitch->Get();
 	bool bottomInput = bottomSwitch->Get();
@@ -34,33 +42,46 @@ void Elevator::move(float magnitude)
 	//If the sensors give any input then the elevator can't be moved more that way, so don't move
 	if (topInput || bottomInput)
 	{
-		talon->Set(0); //sets speed to 0
+		talon->Set(0);
+		talon2->Set(0);
 	}
 	else
 	{
-		talon->Set(magnitude); //Sets speed to inputted speed
+
+		talon->Set(magnitude);
+		talon2->Set(magnitude);
 	}
 	static int count = 0;
 	if (count % 60 == 0)
 	{
-		printf("Elevator motor moved! Speed = %f", magnitude));
+		printf("Elevator motor moved! Speed = %f", magnitude);
 	}
+	*/
+	talon->Set(speed);
+	printf("setting talon to 1 now\n");
+#ifdef TALON
+	talon2->Set(magnitude);
+#endif
 }
 
 void Elevator::stop()
 {
 	//Sets motor speed to nothing
 	talon->Set(0);
-	printf("Stop elevator motor");
+#ifdef TALON
+	talon2->Set(0);
+#endif
+	std::printf("Stop elevator motor\n");
 }
 
 Encoder* Elevator::getEncoder()
 {
-	return encoder;
+	return NULL;//encoder;
 }
 
 bool Elevator::getLeftAlignment()
 {
+	/*
 	float val = leftIR->GetVoltage();
 	val = IRVoltageToDistance(val);
 	float dist = 0.0f;
@@ -70,10 +91,13 @@ bool Elevator::getLeftAlignment()
 	}
 
 	return true;
+	*/
+	return false;
 }
 
 bool Elevator::getRightAlignment()
 {
+	/*
 	float val = rightIR->GetVoltage();
 	val = IRVoltageToDistance(val);
 	float dist = 0.0f; //FIX THIS PLACEHOLDER VALUE TODO
@@ -83,7 +107,8 @@ bool Elevator::getRightAlignment()
 		printf("Crate not found");
 		return false;
 	}
-	return true;
+	*/
+	return false;//true;
 }
 
 float Elevator::IRVoltageToDistance(float val)
@@ -95,7 +120,7 @@ float Elevator::getElevatorHeight()
 {
 	if (sense == IR)
 	{
-		float voltage = elevatorIR->GetVoltage();
+		float voltage = 1.0f;//elevatorIR->GetVoltage();
 		return IRVoltageToDistance(voltage);
 	}
 	else
@@ -129,5 +154,10 @@ Elevator::MainSensor Elevator::switchSensor(float IRDistance, float UDistance)
 	{
 		return sense;
 	}
-	
 }
+
+DoubleSolenoid* Elevator::getSolenoid()
+{
+	return latchSol;
+}
+

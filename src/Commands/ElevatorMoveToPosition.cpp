@@ -21,14 +21,12 @@ void ElevatorMoveToPosition::Execute()
 	//Moves down if the spins are more than the target spins
 	if (spins > targetSpins)
 	{
-		//Using -0.8 as a temporary value
-		elevator->move(-0.8);
+		elevator->move(-ELEV_SPEED_FLOAT);
 	}
 	// Moves up if the spins are less than the target spins
 	else if (spins < targetSpins)
 	{
-		//Using 0.8 as a temporary value
-		elevator->move(0.8);
+		elevator->move(ELEV_SPEED_FLOAT);
 	}
 	//Doesn't move if (spins == targetSpins)
 	static int count = 0;
@@ -44,8 +42,7 @@ bool ElevatorMoveToPosition::IsFinished()
 	int spins = elevator->getEncoder()->Get();
 
 	//If the spins are at the target spins IsFinished() returns true
-	bool isAtPos = targetSpins == spins;
-	return isAtPos;
+	return (targetSpins >= (spins - ELEVATOR_TOLERANCE) && (targetSpins <= (spins + ELEVATOR_TOLERANCE)));
 }
 
 // Called once after isFinished returns true

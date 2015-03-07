@@ -1,13 +1,15 @@
-#ifndef BOUNDING_BOX_H
-#define BOUNDING_BOX_H
+#ifndef ElevatorDown_H
+#define ElevatorDown_H
 
 #include "../CommandBase.h"
 #include "WPILib.h"
+#include "RobotMap.h"
+#include "GamePad.h"
 
-class GetBoundingBox: public CommandBase
+class ElevatorDown: public CommandBase
 {
 public:
-	GetBoundingBox();
+	ElevatorDown();
 	void Initialize();
 	void Execute();
 	bool IsFinished();

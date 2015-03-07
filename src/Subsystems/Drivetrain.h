@@ -6,6 +6,8 @@
 #include <RobotDrive.h>
 #include <MotorSafetyHelper.h>
 #include <AnalogInput.h>
+#include <CANTalon.h>
+#include <include/IMU.h>
 
 class Drivetrain: public Subsystem, public RobotDrive
 {
@@ -16,20 +18,16 @@ private:
 	//Ultrasonic* ultra;
 	//AnalogInput* infrared;
 
-	Encoder* encoderLR;
-	Encoder* encoderLF;
-	Encoder* encoderRR;
-	Encoder* encoderRF;
+	//Encoder* encoderLR;
+	//Encoder* encoderLF;
+	//Encoder* encoderRR;
+	//Encoder* encoderRF;
 
 	bool useIR = false;
 	//bool SwitchSensor(float distance); // Called in CheckSensor
 
 public:
-	Drivetrain(uint32_t talonchannel1,
-					  uint32_t talonchannel2,
-					  uint32_t talonchannel3,
-					  uint32_t talonchannel4,
-					  uint32_t infraredchannel);
+	Drivetrain(CANTalon* fl, CANTalon* fr, CANTalon* rf,CANTalon* rr, AnalogInput* infrared);
 	void InitDefaultCommand();
 
 	//void CheckSensor(float distance);
@@ -39,9 +37,17 @@ public:
 
 	//Encoder Methods
 	enum MotorLocation {LEFT_FRONT, LEFT_REAR, RIGHT_FRONT, RIGHT_REAR}; //For use in getDistance
-	void resetEncoders(); //Resets ALL encoders
-	int32_t getDistance(MotorLocation); //Gets the distance of a specific  motor
+	//void resetEncoders(); //Resets ALL encoders
+	int32_t getDistance(MotorLocation location); //Gets the distance of a specific  motor
 
+	CANTalon* fl;
+	CANTalon* rl;
+	CANTalon* fr;
+	CANTalon* rr;
+
+	float motor_power;
+
+	IMU* imu;
 };
 
 #endif
