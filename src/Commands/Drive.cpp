@@ -11,7 +11,7 @@ Drive::Drive(float x, float y, float rotation)
 	joyObj = NULL;
 }
 
-Drive::Drive(GamePad* joystick)
+Drive::Drive(Lib612::GamePad* joystick)
 {
 	Requires(drivetrain);
 	mode = JOYSTICK;

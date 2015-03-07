@@ -7,13 +7,13 @@
 #include "RobotMap.h"
 #include "Subsystems/Drivetrain.h"
 #include <CANTalon.h>
-#include "GamePad.h"
+#include "Lib612/Lib612.h"
 
 class Drive: public CommandBase
 {
 public:
 	Drive(float x, float y, float rotation);
-	Drive(GamePad* joystick);
+	Drive(Lib612::GamePad* joystick);
 	void Initialize();
 	void Execute();
 	bool IsFinished();
@@ -28,7 +28,7 @@ private:
 	float targetRotation;
 
 
-	GamePad* joyObj;
+	Lib612::GamePad* joyObj;
 };
 
 #endif

@@ -3,19 +3,19 @@
 
 #include "../CommandBase.h"
 #include "WPILib.h"
-#include "GamePad.h"
+#include "Lib612/Lib612.h"
 
 class ElevatorMove: public CommandBase
 {
 public:
-	ElevatorMove(GamePad* joy);
+	ElevatorMove(Lib612::GamePad* joy);
 	void Initialize();
 	void Execute();
 	bool IsFinished();
 	void End();
 	void Interrupted();
 private:
-	GamePad* joystick;
+	Lib612::GamePad* joystick;
 };
 
 #endif
