@@ -1,6 +1,6 @@
 #include "ElevatorMove.h"
 
-ElevatorMove::ElevatorMove(GamePad* joy)
+ElevatorMove::ElevatorMove(Lib612::GamePad* joy)
 {
 	// Use Requires() here to declare subsystem dependencies
 	// eg. Requires(chassis);

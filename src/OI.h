@@ -2,7 +2,7 @@
 #define OI_H
 
 #include "WPILib.h"
-#include "GamePad.h"
+#include "Lib612/Lib612.h"
 #include <Timer.h>
 
 class OI
@@ -10,8 +10,8 @@ class OI
 public:
 	OI();
 	//Elevator Operator Buttons
-	static GamePad* driver;
-	static GamePad* gunner;
+	static Lib612::GamePad* driver;
+	static Lib612::GamePad* gunner;
 
 	void handleLatch();
 	void handleElevator();

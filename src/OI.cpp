@@ -1,23 +1,20 @@
 #include "OI.h"
 #include "Commands/Latch.h"
-#include "Commands/ElevatorUp.h"
-#include "Commands/ElevatorDown.h"
 #include <DoubleSolenoid.h>
-#include "Commands/ElevatorStop.h"
 #include "Commands/ElevatorMove.h"
 #include "RobotMap.h"
 
-GamePad* OI::driver = NULL;
-GamePad* OI::gunner = NULL;
+Lib612::GamePad* OI::driver = Lib612::driver;
+Lib612::GamePad* OI::gunner = Lib612::gunner;
 
 OI::OI()
 {
 	toggleOpen = true; //false is closed, true is opened
 
 	printf("OIinit0\n");
-	driver = new GamePad(DRIVER_JOY);
+	//driver = new GamePad(DRIVER_JOY);
 	printf("OIinit1\n");
-	gunner = new GamePad(GUNNER_JOY);
+	//gunner = new GamePad(GUNNER_JOY);
 	printf("OIinit2\n");
 	/*gunner->ButtonX->WhenPressed(new Latch(CommandBase::elevator->getSolenoid(), DoubleSolenoid::kForward));
 	printf("OIinit3\n");
