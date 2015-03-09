@@ -4,17 +4,15 @@
 #include "Commands/ElevatorMove.h"
 #include "RobotMap.h"
 
-Lib612::GamePad* OI::driver = Lib612::driver;
-Lib612::GamePad* OI::gunner = Lib612::gunner;
+GamePad* OI::driver = NULL;
+GamePad* OI::gunner = NULL;
 
 OI::OI()
 {
-	toggleOpen = true; //false is closed, true is opened
-
 	printf("OIinit0\n");
-	//driver = new GamePad(DRIVER_JOY);Move IMU, Datalogging, and GamePad to Lib612
+	driver = new GamePad(DRIVER_JOY);
 	printf("OIinit1\n");
-	//gunner = new GamePad(GUNNER_JOY);
+	gunner = new GamePad(GUNNER_JOY);
 	printf("OIinit2\n");
 	/*gunner->ButtonX->WhenPressed(new Latch(CommandBase::elevator->getSolenoid(), DoubleSolenoid::kForward));
 	printf("OIinit3\n");
@@ -39,15 +37,12 @@ void OI::handleLatch()
 	static Latch* command;
 	static bool isLatchPressed = false;
 	static bool wasLatchPressed = false;
-	static bool latchToggle = true;
 	const bool OPEN = true;//, CLOSE = false;
 
 	isLatchPressed = gunner->GetRawButton(BUTTON_RB);
 
 	if(isLatchPressed && !wasLatchPressed)
 	{
-		int solenoidPos;
-		bool open;
 		/*
 		* if(latchToggle == OPEN) //if the latch is open
 		* {
@@ -62,8 +57,8 @@ void OI::handleLatch()
 		*	toggleOpen = OPEN;
 		* }
 		*/
-		solenoidPos = command->state == OPEN ? DoubleSolenoid::kForward : DoubleSolenoid::kReverse;
-		command = new Latch(CommandBase::elevator->getSolenoid(), solenoidPos);
+		DoubleSolenoid::Value solenoidState = command->state == OPEN ? DoubleSolenoid::kForward : DoubleSolenoid::kReverse;
+		command = new Latch(CommandBase::elevator->getSolenoid(), solenoidState);
 		command->Start();
 	}
 
