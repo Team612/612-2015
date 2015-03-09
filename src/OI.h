@@ -16,10 +16,10 @@ public:
 	void handleLatch();
 	void handleElevator();
 private:
-	bool toggleOpen;
+	//bool toggleOpen;
 	//bool hasDriven;
-	bool isLatchPressed;
-	bool wasLatchPressed;
+	//bool isLatchPressed;
+	//bool wasLatchPressed;
 	//float val;
 	//float preval;
 };

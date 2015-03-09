@@ -16,6 +16,7 @@ public:;
 	bool IsFinished();
 	void End();
 	void Interrupted();
+	bool state;
 
 private:
 	DoubleSolenoid* commandSol;

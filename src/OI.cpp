@@ -1,9 +1,6 @@
 #include "OI.h"
 #include "Commands/Latch.h"
-#include "Commands/ElevatorUp.h"
-#include "Commands/ElevatorDown.h"
 #include <DoubleSolenoid.h>
-#include "Commands/ElevatorStop.h"
 #include "Commands/ElevatorMove.h"
 #include "RobotMap.h"
 
@@ -12,8 +9,6 @@ GamePad* OI::gunner = NULL;
 
 OI::OI()
 {
-	toggleOpen = true; //false is closed, true is opened
-
 	printf("OIinit0\n");
 	driver = new GamePad(DRIVER_JOY);
 	printf("OIinit1\n");
@@ -29,34 +24,44 @@ OI::OI()
 	printf("OIinit6\n");*/
 	ElevatorMove* elevatormove = new ElevatorMove(gunner);
 	elevatormove->Start();
-	isLatchPressed = false;
-	wasLatchPressed = false;
-	toggleOpen = true;
+	/*
+	 * isLatchPressed = false;
+	 * toggleOpen = true;
+	 */
 	Latch* open = new Latch(CommandBase::elevator->getSolenoid(), DoubleSolenoid::kReverse);
 	open->Start();
 }
 
-//You better be thankful drive team -_-
 void OI::handleLatch()
 {
+	static Latch* command;
+	static bool isLatchPressed = false;
+	static bool wasLatchPressed = false;
+	const bool OPEN = true;//, CLOSE = false;
+
 	isLatchPressed = gunner->GetRawButton(BUTTON_RB);
+
 	if(isLatchPressed && !wasLatchPressed)
 	{
-		if(toggleOpen) //if the latch is open
-		{
-			Latch* close = new Latch(CommandBase::elevator->getSolenoid(), DoubleSolenoid::kForward); //Close the latch
-			std::printf("Latch close(oi)\n");
-			close->Start();
-			toggleOpen = false;
-		}
-		else //if the latch is closed
-		{
-			Latch* open = new Latch(CommandBase::elevator->getSolenoid(), DoubleSolenoid::kReverse); //open the latch
-			std::printf("Latch open(oi)\n");
-			open->Start();
-			toggleOpen = true;
-		}
+		/*
+		* if(latchToggle == OPEN) //if the latch is open
+		* {
+		*	solenoidPos = DoubleSolenoid::kForward; //Close the latch
+		*	std::printf("Latch close (OI)\n");
+		*	toggleOpen = CLOSE;
+		* }
+		* else //if the latch is closed
+		* {int solenoidPos;
+		*	solenoidPos = DoubleSolenoid::kReverse; //open the latch
+		*	std::printf("Latch open (OI)\n");
+		*	toggleOpen = OPEN;
+		* }
+		*/
+		DoubleSolenoid::Value solenoidState = command->state == OPEN ? DoubleSolenoid::kForward : DoubleSolenoid::kReverse;
+		command = new Latch(CommandBase::elevator->getSolenoid(), solenoidState);
+		command->Start();
 	}
+
 	wasLatchPressed = isLatchPressed;
 }
 
