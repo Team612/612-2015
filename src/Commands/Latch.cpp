@@ -11,6 +11,8 @@ Latch::Latch(DoubleSolenoid* sol, DoubleSolenoid::Value val)
 	commandSol = sol;
 	direction = val;
 	timer = new Timer();
+	// Store the state as OPEN == true and CLOSE == false
+	state = !(val == DoubleSolenoid::kForward);
 }
 
 void Latch::Initialize()

@@ -40,13 +40,14 @@ void OI::handleLatch()
 	static bool isLatchPressed = false;
 	static bool wasLatchPressed = false;
 	static bool latchToggle = true;
-	const bool OPEN = true, CLOSE = false;
+	const bool OPEN = true;//, CLOSE = false;
 
 	isLatchPressed = gunner->GetRawButton(BUTTON_RB);
 
 	if(isLatchPressed && !wasLatchPressed)
 	{
 		int solenoidPos;
+		bool open;
 		/*
 		* if(latchToggle == OPEN) //if the latch is open
 		* {
@@ -61,7 +62,7 @@ void OI::handleLatch()
 		*	toggleOpen = OPEN;
 		* }
 		*/
-		if()
+		solenoidPos = command->state == OPEN ? DoubleSolenoid::kForward : DoubleSolenoid::kReverse;
 		command = new Latch(CommandBase::elevator->getSolenoid(), solenoidPos);
 		command->Start();
 	}
