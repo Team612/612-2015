@@ -2,7 +2,6 @@
 
 RoughAlign::RoughAlign(float d, float b, float dw) //good for autonomous. It aligns itself to the front of the tote. some what accurate.
 {
-	drivedistance = new DriveDistance(0,0);
 	bearingToTote = b;
 	distanceToTote = d;
 	distanceToBeAway = dw;
@@ -12,9 +11,9 @@ RoughAlign::RoughAlign(float d, float b, float dw) //good for autonomous. It ali
 void RoughAlign::Initialize()
 {
 	//Look at issue #126 to understand
-	drivedistance->DriveDistance(0.0f, 0.0f, bearingToTote*-1); //turn left parallel to tote
-	drivedistance->DriveDistance(cos(bearingToTote * (3.14159 / 180.0))*distanceToTote, 0.0f, 0.0f); //move sideways to in front of tote
-	drivedistance->DriveDistance(0.0f, (sin(bearingToTote * (3.14159 / 180.0))*distanceToTote) - distanceToBeAway, 0.0f); //move to the tote (the distanceToBeAway variable is the distance it will be away from the tote)
+	drivetrain->move(0.0f, 0.0f, bearingToTote*-1); //turn left parallel to tote
+	drivedistance = new DriveDistance(cos(bearingToTote * (3.14159 / 180.0))*distanceToTote, 0.0f); //move sideways to in front of tote
+	drivedistance = new DriveDistance(0.0f, (sin(bearingToTote * (3.14159 / 180.0))*distanceToTote) - distanceToBeAway); //move to the tote (the distanceToBeAway variable is the distance it will be away from the tote)
 	done = true;
 }
 
