@@ -1,7 +1,5 @@
 #include "OI.h"
 #include "Commands/Latch.h"
-#include "Commands/ElevatorUp.h"
-#include "Commands/ElevatorDown.h"
 #include <DoubleSolenoid.h>
 #include "Commands/ElevatorStop.h"
 #include "Commands/ElevatorMove.h"
