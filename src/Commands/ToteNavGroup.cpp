@@ -25,6 +25,6 @@ ToteNavGroup::ToteNavGroup()
 	// arm.
 	Requires(CommandBase::drivetrain);
 	Requires(CommandBase::vision);
-	AddSequential(new MoveToTote());
+	//AddSequential(new MoveToTote());
 	//AddSequential(new Latch()); // Ensure that latch is open before grabbing tote
 }

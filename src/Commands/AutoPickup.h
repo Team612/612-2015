@@ -1,15 +1,18 @@
-/*
- * AutoPickup.h
+#ifndef AUTOPICKUP_H_
+#define AUTOPICKUP_H_
+
+/* TODO:
  *
- *  Created on: Mar 9, 2015
- *      Author: user
+ *  Move the forks to the correct height
+ *  Crates (this may require to move a bit forward or back and fire the solenoid then move up a bit
+ *  Put a crate down on a stack then pick them up
+ *  Put crate down, rotate around the stack (later will push forward into auto zone)
  */
 
-#ifndef SRC_COMMANDS_AUTOPICKUP_H_
-#define SRC_COMMANDS_AUTOPICKUP_H_
+class AutoPickupGroup: public CommandGroup
+{
+public:
+	AutoPickupGroup();
+};
 
-
-
-
-
-#endif /* SRC_COMMANDS_AUTOPICKUP_H_ */
+#endif /* AUTOPICKUP_H_ */
