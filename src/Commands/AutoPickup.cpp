@@ -1,9 +1,9 @@
 /* TODO:
  *
- *  Move the forks to the correct height
- *  Align with crates (this may require to move a bit forward or back and fire the solenoid then move up a bit
- *  Put a crate down on a stack then pick them up
- *  Put crate down, rotate around the stack (later will push forward into auto zone)
+ *  (Requires testing) Move the forks to the correct height
+ *  (By !Zack and etc) Align with crates (this may require to move a bit forward or back and fire the solenoid then move up a bit
+ *  (Requires testing) Put a crate down on a stack then pick them up
+ *  (Requires testing) Put crate down, (TODO) rotate around the stack (later will push forward into auto zone)
  */
 
 #include "CommandBase.h"
