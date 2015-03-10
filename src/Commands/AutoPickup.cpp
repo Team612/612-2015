@@ -6,6 +6,7 @@
  *  Put crate down, rotate around the stack (later will push forward into auto zone)
  */
 
+#include "CommandBase.h"
 #include "AutoPickup.h"
 
 AutoPickupGroup::AutoPickupGroup()

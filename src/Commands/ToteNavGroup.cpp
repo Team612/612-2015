@@ -1,7 +1,7 @@
 
 #include <Commands/Latch.h>
 #include "CommandBase.h"
-#include "MoveToTote.h"
+//#include "MoveToTote.h"
 #include "Latch.h"
 #include "ToteNavGroup.h"
 

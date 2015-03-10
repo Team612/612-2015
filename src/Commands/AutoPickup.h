@@ -9,6 +9,8 @@
  *  Put crate down, rotate around the stack (later will push forward into auto zone)
  */
 
+#include "WPILib.h"
+
 class AutoPickupGroup: public CommandGroup
 {
 public:
