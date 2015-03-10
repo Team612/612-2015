@@ -9,12 +9,15 @@
 #include "CommandBase.h"
 #include "AutoPickup.h"
 
+// Command inclusions
+#include "AutoAlign.h"
+
 AutoPickupGroup::AutoPickupGroup()
 {
 	// Add Commands here:
 	// e.g. AddSequential(new Command1());
 	//      AddSequential(new Command2());
-	// these Commandswill run in order.
+	// these Commands will run in order.
 
 	// To run multiple commands at the same time,
 	// use AddParallel()
@@ -29,6 +32,6 @@ AutoPickupGroup::AutoPickupGroup()
 	// arm.
 	Requires(CommandBase::drivetrain);
 	Requires(CommandBase::vision);
-	//AddSequential(new MoveToTote());
-	//AddSequential(new Latch()); // Ensure that latch is open before grabbing tote
+
+	AddSequential(new )
 }
