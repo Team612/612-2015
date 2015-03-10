@@ -5,7 +5,8 @@
 #include "Latch.h"
 #include "ToteNavGroup.h"
 
-ToteNavGroup::ToteNavGroup() {
+ToteNavGroup::ToteNavGroup()
+{
 	// Add Commands here:
 	// e.g. AddSequential(new Command1());
 	//      AddSequential(new Command2());
