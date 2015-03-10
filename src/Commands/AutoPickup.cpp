@@ -33,5 +33,5 @@ AutoPickupGroup::AutoPickupGroup()
 	Requires(CommandBase::drivetrain);
 	Requires(CommandBase::vision);
 
-	AddSequential(new )
+	AddSequential(new AutoAlign());
 }
