@@ -1,7 +1,7 @@
 /* TODO:
  *
  *  Move the forks to the correct height
- *  Crates (this may require to move a bit forward or back and fire the solenoid then move up a bit
+ *  Align with crates (this may require to move a bit forward or back and fire the solenoid then move up a bit
  *  Put a crate down on a stack then pick them up
  *  Put crate down, rotate around the stack (later will push forward into auto zone)
  */
@@ -11,6 +11,11 @@
 
 // Command inclusions
 #include "AutoAlign.h"
+#include "ElevatorMoveToPosition.h"
+
+// Hash-defines for easy change of values during testing
+#define LOWERMOST_TOTE_HEIGHT 0
+#define SECOND_TOTE_HEIGHT 10
 
 AutoPickupGroup::AutoPickupGroup()
 {
@@ -34,4 +39,10 @@ AutoPickupGroup::AutoPickupGroup()
 	Requires(CommandBase::vision);
 
 	AddSequential(new AutoAlign());
+
+	// Stack totes
+	AddSequential(new ElevatorMoveToPosition(SECOND_TOTE_HEIGHT));
+	AddSequential(new MoveToTote());
+	AddSequential(new Latch(CommandBase::elevator->getSolenoid(), Latch::OPEN));
+	AddSequential(new ElevatorMoveToPosition(LOWERMOST_TOTE_HEIGHT))
 }

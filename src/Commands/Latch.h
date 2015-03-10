@@ -17,6 +17,9 @@ public:;
 	void End();
 	void Interrupted();
 
+	const DoubleSolenoid::Value OPEN = DoubleSolenoid::kReverse;
+	const DoubleSolenoid::Value CLOSE = DoubleSolenoid::kForward;
+
 private:
 	DoubleSolenoid* commandSol;
 	DoubleSolenoid::Value direction;
