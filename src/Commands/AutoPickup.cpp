@@ -12,6 +12,8 @@
 // Command inclusions
 #include "AutoAlign.h"
 #include "ElevatorMoveToPosition.h"
+#include "MoveToTote.h"
+#include "Latch.h"
 
 // Hash-defines for easy change of values during testing
 #define LOWERMOST_TOTE_HEIGHT 0
@@ -44,5 +46,6 @@ AutoPickupGroup::AutoPickupGroup()
 	AddSequential(new ElevatorMoveToPosition(SECOND_TOTE_HEIGHT));
 	AddSequential(new MoveToTote());
 	AddSequential(new Latch(CommandBase::elevator->getSolenoid(), Latch::OPEN));
-	AddSequential(new ElevatorMoveToPosition(LOWERMOST_TOTE_HEIGHT))
+	AddSequential(new ElevatorMoveToPosition(LOWERMOST_TOTE_HEIGHT));
+	AddSequential(new Latch(CommandBase::elevator->getSolenoid(), Latch::CLOSE));
 }
