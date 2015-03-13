@@ -1,12 +1,35 @@
 #include "AngleAlgor.h"
 
-AngleAlgor::AngleAlgor()
+float AngleAlgor::AngleAlgor(float wR, float hR, float wL,  float hL)
 {
-	// Use Requires() here to declare subsystem dependencies
-	// eg. Requires(chassis);
+	ratioRight = wR/hR;
+	ratioLeft = wL/wL;
+	ratioAverage = (ratioRight + ratioLeft)/2;
+	if(ratioRight > ratioLeft)
+	{
+		leftOrRight = -1;
+	}
+	else if(ratioLeft > ratioRight)
+	{
+		leftOrRight = 1;
+	}
+	else
+	{
+		leftOrRight = 0;
+		return maxRatioAngle;
+	}
+
+	if(leftOrRight == 1)
+	{
+		return 90*((ratioAverage - shortFaceRatio)/shortFaceRange);
+	}
+	else if(leftOrRight == -1)
+	{
+		return (90*((ratioAverage - longFaceRatio)/longFaceRange))+90;
+	}
 }
 
-// Called just before this Command runs the first time
+/* Called just before this Command runs the first time
 void AngleAlgor::Initialize()
 {
 
@@ -36,3 +59,4 @@ void AngleAlgor::Interrupted()
 {
 
 }
+*/
