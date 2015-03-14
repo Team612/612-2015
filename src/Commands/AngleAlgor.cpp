@@ -1,6 +1,6 @@
 #include "AngleAlgor.h"
 
-float AngleAlgor::AngleAlgor(float wR, float hR, float wL,  float hL)
+double AngleAlgor(float wR, float hR, float wL,  float hL)
 {
 	ratioRight = wR/hR;
 	ratioLeft = wL/wL;
@@ -21,42 +21,10 @@ float AngleAlgor::AngleAlgor(float wR, float hR, float wL,  float hL)
 
 	if(leftOrRight == 1)
 	{
-		return 90*((ratioAverage - shortFaceRatio)/shortFaceRange);
+		return ( 0.0243029 + sqrt( ( -0.0243029 * -0.0243029 ) - ( 4 * 0.000111078 * (2.66466 - ratioAverage) ) ) ) / 2*0.000111078;
 	}
 	else if(leftOrRight == -1)
 	{
-		return (90*((ratioAverage - longFaceRatio)/longFaceRange))+90;
+		return ( 0.00023557 + sqrt( ( -0.00023557 * -0.00023557 ) - ( 4 * 0.0000465902 * (2.2209 - ratioAverage) ) ) ) / 2*0.0000465902;
 	}
 }
-
-/* Called just before this Command runs the first time
-void AngleAlgor::Initialize()
-{
-
-}
-
-// Called repeatedly when this Command is scheduled to run
-void AngleAlgor::Execute()
-{
-
-}
-
-// Make this return true when this Command no longer needs to run execute()
-bool AngleAlgor::IsFinished()
-{
-	return false;
-}
-
-// Called once after isFinished returns true
-void AngleAlgor::End()
-{
-
-}
-
-// Called when another command which requires one or more of the same
-// subsystems is scheduled to run
-void AngleAlgor::Interrupted()
-{
-
-}
-*/
