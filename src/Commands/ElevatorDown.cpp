@@ -1,8 +1,8 @@
 #include "ElevatorDown.h"
 
-ElevatorDown::ElevatorDown()
+ElevatorDown::ElevatorDown() : CommandBase("ElevatorDown")
 {
-	Requires(elevator);
+	Requires(CommandBase::elevator);
 	std::printf("Elevator Down contructor\n");
 }
 
