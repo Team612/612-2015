@@ -17,9 +17,7 @@ void Vision::updateVision()
 {
 	uint8_t* data = new uint8_t[7];
 	i2c->ReadOnly(5, data);
-
-	for (int x = 0; x < 5; x++)
-		printf("I2C: %c\n", data[x]);
+	printf("I2C: %u\n", data[0]);
 }
 
 // Put methods for controlling this subsystem
