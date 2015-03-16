@@ -57,8 +57,9 @@ const float BUFFER       = 2.0f;
 const uint32_t ELEVATOR_ULTRASONIC = 1;
 const uint32_t ELEVATOR_IR = 2;
 
-const float MAX_IR    = 60.0f; //TODO
-const float MIN_ULTRA = 20.0f; //TODO make better todos
+//const float MAX_IR    = 60.0f; //in cm
+//const float MIN_US = 20.0f;
+const float ELEVTHRESHOLD = 14.811f;//average of lower sensor limit of US and upper accuracy limit of IR.
 
 const float ELEV_SPEED_FLOAT = 0.8f;
 const double ELEV_SPEED_DOUBLE = 0.8;

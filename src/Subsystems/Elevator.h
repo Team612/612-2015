@@ -14,21 +14,21 @@ private:
 #endif
 	//DigitalInput* topSwitch;
 	//DigitalInput* bottomSwitch;
-	Encoder* encoder;
+	Encoder* elevEncoder;
 	//AnalogInput* leftIR;
 	//AnalogInput* rightIR;
 	float voltageToDistance(float val);
-	typedef enum _MainSensor
+	/*typedef enum _MainSensor
 	{
 		ULTRASONIC, 
 		IR
-	} MainSensor;
-	MainSensor sense;
+	} MainSensor;*/
+	//MainSensor elevSensor;
 	const float SWITCH_TO_ULTRASONIC = 12.0f;
 	const float SWITCH_TO_IR = 6.0f;
-	AnalogInput* ultrasonic;
-	AnalogInput* elevatorIR;
-	MainSensor switchSensor(float IRDistance, float UDistance);
+	AnalogInput* elevUS;
+	AnalogInput* elevIR;
+	//MainSensor switchSensor(float IRDistance, float UDistance);
 	DoubleSolenoid* latchSol;
 public:
 	Elevator();

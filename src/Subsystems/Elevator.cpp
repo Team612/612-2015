@@ -10,12 +10,12 @@ Elevator::Elevator() :
 #endif
 	//topSwitch = new DigitalInput(ELEVATOR_TOP_SWITCH);
 	//bottomSwitch = new DigitalInput(ELEVATOR_BOTTOM_SWITCH);
-	encoder = new Encoder(ELEVATOR_ENCODER_A, ELEVATOR_ENCODER_B);
+	elevEncoder = new Encoder(ELEVATOR_ENCODER_A, ELEVATOR_ENCODER_B);
 	//leftIR = new AnalogInput(LEFT_IR);
 	//rightIR = new AnalogInput(RIGHT_IR);
-	sense = IR; //default to IR sensor
-	ultrasonic = new AnalogInput(ELEVATOR_ULTRASONIC);
-	elevatorIR = new AnalogInput(ELEVATOR_IR);
+	//elevSensor = IR; //default to IR sensor
+	elevUS = new AnalogInput(ELEVATOR_ULTRASONIC);
+	elevIR = new AnalogInput(ELEVATOR_IR);
 	latchSol = new DoubleSolenoid(SOLENOIDCHAN1, SOLENOIDCHAN2);
 }
 
@@ -76,7 +76,7 @@ void Elevator::stop()
 
 Encoder* Elevator::getEncoder()
 {
-	return NULL;//encoder;
+	return elevEncoder;//encoder;
 }
 
 bool Elevator::getLeftAlignment()
@@ -117,16 +117,24 @@ float Elevator::IRVoltageToDistance(float val)
 }
 
 float Elevator::getElevatorHeight()
-{
-	if (sense == IR)
+{/*
+	if (elevSensor == IR)
 	{
 		float voltage = 1.0f;//elevatorIR->GetVoltage();
 		return IRVoltageToDistance(voltage);
 	}
 	else
 	{
-		float voltage = ultrasonic->GetVoltage();
+		float voltage = elevUS->GetVoltage();
 		return UltrasonicVoltageToDistance(voltage);
+	}*/
+	if((UltrasonicVoltageToDistance(elevUS->GetVoltage())+IRVoltageToDistance(elevIR->GetVoltage()))/2>ELEVTHRESHOLD)
+	{
+		return UltrasonicVoltageToDistance(elevUS->GetVoltage());
+	}
+	else
+	{
+		return IRVoltageToDistance(elevIR->GetVoltage());
 	}
 }
 
@@ -140,21 +148,21 @@ float Elevator::UltrasonicVoltageToDistance(float voltage)
 	
 }
 
-Elevator::MainSensor Elevator::switchSensor(float IRDistance, float UDistance)
+/*Elevator::MainSensor Elevator::switchSensor(float IRDistance, float UDistance)
 {
 	if(IRDistance > MAX_IR)
 	{
 		return ULTRASONIC;
 	}
-	else if(UDistance < MIN_ULTRA)
+	else if(UDistance < MIN_US)
 	{
 		return IR;
 	}
 	else //Buffer zone
 	{
-		return sense;
+		return elevSensor;
 	}
-}
+}*/
 
 DoubleSolenoid* Elevator::getSolenoid()
 {
