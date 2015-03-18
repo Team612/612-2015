@@ -10,7 +10,7 @@ ElevatorMoveToPosition::ElevatorMoveToPosition(uint32_t inPosition)
 // Called just before this Command runs the first time
 void ElevatorMoveToPosition::Initialize()
 {
-	printf("ElevatorMoveToPosition Initialized!");
+	//printf("ElevatorMoveToPosition Initialized!");
 }
 
 // Called repeatedly when this Command is scheduled to run

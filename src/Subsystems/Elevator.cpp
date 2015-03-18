@@ -43,7 +43,7 @@ void Elevator::move(float speed)
 void Elevator::stop()
 {
 	//Sets motor speed to nothing
-	talon->Set(0);
+	move(0);
 	//std::printf("Stop elevator motor\n");
 }
 
@@ -76,17 +76,27 @@ bool Elevator::isRightAligned()
 	}
 }
 
-float Elevator::getElevatorHeight()//in inches
+float Elevator::getElevatorSensorHeight()//in inches
 {
 
 	if((USVoltageToDistance(middleUS->GetVoltage())+IRVoltageToDistance(middleIR->GetVoltage()))/2>SENSOR_THRESHOLD)
 	{
-		return USVoltageToDistance(middleUS->GetVoltage());
+		return USVoltageToDistance(middleUS->GetVoltage())-ELEVATOR_OFFSET;
 	}
 	else
 	{
-		return IRVoltageToDistance(middleIR->GetVoltage());
+		return IRVoltageToDistance(middleIR->GetVoltage())-ELEVATOR_OFFSET;
 	}
+}
+
+float Elevator::getElevatorEncoderHeight()//in inches
+{
+	return pow((ELEVATOR_SPOOL_DIAMETER * (elevEncoder->Get()/ENCODER_TICKS_PER_ROTATION)), (getElevatorSensorHeight())/100);
+}
+
+float Elevator::getElevatorHeight()//why does this method that does nothing exist? because of my OCD!
+{
+	return getElevatorEncoderHeight();//in inches, relative to the minimum height of the fork.
 }
 
 float Elevator::USVoltageToDistance(float voltage)

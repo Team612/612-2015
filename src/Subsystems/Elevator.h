@@ -32,6 +32,8 @@ private:
 	AnalogInput* rightIR;
 	//MainSensor switchSensor(float IRDistance, float UDistance);
 	DoubleSolenoid* latchSol;
+	float getElevatorSensorHeight();
+	float getElevatorEncoderHeight();
 public:
 	Elevator();
 	virtual ~Elevator();
