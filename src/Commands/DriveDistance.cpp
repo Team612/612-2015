@@ -1,11 +1,11 @@
 #include <Commands/DriveDistance.h>
 
 
-DriveDistance::DriveDistance(float rotationsX, float rotationsY)
+DriveDistance::DriveDistance(float targetDistanceX, float targetDistanceY)
 {
 	Requires(drivetrain);
-	targetDistanceX = rotationsX * (90/(8*3.14159));
-	targetDistanceY = rotationsY * (90/(8*3.14159));
+	//targetDistanceX = rotationsX * (90/(8*3.14159));
+	//targetDistanceY = rotationsY * (90/(8*3.14159));
 	distanceX = 0;
 	distanceY = 0;
 	xRatio = targetDistanceX/targetDistanceY;

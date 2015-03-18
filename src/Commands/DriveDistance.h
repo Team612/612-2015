@@ -15,7 +15,7 @@ private:
 	float yRatio;
 
 public:
-	DriveDistance(float rotationsX, float rotationsY);
+	DriveDistance(float targetDistanceX, float targetDistanceY);
 	void Initialize();
 	void Execute();
 	bool IsFinished();
