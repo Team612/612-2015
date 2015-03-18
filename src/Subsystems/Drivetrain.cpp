@@ -106,27 +106,3 @@ int32_t Drivetrain::getDistance(MotorLocation motor)
 		return 0;
 	}
 }
-
-/*bool Drivetrain::SwitchSensor(float distance) // Infared sensor is used by default
-{
-	//TODO: Implement auto switching between IR and Ultrasonic
-	// Once the IR becomes accurate, switch to it over ultrasonic
-	return (distance < 6);
-
-	// OLD
-
-	if(d < 6)
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
-}
-
-void Drivetrain::CheckSensor(float distance)
-{
-	this->useIR = this->SwitchSensor(distance);
-}
-*/

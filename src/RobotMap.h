@@ -43,6 +43,9 @@ const uint32_t ELEVATOR_TOP_SWITCH = 1; // The channel for the top switch of the
 const uint32_t ELEVATOR_BOTTOM_SWITCH = 1; // The channel for the bottom switch of the elevator
 const uint32_t ELEVATOR_ENCODER_A = 1; // The channels for the elevator encoder
 const uint32_t ELEVATOR_ENCODER_B = 2;
+const uint32_t LEFT_FORK_IR = -0;//TODO actually fill in this port
+const uint32_t RIGHT_FORK_IR = -0;//TODO actually fill in this port
+const float TOTE_DETECT_TOLERANCE = 6.0f;//in inches
 
 const uint32_t LEFT_IR  = 1;
 const uint32_t RIGHT_IR = 2;
@@ -59,7 +62,7 @@ const uint32_t ELEVATOR_IR = 2;
 
 //const float MAX_IR    = 60.0f; //in cm
 //const float MIN_US = 20.0f;
-const float ELEVTHRESHOLD = 14.811f;//average of lower sensor limit of US and upper accuracy limit of IR.
+const float SENSOR_THRESHOLD = 18.24805f;//average of lower sensor limit of US and upper accuracy limit of IR.
 
 const float ELEV_SPEED_FLOAT = 0.8f;
 const double ELEV_SPEED_DOUBLE = 0.8;

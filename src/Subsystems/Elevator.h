@@ -26,8 +26,10 @@ private:
 	//MainSensor elevSensor;
 	const float SWITCH_TO_ULTRASONIC = 12.0f;
 	const float SWITCH_TO_IR = 6.0f;
-	AnalogInput* elevUS;
-	AnalogInput* elevIR;
+	AnalogInput* middleUS;
+	AnalogInput* middleIR;
+	AnalogInput* leftIR;
+	AnalogInput* rightIR;
 	//MainSensor switchSensor(float IRDistance, float UDistance);
 	DoubleSolenoid* latchSol;
 public:
@@ -37,10 +39,10 @@ public:
 	void stop();
 	void InitDefaultCommand();
 	Encoder* getEncoder();
-	bool getLeftAlignment();
-	bool getRightAlignment();
+	bool isLeftAligned();
+	bool isRightAligned();
 	float getElevatorHeight();
-	float UltrasonicVoltageToDistance(float val);
+	float USVoltageToDistance(float val);
 	float IRVoltageToDistance(float val);
 	DoubleSolenoid* getSolenoid();
 };
