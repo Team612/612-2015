@@ -4,8 +4,6 @@
 DriveDistance::DriveDistance(float targetDistanceX, float targetDistanceY)
 {
 	Requires(drivetrain);
-	//targetDistanceX = rotationsX * (90/(8*3.14159));
-	//targetDistanceY = rotationsY * (90/(8*3.14159));
 	distanceX = 0;
 	distanceY = 0;
 	xRatio = targetDistanceX/targetDistanceY;
@@ -40,8 +38,8 @@ void DriveDistance::Initialize()
 // Called repeatedly when this Command is scheduled to run
 void DriveDistance::Execute()
 {
-	distanceX = drivetrain->getDistance(Drivetrain::MotorLocation::RIGHT_FRONT);
-	distanceY = drivetrain->getDistance(Drivetrain::MotorLocation::RIGHT_FRONT);
+	distanceX = (drivetrain->getDistance(Drivetrain::MotorLocation::RIGHT_FRONT)*1+drivetrain->getDistance(Drivetrain::MotorLocation::RIGHT_REAR)+drivetrain->getDistance(Drivetrain::MotorLocation::LEFT_FRONT)+drivetrain->getDistance(Drivetrain::MotorLocation::LEFT_REAR)*-1)/4;
+	distanceY = (drivetrain->getDistance(Drivetrain::MotorLocation::RIGHT_FRONT)+drivetrain->getDistance(Drivetrain::MotorLocation::RIGHT_REAR)+drivetrain->getDistance(Drivetrain::MotorLocation::LEFT_FRONT)*-1+drivetrain->getDistance(Drivetrain::MotorLocation::LEFT_REAR)*-1)/4;
 	drivetrain->move(xRatio, yRatio, 0.0f);
 	static int count = 0;
 	if (count % 60 == 0)
