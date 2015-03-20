@@ -47,9 +47,9 @@ const uint32_t LEFT_FORK_IR = -0;//TODO actually fill in this port
 const uint32_t RIGHT_FORK_IR = -0;//TODO actually fill in this port
 const float TOTE_DETECT_TOLERANCE = 6.0f;//in inches
 const float ELEVATOR_SPOOL_DIAMETER = 10.12f;//inches
-const float ENCODER_TICKS_PER_ROTATION = 1000;
-const float ELEVATOR_OFFSET = 10;//in inches
-
+const int ENCODER_TICKS_PER_ROTATION = 1023;//might be 1440
+const float ELEVATOR_TOLERANCE = 1.5f;// in inches
+//const float ELEVATOR_OFFSET = 10;//in inches
 const uint32_t LEFT_IR  = 1;
 const uint32_t RIGHT_IR = 2;
 

@@ -48,6 +48,9 @@ void Robot::RobotInit()
 	CameraServer::GetInstance()->SetQuality(50);
 	CameraServer::GetInstance()->StartAutomaticCapture("cam0");
 	std::printf("Starting camera server\n");
+
+	 prefs = Preferences::GetInstance();
+	 prefs->PutFloat("ELEV_OFFSET", 10.0f);
 }
 
 void Robot::DisabledInit()

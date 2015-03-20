@@ -25,6 +25,10 @@ private:
 	//Talon* secondTalon;
 	//Talon* thirdTalon;
 
+	//PREFERENCES
+
+	Preferences* prefs;
+
 	//ACCELEROMETER
 
 	Compressor* compressor;
