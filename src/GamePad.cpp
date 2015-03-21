@@ -6,8 +6,8 @@ GamePad::GamePad(bool isFlightStick, int port, float throttle, float deadzone) :
 	// Axis Ports
 	if(!isFlightStick)
 	{
-		AXIS_LEFT_X     = 1;
-		AXIS_LEFT_Y     = 0;
+		AXIS_LEFT_X     = 0;
+		AXIS_LEFT_Y     = 1;
 		AXIS_RIGHT_X    = 4;
 		AXIS_RIGHT_Y    = 5;
 	}
@@ -18,6 +18,7 @@ GamePad::GamePad(bool isFlightStick, int port, float throttle, float deadzone) :
 		AXIS_RIGHT_X    = 2;
 		AXIS_RIGHT_Y    = 3;
 	}
+	stickType = isFlightStick;
 }
 
 float GamePad::GetLeftXRaw()

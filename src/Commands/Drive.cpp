@@ -41,60 +41,24 @@ void Drive::Execute()
 	if (mode == JOYSTICK)
 	{
 		float* power = &drivetrain->motor_power;
-		if(joyObj->GetButtonStateRB() || joyObj->GetButtonStateRB())
+		//printf("DriveExec0\n %f", joyObj->GetLeftYSmooth());
+		if(joyObj->stickType)
 		{
-			isPressed = true;
+			*power = ((joyObj->GetRightYSmooth()*(-1.0f))+1)/2;
+			if(*power < 0.2f)
+			{
+				*power = 0.2f;
+			}
+			drivetrain->move((*power)*joyObj->GetLeftXSmooth(), (-1.0f)*(*power)*(joyObj->GetLeftYSmooth()), (-*power)*joyObj->GetRightXSmooth());
 		}
-		if(!wasPressed && isPressed)
+		else
 		{
 			if (joyObj->GetButtonStateRB())
-			{
-				if(feedState == 2)
-				{
-					feedState = 1;
-				}
-				else
-				{
-					feedState = 2;
-				}
-			}
+				*power = MOTOR_HIGH;
 			else if (joyObj->GetButtonStateLB())
-			{
-				if(feedState == 0)
-				{
-					feedState = 1;
-				}
-				else
-				{
-					feedState = 2;
-				}
-			}
+				*power = MOTOR_LOW;
+			drivetrain->move((*power)*joyObj->GetLeftXSmooth(), (*power)*joyObj->GetLeftYSmooth(), (-*power)*joyObj->GetRightXSmooth());
 		}
-		else
-		{
-			isPressed = wasPressed;
-		}
-		if(feedState == 0)
-		{
-			drivetrain->SetLeftFeedWheel(1.0f);
-			drivetrain->SetRightFeedWheel(1.0f);
-		}
-		else if(feedState == 2)
-		{
-			drivetrain->SetRightFeedWheel(-1.0f);
-			drivetrain->SetLeftFeedWheel(-1.0f);
-		}
-		else
-		{
-			drivetrain->SetRightFeedWheel(0);
-			drivetrain->SetLeftFeedWheel(0);
-		}
-		//printf("DriveExec0\n %f", joyObj->GetLeftYSmooth());
-		//if()
-		*power = -joyObj->GetRightYSmooth();
-		 float powar = -joyObj->GetRightYSmooth();
-
-		drivetrain->move((*power)*joyObj->GetLeftXSmooth(), (*power)*joyObj->GetLeftYSmooth(), (-*power)*joyObj->GetRightXSmooth());
 		//printf("DriveExec1\n");
 		SmartDashboard::PutNumber("Front left Talon value", drivetrain->fl->Get());
 		SmartDashboard::PutNumber("Front right Talon value", drivetrain->fr->Get());

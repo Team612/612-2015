@@ -46,8 +46,6 @@ public:
 	CANTalon* rl;
 	CANTalon* fr;
 	CANTalon* rr;
-	CANTalon* leftFeedWheel;
-	CANTalon* rightFeedWheel;
 
 	float motor_power;
 
