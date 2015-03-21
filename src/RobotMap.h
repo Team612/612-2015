@@ -101,4 +101,7 @@ const uint32_t TIMER_VALUE = 1.1;
 
 const uint32_t PCM = 0;
 
+//VISION
+const uint8_t DEVICE_ADDRESS = 2;
+
 #endif

@@ -15,7 +15,13 @@ public:
 	Vision();
 	void InitDefaultCommand();
 
-	void updateVision();
+	void updateVisionRead();
+	void updateVisonWrite();
+
+	static int p1[1][1];
+	static int p2[1][1];
+	static int p3[1][1];
+	static int p4[1][1];
 };
 
 #endif
