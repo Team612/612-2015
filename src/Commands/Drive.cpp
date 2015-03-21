@@ -92,8 +92,9 @@ void Drive::Execute()
 		//printf("DriveExec0\n %f", joyObj->GetLeftYSmooth());
 		//if()
 		*power = -joyObj->GetRightYSmooth();
+		 float powar = -joyObj->GetRightYSmooth();
 
-		drivetrain->move((*power)*joyObj->GetLeftXSmooth(), (-*power)*joyObj->GetLeftYSmooth(), (-*power)*joyObj->GetRightXSmooth());
+		drivetrain->move((*power)*joyObj->GetLeftXSmooth(), (*power)*joyObj->GetLeftYSmooth(), (-*power)*joyObj->GetRightXSmooth());
 		//printf("DriveExec1\n");
 		SmartDashboard::PutNumber("Front left Talon value", drivetrain->fl->Get());
 		SmartDashboard::PutNumber("Front right Talon value", drivetrain->fr->Get());

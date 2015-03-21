@@ -41,13 +41,13 @@ const uint32_t INFRARED = 1; // The channel for infrared sensors
 
 //ELEVATOR TODO fix these numbers
 const uint32_t ELEVATOR_MOTOR_1 = 6; // The channel for the elevator motors
-const uint32_t ELEVATOR_MOTOR_2 = 7;
+const uint32_t ELEVATOR_MOTOR_2 = -1;
 const uint32_t ELEVATOR_TOP_SWITCH = 1; // The channel for the top switch of the elevator
 const uint32_t ELEVATOR_BOTTOM_SWITCH = 1; // The channel for the bottom switch of the elevator
 const uint32_t ELEVATOR_ENCODER_A = 1; // The channels for the elevator encoder
 const uint32_t ELEVATOR_ENCODER_B = 2;
-const uint32_t LEFT_FEED_MOTOR = -0;
-const uint32_t RIGHT_FEED_MOTOR = -0;
+const uint32_t LEFT_FEED_MOTOR = 5;
+const uint32_t RIGHT_FEED_MOTOR = 7;
 
 const uint32_t LEFT_IR  = 1;
 const uint32_t RIGHT_IR = 2;
