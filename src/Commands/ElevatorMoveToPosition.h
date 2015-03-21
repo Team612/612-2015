@@ -8,11 +8,9 @@
 class ElevatorMoveToPosition: public CommandBase
 {
 private:
-	uint32_t targetPosition;
-	int targetSpins;
-	const uint32_t INTERVAL = 1; //TODO Placeholder value
+
 public:
-	ElevatorMoveToPosition(uint32_t position);
+	ElevatorMoveToPosition();
 	void Initialize();
 	void Execute();
 	bool IsFinished();

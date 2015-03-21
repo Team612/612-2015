@@ -49,8 +49,15 @@ void Robot::RobotInit()
 	CameraServer::GetInstance()->StartAutomaticCapture("cam0");
 	std::printf("Starting camera server\n");
 
-	 prefs = Preferences::GetInstance();
-	 prefs->PutFloat("ELEV_OFFSET", 10.0f);
+	prefs = Preferences::GetInstance();
+	if(!prefs->ContainsKey("ELEV_OFFSET"))
+	{
+		prefs->PutFloat("ELEV_OFFSET", 10.0f);
+	}
+	if(!prefs->ContainsKey("ELEV_CALIBRATION"))
+	{
+		prefs->PutInt("ELEV_CALIBRATION", 100);
+	}
 }
 
 void Robot::DisabledInit()
@@ -135,7 +142,9 @@ void Robot::TeleopPeriodic()
 void Robot::TestInit()
 {
 	robot_status = TESTINIT; // Makes the status equal TESTINIT
-	printf("lel what are you even doing here scrub?\n");
+	//printf("lel what are you even doing here scrub?\n");
+	ElevatorCalibration* e = new ElevatorCalibration();
+	e->Start();
 }
 void Robot::TestPeriodic()
 {
@@ -148,6 +157,4 @@ void Robot::TestPeriodic()
 	
 }
 
-
 START_ROBOT_CLASS(Robot);
-

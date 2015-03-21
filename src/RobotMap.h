@@ -37,40 +37,30 @@ const float MOTOR_HIGH = 1.0f;
 const uint32_t INFRARED = 1; // The channel for infrared sensors
 
 //ELEVATOR TODO fix these numbers
-const uint32_t ELEVATOR_MOTOR_1 = 6; // The channel for the elevator motors
-const uint32_t ELEVATOR_MOTOR_2 = 7;
+const uint32_t ELEVATOR_MOTOR = 6; // The channel for the elevator motors
 const uint32_t ELEVATOR_TOP_SWITCH = 1; // The channel for the top switch of the elevator
 const uint32_t ELEVATOR_BOTTOM_SWITCH = 1; // The channel for the bottom switch of the elevator
 const uint32_t ELEVATOR_ENCODER_A = 1; // The channels for the elevator encoder
 const uint32_t ELEVATOR_ENCODER_B = 2;
-const uint32_t LEFT_FORK_IR = -0;//TODO actually fill in this port
-const uint32_t RIGHT_FORK_IR = -0;//TODO actually fill in this port
+const uint32_t LEFT_FORK_IR = 1;//TODO actually fill in this port
+const uint32_t RIGHT_FORK_IR = 2;//TODO actually fill in this port
+const uint32_t MIDDLE_FORK_US = 1;
+const uint32_t MIDDLE_FORK_IR = 2;
+
 const float TOTE_DETECT_TOLERANCE = 6.0f;//in inches
 const float ELEVATOR_SPOOL_DIAMETER = 10.12f;//inches
-const int ENCODER_TICKS_PER_ROTATION = 1023;//might be 1440
 const float ELEVATOR_TOLERANCE = 1.5f;// in inches
-//const float ELEVATOR_OFFSET = 10;//in inches
-const uint32_t LEFT_IR  = 1;
-const uint32_t RIGHT_IR = 2;
+const float SENSOR_THRESHOLD = 18.24805f;//average of lower sensor limit of US and upper accuracy limit of IR.
+
+const int ENCODER_TICKS_PER_ROTATION = 1023;//might be 1440
+//const float ELEV_SPEED_FLOAT = 0.8f;
+//const double ELEV_SPEED_DOUBLE = 0.8;
+
+//const int ELEVATOR_TOLERANCE = 50;
 
 //IMU
 const uint32_t SERIAL_PORT = 0;
 const uint8_t REFRESH_RATE = 50;
-
-const float CRATE_HEIGHT = 12.0f;
-const float BUFFER       = 2.0f;
-
-const uint32_t ELEVATOR_ULTRASONIC = 1;
-const uint32_t ELEVATOR_IR = 2;
-
-//const float MAX_IR    = 60.0f; //in cm
-//const float MIN_US = 20.0f;
-const float SENSOR_THRESHOLD = 18.24805f;//average of lower sensor limit of US and upper accuracy limit of IR.
-
-const float ELEV_SPEED_FLOAT = 0.8f;
-const double ELEV_SPEED_DOUBLE = 0.8;
-
-const int ELEVATOR_TOLERANCE = 50;
 
 //JOYSTICK
 static const float DEADZONE = 0.1f; // The value for the joystick deadzone
