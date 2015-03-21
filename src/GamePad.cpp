@@ -1,20 +1,23 @@
 #include <Joystick.h>
 #include "GamePad.h"
 
-GamePad::GamePad(int port, float throttle, float deadzone) : Joystick(port)
+GamePad::GamePad(bool isFlightStick, int port, float throttle, float deadzone) : Joystick(port)
 {
-	ButtonA            = new JoystickButton(this, Button_A);
-	ButtonB            = new JoystickButton(this, Button_B);
-	ButtonX            = new JoystickButton(this, Button_X);
-	ButtonY            = new JoystickButton(this, Button_Y);
-	StartButton        = new JoystickButton(this, Button_START);
-	BackButton         = new JoystickButton(this, Button_BACK);
-	LeftShoulder       = new JoystickButton(this, Button_SHOULDER_LEFT);
-	RightShoulder      = new JoystickButton(this, Button_SHOULDER_RIGHT);
-	LeftStickClick     = new JoystickButton(this, Button_LEFT_STICK);
-	RightStickClick    = new JoystickButton(this, Button_RIGHT_STICK);
-	LeftTriggerClick   = new JoystickButton(this, Button_TRIGGER_LEFT);
-	RightTriggerClick  = new JoystickButton(this, Button_TRIGGER_RIGHT);
+	// Axis Ports
+	if(!isFlightStick)
+	{
+		AXIS_LEFT_X     = 1;
+		AXIS_LEFT_Y     = 0;
+		AXIS_RIGHT_X    = 4;
+		AXIS_RIGHT_Y    = 5;
+	}
+	else
+	{
+		AXIS_LEFT_X     = 0;
+		AXIS_LEFT_Y     = 1;
+		AXIS_RIGHT_X    = 2;
+		AXIS_RIGHT_Y    = 3;
+	}
 }
 
 float GamePad::GetLeftXRaw()
@@ -56,6 +59,25 @@ float GamePad::GetRightYSmooth()
 {
 	return SmoothValue(GetRightYRaw());
 }
+/*float GamePad::GetLeftBumperRaw()
+{
+	return GetRawAxis(AXIS_RIGHT_Y);
+}
+
+float GamePad::GetLeftBumperSmooth()
+{
+	return SmoothValue(GetRightYRaw());
+}
+
+float GamePad::GetRightBumperRaw()
+{
+	return GetRawAxis(AXIS_RIGHT_Y);
+}
+
+float GamePad::GetRightBumperSmooth()
+{
+	return SmoothValue(GetRightYRaw());
+}*/
 
 float GamePad::GetDPad()
 {
@@ -104,6 +126,14 @@ bool GamePad::GetButtonStateX()
 bool GamePad::GetButtonStateY()
 {
 	return GetRawButton(Button_Y);
+}
+bool GamePad::GetButtonStateLB()
+{
+	return GetRawButton(Button_SHOULDER_LEFT);
+}
+bool GamePad::GetButtonStateRB()
+{
+	return GetRawButton(Button_SHOULDER_RIGHT);
 }
 
 void GamePad::SetThrottle(float throttle)

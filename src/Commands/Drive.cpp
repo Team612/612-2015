@@ -9,6 +9,9 @@ Drive::Drive(float x, float y, float rotation)
 	targetY = y;
 	targetRotation = rotation;
 	joyObj = NULL;
+	feedState = 0;
+	isPressed = false;
+	wasPressed = false;
 }
 
 Drive::Drive(GamePad* joystick)
@@ -19,6 +22,9 @@ Drive::Drive(GamePad* joystick)
 	targetX = 0;
 	targetY = 0;
 	targetRotation = 0;
+	feedState = 0;
+	isPressed = false;
+	wasPressed = false;
 }
 
 
@@ -35,14 +41,58 @@ void Drive::Execute()
 	if (mode == JOYSTICK)
 	{
 		float* power = &drivetrain->motor_power;
-		if (joyObj->GetRawButton(BUTTON_R2))
-			*power = MOTOR_HIGH;
-		else if (joyObj->GetRawButton(BUTTON_L2))
-			*power = MOTOR_LOW;
+		if(joyObj->GetButtonStateRB() || joyObj->GetButtonStateRB())
+		{
+			isPressed = true;
+		}
+		if(!wasPressed && isPressed)
+		{
+			if (joyObj->GetButtonStateRB())
+			{
+				if(feedState == 2)
+				{
+					feedState = 1;
+				}
+				else
+				{
+					feedState = 2;
+				}
+			}
+			else if (joyObj->GetButtonStateLB())
+			{
+				if(feedState == 0)
+				{
+					feedState = 1;
+				}
+				else
+				{
+					feedState = 2;
+				}
+			}
+		}
+		else
+		{
+			isPressed = wasPressed;
+		}
+		if(feedState == 0)
+		{
+			drivetrain->SetLeftFeedWheel(1.0f);
+			drivetrain->SetRightFeedWheel(1.0f);
+		}
+		else if(feedState == 2)
+		{
+			drivetrain->SetRightFeedWheel(-1.0f);
+			drivetrain->SetLeftFeedWheel(-1.0f);
+		}
+		else
+		{
+			drivetrain->SetRightFeedWheel(0);
+			drivetrain->SetLeftFeedWheel(0);
+		}
 		//printf("DriveExec0\n %f", joyObj->GetLeftYSmooth());
-#ifndef GAMEPAD
-		*power = joyObj->GetRawAxis(-SLIDER);
-#endif
+		//if()
+		*power = -joyObj->GetRightYSmooth();
+
 		drivetrain->move((*power)*joyObj->GetLeftXSmooth(), (-*power)*joyObj->GetLeftYSmooth(), (-*power)*joyObj->GetRightXSmooth());
 		//printf("DriveExec1\n");
 		SmartDashboard::PutNumber("Front left Talon value", drivetrain->fl->Get());

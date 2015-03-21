@@ -13,6 +13,8 @@ Drivetrain::Drivetrain(CANTalon* t_fl, CANTalon* t_fr, CANTalon* t_rl, CANTalon*
 	fr = t_fr;
 	rl = t_rl;
 	rr = t_rr;
+	rightFeedWheel = new CANTalon(RIGHT_FEED_MOTOR);
+	leftFeedWheel = new CANTalon(LEFT_FEED_MOTOR);
 
 	fl->SetFeedbackDevice(CANTalon::QuadEncoder);
 	fr->SetFeedbackDevice(CANTalon::QuadEncoder);
@@ -107,6 +109,15 @@ int32_t Drivetrain::getDistance(MotorLocation motor)
 	}
 }
 
+void Drivetrain::SetRightFeedWheel(float speed)
+{
+	rightFeedWheel->Set(speed);
+}
+
+void Drivetrain::SetLeftFeedWheel(float speed)
+{
+	leftFeedWheel->Set(speed);
+}
 /*bool Drivetrain::SwitchSensor(float distance) // Infared sensor is used by default
 {
 	//TODO: Implement auto switching between IR and Ultrasonic
