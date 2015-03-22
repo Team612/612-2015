@@ -6,6 +6,7 @@
 #include "OI.h"
 #include "Commands/Latch.h"
 #include <Compressor.h>
+#include "Commands/IntakeWheel.h"
 
 class Robot: public IterativeRobot
 {
@@ -24,6 +25,10 @@ private:
 	//Talon* firstTalon;
 	//Talon* secondTalon;
 	//Talon* thirdTalon;
+
+	//INTAKE
+
+	IntakeWheel* intake;
 
 	//ACCELEROMETER
 

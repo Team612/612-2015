@@ -9,6 +9,7 @@
 #include "Robot.h"
 #include "RobotMap.h"
 #include "Commands/Drive.h"
+#include "Commands/IntakeWheel.h"
 
 
 void Robot::RobotInit()
@@ -28,6 +29,9 @@ void Robot::RobotInit()
 	printf("Robotinit7\n");
 	compressor = new Compressor(PCM);
 	printf("Robotinit8\n");
+	intake = new IntakeWheel(CommandBase::oi->gunner);
+	intake->Start();
+	printf("Robotinit9\n");
 
 	/// AUTO ZONE
 	autonomousCommand = new AutonomousSimple(3.5f, 0.4f);//Initializes simple autonomous program with

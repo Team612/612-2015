@@ -18,7 +18,8 @@ void ElevatorMove::Initialize()
 void ElevatorMove::Execute()
 {
 	elevator->move(joystick->GetRightYSmooth());
-	printf("Moving elevator\n");
+	printf("Right Y = %f\n", joystick->GetRightYSmooth());
+	//printf("Moving elevator\n");
 }
 
 // Make this return true when this Command no longer needs to run execute()

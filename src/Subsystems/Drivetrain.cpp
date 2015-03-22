@@ -14,6 +14,7 @@ Drivetrain::Drivetrain(CANTalon* t_fl, CANTalon* t_fr, CANTalon* t_rl, CANTalon*
 	rl = t_rl;
 	rr = t_rr;
 
+
 	fl->SetFeedbackDevice(CANTalon::QuadEncoder);
 	fr->SetFeedbackDevice(CANTalon::QuadEncoder);
 	rl->SetFeedbackDevice(CANTalon::QuadEncoder);
