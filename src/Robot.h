@@ -3,6 +3,7 @@
 
 #include <Subsystems/Drivetrain.h>
 #include "Commands/Drive.h"
+#include "Commands/DriveDistance.h"
 
 class Robot: public IterativeRobot
 {
@@ -10,6 +11,7 @@ private:
 
 	//COMMAND
 	Command* autonomousCommand;
+	DriveDistance* drivedistance;
 
 
 	//DRIVETRAIN

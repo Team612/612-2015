@@ -3,15 +3,18 @@
 
 #include "Commands/Subsystem.h"
 #include "WPILib.h"
+#include "PixelLogic.h"
+//#include "../CommandBase.h"
 
 class Vision: public Subsystem
 {
 private:
-	// It's desirable that everything possible under private except
-	// for methods that implement subsystem capabilities
+	I2C *i2c;
+
 public:
 	Vision();
 	void InitDefaultCommand();
+	void Update();
 };
 
 #endif

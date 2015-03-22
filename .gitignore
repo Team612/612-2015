@@ -26,3 +26,4 @@ wpilib/*
 .build/CMakeFiles/Progress/
 .build/CMakeFiles/cmake.check_cache
 
+/Debug/

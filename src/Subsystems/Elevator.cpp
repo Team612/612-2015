@@ -43,7 +43,7 @@ void Elevator::move(float magnitude)
 	static int count = 0;
 	if (count % 60 == 0)
 	{
-		printf("Elevator motor moved! Speed = %f", magnitude));
+		printf("Elevator motor moved! Speed = %f", magnitude);
 	}
 }
 

@@ -45,6 +45,8 @@ void Robot::AutonomousPeriodic()
 	if (robot_status != AUTONOMOUSPERIODIC) // Makes the status equal AUTONOMOUSPERIODIC
 		robot_status = AUTONOMOUSPERIODIC;
 	Scheduler::GetInstance()->Run();
+	CommandBase::pixellogic->I2CRecieve();
+	//std::printf("Work pls\n");
 }
 
 void Robot::TeleopInit()

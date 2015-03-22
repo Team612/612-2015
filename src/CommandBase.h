@@ -4,11 +4,13 @@
 #include <Subsystems/Drivetrain.h>
 #include <string>
 #include "Commands/Command.h"
+//#include "Commands/DriveDistance.h"
 #include "OI.h"
 #include "WPILib.h"
 #include "Subsystems/Elevator.h"
 #include "Subsystems/Vision.h"
 #include "RobotMap.h"
+#include "Subsystems/PixelLogic.h"
 
 /**
  * The base for all commands. All atomic commands should subclass CommandBase.
@@ -24,7 +26,8 @@ public:
 	static OI* oi;
 	static Elevator* elevator;
 	static Drivetrain* drivetrain;
-	static Vision* vision;
+	//static Vision* vision;
+	static PixelLogic* pixellogic;
 };
 
 #endif
