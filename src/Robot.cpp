@@ -76,7 +76,7 @@ void Robot::AutonomousPeriodic()
 	if (robot_status != AUTONOMOUSPERIODIC) // Makes the status equal AUTONOMOUSPERIODIC
 		robot_status = AUTONOMOUSPERIODIC;
 	Scheduler::GetInstance()->Run();
-	CommandBase::vision->updateVision();
+	CommandBase::vision->updateVisionRead();
 }
 
 void Robot::TeleopInit()

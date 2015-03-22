@@ -1,10 +1,12 @@
 #include "Vision.h"
 #include "RobotMap.h"
 
+typedef unsigned char uint8_t;
+
 Vision::Vision() :
 		Subsystem("Vision")
 {
-	lcam = new I2C(I2C::kOnboard, 2);
+	lcam = new I2C(I2C::kOnboard, I2C_ADDRESS_1); //Initializes
 }
 
 void Vision::InitDefaultCommand()
@@ -12,7 +14,7 @@ void Vision::InitDefaultCommand()
 
 }
 
-void Vision::updateVision()
+void Vision::updateVisionRead()
 {
 	static uint8_t* data = new uint8_t[7];
 	for (int i = 0; i < 7; i++)

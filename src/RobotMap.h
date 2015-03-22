@@ -102,6 +102,7 @@ const uint32_t TIMER_VALUE = 1.1;
 
 const uint32_t PCM = 0;
 
+//VISION
 const uint32_t I2C_ADDRESS_1 = 2;
 const uint32_t I2C_ADDRESS_2 = 3;
 

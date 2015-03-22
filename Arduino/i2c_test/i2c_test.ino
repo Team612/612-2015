@@ -4,9 +4,12 @@ void setup() {
   // put your setup code here, to run once:
   Wire.begin(2);
   Wire.onRequest(requestEvent);
+  Serial.begin(9600);
 }
 
 void loop() {
+  int input = Serial.read();
+  Serial.println(input);
   delay(100);
 }
 

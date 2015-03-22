@@ -18,8 +18,7 @@ private:
 public:
 	Vision();
 	void InitDefaultCommand();
-
-	void updateVision();
+	void updateVisionRead();
 };
 
 #endif
