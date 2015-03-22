@@ -6,6 +6,7 @@
 //Setings
 //#define IMU
 #define GAMEPAD
+//#define CAMERA
 
 //GYRO
 const uint32_t GYRO_CHANNEL = 0; // The channel for the gyro
@@ -100,5 +101,8 @@ const uint32_t SOLENOIDCHAN2 = 1;
 const uint32_t TIMER_VALUE = 1.1;
 
 const uint32_t PCM = 0;
+
+const uint32_t I2C_ADDRESS_1 = 2;
+const uint32_t I2C_ADDRESS_2 = 3;
 
 #endif

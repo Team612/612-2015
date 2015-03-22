@@ -7,7 +7,11 @@
 class Vision: public Subsystem
 {
 private:
-	I2C* i2c;
+	I2C* rcam;
+	I2C* lcam;
+
+	uint32_t convertToInteger(uint8_t bytes[]);
+	float convertToFloat(uint8_t bytes[]);
 
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities

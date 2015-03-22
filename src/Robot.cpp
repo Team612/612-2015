@@ -44,10 +44,11 @@ void Robot::RobotInit()
 	//autonomousCommand = new AutonomousSimple(0.0f, 0.0f);
 
 	//autonomousCommand = new Autonomous();
-
+#ifdef CAMERA
 	CameraServer::GetInstance()->SetQuality(50);
 	CameraServer::GetInstance()->StartAutomaticCapture("cam0");
 	std::printf("Starting camera server\n");
+#endif
 }
 
 void Robot::DisabledInit()
