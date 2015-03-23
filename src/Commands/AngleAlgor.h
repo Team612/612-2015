@@ -2,7 +2,7 @@
 #define AngleAlgor_H
 
 #include "WPILib.h"
-#include <Math.h>
+#include <cmath.h>
 
 //all ratios are width/height
 const float toteLength = 26.9;

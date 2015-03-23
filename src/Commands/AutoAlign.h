@@ -13,14 +13,15 @@
 
 #include "Commands/CommandGroup.h"
 #include "WPILib.h"
-#include <Math.h>
+#include <cmath.h>
 
 /**
  *
  *
  * @author ExampleAuthor
  */
-class AutoAlign: public CommandGroup {
+class AutoAlign: public CommandGroup 
+{
 private:
     //all ratios are width/height
     const float toteLength = 26.9;
