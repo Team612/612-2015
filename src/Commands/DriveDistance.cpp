@@ -32,7 +32,7 @@ DriveDistance::DriveDistance(float targetDistanceX, float targetDistanceY)
 // Called just before this Command runs the first time
 void DriveDistance::Initialize()
 {
-	drivetrain->resetEncoders();
+	//drivetrain->resetEncoders();
 }
 
 // Called repeatedly when this Command is scheduled to run
