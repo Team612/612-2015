@@ -1,7 +1,7 @@
-#include "../Commands/LatchEngage.h"
+#include <Commands/Latch.h>
 #include "CommandBase.h"
 #include "MoveToTote.h"
-#include "LatchEngage.h"
+#include "Latch.h"
 #include "ToteNavGroup.h"
 
 ToteNavGroup::ToteNavGroup() {
@@ -22,8 +22,7 @@ ToteNavGroup::ToteNavGroup() {
 	// a CommandGroup containing them would require both the chassis and the
 	// arm.
 	Requires(CommandBase::drivetrain);
-	//Requires(CommandBase::vision);
+	Requires(CommandBase::vision);
 	AddSequential(new MoveToTote());
-	AddSequential(new LatchEngage(false)); // Ensure that latch is open before grabbing tote
-	AddSequential(new LatchEngage(true));
+	//AddSequential(new Latch()); // Ensure that latch is open before grabbing tote
 }

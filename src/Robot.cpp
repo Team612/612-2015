@@ -1,10 +1,11 @@
+
 #include "WPILib.h"
 #include "Commands/Command.h"
 #include "CommandBase.h"
 #include <cstdio>
 #include <Joystick.h>
 #include "Subsystems/Drivetrain.h"
-//#include <Talon.h>
+#include <Talon.h>
 #include "Commands/AutonomousSimple.h"
 #include "Robot.h"
 #include "RobotMap.h"
@@ -13,12 +14,43 @@
 
 void Robot::RobotInit()
 {
+	printf("Robotinit1\n");
 	robot_status = ROBOTINIT; // Makes the status equal ROBOTINIT
+	printf("Robotinit2\n");
 	CommandBase::init(); // Constructor for CommandBase
+	printf("Robotinit3\n");
 	lw = LiveWindow::GetInstance();
-	joystick = new Joystick(DRIVER_JOY); // Construct left hand joystick
-	speedgun = new BuiltInAccelerometer(); // Construct new accelerometer called speedgun
+	printf("Robotinit4\n");
+	speedgun = new BuiltInAccelerometer(); // New accelerometer called speedgun
+	printf("Robotinit5\n");
+	move = new Drive(CommandBase::oi->driver);
+	printf("Robotinit6\n");
 	robot = this;
+	printf("Robotinit7\n");
+	compressor = new Compressor(PCM);
+	printf("Robotinit8\n");
+>>>>>>> 0b19f005a73868ef5bfb0d832e13bc1166313706
+
+	/// AUTO ZONE
+	autonomousCommand = new AutonomousSimple(3.5f, 0.4f);//Initializes simple autonomous program with
+														 //time in seconds to move forward, and motor velocity
+														 //between 0 and 1.
+	/// Moves to auto zone sideways
+	//Strafes to the left
+	//autonomousCommand = new AutonomousSimple(3.5f, 0.4f, true);
+
+	/// FARTHER PLATFORM
+	//autonomousCommand = new AutonomousSimple(5.5f, 0.4f);
+
+	/// NO AUTO
+	//autonomousCommand = new AutonomousSimple(0.0f, 0.0f);
+
+	//autonomousCommand = new Autonomous();
+#ifdef CAMERA
+	CameraServer::GetInstance()->SetQuality(50);
+	CameraServer::GetInstance()->StartAutomaticCapture("cam0");
+	std::printf("Starting camera server\n");
+#endif
 }
 
 void Robot::DisabledInit()
@@ -30,7 +62,7 @@ void Robot::DisabledPeriodic()
 {
 	if (robot_status != DISABLEDPERIODIC)
 		robot_status = DISABLEDPERIODIC;
-	Scheduler::GetInstance()->Run();
+	//Scheduler::GetInstance()->Run();
 }
 
 void Robot::AutonomousInit()
@@ -38,6 +70,7 @@ void Robot::AutonomousInit()
 	robot_status = AUTONOMOUSINIT; // Makes the status equal AUTONOMOUSINIT
 	if (autonomousCommand != NULL)
 		autonomousCommand->Start();
+	compressor->Start();
 }
 
 void Robot::AutonomousPeriodic()
@@ -45,12 +78,13 @@ void Robot::AutonomousPeriodic()
 	if (robot_status != AUTONOMOUSPERIODIC) // Makes the status equal AUTONOMOUSPERIODIC
 		robot_status = AUTONOMOUSPERIODIC;
 	Scheduler::GetInstance()->Run();
+	CommandBase::vision->updateVisionRead();
 	CommandBase::pixellogic->I2CRecieve();
-	//std::printf("Work pls\n");
 }
 
 void Robot::TeleopInit()
 {
+	printf("Teleopinit\n");
 	robot_status = TELEOPINIT; // Makes the status equal TELEOPINIT
 	/*
 	 * This makes sure that the autonomous stops running when
@@ -60,8 +94,12 @@ void Robot::TeleopInit()
 	 */
 	if (autonomousCommand != NULL)
 		autonomousCommand->Cancel();
-	move = new Drive(joystick);
 	move->Start();
+	compressor->Start();
+
+	//Driveteam's stuff
+	CommandBase::oi->handleLatch();
+	CommandBase::oi->handleElevator();
 }
 
 void Robot::TeleopPeriodic()
@@ -92,21 +130,23 @@ void Robot::TeleopPeriodic()
 		printf("Max acceleration is %f meters per second per second \n", maxAcceleration); //prints maxAcceleration
 	}
 	TimeChecked = 0;
-
+	CommandBase::oi->handleLatch();
+	//CommandBase::oi->handleElevator();
 }
 
 void Robot::TestInit()
 {
 	robot_status = TESTINIT; // Makes the status equal TESTINIT
+	printf("lel what are you even doing here scrub?\n");
 }
 void Robot::TestPeriodic()
 {
 	if (robot_status != TESTPERIODIC) // Makes the status equal TESTPERIODIC
 		robot_status = TESTPERIODIC;
 	lw->Run();
-	float val = joystick->GetRawAxis(5); //Takes input from joystick
-	firstTalon->Set(val); //Gives joystick input to first talon
-	secondTalon->Set(val);
+	//float val = joystick->GetRawAxis(5); //Takes input from joystick
+	//firstTalon->Set(val); //Gives joystick input to first talon
+	//secondTalon->Set(val);
 	
 }
 

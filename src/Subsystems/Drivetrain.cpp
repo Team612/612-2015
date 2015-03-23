@@ -3,27 +3,31 @@
 #include <MotorSafetyHelper.h>
 #include "Drivetrain.h"
 
-Drivetrain::Drivetrain(uint32_t talonchannel1,
-		                             uint32_t talonchannel2,
-		                             uint32_t talonchannel3,
-		                             uint32_t talonchannel4,
-									 uint32_t infraredchannel):
+Drivetrain::Drivetrain(CANTalon* t_fl, CANTalon* t_fr, CANTalon* t_rl, CANTalon* t_rr, AnalogInput* infrared):
 		Subsystem("Drivetrain"),
-		RobotDrive(new CANTalon(talonchannel1),
-				   new CANTalon(talonchannel2),
-				   new CANTalon(talonchannel3),
-				   new CANTalon(talonchannel4))
-
+		RobotDrive(t_fl, t_fr, t_rl, t_rr)
 {
-	SetSafetyEnabled(true);
-	SetExpiration(MOTOR_EXPIRATION);
-	std::printf("Expiration = %f", GetExpiration());
-	ir = new AnalogInput(infraredchannel);
+	imu = new IMU(new SerialPort(57600,SerialPort::kMXP),REFRESH_RATE);
+	motor_power = 1.0f;
+	fl = t_fl;
+	fr = t_fr;
+	rl = t_rl;
+	rr = t_rr;
 
-	encoderLF = new Encoder(ENCODER_LF_A, ENCODER_LF_B);
-	encoderLR = new Encoder(ENCODER_LR_A, ENCODER_LR_B);
-	encoderRF = new Encoder(ENCODER_RF_A, ENCODER_RF_B);
-	encoderRR = new Encoder(ENCODER_RR_A, ENCODER_RR_B);
+	fl->SetFeedbackDevice(CANTalon::QuadEncoder);
+	fr->SetFeedbackDevice(CANTalon::QuadEncoder);
+	rl->SetFeedbackDevice(CANTalon::QuadEncoder);
+	rr->SetFeedbackDevice(CANTalon::QuadEncoder);
+
+	SetSafetyEnabled(false);
+	//SetExpiration(MOTOR_EXPIRATION);
+	std::printf("Expiration = %f", GetExpiration());
+	ir = infrared;
+
+	//encoderLF = new Encoder(ENCODER_LF_A, ENCODER_LF_B);
+	//encoderLR = new Encoder(ENCODER_LR_A, ENCODER_LR_B);
+	//encoderRF = new Encoder(ENCODER_RF_A, ENCODER_RF_B);
+	//encoderRR = new Encoder(ENCODER_RR_A, ENCODER_RR_B);
 
 	/**
 	 * rear left clockwise = backwards
@@ -33,9 +37,9 @@ Drivetrain::Drivetrain(uint32_t talonchannel1,
 	 */
 
 	//SetInvertedMotor(kRearRightMotor, true);
-	//SetInvertedMotor(kRearLeftMotor, true);
+	SetInvertedMotor(kRearRightMotor, true);
+	//SetInvertedMotor(kFrontRightMotor, true);
 	SetInvertedMotor(kFrontRightMotor, true);
-	SetInvertedMotor(kFrontLeftMotor, true);
 
 	//import trackball or something? idk.
 }
@@ -51,13 +55,22 @@ void Drivetrain::InitDefaultCommand()
 
 void Drivetrain::move(float x, float y, float rotation)
 {
+	std::printf("Gyro = %f\n", imu->GetYaw());
+	//printf("MoveY %f\n", y);
+#ifdef IMU
+	MecanumDrive_Cartesian(x, y, imu->GetYaw());
+#else
 	MecanumDrive_Cartesian(x, y, rotation);
+#endif
+	//printf("MoveX %f\n", x);
+	// FEED ME SEYMORE
 	m_safetyHelper->Feed();
 }
 
 void Drivetrain::stop()
 {
 	MecanumDrive_Cartesian(0.0f, 0.0f, 0.0f);
+	// FEED ME SEYMORE
 	m_safetyHelper->Feed();
 }
 
@@ -66,14 +79,14 @@ int16_t Drivetrain::getir()
 	return ir->GetValue();
 }
 
-void Drivetrain::resetEncoders()
+/*void Drivetrain::resetEncoders()
 {
-	//Calls reset on all encoders
+	//So this seems pretty useless, im gonna comment this out to avoid messing things up.
 	encoderLF->Reset();
 	encoderLR->Reset();
 	encoderRF->Reset();
 	encoderRR->Reset();
-}
+}*/
 
 int32_t Drivetrain::getDistance(MotorLocation motor)
 {
@@ -82,15 +95,15 @@ int32_t Drivetrain::getDistance(MotorLocation motor)
 	switch(motor)
 	{
 	case LEFT_FRONT:
-		return encoderLF->Get();
+
 	case LEFT_REAR:
-		return encoderLR->Get();
+
 	case RIGHT_FRONT:
-		return encoderRF->Get();
+
 	case RIGHT_REAR:
-		return encoderRR->Get();
+
 	default:
-		return 0; //In case the enum somehow gets an addition
+		return 0;
 	}
 }
 
@@ -101,7 +114,7 @@ int32_t Drivetrain::getDistance(MotorLocation motor)
 	return (distance < 6);
 
 	// OLD
-	/*
+
 	if(d < 6)
 	{
 		return true;
