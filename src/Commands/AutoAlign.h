@@ -13,7 +13,7 @@
 
 #include "Commands/CommandGroup.h"
 #include "WPILib.h"
-#include <cmath.h>
+#include <cmath>
 
 /**
  *
