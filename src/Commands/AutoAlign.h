@@ -14,6 +14,7 @@
 #include "Commands/CommandGroup.h"
 #include "WPILib.h"
 #include <cmath>
+#include "RoughAlign.h"
 
 /**
  *
@@ -37,8 +38,9 @@ private:
     double ratioAverage = 0.0;
     int leftOrRight = 0.0; //indicates whether you are left or right of max angle; right is 1, left is -1
     float angle = 0.0;
+    RoughAlign* roughalign;
 public:
-	AutoAlign();
+	AutoAlign(float Distance, float wR, float hR, float wL,  float hL);
 	double AngleAlgor(float wR, float hR, float wL,  float hL); //feed algor the dinosaur
 };
 
