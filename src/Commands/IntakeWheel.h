@@ -15,9 +15,6 @@ public:
 	void End();
 	void Interrupted();
 private:
-	int feedState;
-	bool isPressed;
-	bool wasPressed;
 	GamePad* joyObj;
 	CANTalon* leftFeedWheel;
 	CANTalon* rightFeedWheel;

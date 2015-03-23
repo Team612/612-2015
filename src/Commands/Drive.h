@@ -26,9 +26,6 @@ private:
 	float targetX;
 	float targetY;
 	float targetRotation;
-	int feedState;
-	bool isPressed;
-	bool wasPressed;
 	//CANTalon* leftFeedWheel;
 	//CANTalon* rightFeedWheel;
 
