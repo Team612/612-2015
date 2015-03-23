@@ -9,9 +9,6 @@ Drive::Drive(float x, float y, float rotation)
 	targetY = y;
 	targetRotation = rotation;
 	joyObj = NULL;
-	feedState = 0;
-	isPressed = false;
-	wasPressed = false;
 }
 
 Drive::Drive(GamePad* joystick)
@@ -22,9 +19,6 @@ Drive::Drive(GamePad* joystick)
 	targetX = 0;
 	targetY = 0;
 	targetRotation = 0;
-	feedState = 0;
-	isPressed = false;
-	wasPressed = false;
 }
 
 

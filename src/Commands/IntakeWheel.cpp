@@ -4,9 +4,6 @@ IntakeWheel::IntakeWheel(GamePad* joystick)
 {
 	//Requires(elevator);
 	//Requires(drivetrain);
-	feedState = 1;
-	isPressed = false;
-	wasPressed = false;
 	joyObj = joystick;
 	rightFeedWheel = new CANTalon(RIGHT_FEED_MOTOR);
 	leftFeedWheel = new CANTalon(LEFT_FEED_MOTOR);

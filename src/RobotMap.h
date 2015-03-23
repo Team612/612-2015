@@ -29,8 +29,8 @@ const uint32_t MOTOR_FR = 2; // The channel for the rear left motor
 const uint32_t MOTOR_FL = 1; // The channel for the front left motor
 const uint32_t MOTOR_RR = 3; // The channel for the rear right motor
 const uint32_t MOTOR_RL = 4; // The channel for the front right motor
-const uint32_t MOTOR_LEFT_FEED = 5; // The channel for the front right motor
-const uint32_t MOTOR_RIGHT_FEED = 6; // The channel for the front right motor
+//const uint32_t MOTOR_LEFT_FEED = 5; // The channel for the front right motor
+//const uint32_t MOTOR_RIGHT_FEED = 6; // The channel for the front right motor
 
 const float MOTOR_EXPIRATION = 1000.0f; // float measured in milliseconds
 const float MOTOR_LOW = 0.4f;
