@@ -2,6 +2,7 @@
 #define ROBOTMAP_H
 
 #include "WPILib.h"
+#include "GamePad.h"
 
 //Setings
 //#define IMU
@@ -28,6 +29,8 @@ const uint32_t MOTOR_FR = 2; // The channel for the rear left motor
 const uint32_t MOTOR_FL = 1; // The channel for the front left motor
 const uint32_t MOTOR_RR = 3; // The channel for the rear right motor
 const uint32_t MOTOR_RL = 4; // The channel for the front right motor
+//const uint32_t MOTOR_LEFT_FEED = 5; // The channel for the front right motor
+//const uint32_t MOTOR_RIGHT_FEED = 6; // The channel for the front right motor
 
 const float MOTOR_EXPIRATION = 1000.0f; // float measured in milliseconds
 const float MOTOR_LOW = 0.4f;
@@ -37,7 +40,8 @@ const float MOTOR_HIGH = 1.0f;
 const uint32_t INFRARED = 1; // The channel for infrared sensors
 
 //ELEVATOR TODO fix these numbers
-const uint32_t ELEVATOR_MOTOR = 6; // The channel for the elevator motors
+const uint32_t ELEVATOR_MOTOR_1 = 6; // The channel for the elevator motors
+const uint32_t ELEVATOR_MOTOR_2 = -1;
 const uint32_t ELEVATOR_TOP_SWITCH = 1; // The channel for the top switch of the elevator
 const uint32_t ELEVATOR_BOTTOM_SWITCH = 1; // The channel for the bottom switch of the elevator
 const uint32_t ELEVATOR_ENCODER_A = 1; // The channels for the elevator encoder
@@ -46,6 +50,8 @@ const uint32_t LEFT_FORK_IR = 1;//TODO actually fill in this port
 const uint32_t RIGHT_FORK_IR = 2;//TODO actually fill in this port
 const uint32_t MIDDLE_FORK_US = 1;
 const uint32_t MIDDLE_FORK_IR = 2;
+const uint32_t LEFT_FEED_MOTOR = 5;
+const uint32_t RIGHT_FEED_MOTOR = 7;
 
 const float TOTE_DETECT_TOLERANCE = 6.0f;//in inches
 const float ELEVATOR_SPOOL_DIAMETER = 10.12f;//inches
@@ -72,6 +78,7 @@ static const uint32_t GUNNER_JOY = 1; // The channels for the gunner joystick
 static const uint32_t LEFT_X  = 1; // port for left joystick, x axis
 static const uint32_t LEFT_Y  = 0; // port for left joystick, y axis
 static const uint32_t RIGHT_X = 4; // port for right joystick, x axis
+static const uint32_t RIGHT_Y = 5;
 
 #else
 
@@ -87,9 +94,8 @@ static const uint32_t BUTTON_A = 1; // port for A button on xbox controller
 static const uint32_t BUTTON_B = 2; // port for B button on xbox controller
 static const uint32_t BUTTON_X = 3; // port for X button on xbox controller
 static const uint32_t BUTTON_Y = 4; // port for Y button on xbox controller
+static const uint32_t BUTTON_LB = 5;
 static const uint32_t BUTTON_RB = 6; // port for Y button on xbox controller
-static const uint32_t BUTTON_L2 = 5;
-static const uint32_t BUTTON_R2 = 6;
 
 
 const uint32_t SOLENOIDCHAN1 = 0; // check correct values

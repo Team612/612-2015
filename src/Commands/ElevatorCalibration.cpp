@@ -43,9 +43,9 @@ void ElevatorCalibration::Execute()
 	{
 		if(bottomSum == 0)
 		{
-			for(float bCount : valVectorBottom)
+			for(std::vector<float>::iterator it = valVectorBottom->begin(); it != valVectorBottom->end(); ++it)
 			{
-				bottomSum += bCount;
+				bottomSum += *it;
 			}
 			bottomSum = (bottomSum/valVectorBottom->size());
 			prefs->PutFloat("ELEV_OFFSET", bottomSum);

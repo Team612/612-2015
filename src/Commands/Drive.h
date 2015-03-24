@@ -26,7 +26,8 @@ private:
 	float targetX;
 	float targetY;
 	float targetRotation;
-
+	//CANTalon* leftFeedWheel;
+	//CANTalon* rightFeedWheel;
 
 	GamePad* joyObj;
 };

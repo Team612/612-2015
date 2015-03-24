@@ -4,7 +4,7 @@
 Elevator::Elevator() :
 	Subsystem("Elevator")
 {
-	elevTalon = new CANTalon(ELEVATOR_MOTOR);
+	elevTalon = new CANTalon(ELEVATOR_MOTOR_1);
 	//topSwitch = new DigitalInput(ELEVATOR_TOP_SWITCH);
 	//bottomSwitch = new DigitalInput(ELEVATOR_BOTTOM_SWITCH);
 	//elevEncoder = new Encoder(ELEVATOR_ENCODER_A, ELEVATOR_ENCODER_B);

@@ -30,8 +30,6 @@ private:
 	//MainSensor switchSensor(float IRDistance, float UDistance);
 	DoubleSolenoid* latchSol;
 	Preferences* prefs;
-	float getElevatorSensorHeight();
-	float getElevatorEncoderHeight();
 public:
 	Elevator();
 	virtual ~Elevator();
@@ -41,6 +39,8 @@ public:
 	//Encoder* getEncoder();
 	bool isLeftAligned();
 	bool isRightAligned();
+	float getElevatorSensorHeight();
+	float getElevatorEncoderHeight();
 	float getElevatorHeight();
 	float USVoltageToDistance(float val);
 	float IRVoltageToDistance(float val);

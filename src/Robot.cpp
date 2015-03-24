@@ -28,6 +28,9 @@ void Robot::RobotInit()
 	printf("Robotinit7\n");
 	compressor = new Compressor(PCM);
 	printf("Robotinit8\n");
+	intake = new IntakeWheel(CommandBase::oi->gunner);
+	intake->Start();
+	printf("Robotinit9\n");
 
 	/// AUTO ZONE
 	autonomousCommand = new AutonomousSimple(3.5f, 0.4f);//Initializes simple autonomous program with
@@ -143,8 +146,8 @@ void Robot::TestInit()
 {
 	robot_status = TESTINIT; // Makes the status equal TESTINIT
 	//printf("lel what are you even doing here scrub?\n");
-	ElevatorCalibration* e = new ElevatorCalibration();
-	e->Start();
+	ElevatorCalibration* calibrate = new ElevatorCalibration();
+	calibrate->Start();
 }
 void Robot::TestPeriodic()
 {
