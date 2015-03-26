@@ -55,7 +55,7 @@ void Robot::RobotInit()
 	prefs = Preferences::GetInstance();
 	if(!prefs->ContainsKey("ELEV_OFFSET"))
 	{
-		prefs->PutFloat("ELEV_OFFSET", 10.0f);
+		prefs->PutFloat("ELEV_OFFSET", 5.0f);
 	}
 	if(!prefs->ContainsKey("ELEV_CALIBRATION"))
 	{

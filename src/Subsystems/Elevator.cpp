@@ -50,6 +50,7 @@ void Elevator::stop()
 
 bool Elevator::isLeftAligned()
 {
+	printf("%f inches \n", IRVoltageToDistance(leftIR->GetVoltage()));
 	if(IRVoltageToDistance(leftIR->GetVoltage()) + TOTE_DETECT_TOLERANCE < (IRVoltageToDistance(middleIR->GetVoltage())))
 	{
 		return true;
@@ -62,6 +63,7 @@ bool Elevator::isLeftAligned()
 
 bool Elevator::isRightAligned()
 {
+	printf("%f inches \n", IRVoltageToDistance(rightIR->GetVoltage()));
 	if(IRVoltageToDistance(rightIR->GetVoltage()) + TOTE_DETECT_TOLERANCE < (IRVoltageToDistance(middleIR->GetVoltage())))
 	{
 		return true;
@@ -74,7 +76,7 @@ bool Elevator::isRightAligned()
 
 float Elevator::getElevatorSensorHeight()//in inches
 {
-
+/*
 	if((USVoltageToDistance(middleUS->GetVoltage())+IRVoltageToDistance(middleIR->GetVoltage()))/2>SENSOR_THRESHOLD)
 	{
 		return (USVoltageToDistance(middleUS->GetVoltage())-(prefs->GetInt("ELEV_OFFSET")));
@@ -82,7 +84,8 @@ float Elevator::getElevatorSensorHeight()//in inches
 	else
 	{
 		return (IRVoltageToDistance(middleIR->GetVoltage())-(prefs->GetInt("ELEV_OFFSET")));
-	}
+	}*/
+	return (USVoltageToDistance(middleUS->GetVoltage())-(prefs->GetInt("ELEV_OFFSET")));
 }
 
 float Elevator::getElevatorEncoderHeight()//in inches

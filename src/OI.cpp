@@ -15,7 +15,7 @@ OI::OI()
 	toggleOpen = true; //false is closed, true is opened
 
 	printf("OIinit0\n");
-	driver = new GamePad(true, DRIVER_JOY);
+	driver = new GamePad(false, DRIVER_JOY);
 	printf("OIinit1\n");
 	gunner = new GamePad(false, GUNNER_JOY);
 	printf("OIinit2\n");
