@@ -51,7 +51,7 @@ void Drive::Execute()
 				*power = MOTOR_HIGH;
 			else if (joyObj->GetButtonStateLB())
 				*power = MOTOR_LOW;
-			drivetrain->move((*power)*joyObj->GetLeftXSmooth(), (*power)*joyObj->GetLeftYSmooth(), (-*power)*joyObj->GetRightXSmooth());
+			drivetrain->move((*power)*joyObj->GetLeftXSmooth(), (-1.0f)*(*power)*(joyObj->GetLeftYSmooth()), (-*power)*joyObj->GetRightXSmooth());
 		}
 		//printf("DriveExec1\n");
 		SmartDashboard::PutNumber("Front left Talon value", drivetrain->fl->Get());

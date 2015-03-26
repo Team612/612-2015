@@ -34,7 +34,7 @@ void Robot::RobotInit()
 	printf("Robotinit9\n");
 
 	/// AUTO ZONE
-	autonomousCommand = new AutonomousSimple(3.5f, 0.4f, false);//Initializes simple autonomous program with
+	autonomousCommand = new AutonomousSimple(3.8f, 0.4f, false);//Initializes simple autonomous program with
 														 //time in seconds to move forward, and motor velocity
 														 //between 0 and 1.
 	/// Moves to auto zone sideways
