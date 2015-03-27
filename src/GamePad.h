@@ -47,7 +47,7 @@ public:
 	 JoystickButton* LeftTriggerClick   = new JoystickButton(this, Button_TRIGGER_LEFT);
 	 JoystickButton* RightTriggerClick  = new JoystickButton(this, Button_TRIGGER_RIGHT);
 
-	 bool stickType;
+	 bool isFStick;
 private:
 	// Axis Ports
 

@@ -36,7 +36,7 @@ void Drive::Execute()
 	{
 		float* power = &drivetrain->motor_power;
 		//printf("DriveExec0\n %f", joyObj->GetLeftYSmooth());
-		if(joyObj->stickType)
+		if(joyObj->isFStick)
 		{
 			*power = ((joyObj->GetRightYSmooth()*(-1.0f))+1)/2;
 			if(*power < 0.2f)
