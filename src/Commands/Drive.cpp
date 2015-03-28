@@ -38,12 +38,12 @@ void Drive::Execute()
 		//printf("DriveExec0\n %f", joyObj->GetLeftYSmooth());
 		if(joyObj->isFStick)
 		{
-			*power = ((joyObj->GetRightYSmooth()*(-1.0f))+1)/2;
+			*power = ((joyObj->GetRightYSmooth()*(-0.7f))+1)/2;
 			if(*power < 0.2f)
 			{
 				*power = 0.2f;
 			}
-			drivetrain->move((*power)*joyObj->GetLeftXSmooth(), (-1.0f)*(*power)*(joyObj->GetLeftYSmooth()), (-*power)*joyObj->GetRightXSmooth());
+			drivetrain->move((*power)*joyObj->GetLeftXRaw(), (-1.0f)*(*power)*(joyObj->GetLeftYRaw()), (-*power)*joyObj->GetRightXSmooth());
 		}
 		else
 		{

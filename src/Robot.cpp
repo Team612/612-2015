@@ -37,6 +37,9 @@ void Robot::RobotInit()
 	autonomousCommand = new AutonomousSimple(3.8f, 0.4f, false);//Initializes simple autonomous program with
 														 //time in seconds to move forward, and motor velocity
 														 //between 0 and 1.
+	///NO TOTE
+	//idk if this is nessescary
+	//autonomousCommand = new AutonomousSimple(3.7f, 0.4f, false);
 	/// Moves to auto zone sideways
 	//Strafes to the left
 	//autonomousCommand = new AutonomousSimple(3.5f, 0.4f, true);
