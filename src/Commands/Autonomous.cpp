@@ -2,37 +2,20 @@
 
 Autonomous::Autonomous()
 {
-	// Use Requires() here to declare subsystem dependencies
-	// eg. Requires(chassis);
-}
+	// Add Commands here:
+	// e.g. AddSequential(new Command1());
+	//      AddSequential(new Command2());
+	// these will run in order.
 
-// Called just before this Command runs the first time
-void Autonomous::Initialize()
-{
+	// To run multiple commands at the same time,
+	// use AddParallel()
+	// e.g. AddParallel(new Command1());
+	//      AddSequential(new Command2());
+	// Command1 and Command2 will run in parallel.
 
-}
-
-// Called repeatedly when this Command is scheduled to run
-void Autonomous::Execute()
-{
-
-}
-
-// Make this return true when this Command no longer needs to run execute()
-bool Autonomous::IsFinished()
-{
-	return false;
-}
-
-// Called once after isFinished returns true
-void Autonomous::End()
-{
-
-}
-
-// Called when another command which requires one or more of the same
-// subsystems is scheduled to run
-void Autonomous::Interrupted()
-{
-
+	// A command group will require all of the subsystems that each member
+	// would require.
+	// e.g. if Command1 requires chassis, and Command2 requires arm,
+	// a CommandGroup containing them would require both the chassis and the
+	// arm.
 }

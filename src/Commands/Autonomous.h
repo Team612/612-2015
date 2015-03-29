@@ -1,18 +1,13 @@
 #ifndef Autonomous_H
 #define Autonomous_H
 
-#include "../CommandBase.h"
+#include "Commands/CommandGroup.h"
 #include "WPILib.h"
 
-class Autonomous: public CommandBase
+class Autonomous: public CommandGroup
 {
 public:
 	Autonomous();
-	void Initialize();
-	void Execute();
-	bool IsFinished();
-	void End();
-	void Interrupted();
 };
 
 #endif
