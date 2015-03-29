@@ -20,6 +20,10 @@ private:
 	uint16_t* cam0Data; //Stores all raw data from cameras
 	uint16_t* cam1Data;
 
+	//Shows the heights at different distances in increments of 5
+	uint32_t* distances = new uint32_t[6] {0, 0, 0, 0, 0, 0}; //TODO: Measure sample distances and fill this
+									    //05,10,15,20,25,30
+
 	uint16_t convertTo16Int(uint8_t* array, uint32_t beginIndex); //Converts to 16 bit unsigned int
 	void transferData(uint8_t* buffer, uint16_t* target); //Transfers data from 8-bit buffer to 16-bit target
 	void handleTransaction(uint8_t* buffer); //Handles all readings from the i2c
@@ -45,6 +49,9 @@ public:
 	//Gets an index of a cameras raw data
 	uint16_t getRaw(Camera camera, uint32_t index);
 
+	//Gets the array of data for a camera
+	uint16_t* getRawDataArray(Camera camera);
+
 	//Retrieves the X position of a camera's bounding box
 	uint16_t getBoundingX(Camera camera);
 
@@ -53,6 +60,9 @@ public:
 
 	//Retrieves the height of a camera's bounding box
 	uint16_t getBoundingHeight(Camera camera);
+
+	//Returns the estimated distance to the tote in centimeters
+	uint32_t getEstimatedDistance(Camera camera);
 
 	void printCameraStatistics(Camera camera);
 };
