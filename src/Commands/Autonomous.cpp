@@ -2,6 +2,10 @@
 
 Autonomous::Autonomous()
 {
+	Requires(CommandBase::drivetrain);
+	Requires(CommandBase::vision);
+
+	AddSequential(new ToteNavGroup());
 	// Add Commands here:
 	// e.g. AddSequential(new Command1());
 	//      AddSequential(new Command2());

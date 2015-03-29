@@ -4,6 +4,8 @@
 #include "../Subsystems/Drivetrain.h"
 #include "CommandBase.h"
 #include "WPILib.h"
+#include "AutoAlign.h"
+#include "MoveToTote.h"
 
 class ToteNavGroup: public CommandGroup
 {

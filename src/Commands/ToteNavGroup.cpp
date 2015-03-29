@@ -1,6 +1,5 @@
 #include <Commands/Latch.h>
 #include "CommandBase.h"
-#include "MoveToTote.h"
 #include "Latch.h"
 #include "ToteNavGroup.h"
 
@@ -21,8 +20,11 @@ ToteNavGroup::ToteNavGroup() {
 	// e.g. if Command1 requires chassis, and Command2 requires arm,
 	// a CommandGroup containing them would require both the chassis and the
 	// arm.
+
 	Requires(CommandBase::drivetrain);
 	Requires(CommandBase::vision);
-	AddSequential(new MoveToTote());
+
+	AddSequential(new MoveToTote(5));
+	AddSequential(new AutoAlign());
 	//AddSequential(new Latch()); // Ensure that latch is open before grabbing tote
 }
