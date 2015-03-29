@@ -6,54 +6,49 @@
  */
 MoveToTote::MoveToTote()
 {
+	Requires(drivetrain);
+	Requires(vision);
 }
 
-/** Called just before this Command runs the first time
- * This is run after the constructor.  The initialization code could be done here, too.
- * In many cases, this method is no different than the constructor, so adding code here
- * is not always necessary.
- */
 void MoveToTote::Initialize()
 {
 
 }
 
-/** Called repeatedly when this Command is scheduled to run
- * This method is called many times a second and performs the actions of the Command.
- * Setting a motor value by using a Subsystem method call is an example of what would occur
- * in this method.
- *
- */
 void MoveToTote::Execute()
 {
+	static int count = 0;
+	count++;
 
+	vision->receiveI2C();
+
+	vision->printCameraStatistics(Vision::LEFT);
+	vision->printCameraStatistics(Vision::RIGHT);
+
+	//Can only do it every 1/30th of a second because of I2C stuffs
+	if (count == 2 && (vision->hasReceived(Vision::LEFT) && vision->hasReceived(Vision::RIGHT)))
+	{
+		navigate();
+		count = 0;
+	}
 }
 
-/** Make this return true when this Command no longer needs to run execute()
- * The method might return true for a variety of reasons, such as a Timer object reaching a count,
- * or based on a switch value.
- */
 bool MoveToTote::IsFinished()
 {
-	return false;
+	return success;
 }
 
-/** Called once after isFinished returns true
- * This method is used to clean up variables, if necessary.  Dynamic local variables could be deleted to
- * recover memory.
- */
 void MoveToTote::End()
 {
-
+	drivetrain->stop();
 }
 
-/** Called when another command which requires one or more of the same
- * subsystems is scheduled to run.
- * This method is used if the Subsystem has a requires() statement or if the Command was created
- * by a whileHeld() button action.  When the button is released, the active Command becomes interrupted
- * and canceled.
- */
 void MoveToTote::Interrupted()
 {
+	drivetrain->stop();
+}
 
+void MoveToTote::navigate()
+{
+	if ()
 }

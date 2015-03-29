@@ -13,6 +13,11 @@ public:
 	bool IsFinished(); ///< This method contains the logic of when the command should end
 	void End(); ///< The clean-up method when a command ends gracefully (IsFinished returns true)
 	void Interrupted(); ///< The clean-up method when a command ends abruptly (from another event, such as a button release)
+private:
+	bool success = false;
+
+	void navigate();
+	string boolToString(bool boolean);
 };
 
 #endif /* LATCH_CPP_SRC_COMMANDS_MOVETOTOTE_H_ */
