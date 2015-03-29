@@ -53,6 +53,8 @@ public:
 
 	//Retrieves the height of a camera's bounding box
 	uint16_t getBoundingHeight(Camera camera);
+
+	void printCameraStatistics(Camera camera);
 };
 
 #endif

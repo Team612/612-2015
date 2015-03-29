@@ -113,16 +113,30 @@ uint16_t Vision::getRaw(Camera camera, uint32_t index) {
 	}
 }
 
-uint16_t Vision::getBoundingX(Camera camera) {
+uint16_t Vision::getBoundingX(Camera camera)
+{
 	return getRaw(camera, 0);
 }
 
-uint16_t Vision::getBoundingWidth(Camera camera) {
+uint16_t Vision::getBoundingWidth(Camera camera)
+{
 	return getRaw(camera, 1);
 }
 
-uint16_t Vision::getBoundingHeight(Camera camera) {
+uint16_t Vision::getBoundingHeight(Camera camera)
+{
 	return getRaw(camera, 2);
+}
+
+void Vision::printCameraStatistics(Camera camera)
+{
+	string strReceived = hasReceived(camera)? "true" : "false";
+	string strCamera = camera == LEFT? "LEFT" : "RIGHT";
+
+	printf("VISION %s: [Received: %s, X: %u, W: %u, H: %u", strCamera,
+			strReceived, getBoundingX(camera),
+			getBoundingWidth(camera),
+			getBoundingHeight(camera));
 }
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
