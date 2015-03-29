@@ -29,6 +29,8 @@ public:
 	enum Camera {LEFT, RIGHT};
 
 	Vision();
+	~Vision();
+
 	void InitDefaultCommand();
 
 	//Needs to be called by the routine using vision every tick, receives the new info

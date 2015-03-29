@@ -27,7 +27,7 @@ public:
 	static OI* oi;
 	static Elevator* elevator;
 	static Drivetrain* drivetrain;
-	//static Vision* vision;
+	static Vision* vision;
 	static PixelLogic* pixellogic;
 };
 

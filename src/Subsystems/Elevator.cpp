@@ -162,4 +162,3 @@ DoubleSolenoid* Elevator::getSolenoid()
 	return latchSol;
 }
 
->>>>>>> 0b19f005a73868ef5bfb0d832e13bc1166313706

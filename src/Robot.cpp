@@ -29,7 +29,6 @@ void Robot::RobotInit()
 	printf("Robotinit7\n");
 	compressor = new Compressor(PCM);
 	printf("Robotinit8\n");
->>>>>>> 0b19f005a73868ef5bfb0d832e13bc1166313706
 
 	/// AUTO ZONE
 	autonomousCommand = new AutonomousSimple(3.5f, 0.4f);//Initializes simple autonomous program with
@@ -78,7 +77,6 @@ void Robot::AutonomousPeriodic()
 	if (robot_status != AUTONOMOUSPERIODIC) // Makes the status equal AUTONOMOUSPERIODIC
 		robot_status = AUTONOMOUSPERIODIC;
 	Scheduler::GetInstance()->Run();
-	CommandBase::vision->updateVisionRead();
 	CommandBase::pixellogic->I2CRecieve();
 }
 
