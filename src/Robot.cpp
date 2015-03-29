@@ -70,6 +70,8 @@ void Robot::AutonomousInit()
 	if (autonomousCommand != NULL)
 		autonomousCommand->Start();
 	compressor->Start();
+	Autonomous* autoMode = new Autonomous();
+	autoMode->Start();
 }
 
 void Robot::AutonomousPeriodic()

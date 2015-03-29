@@ -7,6 +7,7 @@
 #include "OI.h"
 #include "Commands/Latch.h"
 #include <Compressor.h>
+#include "Commands/Autonomous.h"
 
 class Robot: public IterativeRobot
 {
