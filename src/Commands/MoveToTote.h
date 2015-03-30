@@ -3,7 +3,6 @@
 
 #include "../CommandBase.h"
 #include "WPILib.h"
-#include <cmath>
 
 class MoveToTote: public CommandBase
 {

@@ -4,9 +4,6 @@
 
 #include "Commands/Subsystem.h"
 #include "WPILib.h"
-#include "PixelLogic.h"
-#include <cmath>
-//#include "../CommandBase.h"
 
 class Vision: public Subsystem
 {
