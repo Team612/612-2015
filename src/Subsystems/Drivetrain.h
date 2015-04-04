@@ -8,6 +8,7 @@
 #include <AnalogInput.h>
 #include <CANTalon.h>
 #include <include/IMU.h>
+#include <cmath>
 
 class Drivetrain: public Subsystem, public RobotDrive
 {
@@ -36,11 +37,9 @@ public:
 	int16_t getir();
 
 	//Encoder Methods
-	enum MotorLocation {LEFT_FRONT, LEFT_REAR, RIGHT_FRONT, RIGHT_REAR}; //For use in getDistance
-	//void resetEncoders(); //Resets ALL encoders
-	int32_t getDistance(MotorLocation location); //Gets the distance of a specific  motor
-	//void SetRightFeedWheel(float speed);
-	//void SetLeftFeedWheel(float speed);
+	enum MotorLocation {FRONT_LEFT, FRONT_RIGHT, REAR_LEFT, REAR_RIGHT, FRONT_AVERAGE, LEFT_AVERAGE, REAR_AVERAGE, RIGHT_AVERAGE, MAJOR_DIAGONAL, MINOR_DIAGONAL, ALL_AVERAGE}; //For use in getDistance
+	void resetEncoders(); //Resets ALL encoders
+	float getDistance(MotorLocation location); //Gets the distance of a specific  motor
 
 	CANTalon* fl;
 	CANTalon* rl;

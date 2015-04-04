@@ -16,9 +16,14 @@ Drivetrain::Drivetrain(CANTalon* t_fl, CANTalon* t_fr, CANTalon* t_rl, CANTalon*
 
 
 	fl->SetFeedbackDevice(CANTalon::QuadEncoder);
+	fl->SetControlMode(CANSpeedController::kPosition);
 	fr->SetFeedbackDevice(CANTalon::QuadEncoder);
+	fr->SetControlMode(CANSpeedController::kPosition);
 	rl->SetFeedbackDevice(CANTalon::QuadEncoder);
+	rl->SetControlMode(CANSpeedController::kPosition);
 	rr->SetFeedbackDevice(CANTalon::QuadEncoder);
+	rr->SetControlMode(CANSpeedController::kPosition);
+	resetEncoders();
 
 	SetSafetyEnabled(false);
 	//SetExpiration(MOTOR_EXPIRATION);
@@ -56,8 +61,8 @@ void Drivetrain::InitDefaultCommand()
 
 void Drivetrain::move(float x, float y, float rotation)
 {
-	std::printf("Gyro = %f\n", imu->GetYaw());
-	//printf("MoveY %f\n", y);
+	//std::printf("Gyro = %f\n", imu->GetYaw());
+	printf("MoveY: THIS IS DRIVETRAIN %f\n", y);
 #ifdef IMU
 	MecanumDrive_Cartesian(x, y, imu->GetYaw());
 #else
@@ -71,6 +76,7 @@ void Drivetrain::move(float x, float y, float rotation)
 void Drivetrain::stop()
 {
 	MecanumDrive_Cartesian(0.0f, 0.0f, 0.0f);
+	printf("STOP \n");
 	// FEED ME SEYMORE
 	m_safetyHelper->Feed();
 }
@@ -80,31 +86,63 @@ int16_t Drivetrain::getir()
 	return ir->GetValue();
 }
 
-/*void Drivetrain::resetEncoders()
+void Drivetrain::resetEncoders()
 {
-	//So this seems pretty useless, im gonna comment this out to avoid messing things up.
-	encoderLF->Reset();
-	encoderLR->Reset();
-	encoderRF->Reset();
-	encoderRR->Reset();
-}*/
+	//encoderLF->Reset();
+	//encoderLR->Reset();
+	//encoderRF->Reset();
+	//encoderRR->Reset();
+	//fl->Set(0.0f);
+	//fr->Set(0.0f);
+	//rl->Set(0.0f);
+	//rr->Set(0.0f);
+	fl->SetPosition(0.0f);
+	fr->SetPosition(0.0f);
+	rl->SetPosition(0.0f);
+	rr->SetPosition(0.0f);
 
-int32_t Drivetrain::getDistance(MotorLocation motor)
+}
+
+float Drivetrain::getDistance(MotorLocation motor)
 {
-	//Switch statement to check for the encoder distance
-	//Did not use break statements because the return statement will end the method anyways
 	switch(motor)
 	{
-	case LEFT_FRONT:
-
-	case LEFT_REAR:
-
-	case RIGHT_FRONT:
-
-	case RIGHT_REAR:
-
+	case FRONT_LEFT:
+		return (float)(fl->GetEncPosition());
+		break;
+	case FRONT_RIGHT:
+		return (float)(fr->GetEncPosition());
+		break;
+	case REAR_LEFT:
+		return (float)(rl->GetEncPosition());
+		break;
+	case REAR_RIGHT:
+		return (float)(rr->GetEncPosition());
+		break;
+	case FRONT_AVERAGE:
+		return (getDistance(FRONT_LEFT)+getDistance(FRONT_RIGHT)/2.0f);
+		break;
+	case RIGHT_AVERAGE:
+		return (getDistance(FRONT_RIGHT)+getDistance(REAR_RIGHT)/2.0f);
+		break;
+	case REAR_AVERAGE:
+		return (getDistance(REAR_RIGHT)+getDistance(REAR_LEFT)/2.0f);
+		break;
+	case LEFT_AVERAGE:
+		return (getDistance(FRONT_LEFT)+getDistance(REAR_LEFT)/2.0f);
+		break;
+	case MAJOR_DIAGONAL:
+		return (getDistance(FRONT_LEFT)+getDistance(REAR_RIGHT)/2.0f);
+		break;
+	case MINOR_DIAGONAL:
+		return (getDistance(FRONT_RIGHT)+getDistance(REAR_LEFT)/2.0f);
+		break;
+	case ALL_AVERAGE:
+		return (getDistance(FRONT_LEFT)+getDistance(FRONT_RIGHT)+getDistance(REAR_LEFT)+getDistance(REAR_RIGHT)/4.0f);
+		break;
 	default:
 		return 0;
+		break;
 	}
 }
 

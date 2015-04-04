@@ -33,24 +33,27 @@ void Robot::RobotInit()
 	intake->Start();
 	printf("Robotinit9\n");
 
-	/// AUTO ZONE
-	autonomousCommand = new AutonomousSimple(3.8f, 0.4f, false);//Initializes simple autonomous program with
-														 //time in seconds to move forward, and motor velocity
-														 //between 0 and 1.
-	///NO TOTE
-	//idk if this is nessescary
+
+	//Autonomous Documentation:Initializes simple autonomous program with time in seconds to move forward
+	//and motor velocity between 0 and 1.
+	///TESTING ADVANCED AUTO
+	autonomousCommand = new Autonomous(10000.0f, 1.0f, Autonomous::FORWARD_PUSH);
+
+	//Initializes simple autonomous program withtime in seconds to move forward, and motor velocity between 0 and 1.
+
+	///FORWARD_PUSH
+	//autonomousCommand = new AutonomousSimple(3.8f, 0.4f, false);
+
+	///SIDEWAYS_PUSH
 	//autonomousCommand = new AutonomousSimple(3.7f, 0.4f, false);
-	/// Moves to auto zone sideways
-	//Strafes to the left
+
+
+	///
 	//autonomousCommand = new AutonomousSimple(3.5f, 0.4f, true);
 
-	/// FARTHER PLATFORM
-	//autonomousCommand = new AutonomousSimple(5.5f, 0.4f);
 
-	/// NO AUTO
+	///NO_AUTO
 	//autonomousCommand = new AutonomousSimple(0.0f, 0.0f);
-
-	//autonomousCommand = new Autonomous();
 
 	CameraServer::GetInstance()->SetQuality(50);
 	CameraServer::GetInstance()->StartAutomaticCapture("cam0");

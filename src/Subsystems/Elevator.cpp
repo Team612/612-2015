@@ -58,7 +58,7 @@ void Elevator::move(float speed)
 	}
 	*/
 	talon->Set(speed);
-	printf("setting talon to 1 now\n");
+	//printf("setting talon to 1 now\n");
 #ifdef TALON
 	talon2->Set(magnitude);
 #endif
@@ -71,7 +71,7 @@ void Elevator::stop()
 #ifdef TALON
 	talon2->Set(0);
 #endif
-	std::printf("Stop elevator motor\n");
+	//std::printf("Stop elevator motor\n");
 }
 
 Encoder* Elevator::getEncoder()

@@ -18,7 +18,7 @@ void ElevatorMove::Initialize()
 void ElevatorMove::Execute()
 {
 	elevator->move(joystick->GetRightYSmooth());
-	printf("Right Y = %f\n", joystick->GetRightYSmooth());
+	//printf("Right Y = %f\n", joystick->GetRightYSmooth());
 	//printf("Moving elevator\n");
 }
 
