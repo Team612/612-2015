@@ -28,7 +28,8 @@ OI::OI()
 	printf("OIinit5\n");
 	gunner->ButtonA->WhileHeld(new ElevatorDown());
 	printf("OIinit6\n");*/
-	Command* elevatormove = new ElevatorMoveToPosition(gunner);
+	Command* elevatormove = new ElevatorMoveToPosition(gunner, 1.0f);
+	//Command* elevatormove = new ElevatorMove(gunner);
 	elevatormove->Start();
 	isLatchPressed = false;
 	wasLatchPressed = false;

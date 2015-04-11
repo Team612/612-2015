@@ -10,7 +10,8 @@ class ElevatorMoveToPosition: public CommandBase
 private:
 
 public:
-	ElevatorMoveToPosition(GamePad* joy);
+	ElevatorMoveToPosition(GamePad* joy, float presetSpeed);
+	ElevatorMoveToPosition(int presetMove, float presetSpeed);
 	void Initialize();
 	void Execute();
 	bool IsFinished();
@@ -18,11 +19,17 @@ public:
 	void Interrupted();
 private:
 	GamePad* joystick;
-	void moveToHeight(int inchesUp);
-	int getPresetHeight();
+	void moveToHeight(float inchesUp);
+	int getPreset();
 	const float HEIGHT_TOLERANCE = 1.0f;
 	bool isManualEngaged;
 	bool wasManualEngaged;
+	bool isLB;
+	bool wasLB;
+	bool isRB;
+	bool wasRB;
+	bool isDynamic;
+	float speed;
 	int preset;
 };
 

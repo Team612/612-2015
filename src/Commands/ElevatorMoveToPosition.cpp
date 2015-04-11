@@ -1,14 +1,33 @@
 #include "ElevatorMoveToPosition.h"
 
-ElevatorMoveToPosition::ElevatorMoveToPosition(GamePad* joy)
+ElevatorMoveToPosition::ElevatorMoveToPosition(GamePad* joy, float presetSpeed)
 {
 	Requires(elevator);
 	joystick = joy;
 	isManualEngaged = true;
 	wasManualEngaged = true;
-	preset = getPresetHeight();
+	isLB = false;
+	wasLB = false;
+	isRB = false;
+	wasRB = false;
+	isDynamic = true;
+	speed = presetSpeed;
+	preset = getPreset();
 }
-
+ElevatorMoveToPosition::ElevatorMoveToPosition(int presetMove, float presetSpeed)
+{
+	Requires(elevator);
+	joystick = NULL;
+	isManualEngaged = true;
+	wasManualEngaged = true;
+	isLB = false;
+	wasLB = false;
+	isRB = false;
+	wasRB = false;
+	isDynamic = false;
+	speed = presetSpeed;
+	preset = presetMove;
+}
 // Called just before this Command runs the first time
 void ElevatorMoveToPosition::Initialize()
 {
@@ -18,16 +37,80 @@ void ElevatorMoveToPosition::Initialize()
 // Called repeatedly when this Command is scheduled to run
 void ElevatorMoveToPosition::Execute()
 {
-	elevator->move(joystick->GetRightYSmooth());
+	if(isDynamic)
+		{
+		if(joystick->GetRightXSmooth() != 0.0f)
+		{
+			isManualEngaged = true;
+		}
+		else if(joystick->GetButtonStateLB() || joystick->GetButtonStateRB())
+		{
+			isManualEngaged = false;
+		}
+		if(isManualEngaged)
+		{
+			elevator->move(joystick->GetRightYSmooth());
+		}
+		else
+		{
+			if(!isManualEngaged && wasManualEngaged)
+			{
+				preset = getPreset();
+			}
+			if(joystick->GetButtonStateLB())
+			{
+				isLB = true;
+				if(isLB && !wasLB)
+				{
+					preset--;
+				}
+			}
+			if(joystick->GetButtonStateRB())
+			{
+				isRB = true;
+				if(isRB &&!wasRB)
+				{
+					preset++;
+				}
+			}
+			if(preset < 0)
+			{
+				preset = 0;
+			}
+			if(preset > 6)
+			{
+				preset = 6;
+			}
+			moveToHeight(preset * 12.1f);
+		}
+		wasManualEngaged = isManualEngaged;
+		wasLB = isLB;
+		wasRB = isRB;
+	}
+	else
+	{
+		moveToHeight((preset * 12.1f) + 2);
+	}
 	//printf("Elevator Height= %f\n", elevator->getElevatorHeight());
 }
 
-void ElevatorMoveToPosition::moveToHeight(int inchesUp)
+void ElevatorMoveToPosition::moveToHeight(float inchesUp)
 {
-	int
+	if(elevator->getElevatorHeight() < inchesUp - HEIGHT_TOLERANCE)
+	{
+		elevator->move(speed);
+	}
+	else if(elevator->getElevatorHeight() > inchesUp + HEIGHT_TOLERANCE)
+	{
+		elevator->move(-speed);
+	}
+	else
+	{
+		elevator->stop();
+	}
 }
 
-int ElevatorMoveToPosition::getPresetHeight()
+int ElevatorMoveToPosition::getPreset()
 {
 	return (elevator->getElevatorHeight() / 12.1f);
 }
