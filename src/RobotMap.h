@@ -24,6 +24,10 @@ const uint32_t ENCODER_RR_B = 0;
 const uint32_t ENCODER_RF_A = 0; // The channels for the right front encdoer
 const uint32_t ENCODER_RF_B = 0;
 
+const uint32_t TICKS_PER_ROTATION = 0;
+
+const float WHEEL_CIRCUMFERENCE = 25.13272;
+
 //MOTORS
 const uint32_t MOTOR_FR = 2; // The channel for the rear left motor
 const uint32_t MOTOR_FL = 1; // The channel for the front left motor
