@@ -18,7 +18,7 @@ void ElevatorMove::Initialize()
 void ElevatorMove::Execute()
 {
 	elevator->move(joystick->GetRightYSmooth());
-	printf("Elevator Height= %f\n", elevator->getElevatorHeight());
+	//printf("Elevator Height= %f\n", elevator->getElevatorHeight());
 	//printf("Elevator Left Height=");
 	//elevator->isLeftAligned();
 	//printf("Elevator Right Height=");

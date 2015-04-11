@@ -8,6 +8,7 @@
 #include <Compressor.h>
 #include "Commands/IntakeWheel.h"
 #include "Commands/ElevatorCalibration.h"
+#include "Commands/Autonomous.h"
 
 class Robot: public IterativeRobot
 {
