@@ -25,6 +25,9 @@ private:
 	//Encoder* encoderRF;
 
 	bool useIR = false;
+
+	float reverseDistances(bool fr, bool rr, bool fl, bool ll);
+
 	//bool SwitchSensor(float distance); // Called in CheckSensor
 
 public:
@@ -39,7 +42,11 @@ public:
 	//Encoder Methods
 	enum MotorLocation {FRONT_LEFT, FRONT_RIGHT, REAR_LEFT, REAR_RIGHT, FRONT_AVERAGE, LEFT_AVERAGE, REAR_AVERAGE, RIGHT_AVERAGE, MAJOR_DIAGONAL, MINOR_DIAGONAL, ALL_AVERAGE}; //For use in getDistance
 	void resetEncoders(); //Resets ALL encoders
-	float getDistance(MotorLocation location); //Gets the distance of a specific  motor
+
+	int getDistance(MotorLocation location); //Gets the distance of a specific  motor
+
+	float getAverageDistanceY();
+	float getAverageDistanceX();
 
 	CANTalon* fl;
 	CANTalon* rl;
