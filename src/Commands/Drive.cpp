@@ -36,14 +36,14 @@ void Drive::Execute()
 	{
 		float* power = &drivetrain->motor_power;
 		//printf("DriveExec0\n %f", joyObj->GetLeftYSmooth());
-		if(joyObj->stickType)
+		if(joyObj->isFStick)
 		{
-			*power = ((joyObj->GetRightYSmooth()*(-1.0f))+1)/2;
+			*power = ((joyObj->GetRightYSmooth()*(-0.7f))+1)/2;
 			if(*power < 0.2f)
 			{
 				*power = 0.2f;
 			}
-			drivetrain->move((*power)*joyObj->GetLeftXSmooth(), (-1.0f)*(*power)*(joyObj->GetLeftYSmooth()), (-*power)*joyObj->GetRightXSmooth());
+			drivetrain->move((*power)*joyObj->GetLeftXRaw(), (-1.0f)*(*power)*(joyObj->GetLeftYRaw()), (-*power)*joyObj->GetRightXSmooth());
 		}
 		else
 		{
@@ -51,7 +51,7 @@ void Drive::Execute()
 				*power = MOTOR_HIGH;
 			else if (joyObj->GetButtonStateLB())
 				*power = MOTOR_LOW;
-			drivetrain->move((*power)*joyObj->GetLeftXSmooth(), (*power)*joyObj->GetLeftYSmooth(), (-*power)*joyObj->GetRightXSmooth());
+			drivetrain->move((*power)*joyObj->GetLeftXSmooth(), (-1.0f)*(*power)*(joyObj->GetLeftYSmooth()), (-*power)*joyObj->GetRightXSmooth());
 		}
 		//printf("DriveExec1\n");
 		SmartDashboard::PutNumber("Front left Talon value", drivetrain->fl->Get());

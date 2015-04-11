@@ -18,6 +18,7 @@ ElevatorCalibration::ElevatorCalibration()
 // Called just before this Command runs the first time
 void ElevatorCalibration::Initialize()
 {
+	time->Reset();
 	time->Start();
 }
 
@@ -27,7 +28,7 @@ void ElevatorCalibration::Execute()
 	nowTime = time->Get();
 	if(nowTime < 2.0)
 	{
-		elevator->move(-0.8f);
+		elevator->move(-1.0f);
 	}
 	else if(nowTime < 4.0)
 	{
@@ -47,10 +48,10 @@ void ElevatorCalibration::Execute()
 			{
 				bottomSum += *it;
 			}
-			bottomSum = (bottomSum/valVectorBottom->size());
+			bottomSum /= valVectorBottom->size();
 			prefs->PutFloat("ELEV_OFFSET", bottomSum);
 		}
-		elevator->move(0.8f);
+		elevator->move(1.0f);
 	}
 	else
 	{

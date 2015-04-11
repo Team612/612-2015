@@ -5,6 +5,7 @@
 #include <DoubleSolenoid.h>
 #include "Commands/ElevatorStop.h"
 #include "Commands/ElevatorMove.h"
+#include "Commands/ElevatorMoveToPosition.h"
 #include "RobotMap.h"
 
 GamePad* OI::driver = NULL;
@@ -27,7 +28,7 @@ OI::OI()
 	printf("OIinit5\n");
 	gunner->ButtonA->WhileHeld(new ElevatorDown());
 	printf("OIinit6\n");*/
-	ElevatorMove* elevatormove = new ElevatorMove(gunner);
+	Command* elevatormove = new ElevatorMoveToPosition(gunner);
 	elevatormove->Start();
 	isLatchPressed = false;
 	wasLatchPressed = false;

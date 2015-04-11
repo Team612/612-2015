@@ -90,7 +90,7 @@ float Elevator::getElevatorSensorHeight()//in inches
 
 float Elevator::getElevatorEncoderHeight()//in inches
 {
-	return (ELEVATOR_SPOOL_DIAMETER * (elevTalon->GetAnalogIn()/ENCODER_TICKS_PER_ROTATION));
+	return (ELEVATOR_SPOOL_DIAMETER * (elevTalon->GetEncPosition()/ENCODER_TICKS_PER_ROTATION));
 }
 
 float Elevator::getElevatorHeight()
@@ -101,12 +101,13 @@ float Elevator::getElevatorHeight()
 float Elevator::USVoltageToDistance(float voltage)
 {
 	//formula from here: http://www.maxbotix.com/articles/032.htm
-	return (voltage/(5.0f/512.0f));//returns inches
+	return (voltage/0.009766f);//returns inches
 }
 
 float Elevator::IRVoltageToDistance(float voltage)
 {
-	return ((pow((27.0f/voltage),-1.1f))/2.54f); //returns inches (theoretically)
+	//http://upgradeindustries.com/product/58/Sharp-10-80cm-Infrared-Distance-Sensor-(GP2Y0A21YK0F)
+	return ((27.86f * pow(voltage, -1.15f)) * 0.393701f); //returns inches
 }
 
 DoubleSolenoid* Elevator::getSolenoid()

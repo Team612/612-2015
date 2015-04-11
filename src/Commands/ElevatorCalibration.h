@@ -3,7 +3,9 @@
 
 #include "../CommandBase.h"
 #include "WPILib.h"
-#include <vector>
+#include "GamePad.h"
+
+class Timer;
 
 class ElevatorCalibration: public CommandBase
 {

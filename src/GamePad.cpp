@@ -18,7 +18,7 @@ GamePad::GamePad(bool isFlightStick, int port, float throttle, float deadzone) :
 		AXIS_RIGHT_X    = 2;
 		AXIS_RIGHT_Y    = 3;
 	}
-	stickType = isFlightStick;
+	isFStick = isFlightStick;
 }
 
 float GamePad::GetLeftXRaw()

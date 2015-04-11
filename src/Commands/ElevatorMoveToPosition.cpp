@@ -1,8 +1,12 @@
 #include "ElevatorMoveToPosition.h"
 
-ElevatorMoveToPosition::ElevatorMoveToPosition()
+ElevatorMoveToPosition::ElevatorMoveToPosition(GamePad* joy)
 {
 	Requires(elevator);
+	joystick = joy;
+	isManualEngaged = true;
+	wasManualEngaged = true;
+	preset = getPresetHeight();
 }
 
 // Called just before this Command runs the first time
@@ -14,13 +18,23 @@ void ElevatorMoveToPosition::Initialize()
 // Called repeatedly when this Command is scheduled to run
 void ElevatorMoveToPosition::Execute()
 {
-
+	elevator->move(joystick->GetRightYSmooth());
+	//printf("Elevator Height= %f\n", elevator->getElevatorHeight());
 }
 
+void ElevatorMoveToPosition::moveToHeight(int inchesUp)
+{
+	int
+}
+
+int ElevatorMoveToPosition::getPresetHeight()
+{
+	return (elevator->getElevatorHeight() / 12.1f);
+}
 // Make this return true when this Command no longer needs to run execute()
 bool ElevatorMoveToPosition::IsFinished()
 {
-	return true;
+	return false;
 }
 
 // Called once after isFinished returns true

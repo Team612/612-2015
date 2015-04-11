@@ -55,7 +55,7 @@ const uint32_t RIGHT_FEED_MOTOR = 7;
 
 const float TOTE_DETECT_TOLERANCE = 6.0f;//in inches
 const float ELEVATOR_SPOOL_DIAMETER = 10.12f;//inches
-const float ELEVATOR_TOLERANCE = 1.5f;// in inches
+//const float ELEVATOR_TOLERANCE = 1.5f;// in inches
 const float SENSOR_THRESHOLD = 18.24805f;//average of lower sensor limit of US and upper accuracy limit of IR.
 
 const int ENCODER_TICKS_PER_ROTATION = 1023;//might be 1440
@@ -67,6 +67,20 @@ const int ENCODER_TICKS_PER_ROTATION = 1023;//might be 1440
 //IMU
 const uint32_t SERIAL_PORT = 0;
 const uint8_t REFRESH_RATE = 50;
+
+const float CRATE_HEIGHT = 12.0f;
+const float BUFFER       = 2.0f;
+
+const uint32_t ELEVATOR_ULTRASONIC = 0;
+const uint32_t ELEVATOR_IR = 3;
+
+const float MAX_IR    = 60.0f; //TODO
+const float MIN_ULTRA = 20.0f; //TODO make better todos
+
+const float ELEV_SPEED_FLOAT = 0.8f;
+const double ELEV_SPEED_DOUBLE = 0.8;
+
+const int ELEVATOR_TOLERANCE = 50;
 
 //JOYSTICK
 static const float DEADZONE = 0.1f; // The value for the joystick deadzone
