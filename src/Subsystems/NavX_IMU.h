@@ -16,6 +16,12 @@ public:
 	NavX_IMU();
 	void InitDefaultCommand();
 	bool IsRobotMoving(); //mainly to test if this thing is working
+	bool IsRobotRotating();
+	float GetXVelocity();
+	float GetYVelocity();
+	short GetXMagnetometer();
+	short GetYMagnetometer();
+	short GetZMagnetometer();
 };
 
 #endif
