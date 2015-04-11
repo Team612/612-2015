@@ -101,4 +101,9 @@ const uint32_t TIMER_VALUE = 1.1;
 
 const uint32_t PCM = 0;
 
+//navX Stuff
+static SerialPort* NAVX_PORT = new SerialPort(57600,SerialPort::kMXP);
+const uint8_t UPDATE_RATE_HZ = 50;
+
+
 #endif

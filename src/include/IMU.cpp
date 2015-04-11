@@ -56,7 +56,8 @@ static void imuTask(IMU *imu)
 
         SerialPort *pport = imu->GetSerialPort();
     try {
-                pport->SetReadBufferSize(512);
+    			uint32_t size = 512;
+                pport->SetReadBufferSize(size);
                 pport->SetTimeout(1.0);
                 pport->EnableTermination('\n');
                 pport->Flush();
@@ -488,3 +489,5 @@ void IMU::SetStreamResponse( char stream_type,
                 this->update_rate_hz = update_rate_hz;
         }
 }
+
+
