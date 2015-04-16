@@ -76,16 +76,15 @@ bool Elevator::isRightAligned()
 
 float Elevator::getElevatorSensorHeight()//in inches
 {
-
-	if((USVoltageToDistance(middleUS->GetVoltage())+IRVoltageToDistance(middleIR->GetVoltage()))/2>SENSOR_THRESHOLD)
+	/*if((USVoltageToDistance(middleUS->GetVoltage())+IRVoltageToDistance(middleIR->GetVoltage()))/2>SENSOR_THRESHOLD)
 	{
 		return (USVoltageToDistance(middleUS->GetVoltage())-(prefs->GetInt("ELEV_OFFSET")));
 	}
 	else
 	{
 		return (IRVoltageToDistance(middleIR->GetVoltage())-(prefs->GetInt("ELEV_OFFSET")));
-	}
-	//return (USVoltageToDistance(middleUS->GetVoltage())-(prefs->GetInt("ELEV_OFFSET")));
+	}*/
+	return (IRVoltageToDistance(middleIR->GetVoltage())-(prefs->GetInt("ELEV_OFFSET")));
 }
 
 float Elevator::getElevatorEncoderHeight()//in inches

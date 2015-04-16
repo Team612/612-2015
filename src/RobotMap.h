@@ -49,7 +49,7 @@ const uint32_t ELEVATOR_ENCODER_B = 2;
 const uint32_t LEFT_FORK_IR = 1;//TODO actually fill in this port
 const uint32_t RIGHT_FORK_IR = 2;//TODO actually fill in this port
 const uint32_t MIDDLE_FORK_US = 0;
-const uint32_t MIDDLE_FORK_IR = 2;
+const uint32_t MIDDLE_FORK_IR = 3;
 const uint32_t LEFT_FEED_MOTOR = 5;
 const uint32_t RIGHT_FEED_MOTOR = 7;
 
@@ -71,8 +71,8 @@ const uint8_t REFRESH_RATE = 50;
 const float CRATE_HEIGHT = 12.0f;
 const float BUFFER       = 2.0f;
 
-const uint32_t ELEVATOR_ULTRASONIC = 0;
-const uint32_t ELEVATOR_IR = 3;
+//const uint32_t ELEVATOR_ULTRASONIC = 0;
+//const uint32_t ELEVATOR_IR = 3;
 
 const float MAX_IR    = 60.0f; //TODO
 const float MIN_ULTRA = 20.0f; //TODO make better todos

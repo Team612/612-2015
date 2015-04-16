@@ -36,12 +36,12 @@ void Robot::RobotInit()
 	//Autonomous Documentation:Initializes simple autonomous program with time in seconds to move forward
 	//and motor velocity between 0 and 1.
 	///TESTING ADVANCED AUTO
-	autonomousCommand = new Autonomous(10000.0f, 1.0f, Autonomous::FORWARD_PUSH);
+	//autonomousCommand = new Autonomous(10000.0f, 1.0f, Autonomous::FORWARD_PUSH);
 
 	//Initializes simple autonomous program withtime in seconds to move forward, and motor velocity between 0 and 1.
 
 	///FORWARD_PUSH
-	//autonomousCommand = new AutonomousSimple(3.8f, 0.4f, false);
+	autonomousCommand = new AutonomousSimple(3.8f, 0.4f, false);
 
 	///SIDEWAYS_PUSH
 	//autonomousCommand = new AutonomousSimple(3.7f, 0.4f, false);

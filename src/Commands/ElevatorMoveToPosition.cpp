@@ -37,22 +37,27 @@ void ElevatorMoveToPosition::Initialize()
 // Called repeatedly when this Command is scheduled to run
 void ElevatorMoveToPosition::Execute()
 {
+	//printf("IS ELEVATORMOVETOPOSITION/n");
 	if(isDynamic)
 		{
-		if(joystick->GetRightXSmooth() != 0.0f)
+		if(joystick->GetLeftYSmooth() != 0.0f)
 		{
 			isManualEngaged = true;
+			printf("IS ELEVATORMOVETOPOSITION MANUAL SET\n");
 		}
 		else if(joystick->GetButtonStateLB() || joystick->GetButtonStateRB())
 		{
 			isManualEngaged = false;
+			printf("IS ELEVATORMOVETOPOSITION MANUAL UN SET\n");
 		}
 		if(isManualEngaged)
 		{
-			elevator->move(joystick->GetRightYSmooth());
+			elevator->move(-joystick->GetLeftYSmooth());
+			printf("IS ELEVATORMOVETOPOSITION MANUAL\n");
 		}
 		else
 		{
+			printf("IS ELEVATORMOVETOPOSITION PRESET\n");
 			if(!isManualEngaged && wasManualEngaged)
 			{
 				preset = getPreset();
@@ -86,6 +91,7 @@ void ElevatorMoveToPosition::Execute()
 		wasManualEngaged = isManualEngaged;
 		wasLB = isLB;
 		wasRB = isRB;
+		printf("IS ELEVATORMOVETOPOSITION END \n");
 	}
 	else
 	{

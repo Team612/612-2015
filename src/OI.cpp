@@ -13,7 +13,9 @@ GamePad* OI::gunner = NULL;
 
 OI::OI()
 {
-	toggleOpen = true; //false is closed, true is opened
+	toggleOpen = true; //false is closed, true is open
+	timer = new Timer();
+	timer->Start();
 
 	printf("OIinit0\n");
 	driver = new GamePad(false, DRIVER_JOY);
@@ -41,9 +43,12 @@ OI::OI()
 //You better be thankful drive team -_-
 void OI::handleLatch()
 {
-	isLatchPressed = gunner->GetRawButton(BUTTON_RB);
-	if(isLatchPressed && !wasLatchPressed)
+	isLatchPressed = gunner->GetButtonStateA();
+	printf("Latch pressed" + isLatchPressed);
+	if(isLatchPressed && timer->Get() > minimumTimeForLatchPressed)
 	{
+		printf("Entered Method");
+		timer->Reset();
 		if(toggleOpen) //if the latch is open
 		{
 			Latch* close = new Latch(CommandBase::elevator->getSolenoid(), DoubleSolenoid::kForward); //Close the latch
