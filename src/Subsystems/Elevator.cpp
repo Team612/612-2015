@@ -122,7 +122,7 @@ DoubleSolenoid* Elevator::getSolenoid()
 
 void Elevator::ResetSensors()
 {
-	elevTalon->SetControlMode(CANSpeedController::ControlMode::kPosition);
+	//elevTalon->SetControlMode(CANSpeedController::ControlMode::kPosition);
 	elevTalon->SetFeedbackDevice(CANTalon::FeedbackDevice::QuadEncoder);
 	elevTalon->Set(0.0f);
 	elevTalon->SetPosition(0.0);

@@ -33,23 +33,23 @@ void ElevatorCalibration::Execute()
 		printf("Cal Phase 1\n");
 		elevator->move(1.0f);
 	}
-	else if(nowTime < 10.0)
+	else if(nowTime < 6.0)
 	{
 		printf("Cal Phase 2\n");
 		elevator->stop();
-		/*if(!stage1)
+		if(!stage1)
 		{
 			elevator->ResetSensors();
 			stage1 = true;
 		}
 		valVectorBottom->push_back(elevator->getElevatorSensorHeight()+prefs->GetFloat("ELEV_OFFSET"));
-		*/
+
 	}
-	else if(nowTime < 11.0)
+	else if(nowTime < 20.0)
 	{
-		//printf("Cal Phase 3\n");
-		elevator->move(1.0f);
-		/*if(bottomSum == 0)
+		printf("Cal Phase 3\n");
+		elevator->move(-1.0f);
+		if(bottomSum == 0)
 		{
 			for(std::vector<float>::iterator it = valVectorBottom->begin(); it != valVectorBottom->end(); ++it)
 			{
@@ -59,7 +59,7 @@ void ElevatorCalibration::Execute()
 			}
 			bottomSum /= valVectorBottom->size();
 			prefs->PutFloat("ELEV_OFFSET", bottomSum);
-		}*/
+		}
 	}
 	else
 	{
@@ -72,7 +72,7 @@ void ElevatorCalibration::Execute()
 		}
 		else if(elevator->getElevatorSensorHeight()>elevator->getElevatorHeight()+ELEV_CALIBRATION_TOLERANCE)
 		{
-			printf("Cal Phase 6\n");
+			printf("Cal Phase 6\n");//FACK, NEED TO HARDCODE THIS BECAUSE OF US NOT WORKING.
 			prefs->PutInt("ELEV_CALIBRATION", prefs->GetInt("ELEV_CALIBRATION")-1);
 		}
 		else
