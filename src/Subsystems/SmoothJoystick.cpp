@@ -21,3 +21,5 @@ float SmoothJoystick::GetValue(int axis) //Axis is used to find out whether you 
 		return value*THROTTLE;
 	}
 }
+
+

@@ -5,6 +5,7 @@ Elevator::Elevator() :
 	Subsystem("Elevator")
 {
 	elevTalon = new CANTalon(ELEVATOR_MOTOR_1);
+	test = new CANTalon(MOTOR_FL);
 	//topSwitch = new DigitalInput(ELEVATOR_TOP_SWITCH);
 	//bottomSwitch = new DigitalInput(ELEVATOR_BOTTOM_SWITCH);
 	//elevEncoder = new Encoder(ELEVATOR_ENCODER_A, ELEVATOR_ENCODER_B);
@@ -76,15 +77,15 @@ bool Elevator::isRightAligned()
 
 float Elevator::getElevatorSensorHeight()//in inches
 {
-	/*if((USVoltageToDistance(middleUS->GetVoltage())+IRVoltageToDistance(middleIR->GetVoltage()))/2>SENSOR_THRESHOLD)
+	if((USVoltageToDistance(middleUS->GetVoltage())+IRVoltageToDistance(middleIR->GetVoltage()))/2>SENSOR_THRESHOLD)
 	{
 		return (USVoltageToDistance(middleUS->GetVoltage())-(prefs->GetInt("ELEV_OFFSET")));
 	}
 	else
 	{
 		return (IRVoltageToDistance(middleIR->GetVoltage())-(prefs->GetInt("ELEV_OFFSET")));
-	}*/
-	return (IRVoltageToDistance(middleIR->GetVoltage())-(prefs->GetInt("ELEV_OFFSET")));
+	}
+	//return (IRVoltageToDistance(middleIR->GetVoltage())-(prefs->GetInt("ELEV_OFFSET")));
 }
 
 float Elevator::getElevatorEncoderHeight()//in inches
@@ -94,7 +95,13 @@ float Elevator::getElevatorEncoderHeight()//in inches
 
 float Elevator::getElevatorHeight()
 {
-	return pow(getElevatorEncoderHeight(),(getElevatorSensorHeight()/prefs->GetInt("ELEV_CALIBRATION"))+1);//in inches, relative to the minimum height of the fork.
+
+	printf("IRHeight=%f\n", IRVoltageToDistance(middleIR->GetVoltage())-(prefs->GetInt("ELEV_OFFSET")));
+	printf("USRaw=%f\n", middleUS->GetVoltage());
+	printf("EncoderHeight=%i\n", elevTalon->GetEncPosition());
+	printf("test=%i\n", test->GetEncPosition());
+	//return pow(getElevatorEncoderHeight(),(getElevatorSensorHeight()/prefs->GetInt("ELEV_CALIBRATION"))+1);//in inches, relative to the minimum height of the fork.
+	return getElevatorSensorHeight();
 }
 
 float Elevator::USVoltageToDistance(float voltage)

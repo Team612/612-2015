@@ -43,24 +43,27 @@ void ElevatorMoveToPosition::Execute()
 		if(joystick->GetLeftYSmooth() != 0.0f)
 		{
 			isManualEngaged = true;
-			printf("IS ELEVATORMOVETOPOSITION MANUAL SET\n");
+			//printf("IS ELEVATORMOVETOPOSITION MANUAL SET\n");
 		}
 		else if(joystick->GetButtonStateLB() || joystick->GetButtonStateRB())
 		{
 			isManualEngaged = false;
-			printf("IS ELEVATORMOVETOPOSITION MANUAL UN SET\n");
+			printf("BWAHAHAAHAH\n");
+			//printf("IS ELEVATORMOVETOPOSITION MANUAL UN SET\n");
 		}
 		if(isManualEngaged)
 		{
 			elevator->move(-joystick->GetLeftYSmooth());
-			printf("IS ELEVATORMOVETOPOSITION MANUAL\n");
+			//printf("IS ELEVATORMOVETOPOSITION MANUAL\n");
 		}
 		else
 		{
-			printf("IS ELEVATORMOVETOPOSITION PRESET\n");
+			printf("Elevpreset code\n");
 			if(!isManualEngaged && wasManualEngaged)
 			{
 				preset = getPreset();
+				printf("getPreset()=%i\n", getPreset());
+
 			}
 			if(joystick->GetButtonStateLB())
 			{
@@ -86,22 +89,26 @@ void ElevatorMoveToPosition::Execute()
 			{
 				preset = 6;
 			}
+			printf("preset=%i\n", preset);
 			moveToHeight(preset * 12.1f);
 		}
 		wasManualEngaged = isManualEngaged;
 		wasLB = isLB;
 		wasRB = isRB;
-		printf("IS ELEVATORMOVETOPOSITION END \n");
+		//printf("IS ELEVATORMOVETOPOSITION END \n");
 	}
 	else
 	{
 		moveToHeight((preset * 12.1f) + 2);
 	}
+	elevator->getElevatorHeight();
 	//printf("Elevator Height= %f\n", elevator->getElevatorHeight());
 }
 
 void ElevatorMoveToPosition::moveToHeight(float inchesUp)
 {
+	printf("getElevatorHeight()=%f\n", elevator->getElevatorHeight());
+	printf("inchesUp%f\n", inchesUp);
 	if(elevator->getElevatorHeight() < inchesUp - HEIGHT_TOLERANCE)
 	{
 		elevator->move(speed);

@@ -13,12 +13,10 @@ GamePad* OI::gunner = NULL;
 
 OI::OI()
 {
-	toggleOpen = true; //false is closed, true is open
-	timer = new Timer();
-	timer->Start();
+	toggleOpen = true; //false is closed, true is opened
 
 	printf("OIinit0\n");
-	driver = new GamePad(false, DRIVER_JOY);
+	driver = new GamePad(true, DRIVER_JOY);
 	printf("OIinit1\n");
 	gunner = new GamePad(false, GUNNER_JOY);
 	printf("OIinit2\n");
@@ -30,13 +28,13 @@ OI::OI()
 	printf("OIinit5\n");
 	gunner->ButtonA->WhileHeld(new ElevatorDown());
 	printf("OIinit6\n");*/
-	Command* elevatormove = new ElevatorMoveToPosition(gunner, 1.0f);
-	//Command* elevatormove = new ElevatorMove(gunner);
+	ElevatorMoveToPosition* elevatormove = new ElevatorMoveToPosition(gunner, 1.0f);
 	elevatormove->Start();
 	isLatchPressed = false;
 	wasLatchPressed = false;
 	toggleOpen = true;
-	Latch* open = new Latch(CommandBase::elevator->getSolenoid(), DoubleSolenoid::kReverse);
+	Latch*
+	open = new Latch(CommandBase::elevator->getSolenoid(), DoubleSolenoid::kReverse);
 	open->Start();
 }
 
@@ -44,22 +42,19 @@ OI::OI()
 void OI::handleLatch()
 {
 	isLatchPressed = gunner->GetButtonStateA();
-	printf("Latch pressed" + isLatchPressed);
-	if(isLatchPressed && timer->Get() > minimumTimeForLatchPressed)
+	if(isLatchPressed && !wasLatchPressed)
 	{
-		printf("Entered Method");
-		timer->Reset();
 		if(toggleOpen) //if the latch is open
 		{
 			Latch* close = new Latch(CommandBase::elevator->getSolenoid(), DoubleSolenoid::kForward); //Close the latch
-			std::printf("Latch close(oi)\n");
+			//std::printf("Latch close(oi)\n");
 			close->Start();
 			toggleOpen = false;
 		}
 		else //if the latch is closed
 		{
 			Latch* open = new Latch(CommandBase::elevator->getSolenoid(), DoubleSolenoid::kReverse); //open the latch
-			std::printf("Latch open(oi)\n");
+			//std::printf("Latch open(oi)\n");
 			open->Start();
 			toggleOpen = true;
 		}

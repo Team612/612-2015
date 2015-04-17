@@ -9,6 +9,7 @@
 class Elevator : public Subsystem {
 private:
 	CANTalon* elevTalon;
+	CANTalon* test;
 	//DigitalInput* topSwitch;
 	//DigitalInput* bottomSwitch;
 	//Encoder* elevEncoder;

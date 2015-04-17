@@ -22,8 +22,6 @@ private:
 	bool wasLatchPressed;
 	//float val;
 	//float preval;
-	Timer* timer;
-	const double minimumTimeForLatchPressed = 0.1;
 };
 
 #endif

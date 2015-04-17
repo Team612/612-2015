@@ -62,7 +62,7 @@ void Drivetrain::InitDefaultCommand()
 void Drivetrain::move(float x, float y, float rotation)
 {
 	//std::printf("Gyro = %f\n", imu->GetYaw());
-	printf("MoveY: THIS IS DRIVETRAIN %f\n", y);
+	//printf("MoveY: THIS IS DRIVETRAIN %f\n", y);
 #ifdef IMU
 	MecanumDrive_Cartesian(x, y, imu->GetYaw());
 #else
