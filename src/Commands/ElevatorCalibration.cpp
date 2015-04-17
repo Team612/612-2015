@@ -10,7 +10,7 @@ ElevatorCalibration::ElevatorCalibration()
 	prefs = Preferences::GetInstance();
 	bottomSum = 0;
 	topSum = 0;
-	ELEV_CALIBRATION_TOLERANCE = 0.5f;
+	ELEV_CALIBRATION_TOLERANCE = 0.2f;
 	isFinished = false;
 	stage1 = false;
 }
@@ -45,7 +45,7 @@ void ElevatorCalibration::Execute()
 		valVectorBottom->push_back(elevator->getElevatorSensorHeight()+prefs->GetFloat("ELEV_OFFSET"));
 
 	}
-	else if(nowTime < 20.0)
+	else if(nowTime < 21.0)
 	{
 		printf("Cal Phase 3\n");
 		elevator->move(-1.0f);
@@ -65,15 +65,15 @@ void ElevatorCalibration::Execute()
 	{
 		printf("Cal Phase 4\n");
 		elevator->stop();
-		if(elevator->getElevatorSensorHeight()<elevator->getElevatorHeight()-ELEV_CALIBRATION_TOLERANCE)
+		if(66.5<elevator->getElevatorHeight()-ELEV_CALIBRATION_TOLERANCE)
 		{
 			printf("Cal Phase 5\n");
-			prefs->PutInt("ELEV_CALIBRATION", prefs->GetInt("ELEV_CALIBRATION")+1);
+			prefs->PutInt("ELEV_CALIBRATION", prefs->GetInt("ELEV_CALIBRATION")+25);
 		}
-		else if(elevator->getElevatorSensorHeight()>elevator->getElevatorHeight()+ELEV_CALIBRATION_TOLERANCE)
+		else if(66.5f>elevator->getElevatorHeight()+ELEV_CALIBRATION_TOLERANCE)
 		{
 			printf("Cal Phase 6\n");//FACK, NEED TO HARDCODE THIS BECAUSE OF US NOT WORKING.
-			prefs->PutInt("ELEV_CALIBRATION", prefs->GetInt("ELEV_CALIBRATION")-1);
+			prefs->PutInt("ELEV_CALIBRATION", prefs->GetInt("ELEV_CALIBRATION")-25);
 		}
 		else
 		{
@@ -93,6 +93,7 @@ bool ElevatorCalibration::IsFinished()
 void ElevatorCalibration::End()
 {
 	printf("Cal Phase 8\n");
+	prefs->Save();
 }
 
 // Called when another command which requires one or more of the same
