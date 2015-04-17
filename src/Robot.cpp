@@ -152,8 +152,8 @@ void Robot::TestInit()
 {
 	robot_status = TESTINIT; // Makes the status equal TESTINIT
 	//printf("lel what are you even doing here scrub?\n");
-	ElevatorCalibration* calibrate = new ElevatorCalibration();
-	calibrate->Start();
+	//ElevatorCalibration* calibrate = new ElevatorCalibration();
+	//calibrate->Start();
 }
 void Robot::TestPeriodic()
 {
