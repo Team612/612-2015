@@ -20,9 +20,9 @@ void Latch::Initialize()
 
 void Latch::Execute()
 {
-	std::printf("Latch exec0\n");
+	//std::printf("Latch exec0\n");
 	commandSol->Set(direction);
-	std::printf("Latch exec1\n");
+	//std::printf("Latch exec1\n");
 }
 
 bool Latch::IsFinished()
@@ -41,6 +41,6 @@ void Latch::End()
 
 void Latch::Interrupted()
 {
-	std::printf("Latch Interrupted\n");
+	//std::printf("Latch Interrupted\n");
 	commandSol->Set(DoubleSolenoid::kOff);
 }
