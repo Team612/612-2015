@@ -99,6 +99,7 @@ float Elevator::getElevatorHeight()
 	//printf("USRaw=%f\n", middleUS->GetVoltage());
 	//printf("EncoderHeight=%f\n", getElevatorEncoderHeight());
 	printf("ElevatorHeight=%f\n", pow(getElevatorEncoderHeight(),(getElevatorSensorHeight()/prefs->GetInt("ELEV_CALIBRATION"))+1));
+	printf("ELEV_CALIBRATION=%i\n", prefs->GetInt("ELEV_CALIBRATION"));
 	return pow(getElevatorEncoderHeight(),(getElevatorSensorHeight()/prefs->GetInt("ELEV_CALIBRATION"))+1);//in inches, relative to the minimum height of the fork.
 	//return getElevatorSensorHeight();
 }

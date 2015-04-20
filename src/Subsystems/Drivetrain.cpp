@@ -16,13 +16,13 @@ Drivetrain::Drivetrain(CANTalon* t_fl, CANTalon* t_fr, CANTalon* t_rl, CANTalon*
 
 
 	fl->SetFeedbackDevice(CANTalon::QuadEncoder);
-	fl->SetControlMode(CANSpeedController::kPosition);
+	//fl->SetControlMode(CANSpeedController::kPosition);
 	fr->SetFeedbackDevice(CANTalon::QuadEncoder);
-	fr->SetControlMode(CANSpeedController::kPosition);
+	//fr->SetControlMode(CANSpeedController::kPosition);
 	rl->SetFeedbackDevice(CANTalon::QuadEncoder);
-	rl->SetControlMode(CANSpeedController::kPosition);
+	//rl->SetControlMode(CANSpeedController::kPosition);
 	rr->SetFeedbackDevice(CANTalon::QuadEncoder);
-	rr->SetControlMode(CANSpeedController::kPosition);
+	//rr->SetControlMode(CANSpeedController::kPosition);
 	resetEncoders();
 
 	SetSafetyEnabled(false);

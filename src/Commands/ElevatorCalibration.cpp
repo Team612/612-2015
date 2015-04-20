@@ -45,7 +45,7 @@ void ElevatorCalibration::Execute()
 		valVectorBottom->push_back(elevator->getElevatorSensorHeight()+prefs->GetFloat("ELEV_OFFSET"));
 
 	}
-	else if(nowTime < 21.0)
+	else if(nowTime < 20.5)
 	{
 		printf("Cal Phase 3\n");
 		elevator->move(-1.0f);
@@ -65,12 +65,12 @@ void ElevatorCalibration::Execute()
 	{
 		printf("Cal Phase 4\n");
 		elevator->stop();
-		if(66.5<elevator->getElevatorHeight()-ELEV_CALIBRATION_TOLERANCE)
+		if(66.5<(pow(elevator->getElevatorEncoderHeight(), (66.5f/prefs->GetInt("ELEV_CALIBRATION"))+1))-ELEV_CALIBRATION_TOLERANCE)
 		{
 			printf("Cal Phase 5\n");
 			prefs->PutInt("ELEV_CALIBRATION", prefs->GetInt("ELEV_CALIBRATION")+25);
 		}
-		else if(66.5f>elevator->getElevatorHeight()+ELEV_CALIBRATION_TOLERANCE)
+		else if(66.5f>(pow(elevator->getElevatorEncoderHeight(),(66.5f/prefs->GetInt("ELEV_CALIBRATION"))+1))+ELEV_CALIBRATION_TOLERANCE)
 		{
 			printf("Cal Phase 6\n");//FACK, NEED TO HARDCODE THIS BECAUSE OF US NOT WORKING.
 			prefs->PutInt("ELEV_CALIBRATION", prefs->GetInt("ELEV_CALIBRATION")-25);

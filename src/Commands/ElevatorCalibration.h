@@ -4,7 +4,7 @@
 #include "../CommandBase.h"
 #include "WPILib.h"
 #include "GamePad.h"
-
+#include <cmath>
 class Timer;
 
 class ElevatorCalibration: public CommandBase

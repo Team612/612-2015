@@ -33,8 +33,7 @@ OI::OI()
 	isLatchPressed = false;
 	wasLatchPressed = false;
 	toggleOpen = true;
-	Latch*
-	open = new Latch(CommandBase::elevator->getSolenoid(), DoubleSolenoid::kReverse);
+	Latch* open = new Latch(CommandBase::elevator->getSolenoid(), DoubleSolenoid::kReverse);
 	open->Start();
 }
 
