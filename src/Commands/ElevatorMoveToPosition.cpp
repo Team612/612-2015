@@ -39,7 +39,7 @@ void ElevatorMoveToPosition::Execute()
 {
 	//printf("IS ELEVATORMOVETOPOSITION/n");
 	if(isDynamic)
-		{
+	{
 		if(joystick->GetLeftYSmooth() != 0.0f)
 		{
 			isManualEngaged = true;
@@ -76,7 +76,7 @@ void ElevatorMoveToPosition::Execute()
 			if(joystick->GetButtonStateRB())
 			{
 				isRB = true;
-				if(isRB &&!wasRB)
+				if(isRB && !wasRB)
 				{
 					preset++;
 				}
