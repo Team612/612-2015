@@ -43,7 +43,7 @@ void Drive::Execute()
 			{
 				*power = 0.2f;
 			}
-			drivetrain->move((*power)*joyObj->GetLeftXRaw(), (-1.0f)*(*power)*(joyObj->GetLeftYRaw()), (-*power)*joyObj->GetRightXSmooth());
+			drivetrain->move(((*power)*joyObj->GetLeftXRaw()) * 1.5f, (-1.0f)*(*power)*(joyObj->GetLeftYRaw()), (-*power)*joyObj->GetRightXSmooth());
 		}
 		else
 		{

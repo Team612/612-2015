@@ -39,6 +39,9 @@ private:
 	double maxAcceleration = 0; // used for highest acceleration during total run time
 
 	Robot* robot;
+
+	//USB CAMERA
+	USBCamera* cam;
 public:
 	//CONSTRUCTOR
 	void RobotInit();

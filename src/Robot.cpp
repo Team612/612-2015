@@ -32,14 +32,38 @@ void Robot::RobotInit()
 	intake = new IntakeWheel(CommandBase::oi->gunner);
 	intake->Start();
 	printf("Robotinit9\n");
-
+	cam = new USBCamera(USBCamera::kDefaultCameraName, true);
+	cam->UpdateSettings();
+	cam->SetWhiteBalanceAuto();
+	cam->SetExposureAuto();
+	//cam->SetFPS(1.0);
+	//cam->SetSize(100, 100);
+	cam->UpdateSettings();
+	//cam->StartCapture();
+	//CameraServer::GetInstance()->SetQuality(1);
+	//CameraServer::GetInstance()->SetSize(0);
+	CameraServer::GetInstance()->StartAutomaticCapture(std::shared_ptr<USBCamera>(cam));
+	std::printf("Starting camera server\n");
+	/*
+	 * 				~~~~~~~~~~~~
+	 * 				|		   |	Who lives in a pineapple under the C?
+	 * 				|  ()   () |
+	 * 				|		   |	SmartKid CodePants!
+	 * 				|		   |
+	 * 				|	C++	   |
+	 * 				------------	Pro ascii art from ma boi Zack.
+	 * 				|	 V	   |
+	 * 				------------
+	 * 				  ||   ||
+	 * 				(==)   (==)
+	 */
 	/// AUTO ZONE
-	autonomousCommand = new AutonomousSimple(3.8f, 0.4f, false);//Initializes simple autonomous program with
+	//autonomousCommand = new AutonomousSimple(3.8f, 0.4f, false);//Initializes simple autonomous program with
 														 //time in seconds to move forward, and motor velocity
 														 //between 0 and 1.
 	///NO TOTE
 	//idk if this is nessescary
-	//autonomousCommand = new AutonomousSimple(3.7f, 0.4f, false);
+	//autonomousCommand = new AutonomousSimple(3.6f, 0.4f, false);
 	/// Moves to auto zone sideways
 	//Strafes to the left
 	//autonomousCommand = new AutonomousSimple(3.5f, 0.4f, true);
@@ -47,19 +71,16 @@ void Robot::RobotInit()
 	/// FARTHER PLATFORM
 	//autonomousCommand = new AutonomousSimple(5.5f, 0.4f);
 
-	/// NO AUTO
-	//autonomousCommand = new AutonomousSimple(0.0f, 0.0f);
+	/// NO AUTO 420 Blazeit
+	autonomousCommand = new AutonomousSimple(0.0f, 0.0f);
 
 	//autonomousCommand = new Autonomous();
 
-	CameraServer::GetInstance()->SetQuality(50);
-	CameraServer::GetInstance()->StartAutomaticCapture("cam0");
-	std::printf("Starting camera server\n");
 }
 
 void Robot::DisabledInit()
 {
-	robot_status = DISABLEDINIT; // Makes the status equal DISABLEDINIT
+	robot_status = DISABLEDINIT; // Makes the status equal DISABLEDINIT Zackisabigscrub=true
 }
 
 void Robot::DisabledPeriodic()
