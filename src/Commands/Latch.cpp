@@ -41,6 +41,6 @@ void Latch::End()
 
 void Latch::Interrupted()
 {
-	std::printf("Latch Interrupted\n");
+	//std::printf("Latch Interrupted\n");
 	commandSol->Set(DoubleSolenoid::kOff);
 }

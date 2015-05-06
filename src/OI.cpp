@@ -39,7 +39,7 @@ OI::OI()
 //You better be thankful drive team -_-
 void OI::handleLatch()
 {
-	isLatchPressed = gunner->GetRawButton(BUTTON_RB);
+	isLatchPressed = gunner->GetButtonStateA();
 	if(isLatchPressed && !wasLatchPressed)
 	{
 		if(toggleOpen) //if the latch is open

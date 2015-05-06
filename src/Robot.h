@@ -40,6 +40,7 @@ private:
 	double maxAcceleration = 0; // used for highest acceleration during total run time
 
 	Robot* robot;
+
 public:
 	//CONSTRUCTOR
 	void RobotInit();
