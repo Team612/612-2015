@@ -4,6 +4,8 @@
 DriveDistance::DriveDistance(float targetDistanceX, float targetDistanceY)
 {
 	Requires(drivetrain);
+	this->targetDistanceX = targetDistanceX;
+	this->targetDistanceY = targetDistanceY;
 	distanceX = 0;
 	distanceY = 0;
 	xRatio = targetDistanceX/targetDistanceY;

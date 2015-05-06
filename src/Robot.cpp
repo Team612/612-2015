@@ -32,17 +32,8 @@ void Robot::RobotInit()
 	intake = new IntakeWheel(CommandBase::oi->gunner);
 	intake->Start();
 	printf("Robotinit9\n");
-	cam = new USBCamera(USBCamera::kDefaultCameraName, true);
-	cam->UpdateSettings();
-	cam->SetWhiteBalanceAuto();
-	cam->SetExposureAuto();
-	//cam->SetFPS(1.0);
-	//cam->SetSize(100, 100);
-	cam->UpdateSettings();
-	//cam->StartCapture();
-	//CameraServer::GetInstance()->SetQuality(1);
-	//CameraServer::GetInstance()->SetSize(0);
-	CameraServer::GetInstance()->StartAutomaticCapture(std::shared_ptr<USBCamera>(cam));
+	CameraServer::GetInstance()->SetQuality(50);
+	CameraServer::GetInstance()->StartAutomaticCapture("cam0");
 	std::printf("Starting camera server\n");
 	/*
 	 * 				~~~~~~~~~~~~
@@ -58,7 +49,7 @@ void Robot::RobotInit()
 	 * 				(==)   (==)
 	 */
 	/// AUTO ZONE
-	//autonomousCommand = new AutonomousSimple(3.8f, 0.4f, false);//Initializes simple autonomous program with
+	autonomousCommand = new AutonomousSimple(3.8f, 0.4f, false);//Initializes simple autonomous program with
 														 //time in seconds to move forward, and motor velocity
 														 //between 0 and 1.
 	///NO TOTE
@@ -72,7 +63,7 @@ void Robot::RobotInit()
 	//autonomousCommand = new AutonomousSimple(5.5f, 0.4f);
 
 	/// NO AUTO 420 Blazeit
-	autonomousCommand = new AutonomousSimple(0.0f, 0.0f);
+	//autonomousCommand = new AutonomousSimple(0.0f, 0.0f);
 
 	//autonomousCommand = new Autonomous();
 

@@ -40,8 +40,6 @@ private:
 
 	Robot* robot;
 
-	//USB CAMERA
-	USBCamera* cam;
 public:
 	//CONSTRUCTOR
 	void RobotInit();

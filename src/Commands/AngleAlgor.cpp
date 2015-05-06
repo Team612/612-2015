@@ -28,4 +28,5 @@ double AngleAlgor(float wR, float hR, float wL,  float hL)
 	{
 		return ( 0.00023557 + sqrt( ( -0.00023557 * -0.00023557 ) - ( 4 * 0.0000465902 * (2.2209 - ratioAverage) ) ) ) / 2*0.0000465902;
 	}
+	return 0.0;
 }
