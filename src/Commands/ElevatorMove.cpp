@@ -17,12 +17,7 @@ void ElevatorMove::Initialize()
 // Called repeatedly when this Command is scheduled to run
 void ElevatorMove::Execute()
 {
-	elevator->move(joystick->GetLeftYSmooth());
-	//printf("Elevator Height= %f\n", elevator->getElevatorHeight());
-	//printf("Elevator Left Height=");
-	//elevator->isLeftAligned();
-	//printf("Elevator Right Height=");
-	//elevator->isRightAligned();
+	elevator->move(-joystick->GetLeftYSmooth());
 	//printf("Right Y = %f\n", joystick->GetRightYSmooth());
 	//printf("Moving elevator\n");
 }
