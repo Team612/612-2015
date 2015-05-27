@@ -13,7 +13,7 @@ private:
 	float distanceToBeAway;
 	bool done = false;
 public:
-	DriveDistance* drivedistance;
+	DriveDistance* driveDistance; // commented out to fix compile warnings. Don't actually know what this does.
 	RoughAlign(float d, float b, float dw);
 	void Initialize();
 	void Execute();

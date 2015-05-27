@@ -103,21 +103,41 @@ void Drivetrain::resetEncoders()
 
 }
 
-float Drivetrain::getDistance(MotorLocation motor)
+float Drivetrain::reverseDistances(bool fr, bool rr, bool fl, bool rl)
+{
+	int distfr = getDistance(FRONT_RIGHT) * (fr? -1: 1);
+	int distrr = getDistance(REAR_RIGHT) * (rr? -1: 1);
+	int distfl = getDistance(FRONT_LEFT) * (fl? -1: 1);
+	int distrl = getDistance(REAR_LEFT) * (rl? -1: 1);
+
+	return ((float)distfr + (float)distrr + (float)distfl + (float)distrl) / 4;
+}
+
+float Drivetrain::getAverageDistanceX()
+{
+	return reverseDistances(false, false, true, true);
+}
+
+float Drivetrain::getAverageDistanceY()
+{
+	return reverseDistances(false, true, false, true);
+}
+
+int Drivetrain::getDistance(MotorLocation motor)
 {
 	switch(motor)
 	{
 	case FRONT_LEFT:
-		return (float)(fl->GetEncPosition());
+		return (fl->GetEncPosition());
 		break;
 	case FRONT_RIGHT:
-		return (float)(fr->GetEncPosition());
+		return (fr->GetEncPosition());
 		break;
 	case REAR_LEFT:
-		return (float)(rl->GetEncPosition());
+		return (rl->GetEncPosition());
 		break;
 	case REAR_RIGHT:
-		return (float)(rr->GetEncPosition());
+		return (rr->GetEncPosition());
 		break;
 	case FRONT_AVERAGE:
 		return (getDistance(FRONT_LEFT)+getDistance(FRONT_RIGHT)/2.0f);

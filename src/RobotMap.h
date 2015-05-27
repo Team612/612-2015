@@ -24,6 +24,10 @@ const uint32_t ENCODER_RR_B = 0;
 const uint32_t ENCODER_RF_A = 0; // The channels for the right front encdoer
 const uint32_t ENCODER_RF_B = 0;
 
+const uint32_t TICKS_PER_ROTATION = 1024;
+
+const float WHEEL_CIRCUMFERENCE = 25.13272f;
+
 //MOTORS
 const uint32_t MOTOR_FR = 2; // The channel for the rear left motor
 const uint32_t MOTOR_FL = 1; // The channel for the front left motor
@@ -49,7 +53,7 @@ const uint32_t ELEVATOR_ENCODER_B = 2;
 const uint32_t LEFT_FEED_MOTOR = 5;
 const uint32_t RIGHT_FEED_MOTOR = 7;
 
-const uint32_t LEFT_IR  = 1;
+const uint32_t LEFT_IR = 1;
 const uint32_t RIGHT_IR = 2;
 
 //IMU
@@ -57,12 +61,12 @@ const uint32_t SERIAL_PORT = 0;
 const uint8_t REFRESH_RATE = 50;
 
 const float CRATE_HEIGHT = 12.0f;
-const float BUFFER       = 2.0f;
+const float BUFFER = 2.0f;
 
 const uint32_t ELEVATOR_ULTRASONIC = 0;
 const uint32_t ELEVATOR_IR = 3;
 
-const float MAX_IR    = 60.0f; //TODO
+const float MAX_IR = 60.0f; //TODO
 const float MIN_ULTRA = 20.0f; //TODO make better todos
 
 const float ELEV_SPEED_FLOAT = 0.8f;
@@ -77,16 +81,16 @@ static const float THROTTLE = 1.0f;  // The value for the joystick throttle
 static const uint32_t DRIVER_JOY = 0; // The channels for the driver joystick
 static const uint32_t GUNNER_JOY = 1; // The channels for the gunner joystick
 #ifdef GAMEPAD
-static const uint32_t LEFT_X  = 1; // port for left joystick, x axis
-static const uint32_t LEFT_Y  = 0; // port for left joystick, y axis
+static const uint32_t LEFT_X = 1; // port for left joystick, x axis
+static const uint32_t LEFT_Y = 0; // port for left joystick, y axis
 static const uint32_t RIGHT_X = 4; // port for right joystick, x axis
 static const uint32_t RIGHT_Y = 5;
 
 #else
 
-static const uint32_t LEFT_X  = 0; // port for left joystick, x axis
-static const uint32_t LEFT_Y  = 1; // port for left joystick, y axis
-static const uint32_t RIGHT_X = 2; // port for right joystick, x axis
+static const uint32_t LEFT_X = 0; // port for left joystick, x axis
+static const uint32_t LEFT_Y = 1;// port for left joystick, y axis
+static const uint32_t RIGHT_X = 2;// port for right joystick, x axis
 
 static const uint32_t SLIDER = 3;
 #endif
@@ -98,7 +102,6 @@ static const uint32_t BUTTON_X = 3; // port for X button on xbox controller
 static const uint32_t BUTTON_Y = 4; // port for Y button on xbox controller
 static const uint32_t BUTTON_LB = 5;
 static const uint32_t BUTTON_RB = 6; // port for Y button on xbox controller
-
 
 const uint32_t SOLENOIDCHAN1 = 0; // check correct values
 const uint32_t SOLENOIDCHAN2 = 1;
