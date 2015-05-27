@@ -1,5 +1,11 @@
 // Benjamin Ward, Jan 13, 2015
-
+// N      N      OOOO   TTTTTTT      U     U     SSSSSS    EEEEEEE    DDDDDD
+// NN     N     O    O     T         U     U    S          E          D     D
+// N N    N     O    O     T         U     U    S          E          D     D
+// N  N   N     O    O     T         U     U     SSSSS     EEEEE      D     D
+// N   N  N     O    O     T         U     U          S    E          D     D 
+// N    N N     O    O     T         U     U          S    E          D     D
+// N     NN      OOOO      T          UUUUU      SSSSS     EEEEEEE    DDDDDD
 #include "DataLogging.h"
 
 DataLogging::DataLogging()

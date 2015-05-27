@@ -15,24 +15,24 @@
 void Robot::RobotInit()
 {
 	printf("Robotinit1\n");
-	robot_status = ROBOTINIT; // Makes the status equal ROBOTINIT
+	robot_status = ROBOTINIT; ///< Makes the status equal ROBOTINIT
 	printf("Robotinit2\n");
-	CommandBase::init(); // Constructor for CommandBase
+	CommandBase::init(); ///< Constructor for CommandBase
 	printf("Robotinit3\n");
 	lw = LiveWindow::GetInstance();
 	printf("Robotinit4\n");
-	speedgun = new BuiltInAccelerometer(); // New accelerometer called speedgun
+	speedgun = new BuiltInAccelerometer(); ///< New accelerometer called speedgun
 	printf("Robotinit5\n");
-	move = new Drive(CommandBase::oi->driver);
+	move = new Drive(CommandBase::oi->driver); ///< New drivetrain
 	printf("Robotinit6\n");
 	robot = this;
 	printf("Robotinit7\n");
-	compressor = new Compressor(PCM);
+	compressor = new Compressor(PCM); ///< New compressor
 	printf("Robotinit8\n");
-	intake = new IntakeWheel(CommandBase::oi->gunner);
-	intake->Start();
+	intake = new IntakeWheel(CommandBase::oi->gunner);///< New intake (never used)
+	intake->Start();///< Start intake
 	printf("Robotinit9\n");
-	CameraServer::GetInstance()->SetQuality(50);
+	CameraServer::GetInstance()->SetQuality(50); ///<Setting up cameras
 	CameraServer::GetInstance()->StartAutomaticCapture("cam0");
 	std::printf("Starting camera server\n");
 	/*
@@ -49,7 +49,7 @@ void Robot::RobotInit()
 	 * 				(==)   (==)
 	 */
 	/// AUTO ZONE
-	autonomousCommand = new AutonomousSimple(3.8f, 0.4f, false);//Initializes simple autonomous program with
+	autonomousCommand = new AutonomousSimple(3.8f, 0.4f, false);///<Initializes simple autonomous program with
 														 //time in seconds to move forward, and motor velocity
 														 //between 0 and 1.
 	///NO TOTE
@@ -71,27 +71,27 @@ void Robot::RobotInit()
 
 void Robot::DisabledInit()
 {
-	robot_status = DISABLEDINIT; // Makes the status equal DISABLEDINIT Zackisabigscrub=true
+	robot_status = DISABLEDINIT; ///< Makes the status equal DISABLEDINIT Zackisabigscrub=true
 }
 
 void Robot::DisabledPeriodic()
 {
 	if (robot_status != DISABLEDPERIODIC)
-		robot_status = DISABLEDPERIODIC;
+		robot_status = DISABLEDPERIODIC; ///< Changes robot status again
 	//Scheduler::GetInstance()->Run();
 }
 
 void Robot::AutonomousInit()
 {
-	robot_status = AUTONOMOUSINIT; // Makes the status equal AUTONOMOUSINIT
+	robot_status = AUTONOMOUSINIT; ///< Makes the status equal AUTONOMOUSINIT
 	if (autonomousCommand != NULL)
-		autonomousCommand->Start();
-	compressor->Start();
+		autonomousCommand->Start(); ///< Start autonomous command
+	compressor->Start(); ///<Start compressor
 }
 
 void Robot::AutonomousPeriodic()
 {
-	if (robot_status != AUTONOMOUSPERIODIC) // Makes the status equal AUTONOMOUSPERIODIC
+	if (robot_status != AUTONOMOUSPERIODIC) ///< Makes the status equal AUTONOMOUSPERIODIC
 		robot_status = AUTONOMOUSPERIODIC;
 	Scheduler::GetInstance()->Run();
 }
@@ -99,7 +99,7 @@ void Robot::AutonomousPeriodic()
 void Robot::TeleopInit()
 {
 	printf("Teleopinit\n");
-	robot_status = TELEOPINIT; // Makes the status equal TELEOPINIT
+	robot_status = TELEOPINIT; ///< Makes the status equal TELEOPINIT
 	/*
 	 * This makes sure that the autonomous stops running when
 	 * teleop starts running. If you want the autonomous to
@@ -107,9 +107,9 @@ void Robot::TeleopInit()
 	 * this line or comment it out.
 	 */
 	if (autonomousCommand != NULL)
-		autonomousCommand->Cancel();
-	move->Start();
-	compressor->Start();
+		autonomousCommand->Cancel(); ///<Starts autonomous command
+	move->Start(); ///<Start drivetrain
+	compressor->Start(); ///<Start compressor
 
 	//Driveteam's stuff
 	CommandBase::oi->handleLatch();
@@ -118,18 +118,18 @@ void Robot::TeleopInit()
 
 void Robot::TeleopPeriodic()
 {
-	if (robot_status != TELEOPPERIODIC) // Makes the status equal TELEOPPERIODIC
+	if (robot_status != TELEOPPERIODIC) ///< Makes the status equal TELEOPPERIODIC
 		robot_status = TELEOPPERIODIC;
 	Scheduler::GetInstance()->Run();
 	//drivetrain->move(joystick->GetRawAxis(LEFT_X),joystick->GetRawAxis(LEFT_Y),joystick->GetRawAxis(RIGHT_X));
 	static unsigned int TimeChecked = 0;
 	TimeChecked++;
-	currentAcceleration = (speedgun -> GetY())*9.806; // covert from g force to acceleration
-	if (currentAcceleration > maxAcceleration)// check to see if currentAcceleration is bigger that maxAcceleration. if yes, set maxAcceleration to currentAcceleration
+	currentAcceleration = (speedgun -> GetY())*9.806; ///< covert from g force to acceleration
+	if (currentAcceleration > maxAcceleration)///< check to see if currentAcceleration is bigger that maxAcceleration. if yes, set maxAcceleration to currentAcceleration
 	{
-		maxAcceleration = currentAcceleration; //set the values
+		maxAcceleration = currentAcceleration; ///<set the values
 	}
-	if (TimeChecked == 30) //print every half second for debug
+	if (TimeChecked == 30) ///<print every half second for debug
 	{
 		lw->Run();
 
@@ -139,9 +139,9 @@ void Robot::TeleopPeriodic()
 		secondTalon->Set(val);
 		thirdTalon->Set(leftYAxis);*/
 
-		printf("Raw G-force on Y-axis is %f meters per second per second \n", speedgun -> GetY()); //prints raw g-force
-		printf("Acceleration is %f meters per second per second \n", currentAcceleration); //prints currentAcceleration
-		printf("Max acceleration is %f meters per second per second \n", maxAcceleration); //prints maxAcceleration
+		printf("Raw G-force on Y-axis is %f meters per second per second \n", speedgun -> GetY()); ///<prints raw g-force
+		printf("Acceleration is %f meters per second per second \n", currentAcceleration); ///<prints currentAcceleration
+		printf("Max acceleration is %f meters per second per second \n", maxAcceleration); ///<prints maxAcceleration
 	}
 	TimeChecked = 0;
 	CommandBase::oi->handleLatch();
@@ -150,12 +150,12 @@ void Robot::TeleopPeriodic()
 
 void Robot::TestInit()
 {
-	robot_status = TESTINIT; // Makes the status equal TESTINIT
+	robot_status = TESTINIT; ///< Makes the status equal TESTINIT
 	printf("lel what are you even doing here scrub?\n");
 }
 void Robot::TestPeriodic()
 {
-	if (robot_status != TESTPERIODIC) // Makes the status equal TESTPERIODIC
+	if (robot_status != TESTPERIODIC) ///< Makes the status equal TESTPERIODIC
 		robot_status = TESTPERIODIC;
 	lw->Run();
 	//float val = joystick->GetRawAxis(5); //Takes input from joystick
@@ -165,5 +165,5 @@ void Robot::TestPeriodic()
 }
 
 
-START_ROBOT_CLASS(Robot);
+START_ROBOT_CLASS(Robot); ///< Starts the actual robot
 

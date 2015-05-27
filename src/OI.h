@@ -10,16 +10,16 @@ class OI
 public:
 	OI();
 	//Elevator Operator Buttons
-	static GamePad* driver;
-	static GamePad* gunner;
+	static GamePad* driver; ///< Driver object
+	static GamePad* gunner; ///< Gunner object
 
-	void handleLatch();
+	void handleLatch(); ///< Called everytime
 	void handleElevator();
 private:
-	bool toggleOpen;
+	bool toggleOpen; ///< Bool if elevator is open
 	//bool hasDriven;
-	bool isLatchPressed;
-	bool wasLatchPressed;
+	bool isLatchPressed; ///< Bool if latch is pressed
+	bool wasLatchPressed; ///< Bool if latch was pressed last "frame"
 	//float val;
 	//float preval;
 };

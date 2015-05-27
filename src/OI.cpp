@@ -7,17 +7,17 @@
 #include "Commands/ElevatorMove.h"
 #include "RobotMap.h"
 
-GamePad* OI::driver = NULL;
-GamePad* OI::gunner = NULL;
+GamePad* OI::driver = NULL; ///< Sets driver to null
+GamePad* OI::gunner = NULL; ///< Sets gunner to null
 
 OI::OI()
 {
-	toggleOpen = true; //false is closed, true is opened
+	toggleOpen = true; //<false is closed, true is opened
 
 	printf("OIinit0\n");
-	driver = new GamePad(true, DRIVER_JOY);
+	driver = new GamePad(true, DRIVER_JOY); ///<Sets driver to real value
 	printf("OIinit1\n");
-	gunner = new GamePad(false, GUNNER_JOY);
+	gunner = new GamePad(false, GUNNER_JOY); ///< Sets gunner to real value
 	printf("OIinit2\n");
 	/*gunner->ButtonX->WhenPressed(new Latch(CommandBase::elevator->getSolenoid(), DoubleSolenoid::kForward));
 	printf("OIinit3\n");
