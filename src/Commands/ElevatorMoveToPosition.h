@@ -8,16 +8,29 @@
 class ElevatorMoveToPosition: public CommandBase
 {
 private:
-	uint32_t targetPosition;
-	int targetSpins;
-	const uint32_t INTERVAL = 1; //TODO Placeholder value
+
 public:
-	ElevatorMoveToPosition(uint32_t position);
+	ElevatorMoveToPosition(GamePad* joy, float presetSpeed);
+	ElevatorMoveToPosition(int presetMove, float presetSpeed);
 	void Initialize();
 	void Execute();
 	bool IsFinished();
 	void End();
 	void Interrupted();
+private:
+	GamePad* joystick;
+	void moveToHeight(float inchesUp);
+	int getPreset();
+	const float HEIGHT_TOLERANCE = 1.0f;
+	bool isManualEngaged;
+	bool wasManualEngaged;
+	bool isLB;
+	bool wasLB;
+	bool isRB;
+	bool wasRB;
+	bool isDynamic;
+	float speed;
+	int preset;
 };
 
 #endif

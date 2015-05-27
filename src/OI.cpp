@@ -5,6 +5,7 @@
 #include <DoubleSolenoid.h>
 #include "Commands/ElevatorStop.h"
 #include "Commands/ElevatorMove.h"
+#include "Commands/ElevatorMoveToPosition.h"
 #include "RobotMap.h"
 
 GamePad* OI::driver = NULL;
@@ -27,7 +28,7 @@ OI::OI()
 	printf("OIinit5\n");
 	gunner->ButtonA->WhileHeld(new ElevatorDown());
 	printf("OIinit6\n");*/
-	ElevatorMove* elevatormove = new ElevatorMove(gunner);
+	ElevatorMoveToPosition* elevatormove = new ElevatorMoveToPosition(gunner, 1.0f);
 	elevatormove->Start();
 	isLatchPressed = false;
 	wasLatchPressed = false;
@@ -45,14 +46,14 @@ void OI::handleLatch()
 		if(toggleOpen) //if the latch is open
 		{
 			Latch* close = new Latch(CommandBase::elevator->getSolenoid(), DoubleSolenoid::kForward); //Close the latch
-			std::printf("Latch close(oi)\n");
+			//std::printf("Latch close(oi)\n");
 			close->Start();
 			toggleOpen = false;
 		}
 		else //if the latch is closed
 		{
 			Latch* open = new Latch(CommandBase::elevator->getSolenoid(), DoubleSolenoid::kReverse); //open the latch
-			std::printf("Latch open(oi)\n");
+			//std::printf("Latch open(oi)\n");
 			open->Start();
 			toggleOpen = true;
 		}

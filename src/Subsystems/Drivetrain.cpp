@@ -62,7 +62,7 @@ void Drivetrain::InitDefaultCommand()
 void Drivetrain::move(float x, float y, float rotation)
 {
 	//std::printf("Gyro = %f\n", imu->GetYaw());
-	printf("MoveY: THIS IS DRIVETRAIN %f\n", y);
+	//printf("MoveY: THIS IS DRIVETRAIN %f\n", y);
 #ifdef IMU
 	MecanumDrive_Cartesian(x, y, imu->GetYaw());
 #else
@@ -165,27 +165,3 @@ int Drivetrain::getDistance(MotorLocation motor)
 		break;
 	}
 }
-
-/*bool Drivetrain::SwitchSensor(float distance) // Infared sensor is used by default
-{
-	//TODO: Implement auto switching between IR and Ultrasonic
-	// Once the IR becomes accurate, switch to it over ultrasonic
-	return (distance < 6);
-
-	// OLD
-
-	if(d < 6)
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
-}
-
-void Drivetrain::CheckSensor(float distance)
-{
-	this->useIR = this->SwitchSensor(distance);
-}
-*/
