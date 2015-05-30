@@ -8,12 +8,12 @@
 class ElevatorUp: public CommandBase
 {
 public:
-	ElevatorUp();
-	void Initialize();
-	void Execute();
-	bool IsFinished();
-	void End();
-	void Interrupted();
+	ElevatorUp();///<ElevatorUp constructor
+	void Initialize(); ///<Initializes command
+	void Execute(); ///<Moves the elevator up at 1.0f
+	bool IsFinished(); ///<Returns false
+	void End(); ///<Stop elevator
+	void Interrupted(); ///<Stop elevator
 };
 
 #endif
