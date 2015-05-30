@@ -121,6 +121,7 @@ void ElevatorMoveToPosition::moveToHeight(float inchesUp)
 	{
 		elevator->stop();
 	}
+	count++;
 }
 
 int ElevatorMoveToPosition::getPreset()

@@ -1,11 +1,12 @@
 
 #include <Commands/Latch.h>
 #include "CommandBase.h"
-#include "MoveToTote.h"
+//#include "MoveToTote.h"
 #include "Latch.h"
 #include "ToteNavGroup.h"
 
-ToteNavGroup::ToteNavGroup() {
+ToteNavGroup::ToteNavGroup()
+{
 	// Add Commands here:
 	// e.g. AddSequential(new Command1());
 	//      AddSequential(new Command2());
@@ -24,6 +25,6 @@ ToteNavGroup::ToteNavGroup() {
 	// arm.
 	Requires(CommandBase::drivetrain);
 	Requires(CommandBase::vision);
-	AddSequential(new MoveToTote());
+	//AddSequential(new MoveToTote());
 	//AddSequential(new Latch()); // Ensure that latch is open before grabbing tote
 }
