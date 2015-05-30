@@ -18,13 +18,16 @@
 class CommandBase: public Command
 {
 public:
+	/// Creates a new command base.
+	/// A commandbase is series of commands to be executed one after another
+	/// @param name (char) A name for the command base
 	CommandBase(char const *name);
-	CommandBase();
-	static void init();
-	static OI* oi;
-	static Elevator* elevator;
-	static Drivetrain* drivetrain;
-	static Vision* vision;
+	CommandBase(); ///< CommandBase constructor
+	static void init(); ///< initializes command base
+	static OI* oi; ///< OI object
+	static Elevator* elevator; ///< elevator object
+	static Drivetrain* drivetrain; ///< drivetrain object
+	static Vision* vision; ///< vision object
 };
 
 #endif
