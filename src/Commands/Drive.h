@@ -12,15 +12,21 @@
 class Drive: public CommandBase
 {
 public:
+	///Constructor autonomous
+	///@param x distance to go left-right
+	///@param y distance to go foward-back
+	///@param rotation angle to rotate to
 	Drive(float x, float y, float rotation);
+	///Constructor with joystick
+	///@joystick joystick object to use
 	Drive(GamePad* joystick);
-	void Initialize();
-	void Execute();
-	bool IsFinished();
-	void End();
-	void Interrupted();
+	void Initialize(); ///<Sets up all the variables
+	void Execute(); ///<Calculates distance traveled with talons and moves robot
+	bool IsFinished(); ///<returns false
+	void End(); ///<stops robot
+	void Interrupted(); ///<stops robot
 private:
-	enum DriveMode {MANUAL, JOYSTICK};
+	enum DriveMode {MANUAL, JOYSTICK}; ///<Possible modes for drive command
 
 	DriveMode mode;
 	float targetX;

@@ -19,7 +19,7 @@ public:
 	void Execute(); ///<Keeps elevator moving in correct direction
 	bool IsFinished(); ///<Tests if it's at target position
 	void End();
-	void Interrupted();
+	void Interrupted(); ///<Stops elevator
 };
 
 #endif
