@@ -5,19 +5,20 @@
 #include <DoubleSolenoid.h>
 #include "Commands/ElevatorStop.h"
 #include "Commands/ElevatorMove.h"
+#include "Commands/ElevatorMoveToPosition.h"
 #include "RobotMap.h"
 
-GamePad* OI::driver = NULL; ///< Sets driver to null
-GamePad* OI::gunner = NULL; ///< Sets gunner to null
+GamePad* OI::driver = NULL;
+GamePad* OI::gunner = NULL;
 
 OI::OI()
 {
-	toggleOpen = true; //<false is closed, true is opened
+	toggleOpen = true; //false is closed, true is opened
 
 	printf("OIinit0\n");
-	driver = new GamePad(true, DRIVER_JOY); ///<Sets driver to real value
+	driver = new GamePad(true, DRIVER_JOY);
 	printf("OIinit1\n");
-	gunner = new GamePad(false, GUNNER_JOY); ///< Sets gunner to real value
+	gunner = new GamePad(false, GUNNER_JOY);
 	printf("OIinit2\n");
 	/*gunner->ButtonX->WhenPressed(new Latch(CommandBase::elevator->getSolenoid(), DoubleSolenoid::kForward));
 	printf("OIinit3\n");
@@ -27,7 +28,7 @@ OI::OI()
 	printf("OIinit5\n");
 	gunner->ButtonA->WhileHeld(new ElevatorDown());
 	printf("OIinit6\n");*/
-	ElevatorMove* elevatormove = new ElevatorMove(gunner);
+	ElevatorMoveToPosition* elevatormove = new ElevatorMoveToPosition(gunner, 1.0f);
 	elevatormove->Start();
 	isLatchPressed = false;
 	wasLatchPressed = false;
@@ -45,14 +46,14 @@ void OI::handleLatch()
 		if(toggleOpen) //if the latch is open
 		{
 			Latch* close = new Latch(CommandBase::elevator->getSolenoid(), DoubleSolenoid::kForward); //Close the latch
-			std::printf("Latch close(oi)\n");
+			//std::printf("Latch close(oi)\n");
 			close->Start();
 			toggleOpen = false;
 		}
 		else //if the latch is closed
 		{
 			Latch* open = new Latch(CommandBase::elevator->getSolenoid(), DoubleSolenoid::kReverse); //open the latch
-			std::printf("Latch open(oi)\n");
+			//std::printf("Latch open(oi)\n");
 			open->Start();
 			toggleOpen = true;
 		}

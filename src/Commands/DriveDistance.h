@@ -3,27 +3,36 @@
 
 #include "../CommandBase.h"
 #include "WPILib.h"
+#include <cmath>
 
 class DriveDistance: public CommandBase
 {
-private:
-	float targetDistanceX; ///<Distance to travel left-right
-	float targetDistanceY; ///<Distance to travel forward-back
-	float distanceX; ///<Current distance left-right
-	float distanceY; ///<Current distance forward-back
-	float xRatio; ///< ratio of targetDistanceX and Y (see intializer)
-	float yRatio; ///< ratio of targetDistanceY and X
-
 public:
-	///Sets up values
-	///@param targetDistanceX distance to go left-right
-	///@param targetDistanceY distance to go forward-back
-	DriveDistance(float targetDistanceX, float targetDistanceY);
-	void Initialize(); ///<Calculates ratio to distance to travel (x to y)
-	void Execute(); ///<Calculates distance traveled and moves robot
-	bool IsFinished(); ///< checks distance to targetDistance
-	void End(); ///<stops robot
-	void Interrupted(); ///<stops robot
+	enum Axis {X_AXIS, Y_AXIS};
+	DriveDistance(float distance, float speed, Axis axis = DriveDistance::Y_AXIS); //Apply negative numbers to move the other direction
+	//DriveDistance(float xDistance, float yDistance, float speed);
+	void Initialize();
+	void Execute();
+	bool IsFinished();
+	void End();
+	void Interrupted();
+
+private:
+	float targetDistanceX;
+	float targetDistanceY;
+
+	float speed;
+
+	Axis currentAxis = X_AXIS;
+
+	bool xInRange;
+	bool yInRange;
+
+	float calculateDistance();
+
+	void checkDistances();
+	bool isInRange(float n1, float n2,float range);
+
 };
 
 #endif

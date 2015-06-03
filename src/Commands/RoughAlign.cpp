@@ -5,6 +5,7 @@ RoughAlign::RoughAlign(float d, float b, float dw) //good for autonomous. It ali
 	bearingToTote = b;
 	distanceToTote = d;
 	distanceToBeAway = dw;
+	driveDistance = NULL;
 }
 
 // Called just before this Command runs the first time
@@ -12,8 +13,8 @@ void RoughAlign::Initialize()
 {
 	//Look at issue #126 to understand
 	drivetrain->move(0.0f, 0.0f, bearingToTote*-1); //turn left parallel to tote
-	drivedistance = new DriveDistance(cos(bearingToTote * (3.14159 / 180.0))*distanceToTote, 0.0f); //move sideways to in front of tote
-	drivedistance = new DriveDistance(0.0f, (sin(bearingToTote * (3.14159 / 180.0))*distanceToTote) - distanceToBeAway); //move to the tote (the distanceToBeAway variable is the distance it will be away from the tote)
+	driveDistance = new DriveDistance((float)(cos(bearingToTote * (3.14159 / 180.0))*distanceToTote), 0.0f); //move sideways to in front of tote
+	driveDistance = new DriveDistance(0.0f, (float)((sin(bearingToTote * (3.14159 / 180.0))*distanceToTote) - distanceToBeAway)); //move to the tote (the distanceToBeAway variable is the distance it will be away from the tote)
 	done = true;
 }
 

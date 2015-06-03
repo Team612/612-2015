@@ -1,75 +1,126 @@
 #include <Commands/DriveDistance.h>
+/*
+* This function takes the two distances, and figures out which one is larger
+* When that is figured out, it multiplies that ratio by the other ratio.
+* The numbers in the ratio cancel out and become 1, and the same thing happens
+* To the other ratio. That means the other ratio is a number between 0 and 1
+* It was made like this so that you could go at a straight line to where you
+* Want to you go based on how the two ratio's compare. This doesn't really work
+* Due to problems with encoders.
+*/
 
+/*
+DriveDistance::DriveDistance(float xDistance, float yDistance, float speed) {
+	 Requires(drivetrain);
+	 targetDistanceX = xDistance;
+	 targetDistanceY = yDistance;
+	 this->speed = speed;
+}
+*/
 
-DriveDistance::DriveDistance(float targetDistanceX, float targetDistanceY)
+DriveDistance::DriveDistance(float distance, float speed, Axis axis)
 {
 	Requires(drivetrain);
 	this->targetDistanceX = targetDistanceX;
 	this->targetDistanceY = targetDistanceY;
-	distanceX = 0;
-	distanceY = 0;
-	xRatio = targetDistanceX/targetDistanceY;
-	yRatio = targetDistanceY/targetDistanceX;
-	if(xRatio > 0 && targetDistanceX < 0)
+	xInRange = false;
+	yInRange = false;
+	if (axis == X_AXIS)
 	{
-		xRatio *= -1;
+		targetDistanceX = distance;
 	}
-	if(yRatio > 0 && targetDistanceY < 0)
+	else if (axis == Y_AXIS)
 	{
-		yRatio *= -1;
+		targetDistanceY = distance;
 	}
-	if(xRatio > 1 || xRatio < -1)
+
+	currentAxis = axis;
+	this->speed = speed;
+}
+
+bool DriveDistance::isInRange(float n1, float n2, float range)
+{
+	float max = n2 + range;
+	float min = n2 - range;
+
+	return n1 <= max && n1 >= min;
+}
+
+float DriveDistance::calculateDistance()
+{
+	float ticks = 0;
+
+	if (currentAxis == X_AXIS)
 	{
-		xRatio *= yRatio;
-		yRatio *= yRatio;
+		ticks = drivetrain->getAverageDistanceX();
 	}
-	if(yRatio > 1 || yRatio < -1)
+	else if (currentAxis == Y_AXIS)
 	{
-		yRatio *= xRatio;
-		xRatio *= xRatio;
+		ticks = drivetrain->getAverageDistanceY();
 	}
-	std::printf("Constructor called\n");
+
+	return (ticks / TICKS_PER_ROTATION) * WHEEL_CIRCUMFERENCE;
+}
+
+void DriveDistance::checkDistances()
+{
+	float distance = calculateDistance();
+
+	if (isInRange(distance, targetDistanceX, 1))
+	{
+		xInRange = true;
+
+		if (!yInRange)
+		{
+			currentAxis = Y_AXIS;
+			drivetrain->resetEncoders();
+		}
+	}
+
+	if (isInRange(distance, targetDistanceY, 1))
+	{
+		yInRange = true;
+
+		if (!xInRange)
+		{
+			currentAxis = X_AXIS;
+			drivetrain->resetEncoders();
+		}
+	}
 }
 
 // Called just before this Command runs the first time
 void DriveDistance::Initialize()
 {
-	//drivetrain->resetEncoders();
+	drivetrain->resetEncoders();
 }
 
 // Called repeatedly when this Command is scheduled to run
 void DriveDistance::Execute()
 {
-	distanceX = (drivetrain->getDistance(Drivetrain::MotorLocation::RIGHT_FRONT)*1+drivetrain->getDistance(Drivetrain::MotorLocation::RIGHT_REAR)+drivetrain->getDistance(Drivetrain::MotorLocation::LEFT_FRONT)+drivetrain->getDistance(Drivetrain::MotorLocation::LEFT_REAR)*-1)/4;
-	distanceY = (drivetrain->getDistance(Drivetrain::MotorLocation::RIGHT_FRONT)+drivetrain->getDistance(Drivetrain::MotorLocation::RIGHT_REAR)+drivetrain->getDistance(Drivetrain::MotorLocation::LEFT_FRONT)*-1+drivetrain->getDistance(Drivetrain::MotorLocation::LEFT_REAR)*-1)/4;
-	drivetrain->move(xRatio, yRatio, 0.0f);
-	static int count = 0;
-	if (count % 60 == 0)
+
+	checkDistances();
+
+	if (currentAxis == X_AXIS)
 	{
-		std::printf("Execute called\n");
-		count++;
+		drivetrain->move(speed, 0, 0);
+	}
+
+	else if (currentAxis == Y_AXIS)
+	{
+		drivetrain->move(0, speed, 0);
 	}
 }
 
 // Make this return true when this Command no longer needs to run execute()
 bool DriveDistance::IsFinished()
 {
-	if(((distanceX >= targetDistanceX && targetDistanceX > 0) || (distanceX <= targetDistanceX && targetDistanceX < 0)) &&
-	   ((distanceY >= targetDistanceY && targetDistanceY > 0) || (distanceY <= targetDistanceY && targetDistanceY < 0)))
-	{
-		drivetrain->stop();
-		return true;
-	}
-	else
-	{
-		return false;
-	}
+	return xInRange && yInRange;
 }
 
 // Called once after isFinished returns true
 void DriveDistance::End()
 {
-	std::printf("Ending command\n");
 	drivetrain->stop();
 }
 
@@ -77,6 +128,5 @@ void DriveDistance::End()
 // subsystems is scheduled to run
 void DriveDistance::Interrupted()
 {
-	std::printf("Interrupted\n");
 	drivetrain->stop();
 }

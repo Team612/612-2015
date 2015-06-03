@@ -1,5 +1,5 @@
 #ifndef ElevatorMoveToPosition_H
-#define ElevatorMoveToPosition_H
+#define ElevatorMoveToPosition_Ht
 
 #include "../CommandBase.h"
 #include "WPILib.h"
@@ -8,18 +8,32 @@
 class ElevatorMoveToPosition: public CommandBase
 {
 private:
-	uint32_t targetPosition; ///<Position you want to move target to
-	int targetSpins; ///<position*interval (constant)
-	const uint32_t INTERVAL = 1; ///<TODO Placeholder value
+
 public:
-	///Moves elevator to certain location
-	///@param position position to move it to
-	ElevatorMoveToPosition(uint32_t position);
-	void Initialize(); ///<Initializer
-	void Execute(); ///<Keeps elevator moving in correct direction
-	bool IsFinished(); ///<Tests if it's at target position
+	/// Moves elevator to spot
+	///@param joy joystick object
+	///@param presetSpeed how fast to move elevator
+	ElevatorMoveToPosition(GamePad* joy, float presetSpeed);
+	ElevatorMoveToPosition(int presetMove, float presetSpeed);
+	void Initialize();
+	void Execute();
+	bool IsFinished();
 	void End();
-	void Interrupted(); ///<Stops elevator
+	void Interrupted();
+private:
+	GamePad* joystick;
+	void moveToHeight(float inchesUp);
+	int getPreset();
+	const float HEIGHT_TOLERANCE = 1.0f;
+	bool isManualEngaged;
+	bool wasManualEngaged;
+	bool isLB;
+	bool wasLB;
+	bool isRB;
+	bool wasRB;
+	bool isDynamic;
+	float speed;
+	int preset;
 };
 
 #endif
