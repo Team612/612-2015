@@ -20,8 +20,8 @@ public:
 	void Initialize(); ///<starts timer
 	void Execute(); ///<sets solenoid to solenoid state
 	bool IsFinished(); ///<check if time's done
-	void End(); ///<turn off solenoid
-	void Interrupted(); ///<turn off solenoid
+	void End(); ///<if the command is finished, turn off solenoid
+	void Interrupted(); ///<if the command is interrupted, turn off solenoid
 };
 
 #endif

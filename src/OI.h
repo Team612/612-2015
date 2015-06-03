@@ -23,7 +23,7 @@ private:
 	bool toggleOpen; ///< Bool if elevator is open
 	//bool hasDriven;
 	bool isLatchPressed; ///< Bool if latch is pressed
-	bool wasLatchPressed; ///<r Bool if latch was pressed last "frame"
+	bool wasLatchPressed; ///< Bool if latch was pressed last "frame"
 	//float val;
 	//float preval;
 };

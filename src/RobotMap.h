@@ -15,7 +15,7 @@ const uint32_t GYRO_CHANNEL = 0; ///<The channel for the gyro
 const uint32_t ENCODER_LR_A = 0; ///<The channel for the left rear encoder
 const uint32_t ENCODER_LR_B = 0; ///<The channel for the left rear encoder
 
-const uint32_t ENCODER_LF_A = 0; ///<The channels for the left front encoder
+const uint32_t ENCODER_LF_A = 0; ///<The channel for the left front encoder
 const uint32_t ENCODER_LF_B = 0; ///<The channel for the left front encoder
 
 const uint32_t ENCODER_RR_A = 0; ///<The channels for the right rear encoder
@@ -97,8 +97,7 @@ static const uint32_t BUTTON_B = 2; ///< port for B button on xbox controller
 static const uint32_t BUTTON_X = 3; ///< port for X button on xbox controller
 static const uint32_t BUTTON_Y = 4; ///< port for Y button on xbox controller
 static const uint32_t BUTTON_LB = 5;///< port for Right Bumper
-static const uint32_t BUTTON_RB = 6; ///< port for left bumper button on xbox controller
-
+static const uint32_t BUTTON_RB = 6; ///< port for left bumper on xbox controller
 
 const uint32_t SOLENOIDCHAN1 = 0; ///< Solenoid channel, innacurate
 const uint32_t SOLENOIDCHAN2 = 1; ///< Other solenoid channel, innacurate

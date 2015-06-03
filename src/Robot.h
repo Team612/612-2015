@@ -12,11 +12,11 @@ class Robot: public IterativeRobot
 {
 private:
 
-	Command* autonomousCommand; ///< command for autonomous (would have been command group, didn't get around to it)
+	Command* autonomousCommand; ///< command fotus (would have been command group, didn't get around to it)
 
-	Drive* move; ///< DRIVETRAIN, used to move
+	Drive* move; ///< DRIVETRAIN object, used to move
 
-	LiveWindow* lw; ///< LIVEWINDOW, not used
+	LiveWindow* lw; ///< LIVEWINDOW object, not used
 	//TALON
 	//Talon* firstTalon;
 	//Talon* secondTalon;
@@ -65,6 +65,6 @@ public:
 	};
 
 
-	ROBOT_STATUS robot_status;
+	ROBOT_STATUS robot_status; ///<Var that holds current state of robot (from ROBOT_STATUS enum)
 };
 #endif

@@ -12,17 +12,17 @@ public:
 	/// Gamepad constructor
 	/// @param isFlightStick boolean for if we are controlling with flight stuck
 	/// @param port integer for what port the gamepad is using
-	/// @param throttle float for value to multiply input by
-	/// @param deadzone float for how much of the joysticks to ignore
+	/// @param throttle float for value to multiply input by (1.0-infinity (technically))
+	/// @param deadzone float for how much of the joysticks to ignore (percentage of full power)
 	GamePad(bool isFlightStick, int port, float throttle = 1.0f, float deadzone = 0.1f);
-	float GetLeftXRaw(); ///<  gets value of left joystick left-right direction, no filter
-	float GetLeftXSmooth(); ///< gets value of left joystick left-right direection, w/ filter
+	float GetLeftXRaw(); ///<  gets value of left joystick left-right direction, no filter or multiplier
+	float GetLeftXSmooth(); ///< gets value of left joystick left-right direction, w/ filter and multiplier (deadzone and throttle)
 	float GetRightXRaw(); ///< gets value of right joystick left-right direction, no filter
-	float GetRightXSmooth(); ///< gets value of right joystick left-right direction, w/ filter
+	float GetRightXSmooth(); ///< gets value of right joystick left-right direction, w/ filter and multiplier (deadzone and throttle)
 	float GetLeftYRaw(); ///< gets value of left joystick up-down direction, no filter
-	float GetLeftYSmooth(); ///< gets value of left joystick up-down direction, w/ filter
+	float GetLeftYSmooth(); ///< gets value of left joystick up-down direction, w/ filter and multiplier (deadzone and throttle)
 	float GetRightYRaw(); ///< gets value of right joystick up-down direction, no filter
-	float GetRightYSmooth();///< gets value of right joystick up-down direction, w/ filter
+	float GetRightYSmooth();///< gets value of right joystick up-down direction, w/ filter and multiplier (deadzone and throttle)
 	/*float GetLeftBumperRaw();
 	float GetLeftBumperSmooth();
 	float GetRightBumperRaw();
@@ -69,8 +69,8 @@ private:
 	 const int Button_B = 2; ///< port for B button
 	 const int Button_X = 3; ///< port for X button
 	 const int Button_Y = 4; ///< port for y button
-	 const int 	Button_SHOULDER_LEFT = 5; ///< port for left shoulder
-	 const int 	Button_SHOULDER_RIGHT = 6; ///< port for right shoulder
+	 const int 	Button_SHOULDER_LEFT = 5; ///< port for left bumper
+	 const int 	Button_SHOULDER_RIGHT = 6; ///< port for right bumper
 	 const int Button_TRIGGER_LEFT = 7; ///< port for left trigger
 	 const int 	Button_TRIGGER_RIGHT = 8; ///< port for right trigger
 	 const int 	Button_BACK = 10; ///< port for back button
@@ -81,8 +81,8 @@ private:
 	void SetThrottle(float throttle); ///< @param throttle settles throttle
 	void SetDeadZone(float deadzone); ///< @param deadzone set deadzone
 
-	float DEADZONE = 0.25f; ///< The value for the Joystick deadzone
-	float THROTTLE = 1.0f;  ///< The value for the Joystick throttle
+	float DEADZONE = 0.25f; ///< The value for the Joystick deadzone (value to be ignored)
+	float THROTTLE = 1.0f;  ///< The value for the Joystick throttle (value to multiply input by)
 
 	// Private internal methods for smoothing joystick values
 	/// Returns if joystick value is within deadzone
