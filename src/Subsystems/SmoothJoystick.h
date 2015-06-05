@@ -11,8 +11,13 @@ private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
 public:
-	SmoothJoystick(int port); //Constructor
+	///Constructor for SmoothJoystick
+	///@param port integer for port of joystick
+	SmoothJoystick(int port);
 	//void InitDefaultCommand();
+	///Gets value of a joystick
+	///Must be called after InitJoystick(0)
+	///@param axis which joystick to get
 	float GetValue(int axis);
 
 	/*

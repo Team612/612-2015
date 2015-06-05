@@ -10,18 +10,34 @@ private:
 	// for methods that implement subsystem capabilities
 	PowerDistributionPanel* powerboard; 
 public:
-	PowerBoard();//Initializer for panel
-	void InitDefaultCommand();//Figure this out
-	double GetVoltage();//Returns input value of the PDP
-	double GetTemperature();//Returns temperature of the PDP
-	double GetCurrent(uint8_t channel);//Returns current of a single channel
-	double GetTotalCurrent();//Total current of all monitored PDP channels (0-15)
-	double GetTotalPower();//Total power drawn from the monitored PDP channels
-	double GetTotalEnergy();//Total energy drawn from the monitored PDP channels
-	void ResetTotalEnergy();//Reset total energy drawn from PDP
-	void ClearStickyFaults();//Remove all of the fault flags on the PDP
-	void UpdateTable();//Update the table for this sendable object with the latest values
-	void StartLiveWindowMode();//Starts sendable object automatically respond to value changes reflect value on table
+	PowerBoard();///Construction for panel
+	void InitDefaultCommand();///<Default command (none really)
+	///Gets voltage input of PDP
+	///@returns voltage (double)
+	double GetVoltage();
+	/// Gets temperature of the PDP
+	double GetTemperature();
+	///Returns current of specific channel
+	///@param channel which channel to get current from (0-15)
+	double GetCurrent(uint8_t channel);
+	///Returns total current of all channels (16 total)
+	double GetTotalCurrent();
+	///Returns total power from all channels (16)
+	double GetTotalPower();
+	///Returns total energy from all channels (16)
+	double GetTotalEnergy();
+	///Resets energy drawn from the PDP
+	void ResetTotalEnergy();
+	///Removes fault flags on PDP (not sure what those are)
+	void ClearStickyFaults();
+	///Updates table
+	///Not sure specifically what it does, this was never used
+	void UpdateTable();
+	///Starts sending objects diretly the live window
+	///Never used also
+	void StartLiveWindowMode();
+	///Stops sending objects to live window
+	///Also never used
 	void StopLiveWindowMode();//Ends the above
 };
 

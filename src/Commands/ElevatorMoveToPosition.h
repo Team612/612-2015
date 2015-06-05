@@ -1,5 +1,5 @@
 #ifndef ElevatorMoveToPosition_H
-#define ElevatorMoveToPosition_H
+#define ElevatorMoveToPosition_Ht
 
 #include "../CommandBase.h"
 #include "WPILib.h"
@@ -10,6 +10,9 @@ class ElevatorMoveToPosition: public CommandBase
 private:
 
 public:
+	/// Moves elevator to spot
+	///@param joy joystick object
+	///@param presetSpeed how fast to move elevator
 	ElevatorMoveToPosition(GamePad* joy, float presetSpeed);
 	ElevatorMoveToPosition(int presetMove, float presetSpeed);
 	void Initialize();

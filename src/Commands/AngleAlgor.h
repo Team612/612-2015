@@ -5,20 +5,22 @@
 #include <cmath>
 
 //all ratios are width/height
-const float toteLength = 26.9;
-const float toteWidth = 16.9;
-const float toteHeight = 12.1;
-const float toteDiagonal = 31.76;
-const float shortFaceRatio = toteWidth/toteHeight;
-const float longFaceRatio = toteLength/toteHeight;
-const float maxFaceRatio = toteDiagonal/toteHeight;
-const double maxRatioAngle = 58.2;
-float ratioRight = 0;
-float ratioLeft = 0;
-double ratioAverage = 0;
-int leftOrRight = 0; //indicates whether you are left or right of max angle; right is 1, left is -1
-float angle = 0;
-double AngleAlgor(float wR, float hR, float wL,  float hL); //feed algor the dinosaur
+const float toteLength = 26.9; ///< length of tote (inches)
+const float toteWidth = 16.9; ///< width of tote (inches)
+const float toteHeight = 12.1; ///< height of tote (inches)
+const float toteDiagonal = 31.76; ///< length of diagonal of tote (inches)
+const float shortFaceRatio = toteWidth/toteHeight; ///< ratio of width to height of tote
+const float longFaceRatio = toteLength/toteHeight; ///<ratio of length to height of tote
+const float maxFaceRatio = toteDiagonal/toteHeight; ///< ratio of diag to height (biggest ratio possible)
+const double maxRatioAngle = 58.2; ///<Value returned if diagonal is divided by height
+float ratioRight = 0; ///< ratio value if we're to the right of tote
+float ratioLeft = 0; ///< ratio value if we're to the left of tote
+double ratioAverage = 0; ///< Average ratio
+int leftOrRight = 0; ///<indicates whether you are left or right of max angle; right is 1, left is -1
+float angle = 0; ///<Angle in relation to tote
+///Constructor
+///Not sure what the parameters are for/how to calculate them, need to ask Shaun
+double AngleAlgor(float wR, float hR, float wL,  float hL);
 
 
 #endif

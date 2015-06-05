@@ -6,7 +6,7 @@
 #include "../Subsystems/Drivetrain.h"
 #include <Timer.h>
 #include "RobotMap.h"
-
+/// @class to test motor
 class TestMotors: public CommandBase
 {
 private:

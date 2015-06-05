@@ -10,8 +10,8 @@ private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
 public:
-	Vision();
-	void InitDefaultCommand();
+	Vision(); ///< Constructor for vision
+	void InitDefaultCommand(); ///< Initialized default vision command (never used)
 };
 
 #endif

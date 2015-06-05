@@ -7,9 +7,9 @@
 class ElevatorStop: public CommandBase
 {
 public:
-	ElevatorStop();
-	void Initialize();
-	void Execute();
+	ElevatorStop(); ///<Constructor
+	void Initialize();///<Initializer
+	void Execute(); ///<Stops the elevator
 	bool IsFinished();
 	void End();
 	void Interrupted();
